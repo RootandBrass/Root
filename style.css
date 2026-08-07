@@ -557,3 +557,53 @@ footer p {
     }
 
 }
+
+/* 301 Ruby Timeline */
+
+.timeline-section {
+    max-width: 720px;
+    margin: 70px auto;
+}
+
+.timeline-section h2 {
+    margin-bottom: 35px;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 25px;
+
+    padding: 0 0 35px;
+    margin-bottom: 35px;
+
+    border-bottom: 1px solid #c3a56a;
+}
+
+.timeline-year {
+    color: #a98545;
+
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.timeline-content h3 {
+    margin: 0 0 8px;
+
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.timeline-content p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+}
