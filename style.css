@@ -19,7 +19,7 @@ a {
 .site-header {
     background-color: #1f1d1a;
     text-align: center;
-    padding: 35px 20px 25px;
+    padding: 32px 20px 26px;
 }
 
 header h1 {
@@ -39,28 +39,25 @@ header p {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 28px;
+    gap: 30px;
 
-    padding: 18px 25px;
+    padding: 17px 20px;
 
     background-color: #a98545;
 
-    border-top: 1px solid #c6a766;
-    border-bottom: 1px solid #80642f;
+    border-top: 1px solid #c4a96a;
+    border-bottom: 1px solid #7e622f;
 }
 
 .main-nav a {
     color: #ffffff;
-
-    font-size: 15px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-
     text-decoration: none;
 
-    padding: 7px 3px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 
-    transition: opacity 0.2s ease;
+    padding: 6px 2px;
 }
 
 .main-nav a:hover {
@@ -92,16 +89,26 @@ p {
 }
 
 footer {
-    text-align: center;
-    padding: 30px;
+    margin-top: 70px;
+    padding: 34px 20px;
+
     background-color: #1f1d1a;
-    color: #f4f0e8;
+    color: #d8d0c2;
+
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+
+    font-size: 12px;
+    letter-spacing: 1.5px;
 }
 
 .site-logo {
     display: block;
     width: 100%;
-    max-width: 700px;
+    max-width: 680px;
     height: auto;
     margin: 0 auto;
 }
