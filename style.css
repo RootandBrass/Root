@@ -24,17 +24,37 @@ header p {
     letter-spacing: 2px;
 }
 
-nav {
-    text-align: center;
-    padding: 18px;
+.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
+
+    padding: 18px 25px;
+
     background-color: #a98545;
+
+    border-top: 1px solid #c6a766;
+    border-bottom: 1px solid #80642f;
 }
 
-nav a {
-    color: white;
+.main-nav a {
+    color: #ffffff;
+
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
     text-decoration: none;
-    margin: 0 18px;
-    font-size: 17px;
+
+    padding: 7px 3px;
+
+    transition: opacity 0.2s ease;
+}
+
+.main-nav a:hover {
+    opacity: 0.65;
 }
 
 nav a:hover {
