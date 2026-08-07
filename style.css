@@ -637,3 +637,80 @@ footer p {
 .featured-link:hover {
     text-decoration: underline;
 }
+
+/* Journal Posts */
+
+.journal-post {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 70px 25px;
+}
+
+.post-header {
+    max-width: 700px;
+    margin: 0 auto 55px;
+    text-align: center;
+    background: none;
+    color: #2f2a24;
+    padding: 0;
+}
+
+.post-header h1 {
+    margin: 8px 0 12px;
+    font-size: 44px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.post-date {
+    color: #8a713f;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.post-body {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.post-body p {
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 24px;
+}
+
+.post-opening {
+    font-size: 22px !important;
+    line-height: 1.7 !important;
+}
+
+.post-footer {
+    max-width: 680px;
+    margin: 55px auto 0;
+    padding-top: 25px;
+    border-top: 1px solid #c3a56a;
+    background: none;
+    text-align: left;
+}
+
+.post-footer a {
+    color: #8a713f;
+    text-decoration: none;
+}
+
+.post-footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+
+    .post-header h1 {
+        font-size: 34px;
+    }
+
+    .post-body p {
+        font-size: 17px;
+    }
+
+}
