@@ -405,3 +405,90 @@ footer {
     }
 
 }
+
+/* Journal */
+
+.journal-page {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 65px 25px;
+}
+
+.journal-intro {
+    max-width: 720px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.journal-intro h1 {
+    font-size: 46px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin: 0 0 20px;
+}
+
+.journal-list {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.journal-entry {
+    padding: 0 0 45px;
+    margin-bottom: 45px;
+    border-bottom: 1px solid #c3a56a;
+}
+
+.journal-date {
+    margin-bottom: 8px;
+
+    color: #8a713f;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.journal-entry h2 {
+    margin: 0 0 15px;
+    border: 0;
+    padding: 0;
+
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.journal-entry h2 a {
+    color: #2f2a24;
+    text-decoration: none;
+}
+
+.journal-entry h2 a:hover {
+    color: #a98545;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 8px;
+
+    color: #8a713f;
+    text-decoration: none;
+
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+
+    .journal-intro h1 {
+        font-size: 36px;
+    }
+
+    .journal-entry h2 {
+        font-size: 24px;
+    }
+
+}
