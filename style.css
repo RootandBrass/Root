@@ -236,3 +236,19 @@ footer {
     }
 
 }
+
+.ruby-image {
+    background-image: url("images/301-ruby.jpg");
+}
+
+.garden-image {
+    background-image: url("images/garden.jpg");
+}
+
+.journal-image {
+    background-image: url("images/journal.jpg");
+}
+
+.collections-image {
+    background-image: url("images/collections.jpg");
+}
