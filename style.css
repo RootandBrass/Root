@@ -252,3 +252,88 @@ footer {
 .collections-image {
     background-image: url("images/collections.jpg");
 }
+
+/* Interior Pages */
+
+.page-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 65px 25px;
+}
+
+.page-intro {
+    max-width: 720px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.eyebrow {
+    color: #a98545;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.page-intro h1 {
+    font-size: 46px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin: 0 0 20px;
+}
+
+.page-lead {
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.story-section {
+    max-width: 720px;
+    margin: 0 auto 65px;
+}
+
+.page-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.page-link-card {
+    display: block;
+    padding: 28px 22px;
+
+    border: 1px solid #c3a56a;
+    background-color: #ebe4d7;
+
+    color: #2f2a24;
+    text-decoration: none;
+    text-align: center;
+}
+
+.page-link-card span {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.page-link-card small {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #6d6255;
+}
+
+.page-link-card:hover {
+    background-color: #f1eadf;
+}
+
+@media (max-width: 700px) {
+
+    .page-links {
+        grid-template-columns: 1fr;
+    }
+
+    .page-intro h1 {
+        font-size: 36px;
+    }
+
+}
