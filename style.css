@@ -98,3 +98,57 @@ footer {
 .site-header a {
     display: inline-block;
 }
+
+/* Mobile layout */
+
+@media (max-width: 768px) {
+
+    .site-header {
+        padding: 25px 15px 20px;
+    }
+
+    .site-logo {
+        max-width: 500px;
+    }
+
+    .main-nav {
+        gap: 14px;
+        padding: 14px 12px;
+    }
+
+    .main-nav a {
+        font-size: 13px;
+        letter-spacing: 1px;
+        padding: 6px 4px;
+    }
+
+    main {
+        padding: 35px 18px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .main-nav {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .main-nav a {
+        width: 100%;
+        text-align: center;
+        padding: 8px 0;
+    }
+
+    .site-logo {
+        max-width: 100%;
+    }
+
+    main {
+        padding: 30px 16px;
+    }
+}
