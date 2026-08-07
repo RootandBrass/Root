@@ -67,3 +67,11 @@ footer {
     background-color: #1f1d1a;
     color: #f4f0e8;
 }
+
+.site-logo {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 0 auto 20px;
+}
