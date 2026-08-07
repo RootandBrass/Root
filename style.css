@@ -492,3 +492,50 @@ footer {
     }
 
 }
+
+/* About Page */
+
+.about-page {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 65px 25px;
+}
+
+.about-intro {
+    max-width: 720px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.about-intro h1 {
+    font-size: 46px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin: 0 0 20px;
+}
+
+.about-section {
+    max-width: 720px;
+    margin: 0 auto 55px;
+}
+
+.about-section h2 {
+    font-size: 27px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #a98545;
+    padding-bottom: 10px;
+}
+
+.about-section p {
+    font-size: 17px;
+    line-height: 1.85;
+}
+
+@media (max-width: 700px) {
+
+    .about-intro h1 {
+        font-size: 36px;
+    }
+
+}
