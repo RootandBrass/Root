@@ -714,3 +714,66 @@ footer p {
     }
 
 }
+
+/* Plant Library */
+
+.plant-library {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 65px 25px;
+}
+
+.plant-library-intro {
+    max-width: 720px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.plant-library-intro h1 {
+    font-size: 46px;
+    font-weight: normal;
+    margin: 0 0 20px;
+}
+
+.plant-group {
+    margin-bottom: 55px;
+}
+
+.plant-group h2 {
+    font-size: 26px;
+    font-weight: normal;
+    border-bottom: 1px solid #a98545;
+    padding-bottom: 10px;
+}
+
+.plant-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 25px;
+    margin-top: 25px;
+}
+
+.plant-list span {
+    padding: 12px 15px;
+    background-color: #ebe7dc;
+    border-left: 2px solid #a98545;
+}
+
+.plant-library-footer {
+    margin-top: 60px;
+    padding-top: 25px;
+    border-top: 1px solid #c3a56a;
+}
+
+.plant-library-footer a {
+    color: #8a713f;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+
+    .plant-list {
+        grid-template-columns: 1fr;
+    }
+
+}
