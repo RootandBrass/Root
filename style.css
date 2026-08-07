@@ -607,3 +607,33 @@ footer p {
     }
 
 }
+
+.featured-update {
+    max-width: 760px;
+    margin: 70px auto;
+    padding: 40px 35px;
+
+    background-color: #eee7dc;
+    border: 1px solid #c3a56a;
+
+    text-align: center;
+}
+
+.featured-update h2 {
+    margin-top: 8px;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.featured-link {
+    display: inline-block;
+    margin-top: 14px;
+
+    color: #8a713f;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.featured-link:hover {
+    text-decoration: underline;
+}
