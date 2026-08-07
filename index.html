@@ -1,14 +1,60 @@
+tep 5: Build the homepage
+
+Open your index.html file in GitHub, click the pencil ✏️ Edit button, and replace everything in it with this:
+
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Root & Brass</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Root & Brass</h1>
-    <p>Welcome. This site is currently under construction.</p>
+    <header>
+        <h1>Root & Brass</h1>
+        <p>Home • Garden • History • Curiosities</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#journal">Journal</a>
+        <a href="#garden">Garden</a>
+    </nav>
+
+    <main>
+
+        <section id="about">
+            <h2>Welcome to Root & Brass</h2>
+            <p>
+                A place for old homes, growing things,
+                forgotten stories, and the beautiful things
+                collected along the way.
+            </p>
+        </section>
+
+        <section id="journal">
+            <h2>Journal</h2>
+            <p>Stories, projects, discoveries, and notes from home.</p>
+        </section>
+
+        <section id="garden">
+            <h2>Garden</h2>
+            <p>Plants, seasons, experiments, and things worth growing.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Root & Brass</p>
+    </footer>
 
 </body>
+
 </html>
