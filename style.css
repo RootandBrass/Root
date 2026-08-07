@@ -152,3 +152,69 @@ footer {
         padding: 30px 16px;
     }
 }
+
+/* Homepage */
+
+.hero-intro {
+    max-width: 760px;
+    margin: 20px auto 70px;
+    text-align: center;
+}
+
+.hero-intro h1 {
+    font-size: 42px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero-intro p {
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    margin-bottom: 60px;
+}
+
+.feature-card {
+    display: block;
+    padding: 40px 32px;
+    background-color: #ebe4d7;
+    border: 1px solid #c3a56a;
+
+    color: #2f2a24;
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.feature-card h2 {
+    margin-top: 0;
+    border-bottom: 1px solid #a98545;
+    padding-bottom: 10px;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    background-color: #f1eadf;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 700px) {
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-intro h1 {
+        font-size: 34px;
+    }
+
+}
