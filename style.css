@@ -108,7 +108,7 @@ footer p {
 .site-logo {
     display: block;
     width: 70%;
-    max-width: 600px;
+    max-width: 400px;
     height: auto;
     margin: 0 auto;
 }
@@ -126,7 +126,7 @@ footer p {
     }
 
     .site-logo {
-        max-width: 500px;
+        max-width: 400px;
     }
 
     .main-nav {
