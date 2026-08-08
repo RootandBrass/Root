@@ -107,8 +107,8 @@ footer p {
 
 .site-logo {
     display: block;
-    width: 100%;
-    max-width: 680px;
+    width: 70%;
+    max-width: 600px;
     height: auto;
     margin: 0 auto;
 }
