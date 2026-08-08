@@ -846,9 +846,101 @@ footer p {
     border-left: 2px solid #a98545;
 
     color: #2f2a24;
-    text-decoration: none;
+    text-decorati
+        on: none;
 }
 
 .plant-link:hover {
     background-color: #f2eee5;
+}
+
+/* History Page */
+
+.history-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 65px 25px;
+}
+
+.history-intro {
+    max-width: 760px;
+    margin: 0 auto 75px;
+    text-align: center;
+}
+
+.history-intro h1 {
+    font-size: 46px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin: 0 0 20px;
+}
+
+.history-feature {
+    max-width: 780px;
+    margin: 0 auto 80px;
+    padding: 45px 40px;
+
+    background-color: #ebe4d7;
+    border: 1px solid #c3a56a;
+}
+
+.history-feature h2 {
+    margin-top: 5px;
+
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.history-opening {
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.history-link {
+    display: inline-block;
+    margin-top: 15px;
+
+    color: #8a713f;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.history-link:hover {
+    text-decoration: underline;
+}
+
+.history-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.history-card {
+    padding: 32px 28px;
+
+    background-color: #eee8dd;
+    border-left: 2px solid #a98545;
+}
+
+.history-card h2 {
+    margin-top: 0;
+
+    font-size: 24px;
+    font-weight: normal;
+}
+
+@media (max-width: 700px) {
+
+    .history-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .history-feature {
+        padding: 35px 25px;
+    }
+
+    .history-intro h1 {
+        font-size: 36px;
+    }
+
 }
