@@ -838,3 +838,17 @@ footer p {
     }
 
 }
+
+.plant-link {
+    display: block;
+    padding: 12px 15px;
+    background-color: #ebe7dc;
+    border-left: 2px solid #a98545;
+
+    color: #2f2a24;
+    text-decoration: none;
+}
+
+.plant-link:hover {
+    background-color: #f2eee5;
+}
