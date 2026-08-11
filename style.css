@@ -1084,3 +1084,139 @@ footer p {
     }
 
 }
+
+/* Harvest & Use */
+
+.harvest-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 65px 25px;
+}
+
+.harvest-intro {
+    max-width: 760px;
+    margin: 0 auto 75px;
+    text-align: center;
+}
+
+.harvest-intro h1 {
+    font-size: 46px;
+    font-weight: normal;
+    margin: 0 0 20px;
+}
+
+.harvest-guide {
+    margin-bottom: 80px;
+}
+
+.harvest-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.harvest-card {
+    padding: 28px 30px;
+    background-color: #ebe7dc;
+    border: 1px solid #c3a56a;
+}
+
+.harvest-card h3 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: normal;
+    border-bottom: 1px solid #a98545;
+    padding-bottom: 10px;
+}
+
+.harvest-card p {
+    line-height: 1.7;
+}
+
+.apothecary-record {
+    max-width: 850px;
+    margin: 0 auto 80px;
+    padding: 40px;
+    background-color: #f0ebe2;
+    border-top: 1px solid #a98545;
+    border-bottom: 1px solid #a98545;
+}
+
+.apothecary-record h2 {
+    margin-top: 5px;
+}
+
+.apothecary-entry {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #c3a56a;
+}
+
+.apothecary-date {
+    color: #8a713f;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.apothecary-entry h3 {
+    font-size: 23px;
+    font-weight: normal;
+    margin: 6px 0 20px;
+}
+
+.apothecary-details p {
+    margin-bottom: 14px;
+}
+
+.preservation-section {
+    margin-bottom: 70px;
+}
+
+.preservation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.preservation-grid div {
+    padding: 25px;
+    border-left: 2px solid #a98545;
+    background-color: #ebe7dc;
+}
+
+.preservation-grid h3 {
+    margin-top: 0;
+    font-size: 21px;
+    font-weight: normal;
+}
+
+.harvest-footer {
+    margin-top: 60px;
+    padding-top: 25px;
+    border-top: 1px solid #c3a56a;
+}
+
+.harvest-footer a {
+    color: #8a713f;
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+
+    .harvest-grid,
+    .preservation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .harvest-intro h1 {
+        font-size: 36px;
+    }
+
+    .apothecary-record {
+        padding: 30px 22px;
+    }
+
+}
