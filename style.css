@@ -1287,6 +1287,11 @@ footer p {
     line-height: 1.7;
 }
 
+.season-plant:hover {
+    background-color: #f2eee5;
+    transform: translateY(-3px);
+}
+
 .spring-season {
     border-top: 3px solid #b9aa79;
     padding-top: 45px;
