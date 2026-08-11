@@ -1220,3 +1220,117 @@ footer p {
     }
 
 }
+
+/* Seasonal Garden */
+
+.seasonal-garden-page {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 65px 25px;
+}
+
+.seasonal-intro {
+    max-width: 760px;
+    margin: 0 auto 85px;
+    text-align: center;
+}
+
+.seasonal-intro h1 {
+    font-size: 46px;
+    font-weight: normal;
+    margin: 0 0 20px;
+}
+
+.season-block {
+    margin-bottom: 100px;
+}
+
+.season-heading {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.season-heading h2 {
+    margin: 5px 0 18px;
+    padding: 0;
+    border: 0;
+
+    font-size: 38px;
+    font-weight: normal;
+}
+
+.season-plant-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.season-plant {
+    padding: 27px 28px;
+
+    background-color: #ebe7dc;
+    border-top: 1px solid #c3a56a;
+}
+
+.season-plant h3 {
+    margin: 0 0 10px;
+
+    font-size: 21px;
+    font-weight: normal;
+
+    color: #5e513d;
+}
+
+.season-plant p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+.spring-season {
+    border-top: 3px solid #b9aa79;
+    padding-top: 45px;
+}
+
+.summer-season {
+    border-top: 3px solid #9a8957;
+    padding-top: 45px;
+}
+
+.autumn-season {
+    border-top: 3px solid #a98545;
+    padding-top: 45px;
+}
+
+.winter-season {
+    border-top: 3px solid #aaa59a;
+    padding-top: 45px;
+}
+
+.seasonal-footer {
+    margin-top: 50px;
+    padding-top: 25px;
+
+    border-top: 1px solid #c3a56a;
+}
+
+.seasonal-footer a {
+    color: #8a713f;
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+
+    .season-plant-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .seasonal-intro h1 {
+        font-size: 36px;
+    }
+
+    .season-heading h2 {
+        font-size: 32px;
+    }
+
+}
