@@ -1,0 +1,125 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Dreams | Grimoire | Root & Brass</title>
+
+    <link rel="icon" type="image/png" href="/images/logo.png">
+    <link rel="stylesheet" href="/grimoire/style.css">
+</head>
+
+<body class="dreams">
+
+<div class="grimoire-shell">
+
+    <header class="grimoire-header">
+
+        <a href="/grimoire/" class="grimoire-mark">
+            Grimoire
+        </a>
+
+        <a href="/" class="return-link">
+            Return Home
+        </a>
+
+    </header>
+
+
+    <main class="section-page">
+
+        <section class="section-heading">
+
+            <p class="kicker">
+                Grimoire
+            </p>
+
+            <h1>Dreams</h1>
+
+            <p class="lead">
+                A record of what remains after waking.
+            </p>
+
+        </section>
+
+
+        <section class="dream-list">
+
+            {% assign dreams = site.pages
+                | where_exp: "page", "page.path contains 'grimoire/dreams/entries/'"
+                | sort: "date"
+                | reverse %}
+
+            {% if dreams.size > 0 %}
+
+                {% for dream in dreams %}
+
+                    <a href="{{ dream.url }}" class="dream-entry">
+
+                        <div>
+
+                            <p class="dream-date">
+                                {{ dream.date | date: "%B %-d, %Y" }}
+                            </p>
+
+                            <h2>
+                                {{ dream.title }}
+                            </h2>
+
+                        </div>
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                {% endfor %}
+
+            {% else %}
+
+                <div class="empty-dreams">
+
+                    <p>
+                        No dreams recorded yet.
+                    </p>
+
+                </div>
+
+            {% endif %}
+
+        </section>
+
+
+        <nav class="section-nav">
+
+            <a href="/grimoire/herbs/">Herbs</a>
+            <a href="/grimoire/crystals/">Crystals</a>
+            <a href="/grimoire/tarot/">Tarot</a>
+            <a href="/grimoire/spells/">Spells</a>
+            <a href="/grimoire/seasonal/">Seasonal</a>
+
+            <a href="/grimoire/dreams/" aria-current="page">
+                Dreams
+            </a>
+
+        </nav>
+
+    </main>
+
+
+    <footer class="grimoire-footer">
+        Root & Brass
+    </footer>
+
+</div>
+
+</body>
+
+</html>
