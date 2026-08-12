@@ -1,0 +1,95 @@
+media:
+  input: images/uploads
+  output: /images/uploads
+  rename: safe
+  categories: [image]
+
+content:
+  - name: journal
+    label: Journal
+    type: collection
+    path: journal/entries
+    filename: "{year}-{month}-{day}-{primary}.md"
+    format: yaml-frontmatter
+
+    view:
+      primary: title
+      sort: date
+      order: desc
+
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+
+      - name: date
+        label: Date
+        type: date
+        required: true
+
+      - name: category
+        label: Category
+        type: select
+        options:
+          values:
+            - Journal
+            - Garden
+            - 301 Ruby
+            - History
+            - Family
+
+      - name: image
+        label: Image
+        type: image
+        required: false
+
+      - name: body
+        label: Entry
+        type: rich-text
+        required: true
+
+  - name: grimoire
+    label: Grimoire
+    type: collection
+    path: grimoire/entries
+    filename: "{year}-{month}-{day}-{primary}.md"
+    format: yaml-frontmatter
+
+    view:
+      primary: title
+      sort: date
+      order: desc
+
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+
+      - name: date
+        label: Date
+        type: date
+        required: true
+
+      - name: section
+        label: Section
+        type: select
+        options:
+          values:
+            - Herbs
+            - Crystals
+            - Tarot
+            - Spells
+            - Seasonal
+            - Dreams
+
+      - name: image
+        label: Image
+        type: image
+        required: false
+
+      - name: body
+        label: Entry
+        type: rich-text
+        required: true
