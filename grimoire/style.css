@@ -1,0 +1,233 @@
+:root {
+    --black: #090c0d;
+    --charcoal: #111719;
+    --midnight: #14212a;
+    --pine: #14251f;
+    --forest: #223a31;
+    --storm: #526674;
+    --smoke: #9da8a4;
+    --bone: #e2e4df;
+    --line: rgba(226, 228, 223, 0.16);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    color: var(--bone);
+
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(42, 67, 78, 0.22),
+            transparent 35rem
+        ),
+        radial-gradient(
+            circle at 10% 75%,
+            rgba(31, 65, 50, 0.20),
+            transparent 40rem
+        ),
+        linear-gradient(
+            150deg,
+            #090c0d,
+            #0d1214 45%,
+            #101a1c 75%,
+            #090d0e
+        );
+
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+.grimoire-shell {
+    width: min(1000px, calc(100% - 40px));
+    margin: auto;
+}
+
+
+/* HEADER */
+
+.grimoire-header {
+    min-height: 85px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid var(--line);
+}
+
+.grimoire-mark {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+
+    color: var(--smoke);
+    font-size: .75rem;
+}
+
+.return-link {
+    text-decoration: none;
+    text-transform: uppercase;
+
+    letter-spacing: .14em;
+    font-size: .7rem;
+
+    color: #71817b;
+}
+
+
+/* ENTRANCE */
+
+.entrance {
+    min-height: calc(100vh - 85px);
+
+    display: grid;
+    place-items: center;
+
+    padding: 80px 0 120px;
+}
+
+.entrance-inner {
+    width: min(760px, 100%);
+    text-align: center;
+}
+
+.moon {
+    margin-bottom: 25px;
+
+    font-size: 2rem;
+    font-weight: normal;
+
+    color: #a7b4b0;
+}
+
+.kicker {
+    color: #71817b;
+
+    text-transform: uppercase;
+    letter-spacing: .35em;
+
+    font-size: .7rem;
+}
+
+h1 {
+    margin: 0;
+
+    font-weight: normal;
+
+    text-transform: uppercase;
+    letter-spacing: .15em;
+
+    font-size: clamp(3rem, 10vw, 6.5rem);
+    line-height: 1;
+}
+
+.intro-line {
+    width: 100px;
+    height: 1px;
+
+    margin: 38px auto;
+
+    background: #566860;
+}
+
+.lead {
+    max-width: 570px;
+
+    margin: auto;
+
+    color: var(--smoke);
+
+    font-size: 1.1rem;
+}
+
+
+/* GRIMOIRE LINKS */
+
+.grimoire-index {
+    margin-top: 75px;
+
+    border-top: 1px solid var(--line);
+}
+
+.grimoire-index a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 23px 5px;
+
+    border-bottom: 1px solid var(--line);
+
+    text-decoration: none;
+
+    transition: .2s ease;
+}
+
+.grimoire-index a:hover {
+    padding-left: 18px;
+    padding-right: 18px;
+
+    background: rgba(255,255,255,.02);
+}
+
+.grimoire-index .name {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+
+    letter-spacing: .08em;
+}
+
+.arrow {
+    color: #71817b;
+}
+
+
+/* FOOTER */
+
+.grimoire-footer {
+    padding: 35px 0;
+
+    border-top: 1px solid var(--line);
+
+    text-align: center;
+
+    color: #5e6c67;
+
+    text-transform: uppercase;
+    letter-spacing: .15em;
+
+    font-size: .7rem;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .grimoire-shell {
+        width: calc(100% - 28px);
+    }
+
+    .grimoire-header {
+        min-height: 72px;
+    }
+
+    .entrance {
+        min-height: calc(100vh - 72px);
+        padding-top: 60px;
+    }
+
+}
