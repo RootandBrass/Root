@@ -50,9 +50,9 @@ content:
         required: true
 
   - name: grimoire
-    label: Grimoire
+    label: Dreams
     type: collection
-    path: grimoire/entries
+    path: grimoire/dreams/entries
     filename: "{year}-{month}-{day}-{primary}.md"
     format: yaml-frontmatter
 
@@ -71,18 +71,6 @@ content:
         label: Date
         type: date
         required: true
-
-      - name: section
-        label: Section
-        type: select
-        options:
-          values:
-            - Herbs
-            - Crystals
-            - Tarot
-            - Spells
-            - Seasonal
-            - Dreams
 
       - name: image
         label: Image
