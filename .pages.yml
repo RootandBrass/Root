@@ -62,6 +62,12 @@ content:
       order: desc
 
     fields:
+      - name: layout
+        label: Layout
+        type: string
+        default: dream
+        hidden: true
+        
       - name: title
         label: Title
         type: string
