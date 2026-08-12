@@ -306,3 +306,577 @@ h1 {
 
     font-style: italic;
 }
+/* =========================
+   SPELLS PAGE
+   ========================= */
+
+body.spells {
+    position: relative;
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(circle at 50% 8%, rgba(194, 153, 82, .12), transparent 26rem),
+        radial-gradient(circle at 18% 68%, rgba(24, 72, 52, .22), transparent 34rem),
+        radial-gradient(circle at 82% 72%, rgba(27, 46, 74, .22), transparent 38rem),
+        linear-gradient(
+            160deg,
+            #050707 0%,
+            #090d0c 32%,
+            #0d1513 58%,
+            #091015 80%,
+            #050707 100%
+        );
+
+    background-attachment: fixed;
+}
+
+
+/* faint magical haze */
+
+body.spells::before {
+    content: "";
+
+    position: fixed;
+    inset: -20%;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(circle at 30% 40%, rgba(111, 151, 125, .08), transparent 22rem),
+        radial-gradient(circle at 70% 20%, rgba(95, 121, 158, .07), transparent 24rem),
+        radial-gradient(circle at 52% 78%, rgba(174, 135, 68, .06), transparent 20rem);
+
+    filter: blur(28px);
+
+    animation: spell-haze 18s ease-in-out infinite alternate;
+
+    z-index: 0;
+}
+
+
+/* scattered stars / sparks */
+
+body.spells::after {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: .34;
+
+    background-image:
+        radial-gradient(circle, rgba(226,228,223,.55) 1px, transparent 1px),
+        radial-gradient(circle, rgba(181,148,83,.35) 1px, transparent 1px),
+        radial-gradient(circle, rgba(115,146,132,.28) 1px, transparent 1px);
+
+    background-size:
+        130px 130px,
+        180px 180px,
+        220px 220px;
+
+    background-position:
+        12px 20px,
+        70px 110px,
+        140px 50px;
+
+    z-index: 0;
+}
+
+
+@keyframes spell-haze {
+    0% {
+        transform: translate3d(-1%, -1%, 0) scale(1);
+    }
+
+    100% {
+        transform: translate3d(2%, 1%, 0) scale(1.04);
+    }
+}
+
+
+/* keep content above effects */
+
+.spells .grimoire-shell {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* main page */
+
+.spell-page {
+    min-height: calc(100vh - 85px);
+
+    padding: 90px 0 130px;
+
+    position: relative;
+}
+
+
+/* decorative outer ritual frame */
+
+.spell-page::before,
+.spell-page::after {
+    content: "";
+
+    position: absolute;
+
+    top: 55px;
+    bottom: 70px;
+
+    width: 1px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(145, 169, 155, .22) 12%,
+            rgba(188, 150, 79, .24) 50%,
+            rgba(145, 169, 155, .22) 88%,
+            transparent
+        );
+}
+
+.spell-page::before {
+    left: 8px;
+}
+
+.spell-page::after {
+    right: 8px;
+}
+
+
+/* hero */
+
+.spell-hero {
+    position: relative;
+
+    max-width: 780px;
+
+    margin: 0 auto 85px;
+
+    padding: 85px 20px 55px;
+
+    text-align: center;
+}
+
+
+/* giant celestial halo behind heading */
+
+.spell-hero::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 42%;
+
+    width: 320px;
+    height: 320px;
+
+    transform: translate(-50%, -50%);
+
+    border: 1px solid rgba(170, 151, 108, .14);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 28px rgba(107, 136, 124, .035),
+        0 0 0 56px rgba(77, 96, 119, .025),
+        0 0 90px rgba(179, 137, 71, .10);
+
+    z-index: -1;
+}
+
+
+/* crescent shape */
+
+.spell-hero::after {
+    content: "☾";
+
+    position: absolute;
+
+    left: 50%;
+    top: -5px;
+
+    transform: translateX(-50%);
+
+    font-size: 4.2rem;
+
+    color: rgba(194, 167, 108, .82);
+
+    text-shadow:
+        0 0 12px rgba(194, 167, 108, .20),
+        0 0 36px rgba(194, 167, 108, .12);
+}
+
+
+.spell-hero .kicker {
+    position: relative;
+
+    margin-bottom: 14px;
+
+    color: #778a81;
+
+    letter-spacing: .42em;
+
+    font-size: .68rem;
+}
+
+
+.spell-hero h1 {
+    position: relative;
+
+    margin: 0;
+
+    font-size: clamp(3.6rem, 10vw, 7.2rem);
+
+    letter-spacing: .18em;
+
+    color: #e2e4df;
+
+    text-shadow:
+        0 0 18px rgba(212, 175, 103, .10),
+        0 0 44px rgba(111, 151, 125, .08);
+}
+
+
+.spell-symbol {
+    margin: 28px 0 18px;
+
+    color: #ba9b61;
+
+    font-size: 1.25rem;
+
+    text-shadow:
+        0 0 16px rgba(186,155,97,.28);
+
+    animation: spell-pulse 4s ease-in-out infinite;
+}
+
+
+@keyframes spell-pulse {
+    0%,
+    100% {
+        opacity: .55;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.12);
+    }
+}
+
+
+.spell-hero .lead {
+    max-width: 620px;
+
+    margin: 0 auto;
+
+    color: #aab3af;
+
+    font-size: clamp(1rem, 2vw, 1.2rem);
+
+    font-style: italic;
+
+    letter-spacing: .03em;
+}
+
+
+/* magical divider */
+
+.spell-divider {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+
+    margin: 0 auto 72px;
+
+    color: #879991;
+
+    font-size: .9rem;
+}
+
+
+.spell-line {
+    width: 100px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(184, 148, 82, .55),
+            rgba(112, 145, 130, .38),
+            transparent
+        );
+}
+
+
+/* spell list frame */
+
+.spell-list {
+    position: relative;
+
+    border-top: 1px solid rgba(178, 149, 91, .22);
+    border-bottom: 1px solid rgba(178, 149, 91, .22);
+
+    box-shadow:
+        inset 0 20px 40px rgba(0,0,0,.08),
+        inset 0 -20px 40px rgba(0,0,0,.08);
+}
+
+
+/* decorative corners */
+
+.spell-list::before,
+.spell-list::after {
+    position: absolute;
+
+    top: -18px;
+
+    color: rgba(178, 149, 91, .55);
+
+    font-size: 1rem;
+
+    letter-spacing: .25em;
+}
+
+
+.spell-list::before {
+    content: "✦ · ☾";
+    left: 0;
+}
+
+
+.spell-list::after {
+    content: "☽ · ✦";
+    right: 0;
+}
+
+
+/* each spell */
+
+.spell-entry {
+    position: relative;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 36px;
+
+    padding: 34px 16px;
+
+    border-bottom: 1px solid rgba(226,228,223,.10);
+
+    text-decoration: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.008),
+            rgba(255,255,255,.016),
+            rgba(255,255,255,.008)
+        );
+
+    transition:
+        transform .25s ease,
+        background-color .25s ease,
+        box-shadow .25s ease,
+        padding .25s ease;
+}
+
+
+.spell-entry:last-child {
+    border-bottom: none;
+}
+
+
+.spell-entry::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 7px;
+
+    border: 1px solid transparent;
+
+    transition: border-color .25s ease;
+}
+
+
+.spell-entry:hover {
+    padding-left: 28px;
+    padding-right: 28px;
+
+    transform: translateY(-1px);
+
+    background:
+        radial-gradient(
+            circle at 15% 50%,
+            rgba(157, 126, 68, .08),
+            transparent 34%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(32, 67, 53, .07),
+            rgba(36, 50, 66, .06)
+        );
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.18),
+        inset 0 0 30px rgba(182,147,79,.025);
+}
+
+
+.spell-entry:hover::before {
+    border-color: rgba(178,149,91,.18);
+}
+
+
+.spell-entry h2 {
+    margin: 4px 0 0;
+
+    font-size: clamp(1.55rem, 3vw, 2.35rem);
+
+    font-weight: normal;
+
+    letter-spacing: .08em;
+
+    color: #e1e3de;
+
+    text-shadow:
+        0 0 16px rgba(182,147,79,.05);
+}
+
+
+.spell-date {
+    margin: 0;
+
+    color: #6f8178;
+
+    text-transform: uppercase;
+
+    letter-spacing: .18em;
+
+    font-size: .66rem;
+}
+
+
+.spell-purpose {
+    margin: 9px 0 0;
+
+    color: #98a49f;
+
+    font-style: italic;
+
+    letter-spacing: .02em;
+}
+
+
+.spell-mark {
+    flex: 0 0 auto;
+
+    color: rgba(187, 154, 91, .75);
+
+    font-size: 1.15rem;
+
+    text-shadow:
+        0 0 12px rgba(187,154,91,.16);
+
+    transition:
+        transform .3s ease,
+        color .3s ease,
+        text-shadow .3s ease;
+}
+
+
+.spell-entry:hover .spell-mark {
+    transform: rotate(90deg) scale(1.15);
+
+    color: #c1a266;
+
+    text-shadow:
+        0 0 18px rgba(193,162,102,.30);
+}
+
+
+/* empty state */
+
+.empty-spells {
+    padding: 68px 20px;
+
+    text-align: center;
+
+    color: #71817b;
+
+    font-style: italic;
+
+    letter-spacing: .04em;
+}
+
+
+/* section nav */
+
+.spells .section-nav {
+    margin-top: 80px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid rgba(226,228,223,.10);
+
+    justify-content: center;
+}
+
+
+/* mobile */
+
+@media (max-width: 640px) {
+
+    .spell-page {
+        padding-top: 62px;
+    }
+
+    .spell-page::before,
+    .spell-page::after {
+        display: none;
+    }
+
+    .spell-hero {
+        padding-top: 70px;
+    }
+
+    .spell-hero::before {
+        width: 240px;
+        height: 240px;
+    }
+
+    .spell-hero::after {
+        font-size: 3.4rem;
+    }
+
+    .spell-divider {
+        gap: 8px;
+    }
+
+    .spell-line {
+        width: 48px;
+    }
+
+    .spell-entry {
+        padding: 28px 8px;
+    }
+
+    .spell-entry:hover {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+}
