@@ -1,0 +1,164 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Spells | Grimoire | Root & Brass</title>
+
+    <link rel="icon"
+          type="image/png"
+          href="/grimoire/images/icon.png">
+
+    <link rel="stylesheet"
+          href="/grimoire/style.css">
+</head>
+
+<body class="spells">
+
+<div class="grimoire-shell">
+
+    <header class="grimoire-header">
+
+        <a href="/grimoire/"
+           class="grimoire-mark">
+            Grimoire
+        </a>
+
+        <a href="/"
+           class="return-link">
+            Return Home
+        </a>
+
+    </header>
+
+
+    <main class="section-page spell-page">
+
+        <section class="spell-hero">
+
+            <p class="kicker">
+                Grimoire
+            </p>
+
+            <h1>
+                Spells
+            </h1>
+
+            <div class="spell-symbol">
+                ✦
+            </div>
+
+            <p class="lead">
+                Words, intention, flame, and the old habit
+                of asking the world to listen.
+            </p>
+
+        </section>
+
+
+        <section class="spell-divider">
+
+            <span>☾</span>
+
+            <div class="spell-line"></div>
+
+            <span>✧</span>
+
+            <div class="spell-line"></div>
+
+            <span>☽</span>
+
+        </section>
+
+
+        <section class="spell-list">
+
+            {% assign spells = site.pages
+                | where_exp: "page", "page.path contains 'grimoire/spells/entries/'"
+                | sort: "date"
+                | reverse %}
+
+            {% if spells.size > 0 %}
+
+                {% for spell in spells %}
+
+                    <a href="{{ spell.url }}"
+                       class="spell-entry">
+
+                        <div class="spell-entry-inner">
+
+                            <p class="spell-date">
+                                {{ spell.date | date: "%B %-d, %Y" }}
+                            </p>
+
+                            <h2>
+                                {{ spell.title }}
+                            </h2>
+
+                            {% if spell.purpose %}
+
+                                <p class="spell-purpose">
+                                    {{ spell.purpose }}
+                                </p>
+
+                            {% endif %}
+
+                        </div>
+
+                        <span class="spell-mark">
+                            ✦
+                        </span>
+
+                    </a>
+
+                {% endfor %}
+
+            {% else %}
+
+                <div class="empty-spells">
+
+                    <p>
+                        No workings recorded yet.
+                    </p>
+
+                </div>
+
+            {% endif %}
+
+        </section>
+
+
+        <nav class="section-nav">
+
+            <a href="/grimoire/herbs/">Herbs</a>
+            <a href="/grimoire/crystals/">Crystals</a>
+            <a href="/grimoire/tarot/">Tarot</a>
+
+            <a href="/grimoire/spells/"
+               aria-current="page">
+                Spells
+            </a>
+
+            <a href="/grimoire/seasonal/">Seasonal</a>
+            <a href="/grimoire/dreams/">Dreams</a>
+
+        </nav>
+
+    </main>
+
+
+    <footer class="grimoire-footer">
+        Root & Brass
+    </footer>
+
+</div>
+
+</body>
+
+</html>
