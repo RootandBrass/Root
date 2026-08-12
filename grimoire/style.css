@@ -358,25 +358,19 @@ h1 {
    ========================= */
 
 body.spells {
-    position: relative;
-    overflow-x: hidden;
-
     background:
-        radial-gradient(circle at 50% 8%, rgba(194, 153, 82, .12), transparent 26rem),
-        radial-gradient(circle at 18% 68%, rgba(24, 72, 52, .22), transparent 34rem),
-        radial-gradient(circle at 82% 72%, rgba(27, 46, 74, .22), transparent 38rem),
         linear-gradient(
-            160deg,
-            #050707 0%,
-            #090d0c 32%,
-            #0d1513 58%,
-            #091015 80%,
-            #050707 100%
-        );
+            rgba(5, 7, 7, 0.28),
+            rgba(5, 7, 7, 0.50)
+        ),
+        url("/grimoire/images/spells-background.png");
 
+    background-size: cover;
+    background-position: top center;
     background-attachment: fixed;
-}
 
+    color: #e5dfd3;
+}
 
 /* faint magical haze */
 
