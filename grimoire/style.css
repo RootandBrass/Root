@@ -231,3 +231,64 @@ h1 {
     }
 
 }
+
+/* DREAM JOURNAL */
+
+.dream-list {
+    border-top: 1px solid var(--line);
+}
+
+.dream-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 28px 6px;
+
+    border-bottom: 1px solid var(--line);
+
+    text-decoration: none;
+
+    transition:
+        padding .2s ease,
+        background-color .2s ease;
+}
+
+.dream-entry:hover {
+    padding-left: 18px;
+    padding-right: 18px;
+
+    background: rgba(255, 255, 255, .018);
+}
+
+.dream-entry h2 {
+    margin: 4px 0 0;
+
+    font-size: clamp(1.5rem, 3vw, 2.15rem);
+
+    font-weight: normal;
+    letter-spacing: .06em;
+}
+
+.dream-date {
+    margin: 0;
+
+    color: #71817b;
+
+    text-transform: uppercase;
+    letter-spacing: .15em;
+
+    font-size: .7rem;
+}
+
+.empty-dreams {
+    padding: 45px 5px;
+
+    border-bottom: 1px solid var(--line);
+
+    color: #71817b;
+
+    font-style: italic;
+}
