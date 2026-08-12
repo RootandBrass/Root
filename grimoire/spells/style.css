@@ -178,7 +178,12 @@ body.spells::after {
         0 0 0 56px rgba(77, 96, 119, .025),
         0 0 90px rgba(179, 137, 71, .10);
 
-    z-index: -1;
+    z-index: 0;
+}
+
+   .spell-hero > * {
+    position: relative;
+    z-index: 1;
 }
 
 
