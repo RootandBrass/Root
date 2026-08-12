@@ -307,6 +307,182 @@ h1 {
     font-style: italic;
 }
 
+/* DREAMS ATMOSPHERE */
+
+body.dreams {
+    position: relative;
+    overflow-x: hidden;
+
+    background-color: #07101f;
+
+    background-image:
+        linear-gradient(
+            rgba(4, 9, 20, 0.08),
+            rgba(4, 9, 20, 0.20)
+        ),
+        url("/grimoire/images/dreams-background.png");
+
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    color: #e3e7ee;
+}
+
+.dreams .grimoire-shell {
+    position: relative;
+}
+
+.dreams .section-page {
+    min-height: 1200px;
+}
+
+
+/* DREAM TITLE */
+
+.dreams .section-heading {
+    max-width: 760px;
+    margin: 0 auto 90px;
+
+    padding-top: 85px;
+
+    text-align: center;
+}
+
+.dreams .section-heading::before {
+    content: "☾";
+
+    display: block;
+
+    margin-bottom: 22px;
+
+    color: #c8d2e1;
+
+    font-size: 3.5rem;
+
+    text-shadow:
+        0 0 18px rgba(190, 211, 239, .35),
+        0 0 45px rgba(126, 158, 203, .20);
+}
+
+.dreams .section-heading h1 {
+    margin: 0;
+
+    color: #edf1f6;
+
+    font-size: clamp(3.5rem, 9vw, 6.5rem);
+
+    font-weight: normal;
+
+    letter-spacing: .18em;
+
+    text-shadow:
+        0 0 24px rgba(174, 198, 230, .18);
+}
+
+.dreams .section-heading .kicker {
+    color: #8d9cb1;
+
+    letter-spacing: .35em;
+}
+
+.dreams .section-heading .lead {
+    margin-top: 25px;
+
+    color: #aeb9c8;
+
+    font-style: italic;
+}
+
+
+/* DREAM LIST */
+
+.dream-list {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    border-top: 1px solid rgba(185, 201, 222, .20);
+    border-bottom: 1px solid rgba(185, 201, 222, .20);
+
+    background: rgba(5, 12, 24, .24);
+
+    backdrop-filter: blur(3px);
+}
+
+.dream-entry {
+    padding: 30px 18px;
+
+    border-bottom: 1px solid rgba(185, 201, 222, .13);
+}
+
+.dream-entry:hover {
+    padding-left: 28px;
+    padding-right: 28px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(88, 117, 157, .08),
+            rgba(164, 184, 211, .035),
+            rgba(88, 117, 157, .08)
+        );
+}
+
+.dream-entry h2 {
+    color: #e1e7ef;
+
+    text-shadow:
+        0 0 15px rgba(178, 202, 233, .10);
+}
+
+.dream-date {
+    color: #8797ac;
+}
+
+.dreams .arrow {
+    color: #a8b8cd;
+
+    text-shadow:
+        0 0 12px rgba(181, 205, 236, .25);
+}
+
+
+/* EMPTY DREAM JOURNAL */
+
+.empty-dreams {
+    padding: 65px 20px;
+
+    text-align: center;
+
+    color: #8998aa;
+
+    background: rgba(5, 12, 24, .18);
+
+    font-style: italic;
+}
+
+
+/* DREAM NAVIGATION */
+
+.dreams .section-nav {
+    margin-top: 90px;
+
+    border-top-color: rgba(185, 201, 222, .14);
+}
+
+.dreams .section-nav a {
+    color: #8291a5;
+}
+
+.dreams .section-nav a:hover,
+.dreams .section-nav a[aria-current="page"] {
+    color: #e2e8f0;
+
+    text-shadow:
+        0 0 12px rgba(178, 202, 233, .20);
+}
+
 /* =========================
    GRIMOIRE SECTION PAGES
    ========================= */
