@@ -306,6 +306,53 @@ h1 {
 
     font-style: italic;
 }
+
+/* =========================
+   GRIMOIRE SECTION PAGES
+   ========================= */
+
+.section-page {
+    min-height: calc(100vh - 85px);
+    padding: 90px 0 120px;
+}
+
+.section-heading {
+    max-width: 760px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.section-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 14px 28px;
+
+    margin-top: 70px;
+    padding-top: 28px;
+
+    border-top: 1px solid var(--line);
+}
+
+.section-nav a {
+    color: #72837c;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    letter-spacing: .14em;
+
+    font-size: .72rem;
+
+    transition: color .2s ease;
+}
+
+.section-nav a:hover,
+.section-nav a[aria-current="page"] {
+    color: var(--bone);
+}
+
 /* =========================
    SPELLS PAGE
    ========================= */
