@@ -1337,3 +1337,248 @@ body.spells::after {
     }
 
 }
+
+/* =========================
+   SPELL ARTICLE
+   ========================= */
+
+.spell-article {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 110px 0 150px;
+}
+
+.spell-article article {
+    position: relative;
+
+    padding: 74px 64px;
+
+    background:
+        linear-gradient(
+            rgba(8, 10, 9, .78),
+            rgba(10, 13, 11, .88)
+        );
+
+    border: 1px solid rgba(190, 152, 82, .24);
+
+    box-shadow:
+        0 24px 80px rgba(0,0,0,.38),
+        inset 0 0 70px rgba(95, 123, 103, .035);
+
+    backdrop-filter: blur(4px);
+}
+
+.spell-article article::before {
+    content: "";
+
+    position: absolute;
+    inset: 12px;
+
+    border: 1px solid rgba(190, 152, 82, .10);
+
+    pointer-events: none;
+}
+
+
+/* HEADER */
+
+.spell-article-header {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.spell-article-header::before {
+    content: "☾";
+
+    display: block;
+
+    margin-bottom: 22px;
+
+    color: #c3a66d;
+
+    font-size: 3.8rem;
+
+    text-shadow:
+        0 0 22px rgba(195,166,109,.30);
+}
+
+.spell-article-header h1 {
+    margin: 12px 0 0;
+
+    font-size: clamp(2.8rem, 7vw, 5.8rem);
+
+    text-transform: none;
+    letter-spacing: .07em;
+
+    color: #ece6da;
+
+    text-shadow:
+        0 0 22px rgba(192,154,87,.12);
+}
+
+.spell-article-date {
+    margin: 0;
+
+    color: #7c8b82;
+
+    text-transform: uppercase;
+    letter-spacing: .17em;
+
+    font-size: .7rem;
+}
+
+.spell-article-purpose {
+    margin: 20px auto 0;
+
+    color: #91a48f;
+
+    font-style: italic;
+
+    font-size: 1.05rem;
+
+    max-width: 620px;
+}
+
+.spell-article-symbol {
+    margin-top: 30px;
+
+    color: #b79558;
+
+    letter-spacing: .55em;
+
+    text-shadow:
+        0 0 14px rgba(183,149,88,.22);
+}
+
+
+/* IMAGE */
+
+.spell-article-image {
+    margin: 0 0 55px;
+}
+
+.spell-article-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-height: 620px;
+
+    object-fit: cover;
+
+    border: 1px solid rgba(190,152,82,.18);
+
+    box-shadow:
+        0 18px 50px rgba(0,0,0,.34);
+}
+
+
+/* CONTENT SECTIONS */
+
+.spell-section,
+.spell-article-content {
+    position: relative;
+
+    margin-top: 55px;
+
+    color: #d1cbc0;
+
+    font-size: 1.06rem;
+
+    line-height: 1.9;
+}
+
+.spell-section {
+    padding-top: 32px;
+
+    border-top: 1px solid rgba(190,152,82,.14);
+}
+
+.spell-section h2 {
+    margin: 0 0 22px;
+
+    color: #e2d6bf;
+
+    font-weight: normal;
+
+    text-transform: uppercase;
+
+    letter-spacing: .13em;
+
+    font-size: 1.12rem;
+}
+
+.spell-section p,
+.spell-article-content p {
+    margin: 0 0 1.4em;
+}
+
+.spell-section ul,
+.spell-section ol,
+.spell-article-content ul,
+.spell-article-content ol {
+    padding-left: 1.4em;
+}
+
+.spell-outcome {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(46, 72, 58, .06),
+            rgba(118, 91, 48, .05)
+        );
+
+    padding: 34px 28px;
+}
+
+
+/* FOOTER */
+
+.spell-article-footer {
+    margin-top: 75px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid rgba(190,152,82,.14);
+
+    text-align: center;
+}
+
+.spell-article-footer a {
+    color: #9b8b6f;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    letter-spacing: .14em;
+
+    font-size: .72rem;
+}
+
+.spell-article-footer a:hover {
+    color: #eee6d8;
+
+    text-shadow:
+        0 0 12px rgba(194,157,91,.22);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+
+    .spell-article {
+        padding-top: 70px;
+    }
+
+    .spell-article article {
+        padding: 50px 24px;
+    }
+
+    .spell-article-header::before {
+        font-size: 3rem;
+    }
+
+}
