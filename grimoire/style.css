@@ -4684,3 +4684,398 @@ body.crystals-page {
     }
 
 }
+
+/* ==================================================
+   CRYSTAL ENTRY
+   ================================================== */
+
+.crystal-entry {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 110px 0 150px;
+}
+
+
+.crystal-record {
+    position: relative;
+
+    padding: 78px 66px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(100, 78, 138, .10),
+            transparent 34%
+        ),
+        linear-gradient(
+            rgba(12, 13, 16, .94),
+            rgba(6, 7, 9, .98)
+        );
+
+    border:
+        1px solid rgba(170, 140, 92, .22);
+
+    box-shadow:
+        0 24px 80px rgba(0,0,0,.45),
+        inset 0 0 80px rgba(91,73,122,.035);
+}
+
+
+.crystal-record::before {
+    content: "";
+
+    position: absolute;
+    inset: 12px;
+
+    border:
+        1px solid rgba(170,140,92,.07);
+
+    pointer-events: none;
+}
+
+
+/* HEADER */
+
+.crystal-record-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+
+.crystal-record-header .kicker {
+    color: #89818e;
+
+    text-transform: uppercase;
+
+    letter-spacing: .34em;
+
+    font-size: .66rem;
+}
+
+
+.crystal-entry-mark {
+    margin: 27px 0 18px;
+
+    color: #9d88b6;
+
+    font-size: 1.5rem;
+
+    text-shadow:
+        0 0 20px rgba(135,105,177,.22);
+}
+
+
+.crystal-record h1 {
+    margin: 0;
+
+    color: #e9e2d8;
+
+    font-size:
+        clamp(3.3rem, 8vw, 6.3rem);
+
+    font-weight: normal;
+
+    letter-spacing: .07em;
+
+    text-transform: uppercase;
+}
+
+
+.crystal-entry-variety {
+    margin: 17px 0 0;
+
+    color: #a49ba8;
+
+    font-size: 1rem;
+
+    font-style: italic;
+}
+
+
+.crystal-entry-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    margin: 32px auto;
+
+    color: #9c8058;
+}
+
+
+.crystal-entry-divider span {
+    width: 90px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(164,135,91,.45),
+            transparent
+        );
+}
+
+
+/* PROPERTIES */
+
+.crystal-properties {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0,1fr));
+
+    gap: 1px;
+
+    max-width: 700px;
+
+    margin: 35px auto 0;
+
+    border:
+        1px solid rgba(162,135,93,.12);
+}
+
+
+.crystal-properties div {
+    padding: 18px 12px;
+
+    background:
+        rgba(255,255,255,.015);
+}
+
+
+.crystal-properties span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #817987;
+
+    text-transform: uppercase;
+
+    letter-spacing: .13em;
+
+    font-size: .56rem;
+}
+
+
+.crystal-properties strong {
+    color: #c8c0c8;
+
+    font-size: .82rem;
+
+    font-weight: normal;
+}
+
+
+/* MY STONE */
+
+.crystal-personal {
+    display: grid;
+
+    grid-template-columns:
+        minmax(220px, .85fr)
+        minmax(0, 1.15fr);
+
+    gap: 42px;
+
+    margin: 65px 0;
+
+    padding: 35px;
+
+    border:
+        1px solid rgba(163,135,92,.15);
+
+    background:
+        rgba(255,255,255,.012);
+}
+
+
+.crystal-specimen-image img {
+    display: block;
+
+    width: 100%;
+    max-height: 400px;
+
+    object-fit: cover;
+
+    border:
+        1px solid rgba(172,145,101,.18);
+
+    filter:
+        brightness(.94)
+        saturate(.92);
+}
+
+
+.crystal-personal-content {
+    align-self: center;
+
+    color: #c4bdc5;
+
+    line-height: 1.8;
+}
+
+
+.crystal-acquired {
+    color: #a69da7;
+
+    font-style: italic;
+}
+
+
+.crystal-acquired span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #8e7654;
+
+    text-transform: uppercase;
+
+    letter-spacing: .12em;
+
+    font-size: .58rem;
+
+    font-style: normal;
+}
+
+
+/* SECTIONS */
+
+.crystal-record-section {
+    margin-top: 52px;
+
+    padding-top: 32px;
+
+    border-top:
+        1px solid rgba(164,137,93,.12);
+
+    color: #cbc4cb;
+
+    font-size: 1.02rem;
+
+    line-height: 1.9;
+}
+
+
+.crystal-record-label {
+    margin: 0 0 20px;
+
+    color: #9e825c;
+
+    text-transform: uppercase;
+
+    letter-spacing: .16em;
+
+    font-size: .64rem;
+}
+
+
+.crystal-record-section p {
+    margin: 0 0 1.4em;
+}
+
+
+/* EMPHASIZED ASSOCIATIONS */
+
+.crystal-associations {
+    padding: 34px 28px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(79,64,105,.09),
+            rgba(114,89,60,.05)
+        );
+
+    border-left:
+        1px solid rgba(158,130,91,.16);
+
+    border-right:
+        1px solid rgba(158,130,91,.16);
+}
+
+
+.crystal-record-notes {
+    color: #9e979f;
+
+    font-style: italic;
+}
+
+
+/* FOOTER */
+
+.crystal-record-footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+
+    margin-top: 75px;
+
+    padding-top: 30px;
+
+    border-top:
+        1px solid rgba(164,137,93,.12);
+}
+
+
+.crystal-record-footer span {
+    color: #8f7856;
+}
+
+
+.crystal-record-footer a {
+    color: #978b80;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    letter-spacing: .14em;
+
+    font-size: .68rem;
+}
+
+
+.crystal-record-footer a:hover {
+    color: #e4ddd4;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+
+    .crystal-entry {
+        padding: 70px 0 100px;
+    }
+
+    .crystal-record {
+        padding: 50px 24px;
+    }
+
+    .crystal-properties {
+        grid-template-columns:
+            repeat(2, minmax(0,1fr));
+    }
+
+    .crystal-personal {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding: 22px;
+    }
+
+    .crystal-record h1 {
+        font-size:
+            clamp(2.8rem, 13vw, 4.5rem);
+    }
+
+}
