@@ -1,0 +1,299 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots"
+          content="noindex, nofollow">
+
+    <title>{{ page.title }} | Crystals | Grimoire</title>
+
+    <link rel="icon"
+          type="image/png"
+          href="/grimoire/images/icon.png">
+
+    <link rel="stylesheet"
+          href="/grimoire/style.css">
+</head>
+
+
+<body class="crystals-page crystal-entry-page">
+
+<div class="grimoire-shell">
+
+    <header class="grimoire-header">
+
+        <a href="/grimoire/"
+           class="grimoire-mark">
+            Grimoire
+        </a>
+
+        <a href="/grimoire/crystals/"
+           class="return-link">
+            Back to Crystals
+        </a>
+
+    </header>
+
+
+    <main class="crystal-entry">
+
+        <article class="crystal-record">
+
+
+            <!-- HEADER -->
+
+            <header class="crystal-record-header">
+
+                <p class="kicker">
+                    The Mineral Cabinet
+                </p>
+
+                <div class="crystal-entry-mark">
+                    ◆
+                </div>
+
+                <h1>
+                    {{ page.title }}
+                </h1>
+
+
+                {% if page.variety %}
+
+                    <p class="crystal-entry-variety">
+                        {{ page.variety }}
+                    </p>
+
+                {% endif %}
+
+
+                <div class="crystal-entry-divider">
+                    <span></span>
+                    ◇
+                    <span></span>
+                </div>
+
+
+                <!-- QUICK DETAILS -->
+
+                {% if page.color or page.element or page.chakra or page.zodiac %}
+
+                <div class="crystal-properties">
+
+                    {% if page.color %}
+                    <div>
+                        <span>Color</span>
+                        <strong>{{ page.color }}</strong>
+                    </div>
+                    {% endif %}
+
+
+                    {% if page.element %}
+                    <div>
+                        <span>Element</span>
+                        <strong>{{ page.element }}</strong>
+                    </div>
+                    {% endif %}
+
+
+                    {% if page.chakra %}
+                    <div>
+                        <span>Chakra</span>
+                        <strong>{{ page.chakra }}</strong>
+                    </div>
+                    {% endif %}
+
+
+                    {% if page.zodiac %}
+                    <div>
+                        <span>Zodiac</span>
+                        <strong>{{ page.zodiac }}</strong>
+                    </div>
+                    {% endif %}
+
+                </div>
+
+                {% endif %}
+
+            </header>
+
+
+            <!-- MY ACTUAL STONE -->
+
+            {% if page.image or page.acquired or page.personal_notes %}
+
+            <section class="crystal-personal">
+
+                {% if page.image %}
+
+                <div class="crystal-specimen-image">
+
+                    <img
+                        src="{{ page.image }}"
+                        alt="{{ page.title }}">
+
+                </div>
+
+                {% endif %}
+
+
+                <div class="crystal-personal-content">
+
+                    <p class="crystal-record-label">
+                        My Stone
+                    </p>
+
+
+                    {% if page.acquired %}
+
+                    <p class="crystal-acquired">
+                        <span>Acquired</span>
+                        {{ page.acquired }}
+                    </p>
+
+                    {% endif %}
+
+
+                    {% if page.personal_notes %}
+
+                        {{ page.personal_notes | markdownify }}
+
+                    {% endif %}
+
+                </div>
+
+            </section>
+
+            {% endif %}
+
+
+            <!-- GEOLOGY -->
+
+            {% if page.geology %}
+
+            <section class="crystal-record-section">
+
+                <p class="crystal-record-label">
+                    Physical & Geological Notes
+                </p>
+
+                {{ page.geology | markdownify }}
+
+            </section>
+
+            {% endif %}
+
+
+            <!-- ASSOCIATIONS -->
+
+            {% if page.associations %}
+
+            <section class="crystal-record-section crystal-associations">
+
+                <p class="crystal-record-label">
+                    Traditional Associations
+                </p>
+
+                {{ page.associations | markdownify }}
+
+            </section>
+
+            {% endif %}
+
+
+            <!-- USES -->
+
+            {% if page.uses %}
+
+            <section class="crystal-record-section">
+
+                <p class="crystal-record-label">
+                    Uses
+                </p>
+
+                {{ page.uses | markdownify }}
+
+            </section>
+
+            {% endif %}
+
+
+            <!-- CARE -->
+
+            {% if page.care %}
+
+            <section class="crystal-record-section">
+
+                <p class="crystal-record-label">
+                    Cleansing & Care
+                </p>
+
+                {{ page.care | markdownify }}
+
+            </section>
+
+            {% endif %}
+
+
+            <!-- PAIRINGS -->
+
+            {% if page.pairings %}
+
+            <section class="crystal-record-section">
+
+                <p class="crystal-record-label">
+                    Crystal Pairings
+                </p>
+
+                {{ page.pairings | markdownify }}
+
+            </section>
+
+            {% endif %}
+
+
+            <!-- EXTRA NOTES -->
+
+            {% if page.notes %}
+
+            <section class="crystal-record-section crystal-record-notes">
+
+                <p class="crystal-record-label">
+                    Additional Notes
+                </p>
+
+                {{ page.notes | markdownify }}
+
+            </section>
+
+            {% endif %}
+
+
+            <footer class="crystal-record-footer">
+
+                <span>◇</span>
+
+                <a href="/grimoire/crystals/">
+                    Return to the Mineral Cabinet
+                </a>
+
+                <span>◇</span>
+
+            </footer>
+
+        </article>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>
