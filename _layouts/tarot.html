@@ -97,19 +97,19 @@
 
             <!-- TRADITIONAL MEANING -->
 
-            {% if page.meaning %}
+            {% if page.traditional_meaning %}
 
-                <section class="tarot-reading-section">
+             <section class="tarot-reading-section">
 
                     <p class="tarot-section-label">
                         Traditional Meaning
                     </p>
 
-                    {{ page.meaning | markdownify }}
+                {{ page.traditional_meaning | markdownify }}
 
-                </section>
+             </section>
 
-            {% endif %}
+{% endif %}
 
 
             <!-- INTERPRETATION -->
