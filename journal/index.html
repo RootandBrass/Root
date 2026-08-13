@@ -20,15 +20,25 @@
 
       <div class="journal-years">
 
-        <h2>2026</h2>
+  {% assign journal_entries = site.pages
+    | where_exp: "item", "item.path contains 'journal/entries/'"
+    | sort: "date"
+    | reverse
+  %}
 
-        <ul>
-          <li><a href="#">August 13, 2026</a></li>
-          <li><a href="#">August 12, 2026</a></li>
-          <li><a href="#">August 11, 2026</a></li>
-        </ul>
+  <ul class="journal-entry-list">
+    {% for entry in journal_entries %}
 
-      </div>
+      <li>
+        <a href="{{ entry.url }}">
+          {{ entry.date | date: "%B %-d, %Y" }}
+        </a>
+      </li>
+
+    {% endfor %}
+  </ul>
+
+</div>
 
     </section>
 
