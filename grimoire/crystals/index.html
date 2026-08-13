@@ -1,0 +1,260 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots"
+          content="noindex, nofollow">
+
+    <title>Crystals | Grimoire</title>
+
+    <link rel="icon"
+          type="image/png"
+          href="/grimoire/images/icon.png">
+
+    <link rel="stylesheet"
+          href="/grimoire/style.css">
+</head>
+
+
+<body class="crystals-page">
+
+<div class="grimoire-shell">
+
+    <header class="grimoire-header">
+
+        <a href="/grimoire/"
+           class="grimoire-mark">
+            Grimoire
+        </a>
+
+        <a href="/"
+           class="return-link">
+            Return Home
+        </a>
+
+    </header>
+
+
+    <main class="crystal-page">
+
+        <!-- HERO -->
+
+        <section class="crystal-hero">
+
+            <div class="crystal-hero-content">
+
+                <p class="kicker">
+                    The Grimoire
+                </p>
+
+                <h1>Crystals</h1>
+
+                <div class="crystal-divider">
+                    <span></span>
+                    ◆
+                    <span></span>
+                </div>
+
+                <p class="crystal-lead">
+                    Stones gathered, studied, carried,
+                    and kept for reasons both earthly and otherwise.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CABINET -->
+
+        <section class="crystal-library">
+
+            <header class="crystal-library-heading">
+
+                <p class="kicker">
+                    Personal Collection
+                </p>
+
+                <h2>The Mineral Cabinet</h2>
+
+                <div class="crystal-small-divider">
+                    ◇ &nbsp; ✦ &nbsp; ◇
+                </div>
+
+            </header>
+
+
+            <div class="crystal-grid">
+
+                {% assign crystal_entries = site.pages
+                    | where_exp: "item",
+                      "item.path contains 'grimoire/crystals/entries/'"
+                    | sort: "title" %}
+
+
+                {% if crystal_entries.size > 0 %}
+
+                    {% for crystal in crystal_entries %}
+
+                    <article class="crystal-card">
+
+                        <a href="{{ crystal.url }}">
+
+                            {% if crystal.image %}
+
+                            <div class="crystal-card-image">
+
+                                <img
+                                    src="{{ crystal.image }}"
+                                    alt="{{ crystal.title }}">
+
+                            </div>
+
+                            {% else %}
+
+                            <div class="crystal-card-symbol">
+                                ◆
+                            </div>
+
+                            {% endif %}
+
+
+                            <p class="crystal-card-kicker">
+                                Specimen
+                            </p>
+
+
+                            <h3>
+                                {{ crystal.title }}
+                            </h3>
+
+
+                            {% if crystal.variety %}
+
+                            <p class="crystal-variety">
+                                {{ crystal.variety }}
+                            </p>
+
+                            {% endif %}
+
+
+                            <div class="crystal-card-details">
+
+                                {% if crystal.element %}
+
+                                <span>
+                                    {{ crystal.element }}
+                                </span>
+
+                                {% endif %}
+
+
+                                {% if crystal.zodiac %}
+
+                                <span>
+                                    {{ crystal.zodiac }}
+                                </span>
+
+                                {% endif %}
+
+                            </div>
+
+
+                            {% if crystal.associations %}
+
+                            <div class="crystal-preview">
+
+                                {{ crystal.associations
+                                   | markdownify
+                                   | strip_html
+                                   | truncate: 115 }}
+
+                            </div>
+
+                            {% endif %}
+
+
+                            <div class="crystal-card-footer">
+
+                                <span>Open Specimen</span>
+
+                                <span>◆</span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+                    {% endfor %}
+
+
+                {% else %}
+
+                <div class="empty-crystal">
+
+                    <span>◇</span>
+
+                    <p>
+                        The cabinet is waiting
+                        for its first specimen.
+                    </p>
+
+                </div>
+
+                {% endif %}
+
+            </div>
+
+        </section>
+
+
+        <!-- GRIMOIRE NAV -->
+
+        <nav class="section-nav">
+
+            <a href="/grimoire/herbs/">
+                Herbs
+            </a>
+
+            <a href="/grimoire/crystals/"
+               aria-current="page">
+                Crystals
+            </a>
+
+            <a href="/grimoire/tarot/">
+                Tarot
+            </a>
+
+            <a href="/grimoire/spells/">
+                Spells
+            </a>
+
+            <a href="/grimoire/recipes/">
+                Recipes
+            </a>
+
+            <a href="/grimoire/moon/">
+                Moon
+            </a>
+
+            <a href="/grimoire/dreams/">
+                Dreams
+            </a>
+
+        </nav>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>
