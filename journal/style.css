@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body.journal-site {
+  min-height: 100vh;
+  padding: 40px 20px;
+
+  background:
+    radial-gradient(circle at center, #2a251f 0%, #1c1915 70%, #12100e 100%);
+
+  color: #3f3126;
+
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.journal-paper {
+  position: relative;
+
+  width: min(780px, 100%);
+  min-height: 88vh;
+
+  margin: 0 auto;
+  padding: 70px 75px 90px;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      #f1dfb8 0%,
+      #ead3a3 65%,
+      #d3aa73 88%,
+      #9a673f 100%
+    );
+
+  border: 1px solid rgba(88, 52, 28, 0.4);
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.45),
+    inset 0 0 35px rgba(92, 55, 29, 0.18),
+    inset 0 0 90px rgba(94, 55, 30, 0.18);
+}
+
+/* faint handmade-paper fibers */
+.journal-paper::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+  opacity: 0.18;
+
+  background-image:
+    repeating-linear-gradient(
+      12deg,
+      rgba(85, 58, 37, 0.06) 0,
+      rgba(85, 58, 37, 0.06) 1px,
+      transparent 1px,
+      transparent 8px
+    ),
+    repeating-linear-gradient(
+      103deg,
+      rgba(255, 255, 255, 0.07) 0,
+      rgba(255, 255, 255, 0.07) 1px,
+      transparent 1px,
+      transparent 12px
+    );
+}
+
+/* darker, softly aged outer edge */
+.journal-paper::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  box-shadow:
+    inset 14px 0 20px rgba(92, 54, 28, 0.12),
+    inset -14px 0 20px rgba(92, 54, 28, 0.12),
+    inset 0 14px 20px rgba(92, 54, 28, 0.12),
+    inset 0 -18px 24px rgba(92, 54, 28, 0.16);
+}
+
+.journal-index {
+  position: relative;
+  z-index: 1;
+}
+
+.journal-index h1 {
+  margin: 0 0 55px;
+
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: 0.18em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.journal-years h2 {
+  margin: 0 0 18px;
+
+  font-size: 1.1rem;
+  font-weight: normal;
+  letter-spacing: 0.12em;
+}
+
+.journal-years ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.journal-years li {
+  margin-bottom: 12px;
+}
+
+.journal-years a {
+  color: #4c382a;
+  text-decoration: none;
+}
+
+.journal-years a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  body.journal-site {
+    padding: 16px 10px;
+  }
+
+  .journal-paper {
+    min-height: calc(100vh - 32px);
+    padding: 50px 28px 70px;
+  }
+}
