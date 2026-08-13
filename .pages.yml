@@ -417,3 +417,4 @@ content:
         label: Notes
         type: rich-text
         required: false
+
