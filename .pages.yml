@@ -101,6 +101,12 @@ content:
       order: desc
 
     fields:
+      - name: layout
+        label: Layout
+        type: string
+        default: spell
+        hidden: true
+        
       - name: title
         label: Title
         type: string
