@@ -29,66 +29,15 @@ body.journal-site {
   margin: 0 auto;
   padding: 70px 75px 90px;
 
-  background:
-    background-image: url("/journal/images/journal-background.png");
-background-size: 100% 100%;
-background-position: center;
-background-repeat: no-repeat;
+  background-image: url("/journal/images/journal-background.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 
-color: #e8dcc4;
-   
-    );
-
-  border: 1px solid rgba(88, 52, 28, 0.4);
+  color: #e8dcc4;
 
   box-shadow:
-    0 20px 45px rgba(0, 0, 0, 0.45),
-    inset 0 0 35px rgba(92, 55, 29, 0.18),
-    inset 0 0 90px rgba(94, 55, 30, 0.18);
-
-}
-
-/* faint handmade-paper fibers */
-.journal-paper::before {
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  pointer-events: none;
-  opacity: 0.18;
-
-  background-image:
-    repeating-linear-gradient(
-      12deg,
-      rgba(85, 58, 37, 0.06) 0,
-      rgba(85, 58, 37, 0.06) 1px,
-      transparent 1px,
-      transparent 8px
-    ),
-    repeating-linear-gradient(
-      103deg,
-      rgba(255, 255, 255, 0.07) 0,
-      rgba(255, 255, 255, 0.07) 1px,
-      transparent 1px,
-      transparent 12px
-    );
-}
-
-/* darker, softly aged outer edge */
-.journal-paper::after {
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  pointer-events: none;
-
-  box-shadow:
-    inset 14px 0 20px rgba(92, 54, 28, 0.12),
-    inset -14px 0 20px rgba(92, 54, 28, 0.12),
-    inset 0 14px 20px rgba(92, 54, 28, 0.12),
-    inset 0 -18px 24px rgba(92, 54, 28, 0.16);
+    0 20px 45px rgba(0, 0, 0, 0.45);
 }
 
 .journal-index {
@@ -126,7 +75,7 @@ color: #e8dcc4;
 }
 
 .journal-years a {
-  color: #4c382a;
+  color: #c2a66b;
   text-decoration: none;
 }
 
