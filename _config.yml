@@ -22,3 +22,9 @@ defaults:
       type: "pages"
     values:
       layout: tarot
+
+  - scope:
+      path: "grimoire/moon/entries"
+      type: "pages"
+    values:
+      layout: moon
