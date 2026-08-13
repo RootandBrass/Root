@@ -4185,3 +4185,502 @@ body.moon-journal {
         drop-shadow(0 0 18px rgba(238, 92, 118, .34))
         drop-shadow(0 0 42px rgba(221, 116, 67, .16));
 }
+
+/* ==================================================
+   CRYSTALS
+   ================================================== */
+
+body.crystals-page {
+    background: #050608;
+    color: #d8d4ce;
+}
+
+
+/* HERO */
+
+.crystal-hero {
+    position: relative;
+
+    min-height: 980px;
+
+    display: flex;
+    align-items: flex-end;
+
+    margin-top: 35px;
+
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(2, 3, 5, .05) 0%,
+            rgba(2, 3, 5, .12) 55%,
+            rgba(2, 3, 5, .68) 84%,
+            #050608 100%
+        ),
+        url("/grimoire/images/crystals-background.png");
+
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    border-left: 1px solid rgba(168, 136, 87, .14);
+    border-right: 1px solid rgba(168, 136, 87, .14);
+}
+
+
+.crystal-hero-content {
+    width: 100%;
+
+    padding: 100px 8% 120px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(4, 5, 7, .55)
+        );
+}
+
+
+.crystal-hero .kicker {
+    margin-bottom: 15px;
+
+    color: #91889e;
+
+    text-transform: uppercase;
+
+    letter-spacing: .35em;
+
+    font-size: .68rem;
+}
+
+
+.crystal-hero h1 {
+    margin: 0;
+
+    color: #e8e0d6;
+
+    font-size: clamp(4rem, 10vw, 7.4rem);
+
+    font-weight: normal;
+
+    letter-spacing: .10em;
+
+    text-shadow:
+        0 3px 30px rgba(0,0,0,.82),
+        0 0 30px rgba(132, 108, 177, .10);
+}
+
+
+.crystal-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    margin: 28px auto;
+
+    color: #aa8a57;
+}
+
+
+.crystal-divider span {
+    width: 90px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(170,138,87,.55),
+            transparent
+        );
+}
+
+
+.crystal-lead {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: #aaa3ad;
+
+    font-style: italic;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+}
+
+
+/* LIBRARY */
+
+.crystal-library {
+    max-width: 1120px;
+
+    margin: 0 auto;
+
+    padding: 100px 40px 135px;
+}
+
+
+.crystal-library-heading {
+    text-align: center;
+
+    margin-bottom: 58px;
+}
+
+
+.crystal-library-heading .kicker {
+    color: #7f7888;
+
+    text-transform: uppercase;
+
+    letter-spacing: .28em;
+
+    font-size: .65rem;
+}
+
+
+.crystal-library-heading h2 {
+    margin: 15px 0 18px;
+
+    color: #ded7cd;
+
+    font-size: clamp(2.2rem, 5vw, 3.7rem);
+
+    font-weight: normal;
+
+    letter-spacing: .07em;
+}
+
+
+.crystal-small-divider {
+    color: #9b8058;
+
+    letter-spacing: .15em;
+}
+
+
+/* GRID */
+
+.crystal-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* CARD */
+
+.crystal-card {
+    position: relative;
+    overflow: hidden;
+
+    border: 1px solid rgba(158, 133, 95, .20);
+
+    background:
+        radial-gradient(
+            circle at 80% 10%,
+            rgba(92, 73, 126, .10),
+            transparent 36%
+        ),
+        linear-gradient(
+            150deg,
+            rgba(14, 15, 18, .96),
+            rgba(7, 8, 10, .99)
+        );
+
+    box-shadow:
+        inset 0 0 35px rgba(0,0,0,.22);
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.crystal-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 8px;
+
+    border: 1px solid rgba(171, 144, 96, .07);
+
+    pointer-events: none;
+}
+
+
+.crystal-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(177, 145, 92, .42);
+
+    box-shadow:
+        0 22px 55px rgba(0,0,0,.36),
+        inset 0 0 40px rgba(103,83,133,.03);
+}
+
+
+.crystal-card a {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 420px;
+
+    padding: 32px;
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+/* PHOTO */
+
+.crystal-card-image {
+    margin-bottom: 26px;
+
+    border: 1px solid rgba(166, 142, 100, .14);
+
+    background: #07080a;
+}
+
+
+.crystal-card-image img {
+    display: block;
+
+    width: 100%;
+    height: 210px;
+
+    object-fit: cover;
+
+    filter:
+        brightness(.92)
+        saturate(.90);
+}
+
+
+.crystal-card-symbol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 160px;
+
+    margin-bottom: 24px;
+
+    color: #9582b0;
+
+    font-size: 3rem;
+
+    text-shadow:
+        0 0 22px rgba(126, 101, 169, .20);
+}
+
+
+/* TEXT */
+
+.crystal-card-kicker {
+    margin: 0 0 8px;
+
+    color: #7f7887;
+
+    text-transform: uppercase;
+
+    letter-spacing: .18em;
+
+    font-size: .58rem;
+}
+
+
+.crystal-card h3 {
+    margin: 0 0 10px;
+
+    color: #e3ddd4;
+
+    font-size: 1.7rem;
+
+    font-weight: normal;
+
+    letter-spacing: .04em;
+}
+
+
+.crystal-variety {
+    margin: 0 0 18px;
+
+    color: #958c98;
+
+    font-style: italic;
+}
+
+
+/* DETAILS */
+
+.crystal-card-details {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 18px;
+}
+
+
+.crystal-card-details span {
+    padding: 5px 8px;
+
+    border: 1px solid rgba(132, 120, 148, .16);
+
+    color: #8f8797;
+
+    font-size: .62rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .10em;
+}
+
+
+/* PREVIEW */
+
+.crystal-preview {
+    margin-top: auto;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid rgba(164,137,93,.10);
+
+    color: #9d969f;
+
+    font-size: .88rem;
+
+    line-height: 1.65;
+}
+
+
+/* FOOTER */
+
+.crystal-card-footer {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 22px;
+
+    padding-top: 17px;
+
+    border-top:
+        1px solid rgba(164,137,93,.10);
+
+    color: #9f855e;
+
+    text-transform: uppercase;
+
+    letter-spacing: .13em;
+
+    font-size: .59rem;
+}
+
+
+/* EMPTY */
+
+.empty-crystal {
+    grid-column: 1 / -1;
+
+    padding: 95px 30px;
+
+    text-align: center;
+
+    color: #817a86;
+
+    font-style: italic;
+}
+
+
+.empty-crystal span {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: #9d8bb3;
+
+    font-size: 2.2rem;
+
+    font-style: normal;
+}
+
+
+/* NAV */
+
+.crystals-page .section-nav a {
+    color: #77737e;
+}
+
+
+.crystals-page .section-nav a:hover,
+.crystals-page .section-nav a[aria-current="page"] {
+    color: #ded8cf;
+
+    text-shadow:
+        0 0 12px rgba(126,102,165,.18);
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .crystal-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+
+    .crystal-hero {
+        min-height: 760px;
+
+        background-position: center top;
+    }
+
+    .crystal-hero-content {
+        padding:
+            75px 24px
+            95px;
+    }
+
+    .crystal-library {
+        padding:
+            75px 20px
+            100px;
+    }
+
+    .crystal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .crystal-card a {
+        min-height: 360px;
+    }
+
+}
