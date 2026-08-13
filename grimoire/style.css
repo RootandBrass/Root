@@ -3119,3 +3119,267 @@ body.tarot {
     }
 
 }
+
+/* ==================================================
+   TAROT ENTRY
+   ================================================== */
+
+.tarot-entry {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 110px 0 150px;
+}
+
+.tarot-reading {
+    position: relative;
+
+    padding: 78px 66px;
+
+    background:
+        radial-gradient(
+            circle at 85% 10%,
+            rgba(130, 76, 165, .10),
+            transparent 34%
+        ),
+        linear-gradient(
+            rgba(10, 8, 17, .88),
+            rgba(6, 6, 12, .95)
+        );
+
+    border: 1px solid rgba(201, 157, 84, .22);
+
+    box-shadow:
+        0 24px 80px rgba(0,0,0,.42),
+        inset 0 0 75px rgba(119, 66, 150, .035);
+
+    backdrop-filter: blur(4px);
+}
+
+
+/* INNER FRAME */
+
+.tarot-reading::before {
+    content: "";
+
+    position: absolute;
+    inset: 12px;
+
+    border: 1px solid rgba(201, 157, 84, .08);
+
+    pointer-events: none;
+}
+
+
+/* HEADER */
+
+.tarot-reading-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.tarot-reading-header .kicker {
+    margin-bottom: 12px;
+
+    color: #9b88ae;
+
+    text-transform: uppercase;
+
+    letter-spacing: .34em;
+
+    font-size: .68rem;
+}
+
+.tarot-reading-date {
+    margin: 0;
+
+    color: #7b7380;
+
+    text-transform: uppercase;
+
+    letter-spacing: .15em;
+
+    font-size: .66rem;
+}
+
+.tarot-reading-star {
+    margin: 26px 0 18px;
+
+    color: #c39a58;
+
+    font-size: 1.1rem;
+
+    text-shadow:
+        0 0 16px rgba(195,154,88,.24);
+}
+
+.tarot-reading h1 {
+    margin: 0;
+
+    color: #eee1ce;
+
+    font-size: clamp(3rem, 7vw, 5.8rem);
+
+    font-weight: normal;
+
+    letter-spacing: .07em;
+
+    text-shadow:
+        0 0 24px rgba(145, 86, 178, .11);
+}
+
+.tarot-reading-orientation {
+    margin: 18px 0 0;
+
+    color: #ad8f60;
+
+    text-transform: uppercase;
+
+    letter-spacing: .18em;
+
+    font-size: .68rem;
+}
+
+
+/* QUESTION */
+
+.tarot-reading-question {
+    max-width: 620px;
+
+    margin: 36px auto 0;
+
+    padding: 22px 28px;
+
+    border-top: 1px solid rgba(201,157,84,.14);
+    border-bottom: 1px solid rgba(201,157,84,.14);
+
+    color: #b6a8ba;
+
+    font-style: italic;
+
+    line-height: 1.8;
+}
+
+
+/* SECTIONS */
+
+.tarot-reading-section {
+    position: relative;
+
+    margin-top: 55px;
+
+    padding-top: 34px;
+
+    border-top: 1px solid rgba(201,157,84,.13);
+
+    color: #d0c7d2;
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+}
+
+.tarot-section-label {
+    margin: 0 0 20px;
+
+    color: #b38b53;
+
+    text-transform: uppercase;
+
+    letter-spacing: .15em;
+
+    font-size: .67rem;
+}
+
+.tarot-reading-section p {
+    margin: 0 0 1.4em;
+}
+
+.tarot-reading-section ul,
+.tarot-reading-section ol {
+    padding-left: 1.4em;
+}
+
+
+/* INTERPRETATION EMPHASIS */
+
+.tarot-interpretation {
+    padding: 34px 28px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(97, 58, 122, .10),
+            rgba(149, 84, 54, .07)
+        );
+
+    border-left: 1px solid rgba(180, 129, 70, .18);
+    border-right: 1px solid rgba(180, 129, 70, .18);
+}
+
+
+/* NOTES */
+
+.tarot-reading-notes {
+    color: #aaa1ad;
+
+    font-style: italic;
+}
+
+
+/* FOOTER */
+
+.tarot-reading-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+
+    margin-top: 75px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid rgba(201,157,84,.13);
+}
+
+.tarot-reading-footer span {
+    color: #9e7d4f;
+}
+
+.tarot-reading-footer a {
+    color: #a99471;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    letter-spacing: .14em;
+
+    font-size: .70rem;
+}
+
+.tarot-reading-footer a:hover {
+    color: #eee2d2;
+
+    text-shadow:
+        0 0 12px rgba(183,126,212,.20);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+
+    .tarot-entry {
+        padding: 70px 0 100px;
+    }
+
+    .tarot-reading {
+        padding: 50px 24px;
+    }
+
+    .tarot-reading h1 {
+        font-size: clamp(2.8rem, 13vw, 4.4rem);
+    }
+
+}
