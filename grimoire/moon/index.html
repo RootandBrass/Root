@@ -113,41 +113,13 @@
 
                         <a href="{{ entry.url }}">
 
-                            <div class="moon-phase-symbol">
+                            <div class="moon-phase-image">
 
-                                {% case entry.phase %}
-
-                                    {% when "new-moon" %}
-                                        ●
-
-                                    {% when "waxing-crescent" %}
-                                        ☽
-
-                                    {% when "first-quarter" %}
-                                        ◐
-
-                                    {% when "waxing-gibbous" %}
-                                        ◕
-
-                                    {% when "full-moon" %}
-                                        ○
-
-                                    {% when "waning-gibbous" %}
-                                        ◕
-
-                                    {% when "last-quarter" %}
-                                        ◑
-
-                                    {% when "waning-crescent" %}
-                                        ☾
-
-                                    {% else %}
-                                        ○
-
-                                {% endcase %}
+                                <img
+                                    src="/grimoire/images/moons/{{ entry.phase }}.png"
+                                    alt="{{ entry.phase | replace: '-', ' ' }}">
 
                             </div>
-
 
                             {% if entry.phase %}
 
