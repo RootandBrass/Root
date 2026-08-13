@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{ page.date | date: "%B %-d, %Y" }} | Journal</title>
+
+  <link rel="stylesheet" href="/journal/style.css">
+</head>
+
+<body class="journal-site">
+
+  <main class="journal-paper">
+
+    <article class="journal-entry-page">
+
+      <a class="journal-back" href="/journal/">Journal</a>
+
+      <time
+        class="journal-entry-date"
+        datetime="{{ page.date | date: "%Y-%m-%d" }}"
+      >
+        {{ page.date | date: "%B %-d, %Y" }}
+      </time>
+
+      <div class="journal-entry-content">
+        {{ content }}
+      </div>
+
+    </article>
+
+  </main>
+
+</body>
+
+</html>
