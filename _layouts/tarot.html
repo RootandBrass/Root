@@ -1,0 +1,217 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots"
+          content="noindex, nofollow">
+
+    <title>{{ page.title }} | Tarot | Grimoire</title>
+
+    <link rel="icon"
+          type="image/png"
+          href="/grimoire/images/icon.png">
+
+    <link rel="stylesheet"
+          href="/grimoire/style.css">
+</head>
+
+
+<body class="tarot tarot-entry-page">
+
+<div class="grimoire-shell">
+
+    <header class="grimoire-header">
+
+        <a href="/grimoire/"
+           class="grimoire-mark">
+            Grimoire
+        </a>
+
+        <a href="/grimoire/tarot/"
+           class="return-link">
+            Back to Tarot
+        </a>
+
+    </header>
+
+
+    <main class="tarot-entry">
+
+        <article class="tarot-reading">
+
+
+            <!-- HEADER -->
+
+            <header class="tarot-reading-header">
+
+                <p class="kicker">
+                    The Cards
+                </p>
+
+                {% if page.date %}
+
+                    <p class="tarot-reading-date">
+                        {{ page.date | date: "%B %-d, %Y" }}
+                    </p>
+
+                {% endif %}
+
+
+                <div class="tarot-reading-star">
+                    ✦
+                </div>
+
+
+                <h1>
+                    {{ page.title }}
+                </h1>
+
+
+                {% if page.orientation %}
+
+                    <p class="tarot-reading-orientation">
+                        {{ page.orientation }}
+                    </p>
+
+                {% endif %}
+
+
+                {% if page.question %}
+
+                    <blockquote class="tarot-reading-question">
+                        {{ page.question }}
+                    </blockquote>
+
+                {% endif %}
+
+            </header>
+
+
+            <!-- TRADITIONAL MEANING -->
+
+            {% if page.meaning %}
+
+                <section class="tarot-reading-section">
+
+                    <p class="tarot-section-label">
+                        Traditional Meaning
+                    </p>
+
+                    {{ page.meaning | markdownify }}
+
+                </section>
+
+            {% endif %}
+
+
+            <!-- INTERPRETATION -->
+
+            {% if page.interpretation %}
+
+                <section class="tarot-reading-section tarot-interpretation">
+
+                    <p class="tarot-section-label">
+                        My Interpretation
+                    </p>
+
+                    {{ page.interpretation | markdownify }}
+
+                </section>
+
+            {% endif %}
+
+
+            <!-- SYMBOLS -->
+
+            {% if page.symbols %}
+
+                <section class="tarot-reading-section">
+
+                    <p class="tarot-section-label">
+                        Symbols Noticed
+                    </p>
+
+                    {{ page.symbols | markdownify }}
+
+                </section>
+
+            {% endif %}
+
+
+            <!-- OUTCOME -->
+
+            {% if page.outcome %}
+
+                <section class="tarot-reading-section">
+
+                    <p class="tarot-section-label">
+                        Outcome & Follow-Up
+                    </p>
+
+                    {{ page.outcome | markdownify }}
+
+                </section>
+
+            {% endif %}
+
+
+            <!-- ADDITIONAL CONTENT -->
+
+            {% if content != "" %}
+
+                <section class="tarot-reading-section">
+
+                    {{ content }}
+
+                </section>
+
+            {% endif %}
+
+
+            <!-- NOTES -->
+
+            {% if page.notes %}
+
+                <section class="tarot-reading-section tarot-reading-notes">
+
+                    <p class="tarot-section-label">
+                        Notes
+                    </p>
+
+                    {{ page.notes | markdownify }}
+
+                </section>
+
+            {% endif %}
+
+
+            <footer class="tarot-reading-footer">
+
+                <span>✦</span>
+
+                <a href="/grimoire/tarot/">
+                    Return to the Cards
+                </a>
+
+                <span>✦</span>
+
+            </footer>
+
+
+        </article>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>
