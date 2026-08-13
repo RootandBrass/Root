@@ -16,3 +16,9 @@ defaults:
       type: "pages"
     values:
       layout: recipe
+
+    - scope:
+    path: "grimoire/tarot/entries"
+    type: "pages"
+  values:
+    layout: tarot
