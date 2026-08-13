@@ -291,7 +291,7 @@ content:
       - name: interpretation
         label: My Interpretation
         type: rich-text
-        required: true
+        required: false
 
       - name: symbols
         label: Symbols Noticed
