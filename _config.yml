@@ -28,3 +28,9 @@ defaults:
       type: "pages"
     values:
       layout: moon
+
+  - scope:
+      path: "grimoire/crystals/entries"
+      type: "pages"
+    values:
+      layout: crystal
