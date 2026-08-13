@@ -9,40 +9,19 @@ content:
     label: Journal
     type: collection
     path: journal/entries
-    filename: "{year}-{month}-{day}-{primary}.md"
+    filename: "{year}-{month}-{day}.md"
     format: yaml-frontmatter
 
     view:
-      primary: title
+      primary: date
       sort: date
       order: desc
 
     fields:
-      - name: title
-        label: Title
-        type: string
-        required: true
-
       - name: date
         label: Date
         type: date
         required: true
-
-      - name: category
-        label: Category
-        type: select
-        options:
-          values:
-            - Journal
-            - Garden
-            - 301 Ruby
-            - History
-            - Family
-
-      - name: image
-        label: Image
-        type: image
-        required: false
 
       - name: body
         label: Entry
