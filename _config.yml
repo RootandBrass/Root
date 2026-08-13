@@ -10,3 +10,9 @@ defaults:
       type: "pages"
     values:
       layout: spell
+
+  - scope:
+      path: "grimoire/recipes/entries"
+      type: "pages"
+    values:
+      layout: recipe
