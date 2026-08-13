@@ -1,0 +1,222 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots"
+          content="noindex, nofollow">
+
+    <title>{{ page.title }} | Recipes | Grimoire</title>
+
+    <link rel="icon"
+          type="image/png"
+          href="/grimoire/images/icon.png">
+
+    <link rel="stylesheet"
+          href="/grimoire/style.css">
+</head>
+
+<body class="recipes recipe-article-page">
+
+<div class="grimoire-shell">
+
+    <header class="grimoire-header">
+
+        <a href="/grimoire/"
+           class="grimoire-mark">
+            Grimoire
+        </a>
+
+        <a href="/grimoire/recipes/"
+           class="return-link">
+            Back to Recipes
+        </a>
+
+    </header>
+
+
+    <main class="recipe-article">
+
+        <article>
+
+            <header class="recipe-article-header">
+
+                <p class="kicker">
+                    Working Kitchen
+                </p>
+
+                <p class="recipe-article-date">
+                    {{ page.date | date: "%B %-d, %Y" }}
+                </p>
+
+                <h1>
+                    {{ page.title }}
+                </h1>
+
+                {% if page.category %}
+
+                    <p class="recipe-article-category">
+                        {{ page.category | replace: "-", " " }}
+                    </p>
+
+                {% endif %}
+
+                {% if page.purpose %}
+
+                    <p class="recipe-article-purpose">
+                        {{ page.purpose }}
+                    </p>
+
+                {% endif %}
+
+                <div class="recipe-article-symbol">
+                    ✦ ♨ ✦
+                </div>
+
+            </header>
+
+
+            {% if page.ingredients %}
+
+                <section class="recipe-section ingredients-section">
+
+                    <h2>
+                        Ingredients
+                    </h2>
+
+                    {{ page.ingredients | markdownify }}
+
+                </section>
+
+            {% endif %}
+
+
+            {% if page.method %}
+
+                <section class="recipe-section">
+
+                    <h2>
+                        Method
+                    </h2>
+
+                    {{ page.method | markdownify }}
+
+                </section>
+
+            {% endif %}
+
+
+            {% if page.storage or page.shelf_life %}
+
+                <section class="recipe-details">
+
+                    {% if page.storage %}
+
+                        <div>
+                            <span>Storage</span>
+
+                            <p>
+                                {{ page.storage }}
+                            </p>
+                        </div>
+
+                    {% endif %}
+
+
+                    {% if page.shelf_life %}
+
+                        <div>
+                            <span>Shelf Life</span>
+
+                            <p>
+                                {{ page.shelf_life }}
+                            </p>
+                        </div>
+
+                    {% endif %}
+
+                </section>
+
+            {% endif %}
+
+
+            {% if content != "" %}
+
+                <div class="recipe-article-content">
+
+                    {{ content }}
+
+                </div>
+
+            {% endif %}
+
+
+            {% if page.result %}
+
+                <section class="recipe-section recipe-result">
+
+                    <h2>
+                        Result
+                    </h2>
+
+                    {{ page.result | markdownify }}
+
+                </section>
+
+            {% endif %}
+
+
+            {% if page.changes %}
+
+                <section class="recipe-section">
+
+                    <h2>
+                        Changes for Next Time
+                    </h2>
+
+                    {{ page.changes | markdownify }}
+
+                </section>
+
+            {% endif %}
+
+
+            {% if page.notes %}
+
+                <section class="recipe-section">
+
+                    <h2>
+                        Notes
+                    </h2>
+
+                    {{ page.notes | markdownify }}
+
+                </section>
+
+            {% endif %}
+
+
+            <footer class="recipe-article-footer">
+
+                <a href="/grimoire/recipes/">
+                    ← Return to Recipes
+                </a>
+
+            </footer>
+
+        </article>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>
