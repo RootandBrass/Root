@@ -229,3 +229,86 @@ content:
         label: Additional Entry
         type: rich-text
         required: false
+
+  - name: tarot
+    label: Tarot
+    type: collection
+    path: grimoire/tarot/entries
+    filename: "{year}-{month}-{day}-{primary}.md"
+    format: yaml-frontmatter
+
+    view:
+      primary: title
+      fields:
+        - deck
+        - orientation
+        - date
+      sort: date
+      order: desc
+
+    fields:
+      - name: title
+        label: Card or Reading Title
+        type: string
+        required: true
+
+      - name: date
+        label: Date
+        type: date
+        required: true
+
+      - name: deck
+        label: Deck
+        type: string
+        required: false
+
+      - name: orientation
+        label: Orientation
+        type: select
+        required: false
+        options:
+          values:
+            - value: upright
+              label: Upright
+            - value: reversed
+              label: Reversed
+
+      - name: question
+        label: Question or Prompt
+        type: string
+        required: false
+
+      - name: position
+        label: Spread Position
+        type: string
+        required: false
+
+      - name: traditional_meaning
+        label: Traditional Meaning
+        type: rich-text
+        required: false
+
+      - name: interpretation
+        label: My Interpretation
+        type: rich-text
+        required: true
+
+      - name: symbols
+        label: Symbols Noticed
+        type: rich-text
+        required: false
+
+      - name: outcome
+        label: Outcome or Follow-up
+        type: rich-text
+        required: false
+
+      - name: notes
+        label: Notes
+        type: rich-text
+        required: false
+
+      - name: body
+        label: Additional Entry
+        type: rich-text
+        required: false
