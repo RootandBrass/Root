@@ -1,0 +1,166 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots"
+          content="noindex, nofollow">
+
+    <title>{{ page.title }} | Spells | Grimoire</title>
+
+    <link rel="icon"
+          type="image/png"
+          href="/grimoire/images/icon.png">
+
+    <link rel="stylesheet"
+          href="/grimoire/style.css">
+</head>
+
+<body class="spells spell-article-page">
+
+<div class="grimoire-shell">
+
+    <header class="grimoire-header">
+
+        <a href="/grimoire/"
+           class="grimoire-mark">
+            Grimoire
+        </a>
+
+        <a href="/grimoire/spells/"
+           class="return-link">
+            Back to Spells
+        </a>
+
+    </header>
+
+
+    <main class="spell-article">
+
+        <article>
+
+            <header class="spell-article-header">
+
+                <p class="kicker">
+                    Spellbook
+                </p>
+
+                <p class="spell-article-date">
+                    {{ page.date | date: "%B %-d, %Y" }}
+                </p>
+
+                <h1>
+                    {{ page.title }}
+                </h1>
+
+                {% if page.purpose %}
+
+                    <p class="spell-article-purpose">
+                        {{ page.purpose }}
+                    </p>
+
+                {% endif %}
+
+                <div class="spell-article-symbol">
+                    ☾ ✦ ☽
+                </div>
+
+            </header>
+
+
+            {% if page.image %}
+
+                <div class="spell-article-image">
+
+                    <img
+                        src="{{ page.image }}"
+                        alt="{{ page.title }}">
+
+                </div>
+
+            {% endif %}
+
+
+            {% if page.ingredients %}
+
+                <section class="spell-section">
+
+                    <h2>Ingredients</h2>
+
+                    {{ page.ingredients | markdownify }}
+
+                </section>
+
+            {% endif %}
+
+
+            {% if page.method %}
+
+                <section class="spell-section">
+
+                    <h2>Method</h2>
+
+                    {{ page.method | markdownify }}
+
+                </section>
+
+            {% endif %}
+
+
+            <div class="spell-article-content">
+
+                {{ content }}
+
+            </div>
+
+
+            {% if page.notes %}
+
+                <section class="spell-section">
+
+                    <h2>Notes</h2>
+
+                    {{ page.notes | markdownify }}
+
+                </section>
+
+            {% endif %}
+
+
+            {% if page.outcome %}
+
+                <section class="spell-section spell-outcome">
+
+                    <h2>Outcome</h2>
+
+                    {{ page.outcome | markdownify }}
+
+                </section>
+
+            {% endif %}
+
+
+            <footer class="spell-article-footer">
+
+                <a href="/grimoire/spells/">
+                    ← Return to Spells
+                </a>
+
+            </footer>
+
+        </article>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>
