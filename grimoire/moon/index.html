@@ -1,0 +1,275 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots"
+          content="noindex, nofollow">
+
+    <title>Moon Journal | Grimoire</title>
+
+    <link rel="icon"
+          type="image/png"
+          href="/grimoire/images/icon.png">
+
+    <link rel="stylesheet"
+          href="/grimoire/style.css">
+</head>
+
+
+<body class="moon-journal">
+
+<div class="grimoire-shell">
+
+    <header class="grimoire-header">
+
+        <a href="/grimoire/"
+           class="grimoire-mark">
+            Grimoire
+        </a>
+
+        <a href="/"
+           class="return-link">
+            Return Home
+        </a>
+
+    </header>
+
+
+    <main class="moon-page">
+
+        <!-- HERO -->
+
+        <section class="moon-hero">
+
+            <div class="moon-hero-content">
+
+                <div class="moon-mark">
+                    ☾
+                </div>
+
+                <p class="kicker">
+                    The Grimoire
+                </p>
+
+                <h1>Moon Journal</h1>
+
+                <div class="moon-divider">
+                    <span></span>
+                    ✦
+                    <span></span>
+                </div>
+
+                <p class="moon-lead">
+                    A record of cycles, intentions,
+                    and the quiet wisdom of the Moon.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- JOURNAL -->
+
+        <section class="moon-library">
+
+            <header class="moon-library-heading">
+
+                <p class="kicker">
+                    Lunar Record
+                </p>
+
+                <h2>Journal Entries</h2>
+
+                <div class="moon-small-divider">
+                    ☾ &nbsp; ✦ &nbsp; ☽
+                </div>
+
+            </header>
+
+
+            <div class="moon-entry-grid">
+
+                {% assign moon_entries = site.pages
+                    | where_exp: "item",
+                      "item.path contains 'grimoire/moon/entries/'"
+                    | sort: "date"
+                    | reverse %}
+
+
+                {% if moon_entries.size > 0 %}
+
+                    {% for entry in moon_entries %}
+
+                    <article class="moon-entry-card">
+
+                        <a href="{{ entry.url }}">
+
+                            <div class="moon-phase-symbol">
+
+                                {% case entry.phase %}
+
+                                    {% when "new-moon" %}
+                                        ●
+
+                                    {% when "waxing-crescent" %}
+                                        ☽
+
+                                    {% when "first-quarter" %}
+                                        ◐
+
+                                    {% when "waxing-gibbous" %}
+                                        ◕
+
+                                    {% when "full-moon" %}
+                                        ○
+
+                                    {% when "waning-gibbous" %}
+                                        ◕
+
+                                    {% when "last-quarter" %}
+                                        ◑
+
+                                    {% when "waning-crescent" %}
+                                        ☾
+
+                                    {% else %}
+                                        ○
+
+                                {% endcase %}
+
+                            </div>
+
+
+                            {% if entry.phase %}
+
+                                <p class="moon-phase-name">
+                                    {{ entry.phase
+                                       | replace: "-", " " }}
+                                </p>
+
+                            {% endif %}
+
+
+                            <h3>
+                                {{ entry.title }}
+                            </h3>
+
+
+                            {% if entry.date %}
+
+                                <p class="moon-entry-date">
+                                    {{ entry.date | date: "%B %-d, %Y" }}
+                                </p>
+
+                            {% endif %}
+
+
+                            {% if entry.moon_sign %}
+
+                                <p class="moon-sign">
+                                    Moon in {{ entry.moon_sign }}
+                                </p>
+
+                            {% endif %}
+
+
+                            {% if entry.observations %}
+
+                                <div class="moon-entry-preview">
+
+                                    {{ entry.observations
+                                       | markdownify
+                                       | strip_html
+                                       | truncate: 120 }}
+
+                                </div>
+
+                            {% endif %}
+
+
+                            <div class="moon-entry-footer">
+
+                                <span>View Entry</span>
+
+                                <span>✦</span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+                    {% endfor %}
+
+
+                {% else %}
+
+                    <div class="empty-moon">
+
+                        <span>○</span>
+
+                        <p>
+                            The journal is waiting
+                            for its first moon.
+                        </p>
+
+                    </div>
+
+                {% endif %}
+
+            </div>
+
+        </section>
+
+
+        <!-- GRIMOIRE NAV -->
+
+        <nav class="section-nav">
+
+            <a href="/grimoire/herbs/">
+                Herbs
+            </a>
+
+            <a href="/grimoire/crystals/">
+                Crystals
+            </a>
+
+            <a href="/grimoire/tarot/">
+                Tarot
+            </a>
+
+            <a href="/grimoire/spells/">
+                Spells
+            </a>
+
+            <a href="/grimoire/recipes/">
+                Recipes
+            </a>
+
+            <a href="/grimoire/moon/"
+               aria-current="page">
+                Moon
+            </a>
+
+            <a href="/grimoire/dreams/">
+                Dreams
+            </a>
+
+        </nav>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>
