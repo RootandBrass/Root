@@ -312,3 +312,108 @@ content:
         label: Additional Entry
         type: rich-text
         required: false
+
+  - name: moon
+    label: Moon Journal
+    type: collection
+    path: grimoire/moon/entries
+    filename: "{year}-{month}-{day}-{primary}.md"
+    format: yaml-frontmatter
+
+    view:
+      primary: title
+      fields:
+        - phase
+        - date
+        - moon_sign
+      sort: date
+      order: desc
+
+    fields:
+      - name: title
+        label: Entry Title
+        type: string
+        required: true
+
+      - name: date
+        label: Date
+        type: date
+        required: true
+
+      - name: phase
+        label: Moon Phase
+        type: select
+        required: true
+        options:
+          values:
+            - value: new-moon
+              label: New Moon
+            - value: waxing-crescent
+              label: Waxing Crescent
+            - value: first-quarter
+              label: First Quarter
+            - value: waxing-gibbous
+              label: Waxing Gibbous
+            - value: full-moon
+              label: Full Moon
+            - value: waning-gibbous
+              label: Waning Gibbous
+            - value: last-quarter
+              label: Last Quarter
+            - value: waning-crescent
+              label: Waning Crescent
+
+      - name: moon_sign
+        label: Moon Sign
+        type: string
+        required: false
+
+      - name: moon_name
+        label: Moon Name
+        type: string
+        required: false
+
+      - name: weather
+        label: Weather / Sky
+        type: string
+        required: false
+
+      - name: mood
+        label: Mood / Energy
+        type: rich-text
+        required: false
+
+      - name: intentions
+        label: Intentions
+        type: rich-text
+        required: false
+
+      - name: release
+        label: What I Am Releasing
+        type: rich-text
+        required: false
+
+      - name: ritual
+        label: Ritual / Practice
+        type: rich-text
+        required: false
+
+      - name: tarot
+        label: Tarot Cards Pulled
+        type: rich-text
+        required: false
+
+      - name: dreams
+        label: Dreams
+        type: rich-text
+        required: false
+
+      - name: observations
+        label: Observations
+        type: rich-text
+        required: false
+
+      - name: notes
+        label: Notes
+        type: rich-text
+        required: false
