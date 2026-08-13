@@ -154,6 +154,17 @@
                                     </p>
 
                                 {% endif %}
+                                
+                                {% if reading.traditional_meaning %}
+
+                                    <div class="tarot-preview">
+                                        {{ reading.traditional_meaning
+                                           | markdownify
+                                           | strip_html
+                                           | truncate: 145 }}
+                                    </div>
+
+                                {% endif %}
 
 
                                 {% if reading.interpretation %}
