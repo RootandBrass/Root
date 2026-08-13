@@ -55,41 +55,13 @@
                 </p>
 
 
-                <div class="moon-record-phase">
+                <div class="moon-record-phase-image">
 
-                    {% case page.phase %}
-
-                        {% when "new-moon" %}
-                            ●
-
-                        {% when "waxing-crescent" %}
-                            ☽
-
-                        {% when "first-quarter" %}
-                            ◐
-
-                        {% when "waxing-gibbous" %}
-                            ◕
-
-                        {% when "full-moon" %}
-                            ○
-
-                        {% when "waning-gibbous" %}
-                            ◕
-
-                        {% when "last-quarter" %}
-                            ◑
-
-                        {% when "waning-crescent" %}
-                            ☾
-
-                        {% else %}
-                            ○
-
-                    {% endcase %}
+                    <img
+                        src="/grimoire/images/moons/{{ page.phase }}.png"
+                        alt="{{ page.phase | replace: '-', ' ' }}">
 
                 </div>
-
 
                 {% if page.phase %}
 
