@@ -4126,3 +4126,41 @@ body.moon-journal {
     }
 
 }
+/* ==================================================
+   MOON PHASE IMAGES
+   ================================================== */
+
+.moon-phase-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 150px;
+
+    margin: 0 auto 22px;
+}
+
+.moon-phase-image img {
+    display: block;
+
+    width: 140px;
+    height: 140px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 0 12px rgba(238, 92, 118, .28))
+        drop-shadow(0 0 24px rgba(221, 116, 67, .12));
+
+    transition:
+        transform .35s ease,
+        filter .35s ease;
+}
+
+.moon-entry-card:hover .moon-phase-image img {
+    transform: scale(1.06);
+
+    filter:
+        drop-shadow(0 0 16px rgba(238, 92, 118, .38))
+        drop-shadow(0 0 32px rgba(221, 116, 67, .18));
+}
