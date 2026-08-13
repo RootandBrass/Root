@@ -61,13 +61,7 @@ content:
       sort: date
       order: desc
 
-    fields:
-      - name: layout
-        label: Layout
-        type: string
-        default: dream
-        hidden: true
-        
+    fields:       
       - name: title
         label: Title
         type: string
@@ -100,13 +94,7 @@ content:
       sort: date
       order: desc
 
-    fields:
-      - name: layout
-        label: Layout
-        type: string
-        default: spell
-        hidden: true
-        
+    fields:        
       - name: title
         label: Title
         type: string
