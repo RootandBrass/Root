@@ -1,0 +1,377 @@
+:root {
+  --ink: #171512;
+  --soft-ink: #5d574f;
+  --paper: #f3eee4;
+  --paper-deep: #e7dfd1;
+  --line: rgba(23, 21, 18, 0.16);
+  --brass: #9b7b45;
+  --brass-dark: #71592f;
+  --white: #fffdf8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background:
+    radial-gradient(circle at top left, rgba(155, 123, 69, 0.08), transparent 34%),
+    linear-gradient(180deg, #12110f 0%, #1a1713 100%);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ink);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+/* ------------------------------
+   SHELL
+------------------------------ */
+
+.workbench-shell {
+  display: flex;
+  justify-content: center;
+  padding: 48px 20px 72px;
+}
+
+.workbench-home,
+.workbench-page {
+  width: min(920px, 100%);
+  background: var(--paper);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 22px 70px rgba(0, 0, 0, 0.42),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+  padding: 54px;
+  position: relative;
+}
+
+.workbench-home::before,
+.workbench-page::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 1px solid var(--line);
+  pointer-events: none;
+}
+
+/* ------------------------------
+   TYPOGRAPHY
+------------------------------ */
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--brass-dark);
+}
+
+h1,
+h2 {
+  font-weight: 400;
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 16px;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 0.95;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+
+.intro,
+.tool-description {
+  color: var(--soft-ink);
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* ------------------------------
+   WORKBENCH HOME
+------------------------------ */
+
+.workbench-mark {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 36px;
+  border: 1px solid var(--brass);
+  border-radius: 50%;
+  color: var(--brass-dark);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+}
+
+.intro {
+  max-width: 560px;
+  margin-bottom: 48px;
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.tool-card {
+  display: grid;
+  gap: 8px;
+  min-height: 170px;
+  padding: 24px;
+  text-decoration: none;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.25);
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--brass);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.tool-number {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  color: var(--brass-dark);
+}
+
+.tool-name {
+  margin-top: auto;
+  font-size: 1.7rem;
+}
+
+.tool-note {
+  color: var(--soft-ink);
+  font-style: italic;
+}
+
+/* ------------------------------
+   JOURNAL PAGE
+------------------------------ */
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 38px;
+  color: var(--soft-ink);
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.back-link:hover {
+  color: var(--brass-dark);
+}
+
+.tool-header {
+  margin-bottom: 42px;
+}
+
+.tool-header h1 {
+  font-size: clamp(2.8rem, 6vw, 4.6rem);
+}
+
+.tool-description {
+  max-width: 620px;
+  margin-bottom: 0;
+}
+
+/* ------------------------------
+   FORM
+------------------------------ */
+
+.journal-form {
+  display: grid;
+  gap: 28px;
+}
+
+.field-group {
+  display: grid;
+  gap: 9px;
+}
+
+.field-group label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--brass-dark);
+}
+
+.field-group input,
+.field-group textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.36);
+  color: var(--ink);
+  outline: none;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.field-group input {
+  padding: 13px 14px;
+}
+
+.field-group textarea {
+  min-height: 420px;
+  resize: vertical;
+  padding: 20px;
+  line-height: 1.75;
+  font-size: 1.05rem;
+}
+
+.field-group input:focus,
+.field-group textarea:focus {
+  border-color: var(--brass);
+  background: rgba(255, 255, 255, 0.56);
+  box-shadow: 0 0 0 3px rgba(155, 123, 69, 0.08);
+}
+
+/* ------------------------------
+   BUTTONS
+------------------------------ */
+
+.primary-button,
+.secondary-button {
+  border: 1px solid var(--brass-dark);
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.primary-button {
+  justify-self: start;
+  padding: 14px 22px;
+  background: var(--ink);
+  color: var(--white);
+  border-color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+  background: var(--brass-dark);
+  border-color: var(--brass-dark);
+}
+
+.secondary-button {
+  padding: 10px 15px;
+  background: transparent;
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.secondary-button:hover {
+  background: var(--brass-dark);
+  color: var(--white);
+}
+
+/* ------------------------------
+   GENERATED ENTRY
+------------------------------ */
+
+.generated-entry {
+  margin-top: 48px;
+  padding-top: 36px;
+  border-top: 1px solid var(--line);
+}
+
+.generated-header {
+  margin-bottom: 18px;
+}
+
+#generated-output {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  min-height: 180px;
+  margin: 0;
+  padding: 22px;
+  border: 1px solid var(--line);
+  background: #171512;
+  color: #f4eee2;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.copy-status {
+  min-height: 1.3em;
+  margin: 12px 0 0;
+  color: var(--brass-dark);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+/* ------------------------------
+   MOBILE
+------------------------------ */
+
+@media (max-width: 650px) {
+  .workbench-shell {
+    padding: 16px 10px 40px;
+  }
+
+  .workbench-home,
+  .workbench-page {
+    padding: 34px 24px;
+  }
+
+  .workbench-home::before,
+  .workbench-page::before {
+    inset: 8px;
+  }
+
+  .field-group textarea {
+    min-height: 330px;
+  }
+}
