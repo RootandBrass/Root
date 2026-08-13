@@ -1,0 +1,12 @@
+defaults:
+  - scope:
+      path: "grimoire/dreams/entries"
+      type: "pages"
+    values:
+      layout: dream
+
+  - scope:
+      path: "grimoire/spells/entries"
+      type: "pages"
+    values:
+      layout: spell
