@@ -5,5 +5,5 @@ purpose: Amplify Love
 ingredients: Roses
 method: Fresh
 notes: Smell the roses
-outcome: Love will be there
+outcome: Love will be there!
 ---
