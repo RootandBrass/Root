@@ -140,45 +140,83 @@
 
                     {% for recipe in recipes %}
 
-                        <article
-                            class="recipe-card"
-                            data-category="{{ recipe.category | slugify }}">
+                     <article
+    class="recipe-card"
+    data-category="{{ recipe.category | slugify }}">
 
-                            <a href="{{ recipe.url }}">
+    <a href="{{ recipe.url }}">
 
-                                <div class="recipe-card-top">
+        <div class="recipe-card-ornament">
+            {% case recipe.category %}
+                {% when "apothecary" %}✣
+                {% when "tea-herbal" %}❧
+                {% when "kitchen" %}♨
+                {% when "ritual" %}☾
+                {% when "home" %}⌂
+                {% when "bath-body" %}♢
+                {% else %}✦
+            {% endcase %}
+        </div>
 
-                                    <span class="recipe-category">
-                                        {{ recipe.category }}
-                                    </span>
+        <div class="recipe-card-top">
 
-                                    {% if recipe.date %}
-                                        <span class="recipe-date">
-                                            {{ recipe.date | date: "%B %-d, %Y" }}
-                                        </span>
-                                    {% endif %}
+            <span class="recipe-category">
+                {{ recipe.category | replace: "-", " " }}
+            </span>
 
-                                </div>
+            {% if recipe.date %}
+                <span class="recipe-date">
+                    {{ recipe.date | date: "%b %-d, %Y" }}
+                </span>
+            {% endif %}
 
-                                <h3>
-                                    {{ recipe.title }}
-                                </h3>
+        </div>
 
-                                {% if recipe.purpose %}
+        <h3>
+            {{ recipe.title }}
+        </h3>
 
-                                    <p>
-                                        {{ recipe.purpose }}
-                                    </p>
+        {% if recipe.purpose %}
+            <p class="recipe-card-purpose">
+                {{ recipe.purpose }}
+            </p>
+        {% endif %}
 
-                                {% endif %}
 
-                                <span class="recipe-open">
-                                    Open Recipe →
-                                </span>
+        <div class="recipe-card-details">
 
-                            </a>
+            {% if recipe.storage %}
+                <span>
+                    <small>Storage</small>
+                    {{ recipe.storage }}
+                </span>
+            {% endif %}
 
-                        </article>
+            {% if recipe.shelf_life %}
+                <span>
+                    <small>Shelf Life</small>
+                    {{ recipe.shelf_life }}
+                </span>
+            {% endif %}
+
+        </div>
+
+
+        <div class="recipe-card-footer">
+
+            <span class="recipe-open">
+                Open Recipe
+            </span>
+
+            <span class="recipe-arrow">
+                →
+            </span>
+
+        </div>
+
+    </a>
+
+</article>
 
                     {% endfor %}
 
