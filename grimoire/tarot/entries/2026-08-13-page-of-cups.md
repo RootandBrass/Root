@@ -1,6 +1,7 @@
 ---
 title: Page of Cups
 date: 2026-08-13
+deck: Cosmic Garden
 orientation: upright
 question: no question
 traditional_meaning: "**a tarot card of creative opportunity, intuitive
