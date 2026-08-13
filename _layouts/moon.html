@@ -1,0 +1,294 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots"
+          content="noindex, nofollow">
+
+    <title>{{ page.title }} | Moon Journal | Grimoire</title>
+
+    <link rel="icon"
+          type="image/png"
+          href="/grimoire/images/icon.png">
+
+    <link rel="stylesheet"
+          href="/grimoire/style.css">
+</head>
+
+
+<body class="moon-journal moon-entry-page">
+
+<div class="grimoire-shell">
+
+    <header class="grimoire-header">
+
+        <a href="/grimoire/"
+           class="grimoire-mark">
+            Grimoire
+        </a>
+
+        <a href="/grimoire/moon/"
+           class="return-link">
+            Back to Moon Journal
+        </a>
+
+    </header>
+
+
+    <main class="moon-entry">
+
+        <article class="moon-record">
+
+
+            <header class="moon-record-header">
+
+                <p class="kicker">
+                    Lunar Record
+                </p>
+
+
+                <div class="moon-record-phase">
+
+                    {% case page.phase %}
+
+                        {% when "new-moon" %}
+                            ●
+
+                        {% when "waxing-crescent" %}
+                            ☽
+
+                        {% when "first-quarter" %}
+                            ◐
+
+                        {% when "waxing-gibbous" %}
+                            ◕
+
+                        {% when "full-moon" %}
+                            ○
+
+                        {% when "waning-gibbous" %}
+                            ◕
+
+                        {% when "last-quarter" %}
+                            ◑
+
+                        {% when "waning-crescent" %}
+                            ☾
+
+                        {% else %}
+                            ○
+
+                    {% endcase %}
+
+                </div>
+
+
+                {% if page.phase %}
+
+                    <p class="moon-record-phase-name">
+                        {{ page.phase | replace: "-", " " }}
+                    </p>
+
+                {% endif %}
+
+
+                <h1>
+                    {{ page.title }}
+                </h1>
+
+
+                {% if page.date %}
+
+                    <p class="moon-record-date">
+                        {{ page.date | date: "%B %-d, %Y" }}
+                    </p>
+
+                {% endif %}
+
+
+                {% if page.moon_sign %}
+
+                    <p class="moon-record-sign">
+                        Moon in {{ page.moon_sign }}
+                    </p>
+
+                {% endif %}
+
+
+                {% if page.moon_name %}
+
+                    <p class="moon-record-name">
+                        {{ page.moon_name }}
+                    </p>
+
+                {% endif %}
+
+            </header>
+
+
+            {% if page.weather %}
+
+                <section class="moon-record-section">
+
+                    <p class="moon-record-label">
+                        Weather / Sky
+                    </p>
+
+                    <p>
+                        {{ page.weather }}
+                    </p>
+
+                </section>
+
+            {% endif %}
+
+
+            {% if page.mood %}
+
+                <section class="moon-record-section">
+
+                    <p class="moon-record-label">
+                        Mood / Energy
+                    </p>
+
+                    {{ page.mood | markdownify }}
+
+                </section>
+
+            {% endif %}
+
+
+            {% if page.intentions %}
+
+                <section class="moon-record-section moon-intentions">
+
+                    <p class="moon-record-label">
+                        Intentions
+                    </p>
+
+                    {{ page.intentions | markdownify }}
+
+                </section>
+
+            {% endif %}
+
+
+            {% if page.release %}
+
+                <section class="moon-record-section">
+
+                    <p class="moon-record-label">
+                        What I Am Releasing
+                    </p>
+
+                    {{ page.release | markdownify }}
+
+                </section>
+
+            {% endif %}
+
+
+            {% if page.ritual %}
+
+                <section class="moon-record-section">
+
+                    <p class="moon-record-label">
+                        Ritual / Practice
+                    </p>
+
+                    {{ page.ritual | markdownify }}
+
+                </section>
+
+            {% endif %}
+
+
+            {% if page.tarot %}
+
+                <section class="moon-record-section">
+
+                    <p class="moon-record-label">
+                        Tarot Cards Pulled
+                    </p>
+
+                    {{ page.tarot | markdownify }}
+
+                </section>
+
+            {% endif %}
+
+
+            {% if page.dreams %}
+
+                <section class="moon-record-section">
+
+                    <p class="moon-record-label">
+                        Dreams
+                    </p>
+
+                    {{ page.dreams | markdownify }}
+
+                </section>
+
+            {% endif %}
+
+
+            {% if page.observations %}
+
+                <section class="moon-record-section">
+
+                    <p class="moon-record-label">
+                        Observations
+                    </p>
+
+                    {{ page.observations | markdownify }}
+
+                </section>
+
+            {% endif %}
+
+
+            {% if page.notes %}
+
+                <section class="moon-record-section moon-record-notes">
+
+                    <p class="moon-record-label">
+                        Notes
+                    </p>
+
+                    {{ page.notes | markdownify }}
+
+                </section>
+
+            {% endif %}
+
+
+            <footer class="moon-record-footer">
+
+                <span>☾</span>
+
+                <a href="/grimoire/moon/">
+                    Return to the Moon Journal
+                </a>
+
+                <span>☽</span>
+
+            </footer>
+
+        </article>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>
