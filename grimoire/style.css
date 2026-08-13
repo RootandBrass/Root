@@ -4164,3 +4164,24 @@ body.moon-journal {
         drop-shadow(0 0 16px rgba(238, 92, 118, .38))
         drop-shadow(0 0 32px rgba(221, 116, 67, .18));
 }
+
+/* LARGE MOON ON INDIVIDUAL ENTRY */
+
+.moon-record-phase-image {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto 22px;
+}
+
+.moon-record-phase-image img {
+    display: block;
+
+    width: min(260px, 65vw);
+    height: auto;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 0 18px rgba(238, 92, 118, .34))
+        drop-shadow(0 0 42px rgba(221, 116, 67, .16));
+}
