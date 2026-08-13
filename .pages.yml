@@ -418,3 +418,93 @@ content:
         type: rich-text
         required: false
 
+  - name: crystals
+    label: Crystals
+    type: collection
+    path: grimoire/crystals/entries
+    filename: "{primary}.md"
+    format: yaml-frontmatter
+
+    view:
+      primary: title
+      fields:
+        - variety
+        - element
+      sort: title
+      order: asc
+
+    fields:
+      - name: title
+        label: Crystal Name
+        type: string
+        required: true
+
+      - name: variety
+        label: Variety
+        type: string
+        required: false
+
+      - name: image
+        label: Photo
+        type: image
+        required: false
+
+      - name: color
+        label: Color
+        type: string
+        required: false
+
+      - name: element
+        label: Element
+        type: string
+        required: false
+
+      - name: chakra
+        label: Chakra
+        type: string
+        required: false
+
+      - name: zodiac
+        label: Zodiac
+        type: string
+        required: false
+
+      - name: geology
+        label: Physical / Geological Notes
+        type: rich-text
+        required: false
+
+      - name: associations
+        label: Traditional Associations
+        type: rich-text
+        required: false
+
+      - name: uses
+        label: Uses
+        type: rich-text
+        required: false
+
+      - name: care
+        label: Cleansing & Care
+        type: rich-text
+        required: false
+
+      - name: pairings
+        label: Crystal Pairings
+        type: rich-text
+        required: false
+
+      - name: acquired
+        label: Where / When Acquired
+        type: string
+        required: false
+
+      - name: personal_notes
+        label: My Stone
+        type: rich-text
+        required: false
+
+      - name: notes
+        label: Additional Notes
+        type: rich-text
+        required: false
