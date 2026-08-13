@@ -3382,4 +3382,481 @@ body.tarot {
         font-size: clamp(2.8rem, 13vw, 4.4rem);
     }
 
+    /* ==================================================
+   MOON JOURNAL
+   ================================================== */
+
+body.moon-journal {
+    background: #08050b;
+    color: #e1d3cf;
+}
+
+
+/* HERO */
+
+.moon-hero {
+    position: relative;
+
+    min-height: 1100px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    margin-top: 35px;
+
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(7, 3, 9, .04) 0%,
+            rgba(7, 3, 9, .04) 48%,
+            rgba(7, 3, 9, .32) 70%,
+            rgba(7, 3, 9, .88) 94%,
+            #08050b 100%
+        ),
+        url("/grimoire/images/moon-background.png");
+
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    border-left:
+        1px solid rgba(190, 125, 70, .16);
+
+    border-right:
+        1px solid rgba(190, 125, 70, .16);
+}
+
+
+.moon-hero-content {
+    width: 100%;
+
+    padding: 120px 30px 135px;
+
+    text-align: center;
+
+    text-shadow:
+        0 3px 22px rgba(0,0,0,.9);
+}
+
+
+.moon-mark {
+    margin-bottom: 18px;
+
+    color: #d59261;
+
+    font-size: 2rem;
+
+    text-shadow:
+        0 0 25px rgba(255,125,112,.45);
+}
+
+
+.moon-hero .kicker {
+    color: #d39793;
+
+    text-transform: uppercase;
+
+    letter-spacing: .38em;
+
+    font-size: .68rem;
+}
+
+
+.moon-hero h1 {
+    margin: 16px 0 0;
+
+    color: #f1d8d2;
+
+    font-size:
+        clamp(4rem, 10vw, 7.5rem);
+
+    font-weight: normal;
+
+    letter-spacing: .09em;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 4px 28px rgba(0,0,0,.85),
+        0 0 25px rgba(255,111,128,.14);
+}
+
+
+.moon-divider {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+
+    margin: 30px auto;
+    
+    color: #d09457;
+}
+
+
+.moon-divider span {
+    width: 95px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(211,143,81,.60),
+            transparent
+        );
+}
+
+
+.moon-lead {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    color: #d6a49a;
+
+    font-size: 1.08rem;
+
+    font-style: italic;
+
+    line-height: 1.8;
+}
+
+
+/* LIBRARY */
+
+.moon-library {
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    padding: 80px 40px 135px;
+}
+
+
+.moon-library-heading {
+    margin-bottom: 55px;
+
+    text-align: center;
+}
+
+
+.moon-library-heading .kicker {
+    color: #a87975;
+
+    text-transform: uppercase;
+
+    letter-spacing: .30em;
+
+    font-size: .65rem;
+}
+
+
+.moon-library-heading h2 {
+    margin: 14px 0 18px;
+
+    color: #e7c8c0;
+
+    font-size:
+        clamp(2.2rem, 5vw, 3.8rem);
+
+    font-weight: normal;
+
+    letter-spacing: .09em;
+}
+
+
+.moon-small-divider {
+    color: #b77c56;
+
+    letter-spacing: .15em;
+}
+
+
+/* GRID */
+
+.moon-entry-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* CARDS */
+
+.moon-entry-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(198, 132, 73, .30);
+
+    background:
+        radial-gradient(
+            circle at 50% 15%,
+            rgba(205, 82, 108, .11),
+            transparent 34%
+        ),
+        linear-gradient(
+            rgba(15, 8, 17, .94),
+            rgba(7, 5, 11, .98)
+        );
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.moon-entry-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 8px;
+
+    border:
+        1px solid rgba(205, 144, 77, .09);
+
+    pointer-events: none;
+}
+
+
+.moon-entry-card:hover {
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(218, 147, 82, .58);
+
+    box-shadow:
+        0 22px 55px rgba(0,0,0,.38),
+        0 0 35px rgba(195,73,102,.06);
+}
+
+
+.moon-entry-card a {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 390px;
+
+    padding: 38px 27px 27px;
+
+    color: inherit;
+
+    text-align: center;
+
+    text-decoration: none;
+}
+
+
+/* PHASE */
+
+.moon-phase-symbol {
+    margin-bottom: 22px;
+
+    color: #ef9ba6;
+
+    font-size: 3.3rem;
+
+    line-height: 1;
+
+    text-shadow:
+        0 0 25px rgba(235,96,117,.26);
+}
+
+
+.moon-phase-name {
+    margin: 0 0 11px;
+
+    color: #dc8992;
+
+    text-transform: uppercase;
+
+    letter-spacing: .13em;
+
+    font-size: .67rem;
+}
+
+
+.moon-entry-card h3 {
+    margin: 0 0 13px;
+
+    color: #ead5ce;
+
+    font-size: 1.35rem;
+
+    font-weight: normal;
+
+    line-height: 1.3;
+}
+
+
+.moon-entry-date {
+    margin: 0;
+
+    color: #c28d62;
+
+    font-size: .78rem;
+
+    font-style: italic;
+}
+
+
+.moon-sign {
+    margin: 7px 0 0;
+
+    color: #b17c6e;
+
+    font-size: .78rem;
+
+    font-style: italic;
+}
+
+
+.moon-entry-preview {
+    margin-top: 23px;
+
+    color: #a99599;
+
+    font-size: .86rem;
+
+    font-style: italic;
+
+    line-height: 1.6;
+}
+
+
+/* CARD FOOTER */
+
+.moon-entry-footer {
+    margin-top: auto;
+
+    padding-top: 22px;
+
+    border-top:
+        1px solid rgba(198,132,73,.12);
+
+    color: #d18783;
+
+    text-transform: uppercase;
+
+    letter-spacing: .13em;
+
+    font-size: .59rem;
+}
+
+
+.moon-entry-footer span:last-child {
+    display: block;
+
+    margin-top: 9px;
+
+    color: #b77a4d;
+}
+
+
+/* EMPTY */
+
+.empty-moon {
+    grid-column: 1 / -1;
+
+    padding: 100px 30px;
+
+    text-align: center;
+
+    color: #9a828a;
+
+    font-style: italic;
+}
+
+
+.empty-moon span {
+    display: block;
+
+    margin-bottom: 22px;
+
+    color: #e08c99;
+
+    font-size: 4rem;
+
+    font-style: normal;
+
+    text-shadow:
+        0 0 30px rgba(224,90,116,.20);
+}
+
+
+/* MOON NAV */
+
+.moon-journal .section-nav a {
+    color: #8f747a;
+}
+
+
+.moon-journal .section-nav a:hover,
+.moon-journal .section-nav a[aria-current="page"] {
+    color: #e3a0a4;
+
+    text-shadow:
+        0 0 15px rgba(225,99,121,.22);
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .moon-entry-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+
+    .moon-hero {
+        min-height: 850px;
+
+        background-position:
+            center top;
+    }
+
+    .moon-hero-content {
+        padding:
+            80px 24px
+            100px;
+    }
+
+    .moon-library {
+        padding:
+            70px 20px
+            100px;
+    }
+
+    .moon-entry-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .moon-entry-card a {
+        min-height: 340px;
+    }
+
+}
 }
