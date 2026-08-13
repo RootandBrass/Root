@@ -3381,6 +3381,7 @@ body.tarot {
     .tarot-reading h1 {
         font-size: clamp(2.8rem, 13vw, 4.4rem);
     }
+}
 
     /* ==================================================
    MOON JOURNAL
@@ -3859,4 +3860,269 @@ body.moon-journal {
     }
 
 }
+}
+
+/* ==================================================
+   MOON JOURNAL ENTRY
+   ================================================== */
+
+.moon-entry {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 110px 0 150px;
+}
+
+.moon-record {
+    position: relative;
+
+    padding: 78px 66px;
+
+    background:
+        radial-gradient(
+            circle at 50% 4%,
+            rgba(235, 92, 117, .13),
+            transparent 34%
+        ),
+        linear-gradient(
+            rgba(14, 7, 16, .88),
+            rgba(7, 5, 10, .96)
+        );
+
+    border: 1px solid rgba(211, 136, 79, .24);
+
+    box-shadow:
+        0 24px 80px rgba(0,0,0,.42),
+        inset 0 0 80px rgba(219, 83, 110, .035);
+
+    backdrop-filter: blur(4px);
+}
+
+
+.moon-record::before {
+    content: "";
+
+    position: absolute;
+    inset: 12px;
+
+    border:
+        1px solid rgba(212, 142, 84, .08);
+
+    pointer-events: none;
+}
+
+
+/* HEADER */
+
+.moon-record-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+
+.moon-record-header .kicker {
+    color: #bd8589;
+
+    text-transform: uppercase;
+
+    letter-spacing: .34em;
+
+    font-size: .67rem;
+}
+
+
+.moon-record-phase {
+    margin: 28px 0 18px;
+
+    color: #ef9ba6;
+
+    font-size: 5.5rem;
+
+    line-height: 1;
+
+    text-shadow:
+        0 0 26px rgba(237, 93, 118, .28),
+        0 0 50px rgba(224, 127, 71, .12);
+}
+
+
+.moon-record-phase-name {
+    margin: 0;
+
+    color: #dd8e95;
+
+    text-transform: uppercase;
+
+    letter-spacing: .18em;
+
+    font-size: .72rem;
+}
+
+
+.moon-record h1 {
+    margin: 20px 0 0;
+
+    color: #efd8d2;
+
+    font-size:
+        clamp(3rem, 7vw, 5.8rem);
+
+    font-weight: normal;
+
+    letter-spacing: .06em;
+
+    text-shadow:
+        0 0 24px rgba(229, 97, 120, .10);
+}
+
+
+.moon-record-date {
+    margin: 18px 0 0;
+
+    color: #a47e78;
+
+    text-transform: uppercase;
+
+    letter-spacing: .14em;
+
+    font-size: .67rem;
+}
+
+
+.moon-record-sign,
+.moon-record-name {
+    margin: 10px 0 0;
+
+    color: #c58b75;
+
+    font-style: italic;
+}
+
+
+/* SECTIONS */
+
+.moon-record-section {
+    margin-top: 55px;
+
+    padding-top: 32px;
+
+    border-top:
+        1px solid rgba(210, 137, 78, .13);
+
+    color: #d7c6c5;
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+}
+
+
+.moon-record-label {
+    margin: 0 0 20px;
+
+    color: #c98667;
+
+    text-transform: uppercase;
+
+    letter-spacing: .15em;
+
+    font-size: .66rem;
+}
+
+
+.moon-record-section p {
+    margin: 0 0 1.4em;
+}
+
+
+.moon-intentions {
+    padding: 34px 28px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(160, 64, 95, .09),
+            rgba(177, 94, 58, .07)
+        );
+
+    border-left:
+        1px solid rgba(204, 126, 74, .18);
+
+    border-right:
+        1px solid rgba(204, 126, 74, .18);
+}
+
+
+.moon-record-notes {
+    color: #aa989c;
+
+    font-style: italic;
+}
+
+
+/* FOOTER */
+
+.moon-record-footer {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 16px;
+
+    margin-top: 75px;
+
+    padding-top: 30px;
+
+    border-top:
+        1px solid rgba(210, 137, 78, .13);
+}
+
+
+.moon-record-footer span {
+    color: #ba7c5b;
+}
+
+
+.moon-record-footer a {
+    color: #c99488;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    letter-spacing: .14em;
+
+    font-size: .69rem;
+}
+
+
+.moon-record-footer a:hover {
+    color: #f0d6d0;
+
+    text-shadow:
+        0 0 12px rgba(225, 105, 122, .20);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+
+    .moon-entry {
+        padding: 70px 0 100px;
+    }
+
+    .moon-record {
+        padding: 50px 24px;
+    }
+
+    .moon-record-phase {
+        font-size: 4rem;
+    }
+
+    .moon-record h1 {
+        font-size:
+            clamp(2.7rem, 13vw, 4.4rem);
+    }
+
 }
