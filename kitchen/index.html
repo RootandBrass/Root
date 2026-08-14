@@ -59,7 +59,7 @@
 
     <div class="kitchen-recipe-grid">
 
-      {% assign kitchen_recipes = site.pages | where_exp: "item", "item.path contains 'kitchen/entries/'" | sort: "name" %}
+      {% assign kitchen_recipes = site.pages | where_exp: "item", "item.path contains 'kitchen/entries/'" | sort: "title" %}
 
       {% for recipe in kitchen_recipes %}
 
@@ -72,11 +72,11 @@
           {% if recipe.photo %}
             <img
               src="{{ recipe.photo | relative_url }}"
-              alt="{{ recipe.name }}"
+              alt="{{ recipe.title }}"
             >
           {% endif %}
 
-          <h3>{{ recipe.name }}</h3>
+          <h3>{{ recipe.title }}</h3>
 
         </a>
 
