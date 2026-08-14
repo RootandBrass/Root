@@ -1,26 +1,43 @@
 ---
 ---
 
+<!DOCTYPE html>
+<html lang="en">
 
-<article class="kitchen-recipe">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <header class="kitchen-recipe-header">
-    <p class="kitchen-recipe-category">{{ page.category }}</p>
-    <h1>{{ page.title }}</h1>
-  </header>
+  <title>{{ page.title }} | Root & Brass</title>
 
-  {% if page.photo %}
-  <div class="kitchen-recipe-photo">
-    <img src="{{ page.photo | relative_url }}" alt="{{ page.title }}">
-  </div>
-  {% endif %}
+  <link rel="stylesheet" href="/style.css">
+</head>
 
-  <div class="kitchen-recipe-content">
-    {{ content }}
-  </div>
+<body>
 
-  <div class="kitchen-recipe-back">
-    <a href="{{ '/kitchen/' | relative_url }}">← Back to the Kitchen</a>
-  </div>
+  <article class="kitchen-recipe">
 
-</article>
+    <header class="kitchen-recipe-header">
+      <p class="kitchen-recipe-category">{{ page.category }}</p>
+      <h1>{{ page.title }}</h1>
+    </header>
+
+    {% if page.photo %}
+    <div class="kitchen-recipe-photo">
+      <img src="{{ page.photo | relative_url }}" alt="{{ page.title }}">
+    </div>
+    {% endif %}
+
+    <div class="kitchen-recipe-content">
+      {{ content }}
+    </div>
+
+    <div class="kitchen-recipe-back">
+      <a href="{{ '/kitchen/' | relative_url }}">← Back to the Kitchen</a>
+    </div>
+
+  </article>
+
+</body>
+
+</html>
