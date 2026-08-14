@@ -2150,3 +2150,8 @@ footer p {
   height: 350px;
   object-fit: cover;
 }
+
+/* Hide Kitchen recipe cards filtered out by category */
+.kitchen-card[hidden] {
+  display: none !important;
+}
