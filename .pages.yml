@@ -496,14 +496,14 @@ content:
     format: yaml-frontmatter
 
     view:
-      primary: name
+      primary: title
       fields:
         - category
-      sort: name
+      sort: title
       order: asc
 
     fields:
-      - name: name
+      - name: title
         label: Name
         type: string
         required: true
