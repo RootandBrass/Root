@@ -1826,14 +1826,15 @@ footer p {
 }
 
 .kitchen-recipe-photo {
-  max-width: 700px;
-  margin: 0 auto 45px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 40px;
 }
 
 .kitchen-recipe-photo img {
   display: block;
   width: 100%;
-  max-height: 600px;
+  height: 350px;
   object-fit: cover;
   border-radius: 4px;
 }
