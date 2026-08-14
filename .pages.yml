@@ -487,3 +487,70 @@ content:
         label: Additional Notes
         type: rich-text
         required: false
+
+  - name: kitchen
+    label: Kitchen
+    type: collection
+    path: kitchen/entries
+    filename: "{primary}.md"
+    format: yaml-frontmatter
+
+    view:
+      primary: name
+      fields:
+        - category
+      sort: name
+      order: asc
+
+    fields:
+      - name: name
+        label: Name
+        type: string
+        required: true
+
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          values:
+            - value: beef-meals
+              label: Beef Meals
+            - value: bread
+              label: Bread
+            - value: breakfast
+              label: Breakfast
+            - value: canning
+              label: Canning
+            - value: casseroles
+              label: Casseroles
+            - value: chicken-meals
+              label: Chicken Meals
+            - value: copycat-recipes
+              label: Copycat Recipes
+            - value: desserts
+              label: Desserts
+            - value: drinks
+              label: Drinks
+            - value: fish-meals
+              label: Fish Meals
+            - value: hors-doeuvres
+              label: Hors d'Oeuvres
+            - value: pork-meals
+              label: Pork Meals
+            - value: salads
+              label: Salads
+            - value: seasonings-dressings
+              label: Seasonings & Dressings
+            - value: soups
+              label: Soups
+
+      - name: photo
+        label: Photo
+        type: image
+        required: false
+
+      - name: body
+        label: Recipe
+        type: rich-text
+        required: true
