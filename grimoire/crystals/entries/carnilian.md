@@ -1,4 +1,4 @@
 ---
 title: Carnilian
-image: /images/uploads/09e627fc-22d1-430e-b1c2-ffe92dd37842.png
+image: /images/uploads/f21f7bb2-53ea-48cf-8363-7e24194bd05b.png
 ---
