@@ -514,8 +514,8 @@ content:
         required: true
         options:
           values:
-            - value: beef-meals
-              label: Beef Meals
+            - value: meals-beef
+              label: Meals Beef
             - value: bread
               label: Bread
             - value: breakfast
@@ -524,20 +524,20 @@ content:
               label: Canning
             - value: casseroles
               label: Casseroles
-            - value: chicken-meals
-              label: Chicken Meals
+            - value: meals-chicken
+              label: Meals-Chicken
             - value: copycat-recipes
               label: Copycat Recipes
             - value: desserts
               label: Desserts
             - value: drinks
               label: Drinks
-            - value: fish-meals
-              label: Fish Meals
+            - value: meals-fish
+              label: Meals Fish
             - value: hors-doeuvres
               label: Hors d'Oeuvres
-            - value: pork-meals
-              label: Pork Meals
+            - value: meals-pork
+              label: Meals Pork
             - value: salads
               label: Salads
             - value: seasonings-dressings
