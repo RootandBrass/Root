@@ -2135,3 +2135,18 @@ footer p {
   }
 
 }
+
+/* Force Kitchen entry photo size */
+.kitchen-recipe .kitchen-recipe-photo {
+  width: 500px;
+  max-width: 90%;
+  margin: 0 auto 45px;
+}
+
+.kitchen-recipe .kitchen-recipe-photo img {
+  display: block;
+  width: 500px;
+  max-width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
