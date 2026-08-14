@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<article class="kitchen-recipe">
+
+  <header class="kitchen-recipe-header">
+    <p class="kitchen-recipe-category">{{ page.category }}</p>
+    <h1>{{ page.name }}</h1>
+  </header>
+
+  {% if page.photo %}
+  <div class="kitchen-recipe-photo">
+    <img src="{{ page.photo | relative_url }}" alt="{{ page.name }}">
+  </div>
+  {% endif %}
+
+  <div class="kitchen-recipe-content">
+    {{ content }}
+  </div>
+
+  <div class="kitchen-recipe-back">
+    <a href="{{ '/kitchen/' | relative_url }}">← Back to the Kitchen</a>
+  </div>
+
+</article>
