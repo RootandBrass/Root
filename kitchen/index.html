@@ -100,49 +100,56 @@ document.addEventListener("DOMContentLoaded", function () {
   const recipeView = document.getElementById("recipe-view");
   const categoryTitle = document.getElementById("category-title");
   const backButton = document.getElementById("back-to-categories");
-  const categoryButtons = document.querySelectorAll("[data-category]");
   const recipeCards = document.querySelectorAll(".kitchen-card");
   const noRecipes = document.getElementById("no-recipes");
 
-  document.querySelectorAll(".kitchen-categories button").forEach(button => {
+  const categoryButtons =
+    document.querySelectorAll(".kitchen-categories button");
+
+  categoryButtons.forEach(function (button) {
 
     button.addEventListener("click", function () {
 
-      const selectedCategory = this.dataset.category;
-      const selectedName = this.textContent.trim();
+      const selectedCategory =
+        button.dataset.category.trim().toLowerCase();
 
-      categoryView.hidden = true;
+      const selectedName =
+        button.textContent.trim();
+
+      categoryView.style.display = "none";
       recipeView.hidden = false;
 
       categoryTitle.textContent = selectedName;
 
       let visibleRecipes = 0;
 
-      recipeCards.forEach(card => {
+      recipeCards.forEach(function (card) {
 
-        if (card.dataset.category === selectedCategory) {
-          card.hidden = false;
+        const recipeCategory =
+          (card.dataset.category || "").trim().toLowerCase();
+
+        if (recipeCategory === selectedCategory) {
+          card.style.display = "block";
           visibleRecipes++;
         } else {
-          card.hidden = true;
+          card.style.display = "none";
         }
 
       });
 
-      noRecipes.hidden = visibleRecipes !== 0;
+      noRecipes.hidden = visibleRecipes > 0;
 
     });
 
   });
 
-
   backButton.addEventListener("click", function () {
 
     recipeView.hidden = true;
-    categoryView.hidden = false;
+    categoryView.style.display = "";
 
-    recipeCards.forEach(card => {
-      card.hidden = false;
+    recipeCards.forEach(function (card) {
+      card.style.display = "";
     });
 
   });
