@@ -1,6 +1,6 @@
 ---
 title: Moonstone
 variety: Champagne Moonstone
-image: /images/uploads/0d34fb4a-dff9-46ef-92aa-5b4c6487ed19.png
+image: /images/uploads/f5150daf-855d-4561-bb59-de28afbd70e3.png
 color: "Champagne "
 ---
