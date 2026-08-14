@@ -1645,3 +1645,267 @@ footer p {
     }
 
 }
+
+/* =========================================================
+   KITCHEN
+   ========================================================= */
+
+.kitchen-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 30px 90px;
+}
+
+
+/* ---------- Kitchen Header ---------- */
+
+.kitchen-header {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.kitchen-header h1 {
+  margin: 0 0 10px;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.kitchen-header p {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  opacity: 0.7;
+}
+
+
+/* ---------- Categories ---------- */
+
+.kitchen-categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.kitchen-categories button {
+  min-height: 85px;
+  padding: 18px 20px;
+
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(142, 111, 55, 0.45);
+  border-radius: 3px;
+
+  color: inherit;
+  font: inherit;
+  font-size: 1.05rem;
+  letter-spacing: 0.05em;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.kitchen-categories button:hover {
+  transform: translateY(-3px);
+  background: rgba(142, 111, 55, 0.09);
+  border-color: rgba(142, 111, 55, 0.8);
+}
+
+
+/* ---------- Selected Category ---------- */
+
+.kitchen-category-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.kitchen-category-heading h2 {
+  margin: 25px 0 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+}
+
+#back-to-categories {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+#back-to-categories:hover {
+  opacity: 1;
+}
+
+
+/* ---------- Recipe Cards ---------- */
+
+.kitchen-recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.kitchen-card {
+  display: block;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(142, 111, 55, 0.3);
+  border-radius: 4px;
+
+  color: inherit;
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.kitchen-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.kitchen-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.kitchen-card h3 {
+  margin: 0;
+  padding: 20px 16px;
+
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+#no-recipes {
+  margin-top: 40px;
+  text-align: center;
+  opacity: 0.65;
+}
+
+
+/* =========================================================
+   INDIVIDUAL KITCHEN RECIPE
+   ========================================================= */
+
+.kitchen-recipe {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 30px 90px;
+}
+
+.kitchen-recipe-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.kitchen-recipe-category {
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+  opacity: 0.65;
+}
+
+.kitchen-recipe-header h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+}
+
+.kitchen-recipe-photo {
+  max-width: 700px;
+  margin: 0 auto 45px;
+}
+
+.kitchen-recipe-photo img {
+  display: block;
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.kitchen-recipe-content {
+  max-width: 720px;
+  margin: 0 auto;
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.kitchen-recipe-content h2 {
+  margin-top: 35px;
+}
+
+.kitchen-recipe-content ul,
+.kitchen-recipe-content ol {
+  padding-left: 25px;
+}
+
+.kitchen-recipe-content li {
+  margin-bottom: 7px;
+}
+
+.kitchen-recipe-back {
+  max-width: 720px;
+  margin: 50px auto 0;
+  padding-top: 25px;
+
+  border-top: 1px solid rgba(142, 111, 55, 0.3);
+}
+
+.kitchen-recipe-back a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.kitchen-recipe-back a:hover {
+  opacity: 1;
+}
+
+
+/* ---------- Kitchen Mobile ---------- */
+
+@media (max-width: 800px) {
+
+  .kitchen-page,
+  .kitchen-recipe {
+    padding: 40px 20px 70px;
+  }
+
+  .kitchen-categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kitchen-recipe-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+}
+
+@media (max-width: 520px) {
+
+  .kitchen-categories {
+    grid-template-columns: 1fr;
+  }
+
+  .kitchen-recipe-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
