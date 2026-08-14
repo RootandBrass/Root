@@ -40,3 +40,9 @@ defaults:
       type: "pages"
     values:
       layout: journal
+
+  - scope:
+      path: "kitchen/entries"
+      type: "pages"
+    values:
+      layout: kitchen
