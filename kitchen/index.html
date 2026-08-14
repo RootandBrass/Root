@@ -1,0 +1,142 @@
+---
+layout: default
+title: Kitchen
+---
+
+<main class="kitchen-page">
+
+  <header class="kitchen-header">
+    <h1>Kitchen</h1>
+    <p>Recipes from the kitchen at 301 Ruby</p>
+  </header>
+
+  <!-- CATEGORY VIEW -->
+  <section id="category-view">
+
+    <div class="kitchen-categories">
+
+      <button data-category="beef-meals">Beef Meals</button>
+      <button data-category="bread">Bread</button>
+      <button data-category="breakfast">Breakfast</button>
+
+      <button data-category="canning">Canning</button>
+      <button data-category="casseroles">Casseroles</button>
+      <button data-category="chicken-meals">Chicken Meals</button>
+
+      <button data-category="copycat-recipes">Copycat Recipes</button>
+      <button data-category="desserts">Desserts</button>
+      <button data-category="drinks">Drinks</button>
+
+      <button data-category="fish-meals">Fish Meals</button>
+      <button data-category="hors-doeuvres">Hors d'Oeuvres</button>
+      <button data-category="pork-meals">Pork Meals</button>
+
+      <button data-category="salads">Salads</button>
+      <button data-category="seasonings-dressings">Seasonings &amp; Dressings</button>
+      <button data-category="soups">Soups</button>
+
+    </div>
+
+  </section>
+
+
+  <!-- RECIPE VIEW -->
+  <section id="recipe-view" hidden>
+
+    <div class="kitchen-category-heading">
+      <button id="back-to-categories">← Back to Categories</button>
+      <h2 id="category-title"></h2>
+    </div>
+
+    <div class="kitchen-recipe-grid">
+
+      {% assign kitchen_recipes = site.pages | where_exp: "item", "item.path contains 'kitchen/entries/'" | sort: "name" %}
+
+      {% for recipe in kitchen_recipes %}
+
+        <a
+          class="kitchen-card"
+          data-category="{{ recipe.category }}"
+          href="{{ recipe.url | relative_url }}"
+        >
+
+          {% if recipe.photo %}
+            <img
+              src="{{ recipe.photo | relative_url }}"
+              alt="{{ recipe.name }}"
+            >
+          {% endif %}
+
+          <h3>{{ recipe.name }}</h3>
+
+        </a>
+
+      {% endfor %}
+
+    </div>
+
+    <p id="no-recipes" hidden>
+      No recipes have been added to this category yet.
+    </p>
+
+  </section>
+
+</main>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const categoryView = document.getElementById("category-view");
+  const recipeView = document.getElementById("recipe-view");
+  const categoryTitle = document.getElementById("category-title");
+  const backButton = document.getElementById("back-to-categories");
+  const categoryButtons = document.querySelectorAll("[data-category]");
+  const recipeCards = document.querySelectorAll(".kitchen-card");
+  const noRecipes = document.getElementById("no-recipes");
+
+  document.querySelectorAll(".kitchen-categories button").forEach(button => {
+
+    button.addEventListener("click", function () {
+
+      const selectedCategory = this.dataset.category;
+      const selectedName = this.textContent.trim();
+
+      categoryView.hidden = true;
+      recipeView.hidden = false;
+
+      categoryTitle.textContent = selectedName;
+
+      let visibleRecipes = 0;
+
+      recipeCards.forEach(card => {
+
+        if (card.dataset.category === selectedCategory) {
+          card.hidden = false;
+          visibleRecipes++;
+        } else {
+          card.hidden = true;
+        }
+
+      });
+
+      noRecipes.hidden = visibleRecipes !== 0;
+
+    });
+
+  });
+
+
+  backButton.addEventListener("click", function () {
+
+    recipeView.hidden = true;
+    categoryView.hidden = false;
+
+    recipeCards.forEach(card => {
+      card.hidden = false;
+    });
+
+  });
+
+});
+</script>
