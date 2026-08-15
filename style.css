@@ -846,8 +846,7 @@ footer p {
     border-left: 2px solid #a98545;
 
     color: #2f2a24;
-    text-decorati
-        on: none;
+    text-decoration: none;
 }
 
 .plant-link:hover {
@@ -2154,4 +2153,296 @@ footer p {
 /* Hide Kitchen recipe cards filtered out by category */
 .kitchen-card[hidden] {
   display: none !important;
+}
+
+
+/* =========================================================
+   ROOT & BRASS HOMEPAGE — POLISHED
+   ========================================================= */
+
+.home-page {
+    --home-ink: #29251f;
+    --home-brass: #9a773c;
+    --home-brass-light: #c5aa72;
+    --home-paper: #f4f0e8;
+    --home-card: #e9e1d4;
+}
+
+.home-page .site-header {
+    padding: 26px 20px 22px;
+    background:
+        radial-gradient(circle at 50% 100%, rgba(169,133,69,.12), transparent 26rem),
+        #1b1a17;
+}
+
+.home-page .site-logo {
+    width: min(70vw, 440px);
+}
+
+.home-page .main-nav {
+    gap: clamp(18px, 4vw, 42px);
+    padding: 15px 20px;
+    background: #9b793d;
+}
+
+.home-page .main-nav a {
+    position: relative;
+    opacity: .82;
+}
+
+.home-page .main-nav a:hover,
+.home-page .main-nav a[aria-current="page"] {
+    opacity: 1;
+    text-decoration: none;
+}
+
+.home-page .main-nav a[aria-current="page"]::after {
+    content: "";
+    position: absolute;
+    right: 2px;
+    bottom: 0;
+    left: 2px;
+    height: 1px;
+    background: rgba(255,255,255,.75);
+}
+
+.home-main {
+    max-width: 1120px;
+    padding: 82px 30px 110px;
+}
+
+.home-page section {
+    margin-bottom: 0;
+}
+
+.home-page .hero-intro {
+    max-width: 800px;
+    margin: 0 auto 85px;
+}
+
+.home-kicker,
+.feature-label {
+    margin: 0 0 12px;
+    color: var(--home-brass);
+    font-size: .7rem;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+}
+
+.home-page .hero-intro h1 {
+    margin: 0;
+    color: var(--home-ink);
+    font-size: clamp(3.4rem, 8vw, 6.3rem);
+    line-height: 1;
+    letter-spacing: .08em;
+}
+
+.home-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 32px auto 28px;
+    color: var(--home-brass);
+    font-size: .65rem;
+}
+
+.home-divider span {
+    width: 86px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--home-brass-light), transparent);
+}
+
+.home-page .home-lead {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #5f574c;
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    line-height: 1.9;
+}
+
+.home-page .feature-grid {
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 20px;
+    margin: 0 0 90px;
+}
+
+.home-page .feature-card {
+    position: relative;
+    display: flex;
+    min-height: 390px;
+    padding: 28px;
+    overflow: hidden;
+    border: 1px solid rgba(154,119,60,.48);
+    background:
+        linear-gradient(145deg, rgba(255,255,255,.35), transparent 45%),
+        var(--home-card);
+    box-shadow: 0 8px 22px rgba(49,41,31,.07);
+}
+
+.home-page .feature-card::after {
+    content: "";
+    position: absolute;
+    inset: 9px;
+    border: 1px solid rgba(154,119,60,.14);
+    pointer-events: none;
+}
+
+.home-page .feature-card:hover {
+    transform: translateY(-6px);
+    background-color: #f0e8dc;
+    box-shadow: 0 16px 34px rgba(49,41,31,.13);
+}
+
+.feature-number {
+    position: absolute;
+    top: 18px;
+    right: 24px;
+    margin: 0;
+    color: rgba(154,119,60,.48);
+    font-size: 2.6rem;
+    line-height: 1;
+}
+
+.home-page .feature-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 78px 12px 8px;
+}
+
+.home-page .feature-content h2 {
+    margin: 0 0 22px;
+    padding: 0 0 15px;
+    border-bottom: 1px solid rgba(154,119,60,.55);
+    color: var(--home-ink);
+    font-size: clamp(1.75rem, 3vw, 2.35rem);
+}
+
+.home-page .feature-content > p:not(.feature-label) {
+    margin: 0;
+    color: #62594d;
+    line-height: 1.75;
+}
+
+.feature-arrow {
+    margin-top: auto;
+    padding-top: 28px;
+    color: #80632f;
+    font-size: .75rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.home-page .featured-update {
+    display: grid;
+    grid-template-columns: 180px minmax(0,1fr);
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px 52px;
+    border: 1px solid rgba(154,119,60,.52);
+    background:
+        linear-gradient(115deg, rgba(154,119,60,.09), transparent 55%),
+        #eee7dc;
+    text-align: left;
+    box-shadow: 0 8px 24px rgba(49,41,31,.06);
+}
+
+.featured-ornament {
+    color: var(--home-brass);
+    font-size: 5rem;
+    text-align: center;
+}
+
+.featured-copy {
+    padding-left: 45px;
+    border-left: 1px solid rgba(154,119,60,.42);
+}
+
+.home-page .featured-update h2 {
+    margin: 5px 0 15px;
+    padding: 0;
+    border: 0;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+}
+
+.home-page .featured-update p {
+    color: #61584c;
+}
+
+.home-page .featured-link {
+    margin-top: 10px;
+    color: #80632f;
+    font-size: .8rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 850px) {
+    .home-page .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-page .feature-card {
+        min-height: 300px;
+    }
+
+    .home-page .featured-update {
+        grid-template-columns: 110px minmax(0,1fr);
+        padding: 40px 34px;
+    }
+
+    .featured-copy {
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 560px) {
+    .home-main {
+        padding: 60px 17px 80px;
+    }
+
+    .home-page .hero-intro {
+        margin-bottom: 58px;
+    }
+
+    .home-page .main-nav {
+        flex-direction: row;
+        gap: 7px 16px;
+    }
+
+    .home-page .main-nav a {
+        width: auto;
+        padding: 6px 2px;
+        font-size: .68rem;
+    }
+
+    .home-page .feature-card {
+        min-height: 280px;
+        padding: 22px;
+    }
+
+    .home-page .feature-content {
+        padding-top: 62px;
+    }
+
+    .home-page .featured-update {
+        display: block;
+        padding: 35px 26px;
+        text-align: center;
+    }
+
+    .featured-ornament {
+        margin-bottom: 15px;
+        font-size: 3.4rem;
+    }
+
+    .featured-copy {
+        padding: 25px 0 0;
+        border-top: 1px solid rgba(154,119,60,.42);
+        border-left: 0;
+    }
 }
