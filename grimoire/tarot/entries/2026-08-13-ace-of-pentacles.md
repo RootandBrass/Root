@@ -1,7 +1,7 @@
 ---
 title: Ace of Pentacles
 date: 2026-08-13
-deck: Cosmic Garden
+deck: Tarot
 orientation: upright
 question: No question
 position: Single card
