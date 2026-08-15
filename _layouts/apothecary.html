@@ -1,0 +1,62 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>{{ page.title }} | Apothecary | Grimoire</title>
+    <link rel="icon" type="image/png" href="/grimoire/images/icon.png">
+    <link rel="stylesheet" href="/grimoire/style.css">
+</head>
+<body class="apothecary-page plant-entry-page">
+<div class="grimoire-shell">
+    <header class="grimoire-header">
+        <a href="/grimoire/" class="grimoire-mark">Grimoire</a>
+        <a href="/grimoire/apothecary/" class="return-link">Back to Apothecary</a>
+    </header>
+
+    <main class="plant-entry">
+        <article class="plant-record">
+            <header class="plant-record-header">
+                <p class="kicker">The Plant Cabinet</p>
+                <div class="plant-entry-mark">❧</div>
+                <h1>{{ page.title }}</h1>
+                {% if page.scientific_name %}<p class="plant-entry-latin">{{ page.scientific_name }}</p>{% endif %}
+                {% if page.common_name %}<p class="plant-entry-common">Also known as {{ page.common_name }}</p>{% endif %}
+                <div class="apothecary-divider"><span></span>✦<span></span></div>
+
+                {% if page.plant_type or page.parts_used or page.found_date or page.found_location %}
+                <div class="plant-properties">
+                    {% if page.plant_type %}<div><span>Plant Type</span><strong>{{ page.plant_type | replace: "-", " " }}</strong></div>{% endif %}
+                    {% if page.parts_used %}<div><span>Parts Used</span><strong>{{ page.parts_used }}</strong></div>{% endif %}
+                    {% if page.found_date %}<div><span>Date Found</span><strong>{{ page.found_date | date: "%B %-d, %Y" }}</strong></div>{% endif %}
+                    {% if page.found_location %}<div><span>Found At</span><strong>{{ page.found_location }}</strong></div>{% endif %}
+                </div>
+                {% endif %}
+            </header>
+
+            {% if page.image %}
+            <figure class="plant-specimen-image"><img src="{{ page.image }}" alt="{{ page.title }}"></figure>
+            {% endif %}
+
+            {% if page.identification %}<section class="plant-record-section"><h2>Identification</h2>{{ page.identification | markdownify }}</section>{% endif %}
+            {% if page.habitat %}<section class="plant-record-section"><h2>Habitat & Growing Conditions</h2>{{ page.habitat | markdownify }}</section>{% endif %}
+            {% if page.benefits %}<section class="plant-record-section plant-benefits"><h2>Benefits</h2>{{ page.benefits | markdownify }}</section>{% endif %}
+            {% if page.medicinal_uses %}<section class="plant-record-section"><h2>Traditional Medicinal Uses</h2>{{ page.medicinal_uses | markdownify }}</section>{% endif %}
+            {% if page.culinary_uses %}<section class="plant-record-section"><h2>Culinary Uses</h2>{{ page.culinary_uses | markdownify }}</section>{% endif %}
+            {% if page.magical_uses %}<section class="plant-record-section"><h2>Folklore & Magical Associations</h2>{{ page.magical_uses | markdownify }}</section>{% endif %}
+            {% if page.harvest %}<section class="plant-record-section"><h2>Harvesting</h2>{{ page.harvest | markdownify }}</section>{% endif %}
+            {% if page.preparation %}<section class="plant-record-section"><h2>Preparation & Preservation</h2>{{ page.preparation | markdownify }}</section>{% endif %}
+            {% if page.cautions %}<section class="plant-record-section plant-cautions"><h2>Safety & Cautions</h2>{{ page.cautions | markdownify }}</section>{% endif %}
+            {% if page.personal_notes %}<section class="plant-record-section plant-personal"><h2>My Notes</h2>{{ page.personal_notes | markdownify }}</section>{% endif %}
+            {% if page.sources %}<section class="plant-record-section plant-sources"><h2>Sources & References</h2>{{ page.sources | markdownify }}</section>{% endif %}
+
+            <footer class="plant-record-footer"><span>❧</span><a href="/grimoire/apothecary/">Return to the Plant Cabinet</a><span>❧</span></footer>
+        </article>
+    </main>
+</div>
+</body>
+</html>
