@@ -5098,7 +5098,24 @@ body.apothecary-page {
 }
 
 .apothecary-library { padding: 0 0 120px; }
-.apothecary-hero { max-width: 780px; margin: 0 auto; padding: 110px 20px 95px; text-align: center; }
+.apothecary-hero {
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 35px 0 0;
+    padding: 110px 60px 105px;
+    text-align: center;
+    background-image:
+        linear-gradient(to bottom, rgba(5, 9, 6, .20), rgba(5, 9, 6, .42) 68%, #080d0a 100%),
+        url("/grimoire/images/apothecary-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-left: 1px solid rgba(168,138,87,.14);
+    border-right: 1px solid rgba(168,138,87,.14);
+    text-shadow: 0 3px 24px rgba(0,0,0,.92);
+}
 .apothecary-mark { margin-bottom: 18px; color: var(--herb-light); font-size: 3.5rem; text-shadow: 0 0 25px rgba(140, 169, 128, .22); }
 .apothecary-hero h1 { color: #e7e3d8; font-size: clamp(3.4rem, 9vw, 6.8rem); letter-spacing: .11em; }
 .apothecary-divider { display: flex; align-items: center; justify-content: center; gap: 15px; margin: 30px auto; color: var(--apoth-brass); }
@@ -5159,7 +5176,12 @@ body.apothecary-page {
     .plant-properties { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
 @media (max-width: 640px) {
-    .apothecary-hero { padding: 75px 12px 65px; }
+    .apothecary-hero {
+        min-height: 610px;
+        margin-top: 20px;
+        padding: 85px 18px 80px;
+        background-position: center;
+    }
     .plant-cabinet { padding: 55px 8px 75px; }
     .apothecary-grid { grid-template-columns: 1fr; }
     .apothecary-note { margin-left: 8px; margin-right: 8px; }
