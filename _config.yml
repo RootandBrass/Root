@@ -36,6 +36,12 @@ defaults:
       layout: crystal
 
   - scope:
+      path: "grimoire/apothecary/entries"
+      type: "pages"
+    values:
+      layout: apothecary
+
+  - scope:
       path: "journal/entries"
       type: "pages"
     values:
