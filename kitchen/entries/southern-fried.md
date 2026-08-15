@@ -10,7 +10,9 @@ category: meals-pork
 - 1⁄4 teaspoon garlic salt, to taste  
 - 1⁄4 teaspoon Tony Chachere's Seasoning, to taste (optional) 
 -   [salt](https://www.food.com/about/salt-359), to taste  
--   [black pepper](https://www.food.com/about/pepper-337), to taste 
+-   [black pepper](https://www.food.com/about/pepper-337), to taste
+
+
 
   
 
@@ -24,5 +26,8 @@ DIRECTIONS 
 - In a large non-stick skillet, sear the sliced sausage for a good crunch and char. Remove sausage from skillet and drain on paper towels if needed. Set aside.  
 - Add remaining ingredients, and the sausage. 
 - Cover the skillet and cook for about 10 minutes. 
-- Uncover, and finish cooking until cabbage is desired tenderness and most of liquid has been reduced. 
+- Uncover, and finish cooking until cabbage is desired tenderness and most of liquid has been reduced.
 
+
+
+&nbsp;
