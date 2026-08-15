@@ -1,100 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Root & Brass — an evolving record of a historic home, its garden, kitchen, and collected stories.">
     <title>Root & Brass</title>
-    
     <link rel="icon" type="image/png" href="/images/logo.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 
-<body>
+<body class="home-page">
+    <header class="site-header">
+        <a href="/" aria-label="Root & Brass home">
+            <img src="/images/logo.png" alt="Root & Brass" class="site-logo">
+        </a>
+    </header>
 
-<header class="site-header">
-    <a href="index.html">
-         <img src="/images/logo.png"
-             alt="Root & Brass"
-             class="site-logo">
-    </a>
-</header>
-
-    <nav class="main-nav">
-        <a href="/index.html">Home</a>
+    <nav class="main-nav" aria-label="Main navigation">
+        <a href="/" aria-current="page">Home</a>
         <a href="/house.html">301 Ruby</a>
         <a href="/garden.html">The Garden</a>
-        <a href="/kitchen/index.html">The Kitchen</a>
+        <a href="/kitchen/">The Kitchen</a>
         <a href="/about.html">About</a>
     </nav>
-        
-<main>
 
-    <section class="hero-intro">
-        <h1>Root & Brass</h1>
-
-        <p>
-            A place for old homes, gardens, history, collected stories,
-            and the beautiful things that gather meaning over time.
-        </p>
-    </section>
-
-<section class="feature-grid">
-
-
-    <a href="/kitchen/index.html" class="feature-card">
-        <div class="feature-image ruby-image"></div>
-        <div class="feature-content">
-            <h2>The Kitchen</h2>
-            <p>
-                Recipes from old and new, some handed
-                down, some found, and a few invented.
+    <main class="home-main">
+        <section class="hero-intro">
+            <p class="home-kicker">Home · Garden · History</p>
+            <h1>Root &amp; Brass</h1>
+            <div class="home-divider" aria-hidden="true"><span></span>◆<span></span></div>
+            <p class="home-lead">
+                A living record of an old home, a growing garden,
+                inherited recipes, collected stories, and the beautiful
+                things that gather meaning over time.
             </p>
-        </div>
-    </a>
+        </section>
 
-    <a href="garden.html" class="feature-card">
-        <div class="feature-image garden-image"></div>
-        <div class="feature-content">
-            <h2>The Garden</h2>
-            <p>
-                Plants, seasons, experiments,
-                and the things worth growing.
-            </p>
-        </div>
-    </a>
+        <section class="feature-grid" aria-label="Explore Root & Brass">
+            <a href="/house.html" class="feature-card feature-house">
+                <p class="feature-number">01</p>
+                <div class="feature-content">
+                    <p class="feature-label">The House</p>
+                    <h2>301 Ruby</h2>
+                    <p>A 1910 Craftsman, its history, restoration, and the life gathered within its walls.</p>
+                    <span class="feature-arrow">Enter 301 Ruby →</span>
+                </div>
+            </a>
 
+            <a href="/garden.html" class="feature-card feature-garden">
+                <p class="feature-number">02</p>
+                <div class="feature-content">
+                    <p class="feature-label">The Grounds</p>
+                    <h2>The Garden</h2>
+                    <p>Plants, seasons, experiments, harvests, and the things worth growing year after year.</p>
+                    <span class="feature-arrow">Walk the Garden →</span>
+                </div>
+            </a>
 
-</section>
+            <a href="/kitchen/" class="feature-card feature-kitchen">
+                <p class="feature-number">03</p>
+                <div class="feature-content">
+                    <p class="feature-label">The Table</p>
+                    <h2>The Kitchen</h2>
+                    <p>Recipes old and new—some handed down, some discovered, and a few invented here.</p>
+                    <span class="feature-arrow">Open the Kitchen →</span>
+                </div>
+            </a>
+        </section>
 
-    <section class="featured-update">
-
-    <p class="eyebrow">FEATURED</p>
-
-    <h2>The Plant Journal</h2>
-
-    <p>
-        A living record of the trees, shrubs, flowers, fruit,
-        and perennial plants growing at Root &amp; Brass.
-        Follow the garden through the seasons and watch each
-        plant's story grow year after year.
-    </p>
-
-    <a href="/garden/plants.html" class="featured-link">
-        Explore the Plant Journal →
-    </a>
-
-</section>
-
-</section>
-
-</main>
+        <section class="featured-update">
+            <div class="featured-ornament" aria-hidden="true">❦</div>
+            <div class="featured-copy">
+                <p class="eyebrow">Currently Growing</p>
+                <h2>The Plant Journal</h2>
+                <p>
+                    A living record of the trees, shrubs, flowers, fruit,
+                    and perennial plants growing at Root &amp; Brass.
+                    Follow the garden through the seasons and watch each
+                    plant’s story grow year after year.
+                </p>
+                <a href="/garden/plants.html" class="featured-link">
+                    Explore the Plant Journal →
+                </a>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2026 Root & Brass</p>
+        <p>&copy; 2026 Root &amp; Brass</p>
     </footer>
-
 </body>
-
 </html>
