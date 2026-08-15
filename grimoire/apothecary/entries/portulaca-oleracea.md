@@ -2,7 +2,7 @@
 title: Portulaca oleracea
 common_name: Little Hogweed, Common purslane
 scientific_name: Common purslane
-plant_type: tree
+plant_type: succulent
 found_date: 2026-08-15
 found_location: In my yard
 habitat: >+
