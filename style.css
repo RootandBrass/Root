@@ -1169,27 +1169,299 @@ footer p {
     margin-bottom: 14px;
 }
 
+.harvest-log-template {
+    margin-top: 34px;
+    padding: 28px 30px;
+    border: 1px solid rgba(152,116,58,.35);
+    background: rgba(255,255,255,.32);
+}
+
+.harvest-log-template h3 {
+    margin: 5px 0 18px;
+    color: #504839;
+    font-size: 23px;
+    font-weight: normal;
+}
+
+.harvest-log-template ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 28px;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.harvest-log-template li {
+    line-height: 1.65;
+}
+
 .preservation-section {
     margin-bottom: 70px;
 }
 
-.preservation-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
-    margin-top: 30px;
-}
-
-.preservation-grid div {
-    padding: 25px;
-    border-left: 2px solid #a98545;
-    background-color: #ebe7dc;
-}
-
-.preservation-grid h3 {
-    margin-top: 0;
-    font-size: 21px;
+.preservation-section > h2 {
+    margin: 5px 0 14px;
+    color: #504839;
+    font-size: clamp(2rem, 4vw, 3.15rem);
     font-weight: normal;
+}
+
+.preservation-intro {
+    max-width: 760px;
+    color: #655e51;
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+.preservation-jump {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 30px 0 40px;
+}
+
+.preservation-jump a {
+    padding: 13px 12px;
+    border: 1px solid rgba(152,116,58,.42);
+    color: #6f592f;
+    font-size: .73rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color .2s ease, color .2s ease;
+}
+
+.preservation-jump a:hover {
+    background: #8f713d;
+    color: #fffaf0;
+}
+
+.preservation-method {
+    margin: 0 0 32px;
+    padding: 36px 38px;
+    border: 1px solid rgba(152,116,58,.38);
+    background: #ebe7dc;
+    box-shadow: 0 8px 22px rgba(52,47,38,.06);
+    scroll-margin-top: 24px;
+}
+
+.preservation-method-heading {
+    display: grid;
+    grid-template-columns: 54px 1fr;
+    gap: 22px;
+    align-items: start;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(152,116,58,.32);
+}
+
+.method-number {
+    margin: 1px 0 0;
+    color: #a98545;
+    font-family: Georgia, serif;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.preservation-method-heading h3 {
+    margin: 3px 0 10px;
+    color: #504839;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.preservation-method-heading p:last-child {
+    max-width: 720px;
+    margin-bottom: 0;
+    line-height: 1.7;
+}
+
+.method-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px;
+    margin-top: 28px;
+}
+
+.method-grid h4,
+.infusion-grid h4 {
+    margin: 0 0 14px;
+    color: #6f592f;
+    font-size: 1.08rem;
+    font-weight: 600;
+    letter-spacing: .06em;
+}
+
+.method-grid ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.method-grid li {
+    margin-bottom: 10px;
+    padding-left: 5px;
+    line-height: 1.65;
+}
+
+.method-facts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(152,116,58,.32);
+}
+
+.method-facts p {
+    margin: 0;
+    font-size: .94rem;
+    line-height: 1.65;
+}
+
+.infusion-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 28px;
+}
+
+.infusion-grid > div {
+    padding: 22px;
+    border-left: 2px solid #a98545;
+    background: rgba(255,255,255,.3);
+}
+
+.infusion-grid p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+.preservation-warning {
+    margin-top: 24px;
+    padding: 20px 22px;
+    border: 1px solid rgba(135,93,46,.45);
+    background: #e5dccb;
+    line-height: 1.7;
+}
+
+.harvest-reference {
+    margin: 64px 0 42px;
+    scroll-margin-top: 24px;
+}
+
+.harvest-reference h3,
+.harvest-safety-note h3,
+.harvest-kitchen-link h3 {
+    margin: 5px 0 20px;
+    color: #504839;
+    font-size: 1.85rem;
+    font-weight: normal;
+}
+
+.harvest-table-wrap {
+    overflow-x: auto;
+    border: 1px solid rgba(152,116,58,.4);
+}
+
+.harvest-reference table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+    background: rgba(255,255,255,.28);
+}
+
+.harvest-reference th,
+.harvest-reference td {
+    padding: 17px 18px;
+    border-right: 1px solid rgba(152,116,58,.2);
+    border-bottom: 1px solid rgba(152,116,58,.24);
+    line-height: 1.55;
+    text-align: left;
+    vertical-align: top;
+}
+
+.harvest-reference thead th {
+    background: #dfd7c8;
+    color: #6f592f;
+    font-size: .72rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.harvest-reference tbody th {
+    width: 145px;
+    color: #504839;
+    font-weight: 600;
+}
+
+.harvest-reference tr:last-child th,
+.harvest-reference tr:last-child td {
+    border-bottom: 0;
+}
+
+.harvest-safety-note {
+    margin: 42px 0 30px;
+    padding: 30px 34px;
+    border-top: 2px solid #a98545;
+    border-bottom: 1px solid rgba(152,116,58,.45);
+    background: #f0ebe2;
+}
+
+.harvest-safety-note ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.harvest-safety-note li {
+    margin-bottom: 10px;
+    line-height: 1.65;
+}
+
+.harvest-resources {
+    padding: 27px 30px;
+    border-left: 2px solid #a98545;
+    background: rgba(235,231,220,.65);
+}
+
+.harvest-resources ul {
+    margin: 12px 0 0;
+    padding-left: 20px;
+}
+
+.harvest-resources li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.harvest-resources a,
+.harvest-kitchen-link a {
+    color: #755b2e;
+    text-decoration-color: rgba(117,91,46,.45);
+    text-underline-offset: 3px;
+}
+
+.harvest-kitchen-link {
+    margin-top: 38px;
+    padding: 36px;
+    border: 1px solid rgba(152,116,58,.42);
+    text-align: center;
+}
+
+.harvest-kitchen-link p:not(.eyebrow) {
+    max-width: 680px;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 1.75;
+}
+
+.harvest-kitchen-link a {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: .77rem;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
 }
 
 .harvest-footer {
@@ -1206,8 +1478,28 @@ footer p {
 @media (max-width: 700px) {
 
     .harvest-grid,
-    .preservation-grid {
+    .method-grid,
+    .method-facts,
+    .infusion-grid,
+    .harvest-log-template ul {
         grid-template-columns: 1fr;
+    }
+
+    .preservation-jump {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .preservation-method {
+        padding: 28px 22px;
+    }
+
+    .preservation-method-heading {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .method-facts {
+        gap: 12px;
     }
 
     .harvest-intro h1 {
@@ -1216,6 +1508,11 @@ footer p {
 
     .apothecary-record {
         padding: 30px 22px;
+    }
+
+    .harvest-safety-note,
+    .harvest-kitchen-link {
+        padding: 26px 22px;
     }
 
 }
