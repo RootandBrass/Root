@@ -1,5 +1,5 @@
 ---
-title: Portulaca oleracea)
+title: Portulaca oleracea
 common_name: Little Hogweed, Common purslane
 scientific_name: Common purslane
 plant_type: tree
