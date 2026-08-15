@@ -3,8 +3,6 @@ title: "Clam Chowder"
 category: soups
 ---
 
-http://www.tasteofhome.com/recipes/new-england-clam-chowder-3
-
 ## Ingredients
 
 - 4 center-cut bacon strips

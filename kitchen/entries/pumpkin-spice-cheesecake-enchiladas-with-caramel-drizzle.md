@@ -3,44 +3,27 @@ title: "Pumpkin Spice Cheesecake Enchiladas with Caramel Drizzle"
 category: desserts
 ---
 
-It's time for the Lady Behind the Curtain dessert challenge! This month's challenge was to use pumpkin and cream cheese to create a unique dessert ... and I decided to step way outside of the dessert box and make some Pumpkin Spice Cheesecake Enchiladas with Caramel Drizzle! I am not even joking!
+Makes 9–12 servings.
 
-Although this was good, I think next time, I may experiment with trying to figure out how to make the tortillas more firm before filling .... or maybe after filling? If you have any ideas - I would love to hear them! :)
+## Ingredients
 
-Pumpkin Spice Cheesecake Enchiladas
+- 1 package (8 ounces) cream cheese, softened
+- 1 cup canned pumpkin
+- 1/2 cup sugar
+- 1/2 teaspoon pumpkin-pie spice
+- 2½ cups whipped topping, thawed
+- 18–24 flour tortillas
+- 6 tablespoons butter, melted
+- 2 teaspoons sugar
+- 2 teaspoons cinnamon
+- Caramel sauce
 
-Printable recipe
+## Instructions
 
-Yield: 9-12 servings
+1. Beat the cream cheese, pumpkin, 1/2 cup sugar, and pumpkin-pie spice until smooth.
+2. Gently fold in the whipped topping.
+3. Divide the filling among the tortillas, roll them up, and arrange them on serving plates.
+4. Mix the melted butter with 2 teaspoons sugar and the cinnamon. Brush over the rolled tortillas.
+5. Drizzle with caramel sauce before serving.
 
-1 pkg. (8 oz.) cream cheese, softened
-
-1 cup canned pumpkin
-
-1/2 cup sugar
-
-1/2 tsp. pumpkin pie spice
-
-2½ cups Cool Whip, thawed
-
-18-24 Flour tortillas
-
-6 tbsp. butter, melted
-
-2 tsp. sugar
-
-2 tsp. cinnamon
-
-Caramel sauce
-
-In a large bowl, beat the cream cheese, pumpkin, sugar and pumpkin pie spice with electric mixer on medium speed until well blended. Gently stir in the whipped topping. Divide the cream cheese mixture evenly between the tortillas. Roll each tortilla up and put on serving plates. In a small bowl, combine the butter, sugar and cinnamon. Brush the mixture over the over the rolled tortillas. Top with caramel sauce.
-
-Report this ad
-
-Pumpkin Oatmeal Chocolate Chip Cookies
-
-I hope you enjoy! Shared at
-
-these
-
-fun parties!
+*Notebook note: experiment with crisping the tortillas before or after filling for a firmer texture.*

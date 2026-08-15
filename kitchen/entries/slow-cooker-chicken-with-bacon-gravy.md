@@ -15,8 +15,6 @@ TOTAL TIME
 
 3 hours 45 mins
 
-Author: Sarah Olson
-
 Serves: 4
 
 ## INGREDIENTS
@@ -27,15 +25,12 @@ Serves: 4
 - 1 tsp. minced garlic
 - 6 slices bacon, sliced and cooked
 - 2 (0.87-oz.) packets chicken gravy dry mix
-- 1¼ cup water <<<<< that's all, not the amount of water the gravy packets say
-- ⅔
-- cup heavy cream (ADD AT THE END)
-- Slow Cooker Size:
-- 3-quart or larger
+- 1¼ cups water
+- ⅔ cup heavy cream, added at the end
 
 ## INSTRUCTIONS
 
-1. Add the chicken to the slow cooker. Sprinkle over the pepper, thyme, garlic and bacon.
+1. Add the chicken to a 3-quart or larger slow cooker. Sprinkle over the pepper, thyme, garlic and bacon.
 2. In a small bowl mix together the gravy mix packet and the 1¼ cup water until smooth. Pour the gravy over the chicken.
 3. Cover and cook on HIGH for 3.5 hours without opening the lid during the cooking time.
 4. When the cooking time is done, add the heavy cream. Shred the chicken with 2 forks and give everything a gentle stir until the gravy and the cream are mixed.

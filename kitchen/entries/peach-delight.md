@@ -3,10 +3,6 @@ title: "Peach Delight"
 category: desserts
 ---
 
-Peach Delight Recipe
-
-Peach Delight Recipe photo by Taste of Hom
-
 TOTAL TIME:
 
 Prep: 25 min. Bake: 15 min. + chilling
@@ -17,35 +13,22 @@ MAKES:
 
 ## Ingredients
 
-- 
 - 1/4 cup butter, softened
-- 
 - 1/2 cup sugar
-- 
 - 1 cup all-purpose flour
-- 
 - 1/4 cup chopped walnuts
-- 
 
 ### FILLING
 
-- 
 - 1 package (8 ounces) reduced-fat cream cheese
-- 
 - 3/4 cup confectioners' sugar
-- 
 - 1 carton (8 ounces) frozen reduced-fat whipped topping, thawed, divided
-- 
 - 7 medium peaches, thinly sliced
-- 
 
 ### GLAZE
 
-- 
 - 3 tablespoons cornstarch
-- 
 - 2 cups water
-- 
 - 1 package (.3 ounce) sugar-free lemon gelatin
 
 ## Directions

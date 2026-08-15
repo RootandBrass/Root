@@ -3,10 +3,6 @@ title: "Peanut Butter Butterfinger Cookies"
 category: desserts
 ---
 
-PEANUT BUTTER BUTTERFINGER COOKIES | www.togetherasfamily.com
-
-Peanut Butter Butterfinger Cookies
-
 ## Ingredients
 
 - 1 cup (2 sticks) butter, softened
@@ -28,6 +24,3 @@ Peanut Butter Butterfinger Cookies
 4. Add flour and baking soda into the bowl and mix to combine together. I found this easiest to do with a wooden spoon (it will take a few minutes). When the flour is almost incorporated, add in the peanut butter chips and crushed Butterfingers. Mix until combined.
 5. Roll cookie dough into a ball, about 2-3 tablespoons of dough, or use a small cookie scoop. Bake for 10-11 minutes.
 6. Let cool on pan for 1 minute and then use a glass cup and gently press down on top of the dough ball to flatten. Do not push down hard, or else the cookie will turn crunchy and thin, just gently press the cup on top. If wanted, spray the cup with cooking spray (lightly) and then dip in sugar before pressing down on top of the cookie. It's yummy!
-7. From <
-8. http://togetherasfamily.com/2016/01/peanut-butter-butterfinger-cookies/
-9. >

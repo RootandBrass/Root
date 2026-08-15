@@ -3,8 +3,6 @@ title: "Peanut Butter Surprise Cookies"
 category: desserts
 ---
 
-Together as Family Peanut Butter surprise cookies
-
 ## Ingredients
 
 - 1 cup (2 sticks) butter, softened
@@ -30,6 +28,3 @@ Together as Family Peanut Butter surprise cookies
 7. Roll it in your hands to create a ball making sure the peanut butter cup is completely covered. Roll the dough ball in the 1/4 cup sugar to coat the outside of it.
 8. Repeat with the remaining dough and place 12 to a cookie sheet. Bake for 8-10 minutes.
 9. Remove from the oven and let cool for 10 minutes on the cookie sheet. Remove to cooling rack to cool completely. Although, these cookies are so good warm.
-10. From <
-11. http://togetherasfamily.com/2015/12/peanut-butter-surprise-cookies/
-12. >

@@ -3,8 +3,6 @@ title: "Pudding Cookies"
 category: desserts
 ---
 
-PEST PUDDING COOKIES THIS IS THE ONLY COOKIE RECIPE YOU NEED!
-
 ## INGREDIENTS
 
 - 1/2 cup unsalted butter, softened
@@ -19,7 +17,8 @@ PEST PUDDING COOKIES THIS IS THE ONLY COOKIE RECIPE YOU NEED!
 
 ## DIRECTIONS
 
-1. Note: This dough requires chilling.
-2. Cream butter and brown sugar in the bowl of a stand mixer fitted with the paddle attachment. (You can also use a hand mixer.) Mix in egg and vanilla until smooth. Add pudding mix, baking soda, and salt. Mix until combined. Mix in flour, then stir chocolate chips or other mix-ins.
-3. Scoop 2 tablespoon balls of cookie dough onto a cookie sheet covered with parchment or a silpat baking mat. There’s no need to space them out, you’re going to chill them. Cover and chill for at least 1 hour.
-4. Preheat oven to 350°F. Line cookie sheets with parchment paper or silpat baking mats. Place chilled cookie dough balls 2” apart on cookie sheet. Bake 9-11 minutes or until the edges just start to turn brown. Cool 5 minutes on cookie sheet before transferring to a rack to cool completely. Store in an airtight container for up to 4 days or freeze for up to one month.
+1. Cream the butter and brown sugar. Beat in the egg and vanilla.
+2. Mix in the pudding mix, baking soda, and salt. Add the flour, then fold in the chocolate chips.
+3. Scoop 2-tablespoon balls onto a parchment-lined pan. Cover and chill for at least 1 hour.
+4. Preheat the oven to 350°F and space the chilled dough balls 2 inches apart.
+5. Bake for 9–11 minutes, until the edges begin to brown. Cool on the pan for 5 minutes before transferring to a rack.

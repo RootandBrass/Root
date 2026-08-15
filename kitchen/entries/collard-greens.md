@@ -23,7 +23,8 @@ category: salads
 
 ## Directions
 
-1. Step 1
-2. Heat oil in a large pot over medium-high heat. Add bacon, and cook until crisp. Remove bacon from pan, crumble and return to the pan. Add onion, and cook until tender, about 5 minutes. Add garlic, and cook until just fragrant. Add collard greens, and fry until they start to wilt.
-3. Step 2
-4. Pour in chicken broth, and season with salt, pepper, and red pepper flakes. Reduce heat to low, cover, and simmer for 45 minutes, or until greens are tender.
+1. Heat oil in a large pot over medium-high heat. Add bacon and cook until crisp. Remove, crumble, and return it to the pan.
+2. Add the onion and cook until tender, about 5 minutes. Add the garlic and cook until fragrant.
+3. Add the collard greens and cook until they begin to wilt.
+4. Pour in the broth and season with salt, pepper, and red-pepper flakes.
+5. Reduce the heat to low, cover, and simmer for about 45 minutes, until tender.

@@ -1,5 +1,5 @@
 ---
-title: "Cherry Cheesecake brownies"
+title: "Cherry Cheesecake Brownies"
 category: desserts
 ---
 
@@ -24,13 +24,10 @@ Serves: 12
 
 ## INSTRUCTIONS
 
-1. Heat oven to 350 degrees. Line a
-2. x9 inch pan
-3. with foil and spray lightly with cooking spray. Set aside.
-4. To make the topping: Beat together cream cheese, and sugar until smooth. Add in egg and vanilla and continue to beat until smooth.
-5. To make the brownies: In a microwave-safe bowl, melt butter and chocolate 30 seconds at a time until melted and smooth. Stir in sugar vanilla and salt. Add in eggs and flour. Mix until incorporated.
-6. Spread brownie mix into the bottom of your 13x9 inch prepared pan. Drop Cheesecake mixture on top followed by the Lucky Leaf Cherry Pie filling. Run a knife through the top giving it the marbled look.
-7. Bake for 45-50 minutes until the cheesecake states to turn lightly brown on the edges. The cheesecake center will still jiggle a bit. Cool completely and chill for 4 hours before cutting.
-8. From <
-9. https://therecipecritic.com/cherry-cheesecake-brownies/
-10. >
+1. Heat the oven to 350°F. Line a 13×9-inch pan with foil and lightly coat it with cooking spray.
+2. Beat the cream cheese and sugar until smooth. Beat in the egg and vanilla; set aside.
+3. Melt the butter and chocolate together in 30-second microwave intervals, stirring until smooth.
+4. Stir the sugar, vanilla, and salt into the chocolate mixture. Add the eggs and flour and mix until incorporated.
+5. Spread the brownie batter in the prepared pan. Spoon the cheesecake mixture and cherry filling over the top, then marble them with a knife.
+6. Bake for 45–50 minutes, until the cheesecake is lightly browned at the edges; the center may still jiggle slightly.
+7. Cool completely, then chill for 4 hours before cutting.

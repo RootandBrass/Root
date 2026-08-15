@@ -1,9 +1,7 @@
 ---
-title: "Better than sex cake"
+title: "Better Than Sex Cake"
 category: desserts
 ---
-
-http://m.allrecipes.com/recipe/7515/better-than-sex-cake-ii
 
 1 (18.25 ounce) package devil's food cake mix
 

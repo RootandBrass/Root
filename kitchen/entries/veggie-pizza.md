@@ -5,15 +5,13 @@ category: hors-doeuvres
 
 ## Ingredients
 
-- 8 oz Pillsbury Crescent Rolls 1 can reduced-fat
-- 
-- 4 oz reduced-fat cream cheesesoftened
-- 1/2 cup sour cream light
-- 
-- 1 tbsp fresh dill chopped
-- 1 tbsp fresh chives chopped
+- 1 can (8 ounces) refrigerated crescent-roll dough
+- 4 ounces reduced-fat cream cheese, softened
+- 1/2 cup light sour cream
+- 1 tablespoon chopped fresh dill
+- 1 tablespoon chopped fresh chives
 - salt and pepper to taste
-- 2 cup chopped assorted veggiesbroccoli, bell peppers, carrots, green onion, cucumber
+- 2 cups chopped assorted vegetables, such as broccoli, bell peppers, carrots, green onion, or cucumber
 
 ## Instructions
 
@@ -26,61 +24,3 @@ category: hors-doeuvres
 7. Top with fresh veggies and additional chives if desired.
 8. Use a pizza cutter or large knife to cut down to appetizer size pieces and serve.
 9. Can be refrigerated for up to an hour before serving.
-
-## Nutrition
-
-Calories:
-
-46 kcal
-
-| Carbohydrates:
-
-5 g
-
-| Protein:
-
-1 g
-
-| Fat:
-
-3 g
-
-| Saturated Fat:
-
-1 g
-
-| Cholesterol:
-
-4 mg
-
-| Sodium:
-
-81 mg
-
-| Potassium:
-
-38 mg
-
-| Fiber:
-
-1 g
-
-| Sugar:
-
-1 g
-
-| Vitamin A:
-
-624 IU
-
-| Vitamin C:
-
-1 mg
-
-| Calcium:
-
-12 mg
-
-| Iron:
-
-1 mg

@@ -3,39 +3,22 @@ title: "Pineapple Upside-Down Cupcakes"
 category: desserts
 ---
 
-Pineapple Upside Down Cupcakes
+Prep time: 25 minutes · Bake time: 23–26 minutes · Makes 12
 
-Prep Time:
+## Ingredients
 
-25 minutes
-
-Cook Time:
-
-25 minutes
-
-1 (20 oz) can pineapple chunks in pineapple juice
-
-1 (8 oz) can pineapple chunks in pineapple juice
-
-1/3 cup (2.7 oz) packed light brown sugar
-
-1/3 cup (2.6 oz) unsalted butter, melted
-
-1 cup (5 oz) all-purpose flour
-
-3/4 cup (5.6 oz) granulated sugar
-
-1/2 tsp baking powder
-
-1/4 tsp salt
-
-1/4 cup (2 oz) unsalted butter, softened
-
-1/2 cup (4 oz) pineapple juice (from pineapple chunk can)
-
-1 large egg
-
-1/2 tsp vanilla extract
+- 1 can (20 ounces) pineapple chunks in juice
+- 1 can (8 ounces) pineapple chunks in juice
+- 1/3 cup packed light brown sugar
+- 1/3 cup unsalted butter, melted
+- 1 cup all-purpose flour
+- 3/4 cup granulated sugar
+- 1/2 teaspoon baking powder
+- 1/4 teaspoon salt
+- 1/4 cup unsalted butter, softened
+- 1/2 cup reserved pineapple juice
+- 1 large egg
+- 1/2 teaspoon vanilla
 
 ### Topping
 
