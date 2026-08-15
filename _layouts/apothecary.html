@@ -28,11 +28,10 @@
                 {% if page.common_name %}<p class="plant-entry-common">Also known as {{ page.common_name }}</p>{% endif %}
                 <div class="apothecary-divider"><span></span>✦<span></span></div>
 
-                {% if page.plant_type or page.parts_used or page.found_date or page.found_location %}
+                {% if page.plant_type or page.parts_used or page.found_location %}
                 <div class="plant-properties">
                     {% if page.plant_type %}<div><span>Plant Type</span><strong>{{ page.plant_type | replace: "-", " " }}</strong></div>{% endif %}
                     {% if page.parts_used %}<div><span>Parts Used</span><strong>{{ page.parts_used }}</strong></div>{% endif %}
-                    {% if page.found_date %}<div><span>Date Found</span><strong>{{ page.found_date | date: "%B %-d, %Y" }}</strong></div>{% endif %}
                     {% if page.found_location %}<div><span>Found At</span><strong>{{ page.found_location }}</strong></div>{% endif %}
                 </div>
                 {% endif %}
