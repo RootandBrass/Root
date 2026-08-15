@@ -8,26 +8,33 @@
     <title>Seasonal Garden | Root & Brass</title>
 
     <link rel="icon" type="image/png" href="../images/logo.png">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 
-<body>
+<body class="secondary-page garden-site">
 
     <header class="site-header">
-        <a href="../index.html">
-            <img src="../images/logo.png"
-                 alt="Root & Brass"
+        <a href="/" aria-label="Root &amp; Brass home">
+            <img src="/images/logo.png"
+                 alt="Root &amp; Brass"
                  class="site-logo">
         </a>
     </header>
 
-    <nav class="main-nav">
-        <a href="/index.html">Home</a>
+    <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
         <a href="/house.html">301 Ruby</a>
-        <a href="/garden.html">The Garden</a>
-        <a href="/kitchen/index.html">The Kitchen</a>
+        <a href="/garden.html" aria-current="page">The Garden</a>
+        <a href="/kitchen/">The Kitchen</a>
         <a href="/history.html">History</a>
         <a href="/about.html">About</a>
+    </nav>
+
+    <nav class="garden-subnav" aria-label="Garden navigation">
+        <a href="/garden/plants.html">Plant Journal</a>
+        <a href="/garden/seasons.html" aria-current="page">Seasonal Garden</a>
+        <a href="/garden/harvest.html">Harvest & Use</a>
+        <a href="/garden/projects.html">Garden Projects</a>
     </nav>
 
 
@@ -92,10 +99,10 @@
                         waking.
                     </p>
                     </a>
-                </article class="season-plant">
+                </article>
 
                 <article class="season-plant">
-                    <a href="/garden/plants/treesandshrubs/crabaple.html" class="garden-card">
+                    <a href="/garden/plants/treesandshrubs/crabapple.html" class="garden-card">
                     <h3>Crabapple</h3>
                     <p>
                         Spring blossoms make the crabapple one of the
@@ -126,7 +133,7 @@
                 </article>
 
                 <article class="season-plant">
-                    <a href="/garden/plants/flowers/lilyofthevalley.html" class="garden-card">
+                    <a href="/garden/plants/flowers/lillyofthevally.html" class="garden-card">
                     <h3>Lily of the Valley</h3>
                     <p>
                         Small fragrant bells bring detail and softness
@@ -181,7 +188,7 @@
 
                 <article class="season-plant">
                     <a href="/garden/plants/flowers/peony.html" class="garden-card">
-                    <h3>White &nd Red Peony</h3>
+                    <h3>White &amp; Red Peony</h3>
                     <p>
                         Large white blooms create one of the garden's
                         most dramatic moments as spring gives way to summer.
@@ -190,7 +197,7 @@
                 </article>
 
                 <article class="season-plant">
-                    <a href="/garden/plants/flowers/clematis.html" class="garden-card">
+                    <a href="/garden/plants/climbers/clematis.html" class="garden-card">
                     <h3>Clematis</h3>
                     <p>
                         The two clematis varieties grow together,

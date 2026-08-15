@@ -10,12 +10,30 @@
 
   <title>{{ page.title }} | Root & Brass</title>
 
+  <link rel="icon" type="image/png" href="/images/logo.png">
   <link rel="stylesheet" href="/style.css">
 </head>
 
-<body>
+<body class="secondary-page kitchen-site">
 
-  <article class="kitchen-recipe">
+  <header class="site-header">
+    <a href="/" aria-label="Root &amp; Brass home">
+      <img src="/images/logo.png"
+           alt="Root &amp; Brass"
+           class="site-logo">
+    </a>
+  </header>
+
+  <nav class="main-nav" aria-label="Main navigation">
+    <a href="/">Home</a>
+    <a href="/house.html">301 Ruby</a>
+    <a href="/garden.html">The Garden</a>
+    <a href="/kitchen/" aria-current="page">The Kitchen</a>
+    <a href="/history.html">History</a>
+    <a href="/about.html">About</a>
+  </nav>
+
+  <main class="kitchen-recipe">
 
     <header class="kitchen-recipe-header">
       <p class="kitchen-recipe-category">{{ page.category }}</p>
@@ -36,7 +54,11 @@
       <a href="{{ '/kitchen/' | relative_url }}">← Back to the Kitchen</a>
     </div>
 
-  </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Root &amp; Brass</p>
+  </footer>
 
 </body>
 

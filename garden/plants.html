@@ -8,26 +8,33 @@
     <title>Plant Journal | Root & Brass</title>
 
     <link rel="icon" type="image/png" href="/images/logo.png">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 
-<body>
+<body class="secondary-page garden-site">
 
     <header class="site-header">
-        <a href="../index.html">
+        <a href="/" aria-label="Root &amp; Brass home">
             <img src="/images/logo.png"
-                 alt="Root & Brass"
+                 alt="Root &amp; Brass"
                  class="site-logo">
         </a>
     </header>
 
-    <nav class="main-nav">
-        <a href="/index.html">Home</a>
+    <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
         <a href="/house.html">301 Ruby</a>
-        <a href="/garden.html">The Garden</a>
-        <a href="/kitchen/index.html">The Kitchen</a>
+        <a href="/garden.html" aria-current="page">The Garden</a>
+        <a href="/kitchen/">The Kitchen</a>
         <a href="/history.html">History</a>
         <a href="/about.html">About</a>
+    </nav>
+
+    <nav class="garden-subnav" aria-label="Garden navigation">
+        <a href="/garden/plants.html" aria-current="page">Plant Journal</a>
+        <a href="/garden/seasons.html">Seasonal Garden</a>
+        <a href="/garden/harvest.html">Harvest & Use</a>
+        <a href="/garden/projects.html">Garden Projects</a>
     </nav>
 
     <main class="plant-library">
@@ -55,7 +62,7 @@
                 <a href="/garden/plants/treesandshrubs/cheyenneprivet.html" class="plant-link">Cheyenne Privet</a>
                 <a href="/garden/plants/treesandshrubs/crabapple.html" class="plant-link">Crabapple</a>
                 <a href="/garden/plants/treesandshrubs/frostpeach.html" class="plant-link">Frost Peach</a>
-                <a href="/garden/plants/treesandshrubs/honeysucklebush.html" class="plant-link">Honey Suckle Bush</a>
+                <a href="/garden/plants/treesandshrubs/honeysucklebush.html" class="plant-link">Honeysuckle Bush</a>
                 <a href="/garden/plants/treesandshrubs/hydrangea.html" class="plant-link">Hydrangea</a>
                 <a href="/garden/plants/treesandshrubs/juniper.html" class="plant-link">Juniper</a>
                 <a href="/garden/plants/treesandshrubs/lilac.html" class="plant-link">Lilac</a>             
@@ -80,9 +87,9 @@
                 <a href="/garden/plants/flowers/hosta.html" class="plant-link">Hosta</a>
                 <a href="/garden/plants/flowers/iris.html" class="plant-link">Iris</a>
                 <a href="/garden/plants/flowers/lilly.html" class="plant-link">Daylily</a>
-                <a href="/garden/plants/flowers/lillyofthevalley.html" class="plant-link">Lily of the Valley</a>
+                <a href="/garden/plants/flowers/lillyofthevally.html" class="plant-link">Lily of the Valley</a>
                 <a href="/garden/plants/flowers/lupine.html" class="plant-link">Lupine</a>
-                <a href="/garden/plants/flowers/merigold.html" class="plant-link">Merigold</a>
+                <a href="/garden/plants/flowers/merigold.html" class="plant-link">Marigold</a>
                 <a href="/garden/plants/flowers/peony.html" class="plant-link">Peony</a>
                 <a href="/garden/plants/flowers/primrose.html" class="plant-link">Primrose</a>
                 <a href="/garden/plants/flowers/sedum.html" class="plant-link">Sedum</a> 
@@ -99,7 +106,7 @@
 
             <div class="plant-list">
                 <a href="/garden/plants/climbers/clematis.html" class="plant-link">Clematis</a>
-                <a href="/garden/plants/climbers/honeysuck.e.html" class="plant-link">Honeysuckle</a>
+                <a href="/garden/plants/climbers/honeysuckle.html" class="plant-link">Honeysuckle</a>
             </div>
 
         </section>

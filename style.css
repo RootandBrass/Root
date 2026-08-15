@@ -2155,6 +2155,505 @@ footer p {
   display: none !important;
 }
 
+/* =========================================================
+   ROOT & BRASS SECONDARY PAGES — SHARED POLISH
+   ========================================================= */
+
+.secondary-page {
+    --page-ink: #2d2923;
+    --page-muted: #6c6255;
+    --page-brass: #98743a;
+    --page-brass-soft: #c7ae7b;
+    --page-paper: #f4f0e8;
+    --page-panel: #ebe4d8;
+    background:
+        radial-gradient(circle at 10% 10%, rgba(169,133,69,.07), transparent 30rem),
+        linear-gradient(#f6f2ea, #f1ece3);
+}
+
+.secondary-page .site-header {
+    padding: 25px 20px 21px;
+    background:
+        radial-gradient(circle at 50% 100%, rgba(169,133,69,.11), transparent 25rem),
+        #1b1a17;
+}
+
+.secondary-page .site-logo {
+    width: min(68vw, 400px);
+}
+
+.secondary-page .main-nav {
+    gap: clamp(16px, 3vw, 34px);
+    padding: 14px 18px;
+}
+
+.secondary-page .main-nav a {
+    position: relative;
+    opacity: .78;
+}
+
+.secondary-page .main-nav a:hover,
+.secondary-page .main-nav a[aria-current="page"] {
+    opacity: 1;
+    text-decoration: none;
+}
+
+.secondary-page .main-nav a[aria-current="page"]::after {
+    content: "";
+    position: absolute;
+    right: 2px;
+    bottom: 0;
+    left: 2px;
+    height: 1px;
+    background: rgba(255,255,255,.72);
+}
+
+.garden-subnav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 7px 26px;
+    padding: 13px 20px;
+    border-bottom: 1px solid rgba(152,116,58,.3);
+    background: #e8e0d3;
+}
+
+.garden-subnav a {
+    position: relative;
+    padding: 4px 0;
+    color: #675b4b;
+    font-size: .72rem;
+    letter-spacing: .1em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.garden-subnav a:hover,
+.garden-subnav a[aria-current="page"] {
+    color: var(--page-brass);
+}
+
+.garden-subnav a[aria-current="page"]::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background: var(--page-brass);
+}
+
+.secondary-page main {
+    position: relative;
+}
+
+.secondary-page .page-intro,
+.secondary-page .garden-intro,
+.secondary-page .about-intro,
+.secondary-page .history-intro,
+.secondary-page .garden-projects-intro,
+.secondary-page .harvest-intro,
+.secondary-page .seasonal-intro,
+.secondary-page .plant-library-intro,
+.secondary-page .plant-profile-header,
+.secondary-page .kitchen-header,
+.secondary-page .journal-intro {
+    position: relative;
+    max-width: 780px;
+    margin-right: auto;
+    margin-bottom: 75px;
+    margin-left: auto;
+    padding-bottom: 35px;
+    text-align: center;
+}
+
+.secondary-page .page-intro::after,
+.secondary-page .garden-intro::after,
+.secondary-page .about-intro::after,
+.secondary-page .history-intro::after,
+.secondary-page .garden-projects-intro::after,
+.secondary-page .harvest-intro::after,
+.secondary-page .seasonal-intro::after,
+.secondary-page .plant-library-intro::after,
+.secondary-page .plant-profile-header::after,
+.secondary-page .journal-intro::after {
+    content: "◆";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 150px;
+    transform: translateX(-50%);
+    border-bottom: 1px solid var(--page-brass-soft);
+    color: var(--page-brass);
+    font-size: .55rem;
+    line-height: 1px;
+    text-align: center;
+}
+
+.secondary-page .page-intro h1,
+.secondary-page .garden-intro h1,
+.secondary-page .about-intro h1,
+.secondary-page .history-intro h1,
+.secondary-page .garden-projects-intro h1,
+.secondary-page .harvest-intro h1,
+.secondary-page .seasonal-intro h1,
+.secondary-page .plant-library-intro h1,
+.secondary-page .plant-profile-header h1 {
+    margin: 4px 0 18px;
+    color: var(--page-ink);
+    font-size: clamp(2.8rem, 7vw, 4.9rem);
+    line-height: 1.08;
+    letter-spacing: .055em;
+}
+
+.secondary-page .page-lead {
+    max-width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+    color: var(--page-muted);
+    font-size: clamp(1.05rem, 2vw, 1.2rem);
+    line-height: 1.85;
+}
+
+.secondary-page .eyebrow {
+    color: var(--page-brass);
+    font-size: .68rem;
+    font-weight: 600;
+    letter-spacing: .26em;
+}
+
+.secondary-page footer {
+    margin-top: 30px;
+    border-top: 3px solid #9b793d;
+}
+
+/* 301 Ruby */
+
+.house-site .story-section {
+    padding: 38px 42px;
+    border: 1px solid rgba(152,116,58,.32);
+    background: rgba(255,255,255,.28);
+}
+
+.house-site .timeline-section {
+    padding: 42px;
+    border-top: 1px solid var(--page-brass-soft);
+    border-bottom: 1px solid var(--page-brass-soft);
+}
+
+.house-site .timeline-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.secondary-page .page-link-card {
+    position: relative;
+    min-height: 150px;
+    border-color: rgba(152,116,58,.45);
+    box-shadow: 0 6px 18px rgba(49,41,31,.05);
+    transition: transform .22s ease, background-color .22s ease, box-shadow .22s ease;
+}
+
+a.page-link-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(49,41,31,.1);
+}
+
+.page-link-note {
+    opacity: .72;
+}
+
+/* Garden landing and garden records */
+
+.garden-site .garden-card,
+.garden-site .harvest-card,
+.garden-site .garden-project-section,
+.garden-site .season-plant,
+.garden-site .plant-detail {
+    border-color: rgba(152,116,58,.4);
+    box-shadow: 0 6px 18px rgba(52,47,38,.05);
+}
+
+.garden-site .garden-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform .22s ease, background-color .22s ease, box-shadow .22s ease;
+}
+
+.garden-site .garden-card::after {
+    content: "→";
+    position: absolute;
+    right: 24px;
+    bottom: 18px;
+    color: rgba(152,116,58,.65);
+}
+
+.garden-site .garden-card:hover {
+    box-shadow: 0 12px 25px rgba(52,47,38,.1);
+}
+
+.harvest-card > .garden-card,
+.season-plant > .garden-card {
+    display: block;
+    min-height: 0;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.harvest-card > .garden-card::after,
+.season-plant > .garden-card::after {
+    display: none;
+}
+
+.harvest-card,
+.season-plant {
+    transition: transform .22s ease, background-color .22s ease, box-shadow .22s ease;
+}
+
+.harvest-card:hover,
+.season-plant:hover {
+    transform: translateY(-3px);
+    background: #f2eee5;
+    box-shadow: 0 11px 24px rgba(52,47,38,.09);
+}
+
+.harvest-card h3,
+.season-plant h3 {
+    color: #504839;
+}
+
+.season-block {
+    margin-bottom: 72px;
+    padding: 48px 0 0;
+}
+
+.season-heading {
+    margin-bottom: 32px;
+}
+
+.garden-year {
+    padding: 45px 0 20px;
+    border-top: 1px solid var(--page-brass-soft);
+}
+
+.garden-project-section,
+.garden-year-journal,
+.apothecary-record {
+    background: rgba(238,231,220,.76);
+}
+
+.empty-record,
+.future-year-note {
+    color: #776d60;
+    font-style: italic;
+}
+
+.future-year {
+    padding: 36px;
+    border: 1px dashed rgba(152,116,58,.44);
+    background: rgba(255,255,255,.2);
+}
+
+/* Plant library and profiles */
+
+.plant-group {
+    padding: 32px 36px 38px;
+    border: 1px solid rgba(152,116,58,.28);
+    background: rgba(255,255,255,.23);
+}
+
+.plant-group h2 {
+    margin-top: 0;
+}
+
+.plant-link {
+    position: relative;
+    padding: 14px 42px 14px 17px;
+    border-left-width: 2px;
+    transition: transform .18s ease, background-color .18s ease;
+}
+
+.plant-link::after {
+    content: "›";
+    position: absolute;
+    right: 17px;
+    color: var(--page-brass);
+}
+
+.plant-link:hover {
+    transform: translateX(3px);
+    text-decoration: none;
+}
+
+.plant-profile {
+    max-width: 900px;
+}
+
+.plant-profile-header .plant-subtitle {
+    margin-top: 0;
+    font-size: 1.05rem;
+}
+
+.plant-details {
+    gap: 14px;
+}
+
+.plant-detail {
+    padding: 24px;
+    border-left-width: 3px;
+    background: rgba(235,231,220,.84);
+}
+
+.plant-notes {
+    padding: 34px 38px;
+    border-top: 1px solid rgba(152,116,58,.34);
+    border-bottom: 1px solid rgba(152,116,58,.34);
+    background: rgba(255,255,255,.2);
+}
+
+.plant-notes + .plant-notes {
+    margin-top: -25px;
+    border-top: 0;
+}
+
+/* About and History */
+
+.about-section,
+.history-feature {
+    padding: 35px 40px;
+    border: 1px solid rgba(152,116,58,.28);
+    background: rgba(255,255,255,.22);
+}
+
+.about-section h2,
+.history-feature h2 {
+    margin-top: 0;
+}
+
+.meaning-section h3 {
+    margin-top: 36px;
+    color: #65543a;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.meaning-closing {
+    margin-top: 42px;
+    padding: 30px;
+    border-left: 3px solid var(--page-brass);
+    background: #ebe4d8;
+}
+
+.history-card {
+    border: 1px solid rgba(152,116,58,.28);
+    border-left: 3px solid var(--page-brass);
+    box-shadow: 0 6px 18px rgba(49,41,31,.05);
+}
+
+.history-status {
+    display: inline-block;
+    margin-top: 17px;
+    padding-top: 13px;
+    border-top: 1px solid rgba(152,116,58,.4);
+    color: #80632f;
+    font-size: .78rem;
+    font-style: italic;
+    letter-spacing: .06em;
+}
+
+/* Kitchen */
+
+.kitchen-site .kitchen-header {
+    padding-top: 0;
+}
+
+.kitchen-site .kitchen-header::after {
+    bottom: 0;
+}
+
+.kitchen-site .kitchen-categories {
+    margin-top: 18px;
+}
+
+.kitchen-site .kitchen-categories button {
+    min-height: 112px;
+}
+
+/* Responsive secondary pages */
+
+@media (max-width: 760px) {
+    .secondary-page .main-nav {
+        gap: 8px 18px;
+    }
+
+    .secondary-page .main-nav a {
+        font-size: .7rem;
+    }
+
+    .garden-subnav {
+        gap: 7px 18px;
+    }
+
+    .house-site .story-section,
+    .house-site .timeline-section,
+    .about-section,
+    .history-feature,
+    .plant-notes {
+        padding: 30px 25px;
+    }
+
+    .plant-group {
+        padding: 26px 22px 30px;
+    }
+}
+
+@media (max-width: 520px) {
+    .secondary-page .site-logo {
+        width: min(86vw, 360px);
+    }
+
+    .secondary-page .main-nav {
+        flex-direction: row;
+        gap: 5px 14px;
+    }
+
+    .secondary-page .main-nav a {
+        width: auto;
+        padding: 6px 2px;
+        font-size: .63rem;
+    }
+
+    .garden-subnav {
+        padding: 12px 10px;
+    }
+
+    .garden-subnav a {
+        font-size: .63rem;
+    }
+
+    .secondary-page .page-intro,
+    .secondary-page .garden-intro,
+    .secondary-page .about-intro,
+    .secondary-page .history-intro,
+    .secondary-page .garden-projects-intro,
+    .secondary-page .harvest-intro,
+    .secondary-page .seasonal-intro,
+    .secondary-page .plant-library-intro,
+    .secondary-page .plant-profile-header,
+    .secondary-page .kitchen-header,
+    .secondary-page .journal-intro {
+        margin-bottom: 55px;
+    }
+
+    .future-year {
+        padding: 26px 20px;
+    }
+}
+
 
 /* =========================================================
    ROOT & BRASS HOMEPAGE — POLISHED
