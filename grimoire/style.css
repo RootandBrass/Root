@@ -5109,9 +5109,10 @@ body.apothecary-page {
     background-image:
         linear-gradient(to bottom, rgba(5, 9, 6, .20), rgba(5, 9, 6, .42) 68%, #080d0a 100%),
         url("/grimoire/images/apothecary-background.png");
-    background-size: cover;
-    background-position: center;
+    background-size: 100% auto;
+    background-position: center top;
     background-repeat: no-repeat;
+    background-color: #080d0a;
     border-left: 1px solid rgba(168,138,87,.14);
     border-right: 1px solid rgba(168,138,87,.14);
     text-shadow: 0 3px 24px rgba(0,0,0,.92);
@@ -5180,7 +5181,8 @@ body.apothecary-page {
         min-height: 610px;
         margin-top: 20px;
         padding: 85px 18px 80px;
-        background-position: center;
+        background-size: auto 100%;
+        background-position: center top;
     }
     .plant-cabinet { padding: 55px 8px 75px; }
     .apothecary-grid { grid-template-columns: 1fr; }
