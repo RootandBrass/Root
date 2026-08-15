@@ -52,3 +52,31 @@ defaults:
       type: "pages"
     values:
       layout: kitchen
+
+  - scope:
+      path: "garden/plants/treesandshrubs"
+      type: "pages"
+    values:
+      layout: plant
+      plant_group: trees-shrubs
+
+  - scope:
+      path: "garden/plants/flowers"
+      type: "pages"
+    values:
+      layout: plant
+      plant_group: flowers
+
+  - scope:
+      path: "garden/plants/climbers"
+      type: "pages"
+    values:
+      layout: plant
+      plant_group: climbers
+
+  - scope:
+      path: "garden/plants/edibles"
+      type: "pages"
+    values:
+      layout: plant
+      plant_group: edibles

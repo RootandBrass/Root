@@ -1,0 +1,121 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ page.title }} | Root & Brass</title>
+
+    <link rel="icon" type="image/png" href="/images/logo.png">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="secondary-page garden-site plant-page">
+
+    <header class="site-header">
+        <a href="/" aria-label="Root &amp; Brass home">
+            <img src="/images/logo.png"
+                 alt="Root &amp; Brass"
+                 class="site-logo">
+        </a>
+    </header>
+
+    <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/house.html">301 Ruby</a>
+        <a href="/garden.html" aria-current="page">The Garden</a>
+        <a href="/kitchen/">The Kitchen</a>
+        <a href="/history.html">History</a>
+        <a href="/about.html">About</a>
+    </nav>
+
+    <nav class="garden-subnav" aria-label="Garden navigation">
+        <a href="/garden/plants.html" aria-current="page">Plant Journal</a>
+        <a href="/garden/seasons.html">Seasonal Garden</a>
+        <a href="/garden/harvest.html">Harvest &amp; Use</a>
+        <a href="/garden/projects.html">Garden Projects</a>
+    </nav>
+
+    <main class="plant-profile">
+
+        <section class="plant-profile-header">
+            <p class="eyebrow">PLANT JOURNAL</p>
+            <h1>{{ page.title }}</h1>
+            {% if page.scientific_name %}
+            <p class="plant-subtitle">{{ page.scientific_name }}</p>
+            {% endif %}
+        </section>
+
+        {% if page.photo %}
+        <figure class="plant-profile-photo">
+            <img src="{{ page.photo | relative_url }}" alt="{{ page.title }}">
+        </figure>
+        {% endif %}
+
+        <section class="plant-details">
+            {% if page.plant_type %}
+            <div class="plant-detail">
+                <span>Type</span>
+                <p>{{ page.plant_type }}</p>
+            </div>
+            {% endif %}
+
+            {% if page.bloom %}
+            <div class="plant-detail">
+                <span>Bloom</span>
+                <p>{{ page.bloom }}</p>
+            </div>
+            {% endif %}
+
+            {% if page.light %}
+            <div class="plant-detail">
+                <span>Light</span>
+                <p>{{ page.light }}</p>
+            </div>
+            {% endif %}
+
+            {% if page.water %}
+            <div class="plant-detail">
+                <span>Water</span>
+                <p>{{ page.water }}</p>
+            </div>
+            {% endif %}
+        </section>
+
+        {% if page.garden_notes %}
+        <section class="plant-notes">
+            <h2>Garden Notes</h2>
+            {{ page.garden_notes | markdownify }}
+        </section>
+        {% endif %}
+
+        {% if page.seasonal_record %}
+        <section class="plant-notes">
+            <h2>Seasonal Record</h2>
+            {{ page.seasonal_record | markdownify }}
+        </section>
+        {% endif %}
+
+        {% if content and content != empty %}
+        <section class="plant-notes">
+            <h2>Additional Notes</h2>
+            {{ content | markdownify }}
+        </section>
+        {% endif %}
+
+        <div class="plant-library-footer">
+            <a href="/garden/plants.html">← Back to Plant Journal</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Root &amp; Brass</p>
+    </footer>
+
+</body>
+</html>

@@ -2498,6 +2498,21 @@ a.page-link-card:hover {
     font-size: 1.05rem;
 }
 
+.plant-profile-photo {
+    max-width: 760px;
+    margin: -20px auto 48px;
+    padding: 10px;
+    border: 1px solid rgba(152,116,58,.34);
+    background: rgba(255,255,255,.28);
+}
+
+.plant-profile-photo img {
+    display: block;
+    width: 100%;
+    max-height: 520px;
+    object-fit: cover;
+}
+
 .plant-details {
     gap: 14px;
 }

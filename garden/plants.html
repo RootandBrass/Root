@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,17 +59,10 @@
             <h2>Trees & Shrubs</h2>
 
             <div class="plant-list">
-                <a href="/garden/plants/treesandshrubs/aspen.html" class="plant-link">Aspen</a>
-                <a href="/garden/plants/treesandshrubs/autumnblazemaple.html" class="plant-link">Autumn Blaze Maple</a>
-                <a href="/garden/plants/treesandshrubs/burningbush.html" class="plant-link">Burning Bush</a>   
-                <a href="/garden/plants/treesandshrubs/cheyenneprivet.html" class="plant-link">Cheyenne Privet</a>
-                <a href="/garden/plants/treesandshrubs/crabapple.html" class="plant-link">Crabapple</a>
-                <a href="/garden/plants/treesandshrubs/frostpeach.html" class="plant-link">Frost Peach</a>
-                <a href="/garden/plants/treesandshrubs/honeysucklebush.html" class="plant-link">Honeysuckle Bush</a>
-                <a href="/garden/plants/treesandshrubs/hydrangea.html" class="plant-link">Hydrangea</a>
-                <a href="/garden/plants/treesandshrubs/juniper.html" class="plant-link">Juniper</a>
-                <a href="/garden/plants/treesandshrubs/lilac.html" class="plant-link">Lilac</a>             
-                <a href="/garden/plants/treesandshrubs/smokebush.html" class="plant-link">Smoke Bush</a>
+                {% assign plants = site.pages | where: "plant_group", "trees-shrubs" | sort: "title" %}
+                {% for plant in plants %}
+                <a href="{{ plant.url | relative_url }}" class="plant-link">{{ plant.title }}</a>
+                {% endfor %}
             </div>
         </section>
 
@@ -75,28 +71,10 @@
             <h2>Perennials & Flowers</h2>
 
             <div class="plant-list">
-                <a href="/garden/plants/flowers/allium.html" class="plant-link">Allium</a>
-                <a href="/garden/plants/flowers/blackeyedsusan.html" class="plant-link">Black-Eyed Susan</a>
-                <a href="/garden/plants/flowers/blanketflower.html" class="plant-link">Blanket Flower</a>
-                <a href="/garden/plants/flowers/cactus.html" class="plant-link">Cactus</a>
-                <a href="/garden/plants/flowers/calendula.html" class="plant-link">Calendula</a>
-                <a href="/garden/plants/flowers/coneflower.html" class="plant-link">Deep Red Coneflower</a>
-                <a href="/garden/plants/flowers/daffodil.html" class="plant-link">Daffodil</a>
-                <a href="/garden/plants/flowers/hensandchicks.html" class="plant-link">Hens and Chicks</a>
-                <a href="/garden/plants/flowers/hollyhock.html" class="plant-link">Hollyhock</a>
-                <a href="/garden/plants/flowers/hosta.html" class="plant-link">Hosta</a>
-                <a href="/garden/plants/flowers/iris.html" class="plant-link">Iris</a>
-                <a href="/garden/plants/flowers/lilly.html" class="plant-link">Daylily</a>
-                <a href="/garden/plants/flowers/lillyofthevally.html" class="plant-link">Lily of the Valley</a>
-                <a href="/garden/plants/flowers/lupine.html" class="plant-link">Lupine</a>
-                <a href="/garden/plants/flowers/merigold.html" class="plant-link">Marigold</a>
-                <a href="/garden/plants/flowers/peony.html" class="plant-link">Peony</a>
-                <a href="/garden/plants/flowers/primrose.html" class="plant-link">Primrose</a>
-                <a href="/garden/plants/flowers/sedum.html" class="plant-link">Sedum</a> 
-                <a href="/garden/plants/flowers/snowinsummer.html" class="plant-link">Snow in Summer</a>
-                <a href="/garden/plants/flowers/thyme.html" class="plant-link">Thyme</a>
-                <a href="/garden/plants/flowers/tulip.html" class="plant-link">Tulip</a>
-                <a href="/garden/plants/flowers/vincaminor.html" class="plant-link">Vinca Minor</a>         
+                {% assign plants = site.pages | where: "plant_group", "flowers" | sort: "title" %}
+                {% for plant in plants %}
+                <a href="{{ plant.url | relative_url }}" class="plant-link">{{ plant.title }}</a>
+                {% endfor %}
             </div>
         </section>
 
@@ -105,8 +83,10 @@
             <h2>Vines & Climbers</h2>
 
             <div class="plant-list">
-                <a href="/garden/plants/climbers/clematis.html" class="plant-link">Clematis</a>
-                <a href="/garden/plants/climbers/honeysuckle.html" class="plant-link">Honeysuckle</a>
+                {% assign plants = site.pages | where: "plant_group", "climbers" | sort: "title" %}
+                {% for plant in plants %}
+                <a href="{{ plant.url | relative_url }}" class="plant-link">{{ plant.title }}</a>
+                {% endfor %}
             </div>
 
         </section>
@@ -116,10 +96,10 @@
             <h2>Fruit & Edibles</h2>
 
             <div class="plant-list">
-                <a href="/garden/plants/edibles/blackberry.html" class="plant-link">Blackberry</a>
-                <a href="/garden/plants/edibles/mint.html" class="plant-link">Mint</a>
-                <a href="/garden/plants/edibles/raspberry.html" class="plant-link">Raspberry</a>
-                <a href="/garden/plants/edibles/strawberry.html" class="plant-link">Strawberry</a>
+                {% assign plants = site.pages | where: "plant_group", "edibles" | sort: "title" %}
+                {% for plant in plants %}
+                <a href="{{ plant.url | relative_url }}" class="plant-link">{{ plant.title }}</a>
+                {% endfor %}
             </div>
 
         </section>

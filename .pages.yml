@@ -489,6 +489,278 @@ content:
         required: false
 
 
+  - name: plant_journal
+    label: Plant Journal
+    type: group
+    items:
+      - name: plant_trees_shrubs
+        label: Trees & Shrubs
+        type: collection
+        path: garden/plants/treesandshrubs
+        filename: "{primary}.html"
+        format: yaml-frontmatter
+        view:
+          primary: title
+          fields:
+            - scientific_name
+            - plant_type
+            - bloom
+          sort: title
+          order: asc
+        fields:
+          - name: title
+            label: Plant Name
+            type: string
+            required: true
+
+          - name: scientific_name
+            label: Scientific Name
+            type: string
+            required: false
+
+          - name: photo
+            label: Photo
+            type: image
+            required: false
+
+          - name: plant_type
+            label: Type
+            type: string
+            required: true
+            description: "Example: Deciduous flowering shrub or Herbaceous perennial"
+
+          - name: bloom
+            label: Bloom
+            type: string
+            required: true
+            description: When it blooms or produces seasonal interest
+
+          - name: light
+            label: Light
+            type: string
+            required: true
+
+          - name: water
+            label: Water
+            type: string
+            required: true
+
+          - name: garden_notes
+            label: Garden Notes
+            type: rich-text
+            required: false
+
+          - name: seasonal_record
+            label: Seasonal Record
+            type: rich-text
+            required: false
+
+          - name: body
+            label: Additional Notes
+            type: rich-text
+            required: false
+
+      - name: plant_flowers
+        label: Perennials & Flowers
+        type: collection
+        path: garden/plants/flowers
+        filename: "{primary}.html"
+        format: yaml-frontmatter
+        view:
+          primary: title
+          fields:
+            - scientific_name
+            - plant_type
+            - bloom
+          sort: title
+          order: asc
+        fields:
+          - name: title
+            label: Plant Name
+            type: string
+            required: true
+
+          - name: scientific_name
+            label: Scientific Name
+            type: string
+            required: false
+
+          - name: photo
+            label: Photo
+            type: image
+            required: false
+
+          - name: plant_type
+            label: Type
+            type: string
+            required: true
+            description: "Example: Deciduous flowering shrub or Herbaceous perennial"
+
+          - name: bloom
+            label: Bloom
+            type: string
+            required: true
+            description: When it blooms or produces seasonal interest
+
+          - name: light
+            label: Light
+            type: string
+            required: true
+
+          - name: water
+            label: Water
+            type: string
+            required: true
+
+          - name: garden_notes
+            label: Garden Notes
+            type: rich-text
+            required: false
+
+          - name: seasonal_record
+            label: Seasonal Record
+            type: rich-text
+            required: false
+
+          - name: body
+            label: Additional Notes
+            type: rich-text
+            required: false
+
+      - name: plant_climbers
+        label: Vines & Climbers
+        type: collection
+        path: garden/plants/climbers
+        filename: "{primary}.html"
+        format: yaml-frontmatter
+        view:
+          primary: title
+          fields:
+            - scientific_name
+            - plant_type
+            - bloom
+          sort: title
+          order: asc
+        fields:
+          - name: title
+            label: Plant Name
+            type: string
+            required: true
+
+          - name: scientific_name
+            label: Scientific Name
+            type: string
+            required: false
+
+          - name: photo
+            label: Photo
+            type: image
+            required: false
+
+          - name: plant_type
+            label: Type
+            type: string
+            required: true
+            description: "Example: Deciduous flowering shrub or Herbaceous perennial"
+
+          - name: bloom
+            label: Bloom
+            type: string
+            required: true
+            description: When it blooms or produces seasonal interest
+
+          - name: light
+            label: Light
+            type: string
+            required: true
+
+          - name: water
+            label: Water
+            type: string
+            required: true
+
+          - name: garden_notes
+            label: Garden Notes
+            type: rich-text
+            required: false
+
+          - name: seasonal_record
+            label: Seasonal Record
+            type: rich-text
+            required: false
+
+          - name: body
+            label: Additional Notes
+            type: rich-text
+            required: false
+
+      - name: plant_edibles
+        label: Fruit & Edibles
+        type: collection
+        path: garden/plants/edibles
+        filename: "{primary}.html"
+        format: yaml-frontmatter
+        view:
+          primary: title
+          fields:
+            - scientific_name
+            - plant_type
+            - bloom
+          sort: title
+          order: asc
+        fields:
+          - name: title
+            label: Plant Name
+            type: string
+            required: true
+
+          - name: scientific_name
+            label: Scientific Name
+            type: string
+            required: false
+
+          - name: photo
+            label: Photo
+            type: image
+            required: false
+
+          - name: plant_type
+            label: Type
+            type: string
+            required: true
+            description: "Example: Deciduous flowering shrub or Herbaceous perennial"
+
+          - name: bloom
+            label: Bloom
+            type: string
+            required: true
+            description: When it blooms or produces seasonal interest
+
+          - name: light
+            label: Light
+            type: string
+            required: true
+
+          - name: water
+            label: Water
+            type: string
+            required: true
+
+          - name: garden_notes
+            label: Garden Notes
+            type: rich-text
+            required: false
+
+          - name: seasonal_record
+            label: Seasonal Record
+            type: rich-text
+            required: false
+
+          - name: body
+            label: Additional Notes
+            type: rich-text
+            required: false
+
   - name: apothecary
     label: Apothecary
     type: collection
