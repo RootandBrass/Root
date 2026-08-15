@@ -5107,7 +5107,7 @@ body.apothecary-page {
     text-align: center;
     background-image:
         linear-gradient(to bottom, rgba(5, 9, 6, .20), rgba(5, 9, 6, .42) 68%, #080d0a 100%),
-        url("/grimoire/images/apothecary-background.png");
+        url("/grimoire/images/apothecary-background.png?v=20260815-2");
     background-size: 100% auto;
     background-position: center top;
     background-repeat: no-repeat;
@@ -5182,6 +5182,10 @@ body.apothecary-page {
         padding: 85px 18px 80px;
         background-size: auto 100%;
         background-position: center top;
+    }
+    .apothecary-hero h1 {
+        font-size: clamp(2.4rem, 11vw, 3.4rem);
+        letter-spacing: .07em;
     }
     .plant-cabinet { padding: 55px 8px 75px; }
     .apothecary-grid { grid-template-columns: 1fr; }
