@@ -488,6 +488,141 @@ content:
         type: rich-text
         required: false
 
+
+  - name: apothecary
+    label: Apothecary
+    type: collection
+    path: grimoire/apothecary/entries
+    filename: "{primary}.md"
+    format: yaml-frontmatter
+
+    view:
+      primary: title
+      fields:
+        - common_name
+        - plant_type
+        - found_date
+      sort: title
+      order: asc
+
+    fields:
+      - name: title
+        label: Plant Name
+        type: string
+        required: true
+
+      - name: common_name
+        label: Common Name
+        type: string
+        required: false
+
+      - name: scientific_name
+        label: Scientific Name
+        type: string
+        required: false
+
+      - name: image
+        label: Photo
+        type: image
+        required: false
+
+      - name: plant_type
+        label: Plant Type
+        type: select
+        required: false
+        options:
+          values:
+            - value: tree
+              label: Tree
+            - value: shrub
+              label: Shrub
+            - value: perennial
+              label: Perennial
+            - value: annual
+              label: Annual
+            - value: biennial
+              label: Biennial
+            - value: vine
+              label: Vine
+            - value: grass
+              label: Grass
+            - value: fern
+              label: Fern
+            - value: moss
+              label: Moss
+            - value: fungi
+              label: Fungi
+
+      - name: found_date
+        label: Date Found
+        type: date
+        required: false
+
+      - name: found_location
+        label: Where Found
+        type: string
+        required: false
+
+      - name: habitat
+        label: Habitat & Growing Conditions
+        type: rich-text
+        required: false
+
+      - name: identification
+        label: Identification Notes
+        type: rich-text
+        required: false
+
+      - name: benefits
+        label: Benefits
+        type: rich-text
+        required: false
+
+      - name: medicinal_uses
+        label: Traditional Medicinal Uses
+        type: rich-text
+        required: false
+
+      - name: culinary_uses
+        label: Culinary Uses
+        type: rich-text
+        required: false
+
+      - name: magical_uses
+        label: Folklore & Magical Associations
+        type: rich-text
+        required: false
+
+      - name: parts_used
+        label: Parts Used
+        type: string
+        required: false
+
+      - name: harvest
+        label: Harvesting
+        type: rich-text
+        required: false
+
+      - name: preparation
+        label: Preparation & Preservation
+        type: rich-text
+        required: false
+
+      - name: cautions
+        label: Safety & Cautions
+        type: rich-text
+        required: false
+
+      - name: personal_notes
+        label: My Notes
+        type: rich-text
+        required: false
+
+      - name: sources
+        label: Sources & References
+        type: rich-text
+        required: false
+
   - name: kitchen
     label: Kitchen
     type: collection
