@@ -1,0 +1,43 @@
+---
+title: Hollyhock
+common_name: Common Hollyhock
+scientific_name: Alcea rosea
+plant_type: biennial
+found_location: Root & Brass garden
+habitat: |-
+  - **Garden setting:** A tall biennial or short-lived perennial for full sun.
+  - **Soil:** Prefers rich, well-drained soil with moderate moisture and airflow around its leaves.
+  - **Season:** Produces towering flower spikes in early to midsummer and often persists by self-sowing.
+identification: |-
+  - **Flowers:** Large, open funnel-shaped flowers arranged up a tall rigid spike; colors range from white and yellow to pink, red, purple, and nearly black.
+  - **Leaves:** Large, rough or softly hairy, rounded, and palmately lobed.
+  - **Growth:** A low leaf rosette commonly forms before the flowering stalk rises.
+  - **Disease note:** Orange-brown pustules on lower leaves indicate hollyhock rust; diseased material should not be harvested.
+benefits: |-
+  - **Demulcent tradition:** Mucilage-rich hollyhock tissues have been used traditionally to soothe irritated throat and gastrointestinal tissues.
+  - **Respiratory tradition:** Flowers and roots appear in traditional remedies for cough and airway irritation.
+  - **Evidence limit:** Pharmacological research is mostly laboratory or animal based; reliable human trials and standardized doses are lacking.
+medicinal_uses: |-
+  Hollyhock is recorded as a gentle, mucilaginous traditional herb related to marshmallow. Dried flowers have been used in soothing infusions for minor throat irritation and cough, while root traditions are broader.
+
+  This is a historical and educational record, not evidence that hollyhock treats bronchitis, kidney stones, infection, or inflammatory disease.
+culinary_uses: |-
+  Clean, unsprayed petals are sometimes used as an edible garnish or tea ingredient. Use small food amounts and remove insects and the bitter green base.
+parts_used: Flowers; historically leaves and roots
+harvest: |-
+  - Pick newly opened, unsprayed flowers after dew dries.
+  - Do not harvest rusty, mildewed, chemically treated, or roadside plants.
+  - Root harvest kills the plant and is not recommended for an ornamental garden specimen.
+preparation: |-
+  - **Flower infusion:** Dry petals thoroughly, then steep and strain carefully for a mild traditional tea.
+  - **Cold infusion tradition:** Mucilage extracts well in cool water, but fresh water preparations spoil quickly and should not be stored at room temperature.
+  - Keep dried flowers airtight and discard them if they become damp or moldy.
+cautions: |-
+  - Human safety evidence is limited. Avoid medicinal use during pregnancy or breastfeeding and in children without professional guidance.
+  - Mucilaginous herbs may delay absorption of oral medicines; separate use from prescription drugs and ask a pharmacist when timing matters.
+  - Stop for rash, swelling, wheezing, or other allergic symptoms. Do not use hollyhock to delay care for breathing difficulty, persistent cough, fever, or severe urinary pain.
+sources: |-
+  1. [Root & Brass Plant Journal — Hollyhock](/garden/plants/flowers/hollyhock.html)
+  2. [Hanif et al. — Pharmacological basis for the medicinal use of *Alcea rosea*](https://pubmed.ncbi.nlm.nih.gov/31894065/)
+  3. [Ahmadi et al. — *Alcea rosea* root extract preclinical study](https://pubmed.ncbi.nlm.nih.gov/22701236/)
+---

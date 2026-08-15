@@ -1,0 +1,43 @@
+---
+title: Thyme
+common_name: Garden Thyme
+scientific_name: Thymus spp.
+plant_type: perennial
+found_location: Root & Brass garden
+habitat: |-
+  - **Garden setting:** A low evergreen perennial herb or groundcover for full sun.
+  - **Soil:** Requires sharp drainage and tolerates dry conditions once established.
+  - **Season:** Small flowers appear from late spring into summer and are valuable to pollinators.
+identification: |-
+  - **Leaves:** Tiny, opposite, aromatic leaves on slender woody or semi-woody stems.
+  - **Flowers:** Small pink, lavender, or white flowers clustered near stem tips.
+  - **Species note:** The medicinal monograph applies specifically to *Thymus vulgaris* and *T. zygis*. The journal currently lists *Thymus* to genus, so identify the exact species before medicinal use.
+benefits: |-
+  - **Traditional respiratory use:** Thyme herb is recognized as a traditional expectorant for a cough associated with an ordinary cold.
+  - **Aromatic compounds:** Thymol and carvacrol contribute to the characteristic scent and laboratory antimicrobial activity.
+  - **Evidence limit:** Traditional recognition does not mean thyme cures respiratory infection, and laboratory antimicrobial findings do not justify treating infection with tea or oil.
+medicinal_uses: |-
+  Correctly identified *T. vulgaris* or *T. zygis* leaves and flowering tops may be recorded for traditional short-term use in a chesty cough accompanying a cold. A warm leaf infusion is milder than essential oil and can also serve as a soothing culinary drink.
+
+  Thyme is not a treatment for pneumonia, asthma attack, influenza, whooping cough, or breathing difficulty.
+culinary_uses: |-
+  Leaves season vegetables, beans, soups, breads, meats, and sauces. Normal culinary use is distinct from concentrated medicinal extracts or essential oil.
+parts_used: Leaves and flowering aerial parts, after species confirmation
+harvest: |-
+  - Clip unsprayed stems just before or as flowering begins.
+  - Never remove more than a modest portion of a woody crown at once.
+  - Dry small sprigs with excellent airflow, then strip leaves after they are crisp.
+preparation: |-
+  - **Leaf infusion:** Steep clean fresh or dried leaves in hot water for a mild aromatic tea; strain before drinking.
+  - **Dry storage:** Store leaves airtight away from heat and light.
+  - **Essential oil:** Do not ingest homemade or undiluted thyme oil. Concentrated oil is chemically and toxicologically different from culinary leaf.
+cautions: |-
+  - Avoid medicinal use with allergy to thyme or other Lamiaceae-family plants.
+  - Safety during pregnancy and breastfeeding has not been established; medicinal use is not recommended without professional guidance.
+  - Seek medical care for shortness of breath, wheezing, chest pain, high fever, bloody or rust-colored mucus, dehydration, or a persistent or worsening cough.
+  - Consult a pediatric clinician before using medicinal thyme for a child.
+sources: |-
+  1. [Root & Brass Plant Journal — Thyme](/garden/plants/flowers/thyme.html)
+  2. [European Medicines Agency — Thyme herb](https://www.ema.europa.eu/en/medicines/herbal/thymi-herba)
+  3. [EMA monograph — *Thymus vulgaris* and *Thymus zygis* herb](https://www.ema.europa.eu/en/documents/herbal-monograph/final-community-herbal-monograph-thymus-vulgaris-l-and-thymus-zygis-l-herba_en.pdf)
+---

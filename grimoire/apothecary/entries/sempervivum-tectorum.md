@@ -1,0 +1,42 @@
+---
+title: Hens & Chicks
+common_name: Common Houseleek, Roof Houseleek
+scientific_name: Sempervivum tectorum
+plant_type: succulent
+found_location: Root & Brass garden
+habitat: |-
+  - **Garden setting:** A cold-hardy evergreen succulent for full sun to light shade.
+  - **Soil:** Requires gritty, sharply drained soil and very little supplemental water.
+  - **Growth:** The central “hen” produces offset “chicks”; a mature rosette flowers once and then dies after setting seed.
+identification: |-
+  - **Rosettes:** Tight clusters of pointed, fleshy leaves, often green with red or burgundy tips.
+  - **Offsets:** Smaller rosettes form on short runners around the parent plant.
+  - **Flowers:** Star-shaped pink to reddish flowers rise on a thick stalk from a mature rosette.
+  - **Look-alikes:** Confirm *Sempervivum* rather than an indoor *Echeveria*, *Aeonium*, or another ornamental succulent before recording traditional use.
+benefits: |-
+  - **Topical tradition:** Fresh houseleek juice has been used traditionally for minor burns, insect bites, skin irritation, and ear discomfort.
+  - **Preclinical research:** Laboratory and animal studies report anti-inflammatory, pain-relieving, and wound-healing activity.
+  - **Evidence limit:** These findings do not establish effectiveness or safe dosing in people, especially inside the ear or on broken skin.
+medicinal_uses: |-
+  Hens & Chicks belongs in the cabinet as a traditional topical plant and research subject. Its cool leaf juice has historically been compared with aloe for minor external irritation.
+
+  Earache traditions are recorded for history only. Plant juice must not be placed into the ear canal because pain can reflect infection, a foreign object, or a ruptured eardrum.
+parts_used: Fresh leaves, traditionally for external use
+harvest: |-
+  - Take a single clean outer leaf from a healthy, positively identified, unsprayed rosette.
+  - Avoid leaves with rot, fungal spotting, pest damage, or soil contamination.
+  - Do not overharvest a small rosette or a plant preparing to flower.
+preparation: |-
+  - **Patch test only:** Wash a leaf, split it, and test a small amount of fresh juice on a tiny area of intact skin.
+  - Make fresh preparations only and discard leftovers; succulent juice is water-rich and spoils quickly.
+  - Do not can, bottle, tincture, or preserve fresh juice without a validated formulation.
+cautions: |-
+  - Do not put houseleek juice into the eyes, nose, mouth, or ear canal, and never use it when a ruptured eardrum is possible.
+  - Do not apply it to deep, infected, puncture, surgical, or serious burn wounds. Seek medical care for blistering burns, facial or hand burns, spreading redness, pus, fever, or worsening pain.
+  - Stop use for burning, rash, swelling, or other irritation. Safety of internal medicinal use, pregnancy, breastfeeding, and pediatric use is not established.
+sources: |-
+  1. [Root & Brass Plant Journal — Hens & Chicks](/garden/plants/flowers/hensandchicks.html)
+  2. [Stojković et al. — Ethnopharmacological uses of *Sempervivum tectorum*](https://pubmed.ncbi.nlm.nih.gov/26551879/)
+  3. [Cattaneo et al. — Wound-healing activity and phytochemical screening](https://pubmed.ncbi.nlm.nih.gov/31168900/)
+  4. [Kékesi et al. — Preclinical antinociceptive activity](https://pubmed.ncbi.nlm.nih.gov/14595582/)
+---
