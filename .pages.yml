@@ -536,6 +536,8 @@ content:
               label: Tree
             - value: shrub
               label: Shrub
+            - value: succulent
+              label: Succulent
             - value: perennial
               label: Perennial
             - value: annual
