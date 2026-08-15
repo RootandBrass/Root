@@ -1,7 +1,7 @@
 ---
-title: Portulaca oleracea
-common_name: Little Hogweed, Common purslane
-scientific_name: Common purslane
+title: Common Purslane
+common_name: Little Hogweed, Purslane
+scientific_name: Portulaca oleracea
 plant_type: succulent
 found_date: 2026-08-15
 found_location: In my yard
@@ -40,8 +40,7 @@ benefits: >+
   - Packed with higher amounts of omega-3 fatty acids, vitamin E, and
   beta-carotene than most cultivated leafy greens.
 
-  - Creates a thick, shelf-stable ointment to protect dry, chapped, or
-  eczematous skin
+  - Creates a thick ointment traditionally used to protect dry or chapped skin.
 
 culinary_uses: |-
   **Flavor:** Crunchy texture with a sharp, tangy, lemony taste.

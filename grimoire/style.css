@@ -3860,7 +3860,6 @@ body.moon-journal {
     }
 
 }
-}
 
 /* ==================================================
    MOON JOURNAL ENTRY
@@ -5191,4 +5190,183 @@ body.apothecary-page {
     .plant-record { padding: 48px 23px; }
     .plant-record h1 { font-size: clamp(2.6rem,13vw,4.4rem); }
     .plant-benefits, .plant-cautions { padding: 25px 18px; }
+}
+
+/* ==================================================
+   SHARED GRIMOIRE POLISH
+   ================================================== */
+
+html {
+    color-scheme: dark;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    font: inherit;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #aa8b5c;
+    outline-offset: 5px;
+}
+
+body:not(.grimoire-home) .grimoire-shell {
+    width: min(1180px, calc(100% - 40px));
+}
+
+.grimoire-header {
+    position: relative;
+    z-index: 10;
+    padding: 0 2px;
+    background: linear-gradient(90deg, transparent, rgba(5, 10, 9, .28), transparent);
+}
+
+.grimoire-mark,
+.return-link {
+    transition: color .2s ease, text-shadow .2s ease;
+}
+
+.grimoire-mark:hover,
+.grimoire-mark:focus-visible,
+.return-link:hover,
+.return-link:focus-visible {
+    color: var(--bone);
+    text-shadow: 0 0 14px rgba(190, 208, 199, .18);
+}
+
+.section-nav {
+    gap: 12px 26px;
+    margin: 78px auto 0;
+    padding: 25px 24px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: rgba(5, 10, 9, .25);
+}
+
+.section-nav a {
+    position: relative;
+    padding: 4px 0;
+}
+
+.section-nav a::after {
+    content: "";
+    position: absolute;
+    right: 50%;
+    bottom: -3px;
+    left: 50%;
+    height: 1px;
+    background: currentColor;
+    opacity: .7;
+    transition: right .2s ease, left .2s ease;
+}
+
+.section-nav a:hover::after,
+.section-nav a:focus-visible::after,
+.section-nav a[aria-current="page"]::after {
+    right: 0;
+    left: 0;
+}
+
+.grimoire-footer {
+    margin-top: 0;
+    padding: 40px 0 44px;
+}
+
+.grimoire-home .entrance {
+    padding-top: 64px;
+}
+
+.grimoire-home .grimoire-logo {
+    width: min(78vw, 460px);
+    max-height: 680px;
+}
+
+.grimoire-home .grimoire-index {
+    margin-top: 64px;
+    background: rgba(5, 10, 9, .18);
+}
+
+.grimoire-home .grimoire-index a:focus-visible {
+    padding-right: 18px;
+    padding-left: 18px;
+}
+
+:where(
+    .dream-article,
+    .spell-article,
+    .recipe-article,
+    .tarot-reading,
+    .moon-record,
+    .crystal-record,
+    .plant-record
+) h1 {
+    overflow-wrap: anywhere;
+}
+
+:where(
+    .dream-article-content,
+    .spell-article-content,
+    .recipe-article-content,
+    .tarot-reading-section,
+    .moon-record-section,
+    .crystal-record-section,
+    .plant-record-section
+) table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+@media (max-width: 640px) {
+    body:not(.grimoire-home) .grimoire-shell {
+        width: calc(100% - 24px);
+    }
+
+    .grimoire-header {
+        gap: 18px;
+    }
+
+    .grimoire-mark,
+    .return-link {
+        letter-spacing: .12em;
+    }
+
+    .section-page {
+        padding-bottom: 85px;
+    }
+
+    .section-nav {
+        gap: 10px 20px;
+        margin-top: 55px;
+        padding: 22px 12px;
+    }
+
+    .section-nav a {
+        font-size: .65rem;
+    }
+
+    .grimoire-home .entrance {
+        padding: 48px 0 90px;
+    }
+
+    .grimoire-home .grimoire-logo {
+        width: min(94vw, 420px);
+        max-height: 580px;
+    }
+
+    .grimoire-home .grimoire-index .name {
+        font-size: 1.25rem;
+    }
 }
