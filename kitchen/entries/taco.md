@@ -10,5 +10,8 @@ category: seasonings-dressings
 - 1/2 teaspoon paprika 
 - 1 1/2 teaspoons ground cumin 
 - 1 teaspoon sea salt 
-- 1 teaspoon black pepper 
+- 1 teaspoon black pepper
 
+
+
+&nbsp;
