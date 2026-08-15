@@ -10,5 +10,8 @@ category: seasonings-dressings
 - 1/2 teaspoon onion powder 
 - 1/2 teaspoon garlic powder 
 - 1/4 teaspoon cayenne pepper 
-- 1/2 teaspoon ground cumin 
+- 1/2 teaspoon ground cumin
 
+
+
+&nbsp;
