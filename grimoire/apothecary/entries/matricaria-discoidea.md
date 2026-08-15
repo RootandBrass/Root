@@ -1,0 +1,56 @@
+---
+title: Pineapple Weed
+common_name: Wild Chamomile, Disc Mayweed, Rayless Mayweed
+scientific_name: Matricaria discoidea
+plant_type: annual
+habitat: |-
+  - **Habit:** A low, branching annual that favors open, disturbed ground.
+  - **Soil:** Especially common in hard-packed or frequently walked soil, gravel, path edges, driveways, garden margins, and other waste places.
+  - **Light:** Most often found in full sun, though it may tolerate some light shade.
+  - **Range:** Native across much of northern and western North America and now naturalized widely in other temperate regions.
+identification: |-
+  - **Flower heads:** Small, rounded to cone-shaped yellow-green buttons with **no white ray petals**. This petal-free head is one of the clearest distinctions from German chamomile.
+  - **Scent:** Crushed flower heads and foliage release a sweet pineapple-and-chamomile fragrance.
+  - **Leaves:** Alternate, soft-looking, and finely divided one to three times into narrow, threadlike segments.
+  - **Stems:** Smooth, leafy, and much-branched; plants commonly remain low where they are walked on.
+  - **Size:** Usually about 2–16 inches (5–40 cm) tall.
+  - **Confirmation:** Use the combination of rayless button-shaped heads, finely divided leaves, and pineapple scent. Never rely on scent alone when identifying a plant for food or medicine.
+benefits: |-
+  - **Aromatic edible:** Clean flower heads and young leaves can add a pineapple-chamomile fragrance to teas and seasonal foods.
+  - **Traditional herbal record:** Historical sources describe the herb in teas and tinctures for soothing, antispasmodic, and anti-inflammatory purposes.
+  - **Promising but preliminary research:** Extracts contain phenolic compounds and aromatic terpenoids. Recent laboratory and rodent studies reported pain-relieving and sleep-related activity, but these findings do **not** establish effectiveness, safety, or dosing in humans.
+  - **Practical field use:** A peer-reviewed study confirmed compounds in the plant's essential oil that deter mosquito biting, supporting its documented traditional use as an insect-repellent plant. This does not make homemade preparations a substitute for a tested repellent.
+medicinal_uses: |-
+  Pineapple weed has a history of use as a tea or tincture for digestive cramping, discomfort, inflammation, and restlessness. Indigenous North American ethnobotanical records also describe varied cultural and practical uses, including insect repellent.
+
+  These are **traditional uses**, not proven treatments. Published pharmacology on *Matricaria discoidea* is still largely laboratory- and animal-based, and there is not enough human clinical evidence to recommend it for treating pain, insomnia, digestive disease, infection, or any other condition.
+culinary_uses: |-
+  - **Flower-head tea:** The fresh or dried rayless flower heads make a mild, fruity infusion reminiscent of chamomile.
+  - **Young greens:** Tender spring leaves and shoots may be used sparingly in salads or as an aromatic garnish; older leaves become more bitter.
+  - **Flavoring:** Clean flower heads can scent cold infusions, simple syrups, or desserts. Treat these as culinary flavorings rather than medicinal doses.
+magical_uses: |-
+  In contemporary folk practice, pineapple weed is often read as a symbol of **resilience, welcome, calm, and finding sweetness in difficult ground**. These correspondences are interpretive rather than medical or historically universal. It may be included in sachets, altar bowls, or threshold work centered on comfort, persistence, and hospitality.
+parts_used: Flower heads and young leaves; sometimes the flowering aerial parts
+harvest: |-
+  - Harvest only after a confident identification, preferably while the yellow-green flower heads are fresh and strongly fragrant.
+  - Snip clean flower heads and tender upper leaves, leaving enough plants to flower and seed where the colony is welcome.
+  - Choose unsprayed ground away from road runoff, parking areas, treated lawns, industrial soil, livestock waste, and places heavily used by pets.
+  - Discard material that is discolored, moldy, insect-damaged, or contaminated with grit that cannot be washed away.
+preparation: |-
+  - **Fresh infusion:** Rinse carefully and steep a few flower heads in hot water for 5–10 minutes. Begin with a weak culinary infusion to assess taste and tolerance.
+  - **Drying:** Spread clean flower heads and tender tops in a single layer in a warm, shaded, well-ventilated place. Store only when fully crisp and dry.
+  - **Storage:** Keep dried herb in a labeled airtight container away from light, heat, and moisture; discard it if the aroma fades markedly or any dampness or mold appears.
+  - **External folk use:** Historical preparations include washes and infused applications, but homemade oils and salves can trap moisture or irritate skin. Patch-test first and never apply them to deep wounds, serious burns, infected skin, or near the eyes.
+cautions: |-
+  - **Positive identification is essential.** Pineapple weed should have rayless yellow-green button heads, finely divided leaves, and a pineapple-like scent when crushed. Do not consume a plant based on a photograph or scent alone.
+  - **Avoid contaminated harvest sites.** This plant commonly grows where soil may carry vehicle residue, herbicides, pesticides, pet waste, or other pollutants. Washing does not reliably remove every chemical contaminant.
+  - **Allergy is possible.** Pineapple weed belongs to the daisy family (Asteraceae). Anyone sensitive to chamomile, ragweed, chrysanthemums, asters, or related plants should avoid it or seek medical guidance. Stop use for rash, mouth or throat swelling, wheezing, or other allergic symptoms; breathing difficulty or throat swelling requires emergency care.
+  - **Human safety data are limited.** There is no well-established therapeutic dose, and concentrated extracts or essential oil are not equivalent to a mild food infusion. Do not ingest essential oil.
+  - Ask a qualified clinician before medicinal use during pregnancy or breastfeeding, for children, with chronic illness, before surgery, or alongside prescription medicines. This record is educational and is not a diagnosis or treatment plan.
+sources: |-
+  1. [Royal Botanic Gardens, Kew — *Matricaria discoidea* taxonomy and distribution](https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:154716-2)
+  2. [Burke Herbarium / Flora of North America — botanical description](https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Matricaria+discoidea)
+  3. [Colorado State University Extension — foraging identification and edible parts](https://pueblo.extension.colostate.edu/foraging/)
+  4. [Sepp et al. (2024), *Biomolecules* — phytochemistry and preclinical pharmacology](https://pubmed.ncbi.nlm.nih.gov/38540779/)
+  5. [Cantrell et al. (2018), *Journal of Medical Entomology* — mosquito-biting deterrent compounds](https://pubmed.ncbi.nlm.nih.gov/30379955/)
+---
