@@ -1,0 +1,84 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Apothecary | Grimoire</title>
+    <link rel="icon" type="image/png" href="/grimoire/images/icon.png">
+    <link rel="stylesheet" href="/grimoire/style.css">
+</head>
+<body class="apothecary-page">
+<div class="grimoire-shell">
+    <header class="grimoire-header">
+        <a href="/grimoire/" class="grimoire-mark">Grimoire</a>
+        <a href="/" class="return-link">Return Home</a>
+    </header>
+
+    <main class="apothecary-library">
+        <header class="apothecary-hero">
+            <div class="apothecary-mark">❧</div>
+            <p class="kicker">The Grimoire</p>
+            <h1>Apothecary</h1>
+            <div class="apothecary-divider"><span></span>✦<span></span></div>
+            <p class="apothecary-lead">A field cabinet of plants found, identified, and studied—along with their traditional benefits, practical uses, and necessary cautions.</p>
+        </header>
+
+        <section class="plant-cabinet">
+            <header class="plant-cabinet-heading">
+                <p class="kicker">Field Collection</p>
+                <h2>The Plant Cabinet</h2>
+                <div class="apothecary-small-divider">❧ &nbsp; ✦ &nbsp; ❧</div>
+            </header>
+
+            <div class="apothecary-grid">
+                {% assign plant_entries = site.pages | where_exp: "item", "item.path contains 'grimoire/apothecary/entries/'" | sort: "title" %}
+                {% if plant_entries.size > 0 %}
+                    {% for plant in plant_entries %}
+                    <article class="plant-card">
+                        <a href="{{ plant.url }}">
+                            {% if plant.image %}
+                            <div class="plant-card-image"><img src="{{ plant.image }}" alt="{{ plant.title }}"></div>
+                            {% else %}
+                            <div class="plant-card-symbol">❧</div>
+                            {% endif %}
+                            <p class="plant-card-kicker">{{ plant.plant_type | default: "Plant Record" | replace: "-", " " }}</p>
+                            <h3>{{ plant.title }}</h3>
+                            {% if plant.scientific_name %}<p class="plant-latin">{{ plant.scientific_name }}</p>{% endif %}
+                            {% if plant.found_location %}<p class="plant-found">Found: {{ plant.found_location }}</p>{% endif %}
+                            {% if plant.benefits %}
+                            <div class="plant-preview">{{ plant.benefits | markdownify | strip_html | truncate: 120 }}</div>
+                            {% endif %}
+                            <div class="plant-card-footer"><span>Open Plant Record</span><span>❧</span></div>
+                        </a>
+                    </article>
+                    {% endfor %}
+                {% else %}
+                <div class="empty-apothecary">
+                    <span>❧</span>
+                    <p>The cabinet is waiting for its first plant.</p>
+                </div>
+                {% endif %}
+            </div>
+        </section>
+
+        <aside class="apothecary-note">
+            <strong>A field-note reminder:</strong> Confirm a plant's identity with reliable sources before eating or using it. Traditional uses are recorded for reference and are not medical advice.
+        </aside>
+
+        <nav class="section-nav">
+            <a href="/grimoire/apothecary/" aria-current="page">Apothecary</a>
+            <a href="/grimoire/crystals/">Crystals</a>
+            <a href="/grimoire/tarot/">Tarot</a>
+            <a href="/grimoire/spells/">Spells</a>
+            <a href="/grimoire/recipes/">Recipes</a>
+            <a href="/grimoire/moon/">Moon</a>
+            <a href="/grimoire/dreams/">Dreams</a>
+        </nav>
+    </main>
+</div>
+</body>
+</html>
