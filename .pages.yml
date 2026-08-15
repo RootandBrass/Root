@@ -504,7 +504,7 @@ content:
 
     fields:
       - name: title
-        label: Name
+        label: Title
         type: string
         required: true
 
