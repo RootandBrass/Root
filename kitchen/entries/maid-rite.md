@@ -2,14 +2,14 @@
 title: "Maid Rite "
 category: meals-beef
 ---
-Brown burger rinse burger 
+Brown burger rinse burger (or not) 
 
-  
+Helping of Mustard 
 
-Mustard 
+Good few dashes of Worcestershire.  
 
-Warchersire.  
+1/4 cup Brown sugar  
 
-Brown sugar  
+Chick broth 1/2 can or 1 can of your not in a hurry
 
-Chick broth 1 can 
+After browning burger throw in all the ingredients and reduce sauce down to a “sloppy Joe” thickness
