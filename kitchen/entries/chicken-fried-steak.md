@@ -4,31 +4,19 @@ category: meals-beef
 ---
 I**ngredients** 
 
-- 4 cube steaks (about 1/3 lb each) 
-
-1 1/2 cups all purpose flour 
-
-2 tsp fresh ground black pepper, divided 
-
-2 tsp kosher salt or sea salt, divided 
-
-1/2 tsp smoked paprika 
-
-1/2 tsp onion powder 
-
-1/2 tsp garlic powder 
-
-1/2 tsp baking soda 
-
-1/2 tsp baking powder 
-
-1 1/2 cups buttermilk 
-
-2 tsps TABASCO® Sauce (original) 
-
-2 eggs 
-
-1 cup vegetable oil 
+- 4 cube steaks (about 1/3 lb each)
+- 1 1/2 cups all purpose flour 
+- 2 tsp fresh ground black pepper, divided 
+- 2 tsp kosher salt or sea salt, divided 
+- 1/2 tsp smoked paprika 
+- 1/2 tsp onion powder 
+- 1/2 tsp garlic powder 
+- 1/2 tsp baking soda 
+- 1/2 tsp baking powder 
+- 1 1/2 cups buttermilk 
+- 2 tsps TABASCO® Sauce (original) 
+- 2 eggs 
+- 1 cup vegetable oil 
 
 **Chicken Fried Steak Gravy** 
 
@@ -36,9 +24,7 @@ I**ngredients** 
 - 4 tbsp flour 
 - 2 to 3 cups whole milk 
 - 1/2 cup heavy whipping cream 
-- salt and pepper to taste 
-
-  
+- salt and pepper to taste
 
 **Instructions** 
 
@@ -51,7 +37,9 @@ I**ngredients** 
 - Meanwhile, heat vegetable oil in a heavy skillet or large cast iron skillet over medium high heat. How much oil you need depends on the size of your skillet. You want it to be about 1/4-inch deep. We aren't deep frying the steaks, just shallow frying.  
 - Test the oil by dropping a bit of the breading into in. The oil should sizzle and bubble around the breading. Look for the oil to be glistening but not smoking - about 320-340 degrees F. Now we're ready to fry. 
 - Place two steaks into the pan at a time and fry for 3 to 4 minutes on each side or until golden brown. Do not flip more than once or the breading will fall off. Do not fry more than two steaks or the pan will be too crowded and the breading will fall off.  
-- Remove steaks from pan and drain on paper towels. Place in preheated oven. Turn skillet heat to medium. 
+- Remove steaks from pan and drain on paper towels. Place in preheated oven. Turn skillet heat to medium.
+
+
 
 **Chicken Fried Steak Gravy** 
 
@@ -60,7 +48,9 @@ I**ngredients** 
 - Whisk in flour and continue whisking for two to three minutes or until nice and golden brown. 
 - Combine the cream and milk and slowly drizzle in about 2 1/2 cups into the skillet, whisking constantly. It might look a little crazy right at the beginning, but it will all come together. 
 - Continue whisking and bring the gravy to a simmer. Cook until the gravy is smooth and creamy, about 5 to 7 minutes. If the gravy gets too thick, add in a little more milk. Season with salt and pepper to taste. (Mine didn't need any salt but LOTS of pepper!) 
-- Serve chicken fried steak with gravy and mashed potatoes and your favorite green veggies. ENJOY! 
+- Serve chicken fried steak with gravy and mashed potatoes and your favorite green veggies. ENJOY!
+
+
 
 **Nutrition** 
 
