@@ -22,17 +22,11 @@ preparation: |-
   Wash under cool running water, cut around the stone, twist the halves apart, and remove the pit. Eat promptly, refrigerate, dry, cook, or freeze using a tested food-preservation method. See the Root & Brass Harvest & Use guide for the garden's drying, freezing, and infusing framework; peach is listed here for fruit preparations, not medicinal infusions from leaves or bark.
 cautions: |-
   Peach pits and kernels, leaves, bark, and twigs can contain cyanogenic glycosides that may release toxic cyanide. Never chew or eat the kernel inside a cracked pit, and do not make tea, tincture, syrup, extract, or "vitamin B17"/amygdalin remedies from these tissues. Keep pits and prunings away from children, pets, and livestock. Peach can also cause food allergy or pollen-related oral allergy symptoms; stop eating it and seek urgent help for trouble breathing, throat swelling, faintness, or a rapidly spreading reaction. Whole or broken pits are a choking hazard. This record is educational and is not medical advice.
-sources:
-  - label: "Root & Brass Plant Journal — Frost Peach"
-    url: "/garden/plants/treesandshrubs/frostpeach.html"
-  - label: "Root & Brass Harvest & Use"
-    url: "/garden/harvest.html"
-  - label: "USDA FoodData Central — Peaches"
-    url: "https://fdc.nal.usda.gov/food-search/?query=peaches"
-  - label: "National Cancer Institute — Laetrile/Amygdalin"
-    url: "https://www.cancer.gov/about-cancer/treatment/cam/patient/laetrile-pdq"
-  - label: "European Food Safety Authority — Cyanogenic glycosides in foods"
-    url: "https://www.efsa.europa.eu/en/efsajournal/pub/5662"
-  - label: "National Center for Home Food Preservation — Peaches"
-    url: "https://nchfp.uga.edu/resources/entry/resources-for-home-preserving-peaches"
+sources: |-
+  1. [Root & Brass Plant Journal — Frost Peach](/garden/plants/treesandshrubs/frostpeach.html)
+  2. [Root & Brass Harvest & Use](/garden/harvest.html)
+  3. [USDA FoodData Central — Peaches](https://fdc.nal.usda.gov/food-search/?query=peaches)
+  4. [National Cancer Institute — Laetrile/Amygdalin](https://www.cancer.gov/about-cancer/treatment/cam/patient/laetrile-pdq)
+  5. [European Food Safety Authority — Cyanogenic glycosides in foods](https://www.efsa.europa.eu/en/efsajournal/pub/5662)
+  6. [National Center for Home Food Preservation — Peaches](https://nchfp.uga.edu/resources/entry/resources-for-home-preserving-peaches)
 ---
