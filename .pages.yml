@@ -907,6 +907,7 @@ content:
     view:
       primary: title
       fields:
+        - title
         - category
       sort: title
       order: asc
