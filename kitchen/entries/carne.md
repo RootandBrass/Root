@@ -20,35 +20,21 @@ Servings: [6](https://pinchandswirl.com/carne-asada-recipe/#) people 
 
 Calories: 344kcal 
 
-**Ingredientsmmm m s\**  
-
-- 2 pounds skirt steak trimmed of excess fat 
+- 2 pounds skirt steak trimmed of excess fat
 
 **Carne Asada Marinade** 
 
-- 1 jalapeño seeded and minced 
-
-4 cloves garlic minced 
-
-1/2 cup fresh cilantro leaveschopped 
-
-juice of 1 orange 
-
-juice of 1 lime 
-
-juice of 1 lemon 
-
-2 tablespoons apple cider vinegar 
-
-1/3 cup olive oil 
-
-1 teaspoon ground cumin 
-
-1 teaspoon kosher salt 
-
-1/4 teaspoon freshly ground black pepper 
-
-Report this ad 
+- 1 jalapeño seeded and minced
+- 4 cloves garlic minced 
+- 1/2 cup fresh cilantro leaveschopped 
+- juice of 1 orange 
+- juice of 1 lime 
+- juice of 1 lemon 
+- 2 tablespoons apple cider vinegar 
+- 1/3 cup olive oil 
+- 1 teaspoon ground cumin 
+- 1 teaspoon kosher salt 
+- 1/4 teaspoon freshly ground black pepper 
 
 **Instructions** 
 
