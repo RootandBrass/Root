@@ -19,6 +19,8 @@
 }
 
 .kitchen-site .kitchen-page {
+  --kitchen-brass: #a37f43;
+  --kitchen-olive: #343a30;
   width: min(1180px, calc(100% - 48px));
   max-width: none;
   margin: 0 auto;
