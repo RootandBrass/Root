@@ -1,0 +1,110 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A yearly volume from the Root & Brass journal.">
+  <title>Journal Volume | Root &amp; Brass</title>
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="/journal/style.css?v=20260817">
+</head>
+
+<body class="journal-site journal-reader-site">
+  <header class="journal-topbar">
+    <a class="journal-brand" href="/">Root &amp; Brass</a>
+    <a class="journal-home-link" href="/journal/">All Years</a>
+  </header>
+
+  {% assign journal_entries = site.pages
+    | where_exp: "item", "item.path contains 'journal/entries/'"
+    | where_exp: "item", "item.date"
+    | sort: "date"
+    | reverse
+  %}
+  {% assign journal_years = journal_entries
+    | group_by_exp: "entry", "entry.date | date: '%Y'"
+  %}
+
+  <main class="journal-reader">
+    <nav class="journal-volume-nav" aria-label="Journal years">
+      <a class="back-to-shelf" href="/journal/">
+        <span aria-hidden="true">←</span> Back to the year shelf
+      </a>
+      <div class="journal-year-links">
+        {% for year in journal_years %}
+          <a href="/journal/year.html?year={{ year.name }}" data-year-link="{{ year.name }}">{{ year.name }}</a>
+        {% endfor %}
+      </div>
+    </nav>
+
+    {% for year in journal_years %}
+      <section class="journal-volume" data-journal-year="{{ year.name }}">
+        <header class="journal-volume-cover">
+          <p class="journal-kicker">Volume {{ year.name }}</p>
+          <h1>{{ year.name }}</h1>
+          <span class="journal-flourish" aria-hidden="true">❦</span>
+          <p>
+            {{ year.items.size }} {% if year.items.size == 1 %}entry{% else %}entries{% endif %},
+            gathered newest to oldest.
+          </p>
+        </header>
+
+        <div class="journal-entry-stream">
+          {% for entry in year.items %}
+            <article class="journal-entry-inline" id="entry-{{ entry.date | date: '%Y-%m-%d' }}">
+              <header class="journal-entry-heading">
+                <time datetime="{{ entry.date | date: '%Y-%m-%d' }}">
+                  <span class="entry-month">{{ entry.date | date: "%B" }}</span>
+                  <span class="entry-day">{{ entry.date | date: "%-d" }}</span>
+                  <span class="entry-year">{{ entry.date | date: "%Y" }}</span>
+                </time>
+                <span class="entry-divider" aria-hidden="true"></span>
+              </header>
+              <div class="journal-entry-content">
+                {{ entry.content }}
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+
+        <footer class="journal-volume-end">
+          <span aria-hidden="true">❦</span>
+          <p>End of the {{ year.name }} volume</p>
+          <a href="/journal/">Return to the year shelf</a>
+        </footer>
+      </section>
+    {% endfor %}
+
+    <p class="journal-year-not-found" hidden>
+      That journal year is not on the shelf yet. <a href="/journal/">Return to all years.</a>
+    </p>
+  </main>
+
+  <script>
+    (function () {
+      const volumes = Array.from(document.querySelectorAll('[data-journal-year]'));
+      const yearLinks = Array.from(document.querySelectorAll('[data-year-link]'));
+      const emptyMessage = document.querySelector('.journal-year-not-found');
+      const requestedYear = new URLSearchParams(window.location.search).get('year');
+      const availableYears = volumes.map((volume) => volume.dataset.journalYear);
+      const selectedYear = requestedYear || availableYears[0];
+      const selectedVolume = volumes.find((volume) => volume.dataset.journalYear === selectedYear);
+
+      if (selectedVolume) {
+        selectedVolume.classList.add('is-active');
+        yearLinks.forEach((link) => {
+          if (link.dataset.yearLink === selectedYear) {
+            link.classList.add('is-current');
+            link.setAttribute('aria-current', 'page');
+          }
+        });
+        document.title = selectedYear + ' Journal | Root & Brass';
+      } else if (emptyMessage) {
+        emptyMessage.hidden = false;
+      }
+    }());
+  </script>
+</body>
+</html>
