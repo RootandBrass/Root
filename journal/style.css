@@ -7,8 +7,8 @@
   --journal-gold-light: #ddc47e;
   --journal-night: #15120f;
   --journal-night-soft: #282119;
+  --journal-oxblood: #552229;
   --journal-green: #263b31;
-  --journal-wine: #4b2528;
   --journal-navy: #253444;
   --journal-brown: #4a3527;
 }
@@ -168,16 +168,16 @@ a {
   background:
     radial-gradient(circle at 50% 35%, rgba(255,255,255,0.08), transparent 34%),
     repeating-linear-gradient(90deg, rgba(255,255,255,0.018) 0 1px, transparent 1px 4px),
-    var(--journal-green);
+    var(--journal-oxblood);
   box-shadow:
     inset 0 0 0 5px rgba(16, 13, 9, 0.18),
     inset 0 0 0 7px rgba(194, 158, 83, 0.28),
     inset 12px 0 18px rgba(0,0,0,0.25);
 }
 
-.journal-year-book-1 .book-cover { background-color: var(--journal-wine); }
-.journal-year-book-2 .book-cover { background-color: var(--journal-navy); }
-.journal-year-book-3 .book-cover { background-color: var(--journal-brown); }
+.journal-year-book-1 .book-cover { background-color: var(--journal-navy); }
+.journal-year-book-2 .book-cover { background-color: var(--journal-brown); }
+.journal-year-book-3 .book-cover { background-color: var(--journal-green); }
 
 .book-cover::before,
 .book-cover::after {
@@ -212,13 +212,13 @@ a {
   border-radius: 6px 2px 2px 6px;
   background:
     linear-gradient(90deg, rgba(0,0,0,0.34), rgba(255,255,255,0.08) 48%, rgba(0,0,0,0.25)),
-    var(--journal-green);
+    var(--journal-oxblood);
   box-shadow: inset -4px 0 6px rgba(0,0,0,0.24);
 }
 
-.journal-year-book-1 .book-spine { background-color: var(--journal-wine); }
-.journal-year-book-2 .book-spine { background-color: var(--journal-navy); }
-.journal-year-book-3 .book-spine { background-color: var(--journal-brown); }
+.journal-year-book-1 .book-spine { background-color: var(--journal-navy); }
+.journal-year-book-2 .book-spine { background-color: var(--journal-brown); }
+.journal-year-book-3 .book-spine { background-color: var(--journal-green); }
 
 .book-pages {
   position: absolute;
