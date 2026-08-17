@@ -1,192 +1,163 @@
 ---
 ---
-
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    <title>Kitchen | Root & Brass</title>
-  
-    <link rel="icon" type="image/png" href="/images/logo.png">
-    <link rel="stylesheet" href="/style.css">
+  <meta name="description" content="The recipe collection from the kitchen at 301 Ruby.">
+  <title>The Kitchen | Root &amp; Brass</title>
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/kitchen/style.css?v=20260817a">
 </head>
 
 <body class="secondary-page kitchen-site">
-
   <header class="site-header">
-        <a href="/" aria-label="Root &amp; Brass home">
-            <img src="/images/logo.png"
-                 alt="Root &amp; Brass"
-                 class="site-logo">
-        </a>
-    </header>
+    <a href="/" aria-label="Root &amp; Brass home">
+      <img src="/images/logo.png" alt="Root &amp; Brass" class="site-logo">
+    </a>
+  </header>
 
-    <nav class="main-nav" aria-label="Main navigation">
-        <a href="/">Home</a>
-        <a href="/house.html">301 Ruby</a>
-        <a href="/garden.html">The Garden</a>
-        <a href="/kitchen/" aria-current="page">The Kitchen</a>
-        <a href="/history.html">History</a>
-        <a href="/about.html">About</a>
-    </nav>
+  <nav class="main-nav" aria-label="Main navigation">
+    <a href="/">Home</a>
+    <a href="/house.html">301 Ruby</a>
+    <a href="/garden.html">The Garden</a>
+    <a href="/kitchen/" aria-current="page">The Kitchen</a>
+    <a href="/history.html">History</a>
+    <a href="/about.html">About</a>
+  </nav>
 
-     <main class="kitchen-page">
+  {% assign kitchen_recipes = site.pages | where_exp: "item", "item.path contains 'kitchen/entries/'" | sort: "title" %}
 
-        <section class="kitchen-header">
+  <main class="kitchen-page">
+    <section class="kitchen-header" aria-labelledby="kitchen-title">
+      <div class="kitchen-header-title">
+        <p class="eyebrow">The working kitchen · 301 Ruby</p>
+        <h1 id="kitchen-title">The Kitchen</h1>
+      </div>
+      <div class="kitchen-header-note">
+        <span class="kitchen-header-rule" aria-hidden="true"></span>
+        <p>Family recipes, remembered favorites, and the dishes worth making again.</p>
+        <p class="kitchen-collection-count">
+          {{ kitchen_recipes.size }} recipes in the collection
+        </p>
+      </div>
+    </section>
 
-            <p class="eyebrow">FROM THE KITCHEN</p>
+    <section id="category-view" class="kitchen-index" aria-labelledby="recipe-index-title">
+      <header class="kitchen-index-heading">
+        <div>
+          <p class="eyebrow">Recipe index</p>
+          <h2 id="recipe-index-title">Browse the collection</h2>
+        </div>
+        <p>Choose a section to open its recipes.</p>
+      </header>
 
-            <h1>Recipes</h1>
+      <div class="kitchen-categories">
+        <button data-category="bread"><span class="category-number">01</span><span class="category-name">Bread</span><span class="category-count"></span></button>
+        <button data-category="breakfast"><span class="category-number">02</span><span class="category-name">Breakfast</span><span class="category-count"></span></button>
+        <button data-category="canning"><span class="category-number">03</span><span class="category-name">Canning</span><span class="category-count"></span></button>
+        <button data-category="casseroles"><span class="category-number">04</span><span class="category-name">Casseroles</span><span class="category-count"></span></button>
+        <button data-category="copycat-recipes"><span class="category-number">05</span><span class="category-name">Copycat Recipes</span><span class="category-count"></span></button>
+        <button data-category="desserts"><span class="category-number">06</span><span class="category-name">Desserts</span><span class="category-count"></span></button>
+        <button data-category="drinks"><span class="category-number">07</span><span class="category-name">Drinks</span><span class="category-count"></span></button>
+        <button data-category="hors-doeuvres"><span class="category-number">08</span><span class="category-name">Hors d'Oeuvres</span><span class="category-count"></span></button>
+        <button data-category="meals-beef"><span class="category-number">09</span><span class="category-name">Meals · Beef</span><span class="category-count"></span></button>
+        <button data-category="meals-chicken"><span class="category-number">10</span><span class="category-name">Meals · Chicken</span><span class="category-count"></span></button>
+        <button data-category="meals-fish"><span class="category-number">11</span><span class="category-name">Meals · Fish</span><span class="category-count"></span></button>
+        <button data-category="meals-pork"><span class="category-number">12</span><span class="category-name">Meals · Pork</span><span class="category-count"></span></button>
+        <button data-category="salads"><span class="category-number">13</span><span class="category-name">Salads</span><span class="category-count"></span></button>
+        <button data-category="seasonings-dressings"><span class="category-number">14</span><span class="category-name">Seasonings &amp; Dressings</span><span class="category-count"></span></button>
+        <button data-category="soups"><span class="category-number">15</span><span class="category-name">Soups</span><span class="category-count"></span></button>
+      </div>
+    </section>
 
-            <p class="page-lead">
-             Recipes from the kitchen at 301 Ruby.
-            </p>
-        </section>
+    <section id="recipe-view" class="kitchen-category-view" hidden>
+      <header class="kitchen-category-heading">
+        <button id="back-to-categories">← Recipe index</button>
+        <p class="eyebrow">Recipe section</p>
+        <h2 id="category-title"></h2>
+        <p id="category-summary"></p>
+      </header>
 
-  <!-- CATEGORY VIEW -->
-  <section id="category-view">
+      <div class="kitchen-recipe-grid">
+        {% for recipe in kitchen_recipes %}
+          <a class="kitchen-card" data-category="{{ recipe.category }}" href="{{ recipe.url | relative_url }}">
+            {% if recipe.photo %}
+              <div class="kitchen-card-media">
+                <img src="{{ recipe.photo | relative_url }}" alt="{{ recipe.title }}">
+              </div>
+            {% else %}
+              <div class="kitchen-card-media kitchen-card-placeholder" aria-hidden="true">
+                <span>301 Ruby</span>
+                <strong>R&amp;B</strong>
+                <small>Kitchen recipe</small>
+              </div>
+            {% endif %}
+            <div class="kitchen-card-copy">
+              <p>{{ recipe.category | replace: "-", " " }}</p>
+              <h3>{{ recipe.title }}</h3>
+              <span>View recipe <b aria-hidden="true">→</b></span>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
 
-    <div class="kitchen-categories">
+      <p id="no-recipes" hidden>No recipes have been added to this section yet.</p>
+    </section>
+  </main>
 
-      <button data-category="bread">Bread</button>
-      <button data-category="breakfast">Breakfast</button>
-      <button data-category="canning">Canning</button>
-      
-      <button data-category="casseroles">Casseroles</button>
-      <button data-category="copycat-recipes">Copycat Recipes</button>
-      <button data-category="desserts">Desserts</button>
-      
-      <button data-category="drinks">Drinks</button>
-      <button data-category="hors-doeuvres">Hors d'Oeuvres</button>
-      <button data-category="meals-beef">Meals Beef</button>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const categoryView = document.getElementById("category-view");
+      const recipeView = document.getElementById("recipe-view");
+      const categoryTitle = document.getElementById("category-title");
+      const categorySummary = document.getElementById("category-summary");
+      const backButton = document.getElementById("back-to-categories");
+      const recipeCards = Array.from(document.querySelectorAll(".kitchen-card"));
+      const categoryButtons = Array.from(document.querySelectorAll(".kitchen-categories button"));
+      const noRecipes = document.getElementById("no-recipes");
 
-      <button data-category="meals-chicken">Meals Chicken</button>
-      <button data-category="meals-fish">Meals Fish</button>
-      <button data-category="meals-pork">Meals Pork</button>   
+      categoryButtons.forEach(function (button) {
+        const category = button.dataset.category.trim().toLowerCase();
+        const count = recipeCards.filter(function (card) {
+          return (card.dataset.category || "").trim().toLowerCase() === category;
+        }).length;
+        const countLabel = button.querySelector(".category-count");
 
-      <button data-category="salads">Salads</button>
-      <button data-category="seasonings-dressings">Seasonings &amp; Dressings</button>
-      <button data-category="soups">Soups</button>
-
-    </div>
-
-  </section>
-
-
-  <!-- RECIPE VIEW -->
-  <section id="recipe-view" hidden>
-
-    <div class="kitchen-category-heading">
-      <button id="back-to-categories">← Back to Categories</button>
-      <h2 id="category-title"></h2>
-    </div>
-
-    <div class="kitchen-recipe-grid">
-
-      {% assign kitchen_recipes = site.pages | where_exp: "item", "item.path contains 'kitchen/entries/'" | sort: "title" %}
-
-      {% for recipe in kitchen_recipes %}
-
-        <a
-          class="kitchen-card"
-          data-category="{{ recipe.category }}"
-          href="{{ recipe.url | relative_url }}"
-        >
-
-          {% if recipe.photo %}
-            <img
-              src="{{ recipe.photo | relative_url }}"
-              alt="{{ recipe.title }}"
-            >
-          {% endif %}
-
-          <h3>{{ recipe.title }}</h3>
-
-        </a>
-
-      {% endfor %}
-
-    </div>
-
-    <p id="no-recipes" hidden>
-      No recipes have been added to this category yet.
-    </p>
-
-  </section>
-
-</main>
-
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  const categoryView = document.getElementById("category-view");
-  const recipeView = document.getElementById("recipe-view");
-  const categoryTitle = document.getElementById("category-title");
-  const backButton = document.getElementById("back-to-categories");
-  const recipeCards = document.querySelectorAll(".kitchen-card");
-  const noRecipes = document.getElementById("no-recipes");
-
-  const categoryButtons =
-    document.querySelectorAll(".kitchen-categories button");
-
-  categoryButtons.forEach(function (button) {
-
-    button.addEventListener("click", function () {
-
-      const selectedCategory =
-        button.dataset.category.trim().toLowerCase();
-
-      const selectedName =
-        button.textContent.trim();
-
-      categoryView.style.display = "none";
-      recipeView.hidden = false;
-
-      categoryTitle.textContent = selectedName;
-
-      let visibleRecipes = 0;
-
-      recipeCards.forEach(function (card) {
-
-        const recipeCategory =
-          (card.dataset.category || "").trim().toLowerCase();
-
-        if (recipeCategory === selectedCategory) {
-          card.style.display = "block";
-          visibleRecipes++;
-        } else {
-          card.style.display = "none";
+        if (countLabel) {
+          countLabel.textContent = count + (count === 1 ? " recipe" : " recipes");
         }
 
+        button.addEventListener("click", function () {
+          const selectedName = button.querySelector(".category-name").textContent.trim();
+          let visibleRecipes = 0;
+
+          recipeCards.forEach(function (card) {
+            const recipeCategory = (card.dataset.category || "").trim().toLowerCase();
+            card.hidden = recipeCategory !== category;
+            if (!card.hidden) visibleRecipes++;
+          });
+
+          categoryView.hidden = true;
+          recipeView.hidden = false;
+          categoryTitle.textContent = selectedName;
+          categorySummary.textContent = visibleRecipes + (visibleRecipes === 1 ? " recipe" : " recipes");
+          noRecipes.hidden = visibleRecipes > 0;
+          window.scrollTo({ top: recipeView.offsetTop - 24, behavior: "smooth" });
+        });
       });
 
-      noRecipes.hidden = visibleRecipes > 0;
-
+      backButton.addEventListener("click", function () {
+        recipeView.hidden = true;
+        categoryView.hidden = false;
+        recipeCards.forEach(function (card) { card.hidden = false; });
+        window.scrollTo({ top: categoryView.offsetTop - 24, behavior: "smooth" });
+      });
     });
+  </script>
 
-  });
-
-  backButton.addEventListener("click", function () {
-
-    recipeView.hidden = true;
-    categoryView.style.display = "";
-
-    recipeCards.forEach(function (card) {
-      card.style.display = "";
-    });
-
-  });
-
-});
-</script>
-    <footer>
-        <p>&copy; 2026 Root &amp; Brass</p>
-    </footer>
-
+  <footer><p>&copy; 2026 Root &amp; Brass</p></footer>
 </body>
-
 </html>

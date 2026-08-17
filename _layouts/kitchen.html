@@ -1,26 +1,20 @@
 ---
 ---
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>{{ page.title }} | Root & Brass</title>
-
+  <title>{{ page.title }} | Root &amp; Brass</title>
   <link rel="icon" type="image/png" href="/images/logo.png">
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/kitchen/style.css?v=20260817a">
 </head>
 
-<body class="secondary-page kitchen-site">
-
+<body class="secondary-page kitchen-site kitchen-entry-site">
   <header class="site-header">
     <a href="/" aria-label="Root &amp; Brass home">
-      <img src="/images/logo.png"
-           alt="Root &amp; Brass"
-           class="site-logo">
+      <img src="/images/logo.png" alt="Root &amp; Brass" class="site-logo">
     </a>
   </header>
 
@@ -34,32 +28,30 @@
   </nav>
 
   <main class="kitchen-recipe">
+    <article class="kitchen-recipe-paper">
+      <header class="kitchen-recipe-header">
+        <p class="kitchen-recipe-origin">From the kitchen at 301 Ruby</p>
+        <p class="kitchen-recipe-category">{{ page.category | replace: "-", " " }}</p>
+        <h1>{{ page.title }}</h1>
+        <span class="kitchen-recipe-rule" aria-hidden="true"></span>
+      </header>
 
-    <header class="kitchen-recipe-header">
-      <p class="kitchen-recipe-category">{{ page.category }}</p>
-      <h1>{{ page.title }}</h1>
-    </header>
+      {% if page.photo %}
+        <figure class="kitchen-recipe-photo">
+          <img src="{{ page.photo | relative_url }}" alt="{{ page.title }}">
+        </figure>
+      {% endif %}
 
-    {% if page.photo %}
-    <div class="kitchen-recipe-photo">
-      <img src="{{ page.photo | relative_url }}" alt="{{ page.title }}">
-    </div>
-    {% endif %}
+      <div class="kitchen-recipe-content">
+        {{ content }}
+      </div>
 
-    <div class="kitchen-recipe-content">
-      {{ content }}
-    </div>
-
-    <div class="kitchen-recipe-back">
-      <a href="{{ '/kitchen/' | relative_url }}">← Back to the Kitchen</a>
-    </div>
-
+      <footer class="kitchen-recipe-back">
+        <a href="{{ '/kitchen/' | relative_url }}">← Return to the recipe index</a>
+      </footer>
+    </article>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Root &amp; Brass</p>
-  </footer>
-
+  <footer><p>&copy; 2026 Root &amp; Brass</p></footer>
 </body>
-
 </html>
