@@ -141,7 +141,7 @@
   margin: 0;
   padding: 25px 26px;
   display: grid;
-  grid-template-columns: 38px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   grid-template-rows: auto 1fr;
   align-items: start;
   gap: 10px 15px;
@@ -172,17 +172,8 @@
   transform: none;
 }
 
-.category-number {
-  grid-column: 1;
-  grid-row: 1 / span 2;
-  padding-top: 3px;
-  color: var(--kitchen-brass);
-  font-size: 0.58rem;
-  letter-spacing: 0.12em;
-}
-
 .category-name {
-  grid-column: 2;
+  grid-column: 1;
   color: inherit;
   font-size: 1.12rem;
   font-weight: 400;
@@ -191,7 +182,7 @@
 }
 
 .category-count {
-  grid-column: 2;
+  grid-column: 1;
   align-self: end;
   color: #8b806f;
   font-size: 0.57rem;
