@@ -8,7 +8,7 @@
   <meta name="description" content="A yearly volume from the Root & Brass journal.">
   <title>Journal Volume | Root &amp; Brass</title>
   <script>document.documentElement.classList.add('js');</script>
-  <link rel="stylesheet" href="/journal/style.css?v=20260817">
+  <link rel="stylesheet" href="/journal/style.css?v=20260817d">
 </head>
 
 <body class="journal-site journal-reader-site">
@@ -30,7 +30,7 @@
   <main class="journal-reader">
     <nav class="journal-volume-nav" aria-label="Journal years">
       <a class="back-to-shelf" href="/journal/">
-        <span aria-hidden="true">←</span> Back to the year shelf
+        <span aria-hidden="true">←</span> All journal years
       </a>
       <div class="journal-year-links">
         {% for year in journal_years %}
@@ -42,9 +42,9 @@
     {% for year in journal_years %}
       <section class="journal-volume" data-journal-year="{{ year.name }}">
         <header class="journal-volume-cover">
-          <p class="journal-kicker">Volume {{ year.name }}</p>
+          <p class="journal-kicker">Root &amp; Brass · Annual volume</p>
           <h1>{{ year.name }}</h1>
-          <span class="journal-flourish" aria-hidden="true">❦</span>
+          <span class="journal-title-rule" aria-hidden="true"></span>
           <p>
             {{ year.items.size }} {% if year.items.size == 1 %}entry{% else %}entries{% endif %},
             gathered newest to oldest.
@@ -52,7 +52,15 @@
         </header>
 
         <div class="journal-entry-stream">
+          {% assign current_month = "" %}
           {% for entry in year.items %}
+            {% assign entry_month_key = entry.date | date: "%Y-%m" %}
+            {% if entry_month_key != current_month %}
+              <div class="journal-month-divider">
+                <span>{{ entry.date | date: "%B" }}</span>
+              </div>
+              {% assign current_month = entry_month_key %}
+            {% endif %}
             <article class="journal-entry-inline" id="entry-{{ entry.date | date: '%Y-%m-%d' }}">
               <header class="journal-entry-heading">
                 <time datetime="{{ entry.date | date: '%Y-%m-%d' }}">
@@ -60,7 +68,6 @@
                   <span class="entry-day">{{ entry.date | date: "%-d" }}</span>
                   <span class="entry-year">{{ entry.date | date: "%Y" }}</span>
                 </time>
-                <span class="entry-divider" aria-hidden="true"></span>
               </header>
               <div class="journal-entry-content">
                 {{ entry.content }}
