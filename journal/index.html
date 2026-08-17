@@ -2,49 +2,72 @@
 ---
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Journal</title>
-
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="The Root & Brass journal, arranged into yearly volumes.">
+  <title>Journal | Root & Brass</title>
+  <link rel="stylesheet" href="/journal/style.css?v=20260817">
 </head>
 
-<body class="journal-site">
+<body class="journal-site journal-library-site">
+  <header class="journal-topbar">
+    <a class="journal-brand" href="/">Root &amp; Brass</a>
+    <a class="journal-home-link" href="/">Return Home</a>
+  </header>
 
-  <main class="journal-paper">
-
-    <section class="journal-index">
-
-      <h1>Journal</h1>
-
-      <div class="journal-years">
-
-  {% assign journal_entries = site.pages
-    | where_exp: "item", "item.path contains 'journal/entries/'"
-    | sort: "date"
-    | reverse
-  %}
-
-  <ul class="journal-entry-list">
-    {% for entry in journal_entries %}
-
-      <li>
-        <a href="{{ entry.url }}">
-          {{ entry.date | date: "%B %-d, %Y" }}
-        </a>
-      </li>
-
-    {% endfor %}
-  </ul>
-
-</div>
-
+  <main class="journal-library">
+    <section class="journal-library-intro" aria-labelledby="journal-title">
+      <p class="journal-kicker">The collected years</p>
+      <h1 id="journal-title">Journal</h1>
+      <span class="journal-flourish" aria-hidden="true">❦</span>
+      <p class="journal-intro-copy">
+        A shelf of ordinary days, turning points, celebrations, and the moments worth remembering.
+      </p>
     </section>
 
+    {% assign journal_entries = site.pages
+      | where_exp: "item", "item.path contains 'journal/entries/'"
+      | where_exp: "item", "item.date"
+      | sort: "date"
+      | reverse
+    %}
+    {% assign journal_years = journal_entries
+      | group_by_exp: "entry", "entry.date | date: '%Y'"
+    %}
+
+    {% if journal_years.size > 0 %}
+      <section class="journal-bookcase" aria-label="Journal volumes by year">
+        <div class="journal-book-grid">
+          {% for year in journal_years %}
+            <a
+              class="journal-year-book journal-year-book-{{ forloop.index0 | modulo: 4 }}"
+              href="/journal/year.html?year={{ year.name }}"
+              aria-label="Open the {{ year.name }} journal, {{ year.items.size }} entries"
+            >
+              <span class="book-spine" aria-hidden="true"></span>
+              <span class="book-cover">
+                <span class="book-rule book-rule-top" aria-hidden="true"></span>
+                <span class="book-small-title">Root &amp; Brass</span>
+                <strong class="book-year">{{ year.name }}</strong>
+                <span class="book-ornament" aria-hidden="true">✦</span>
+                <span class="book-label">Journal</span>
+                <span class="book-rule book-rule-bottom" aria-hidden="true"></span>
+                <span class="book-entry-count">
+                  {{ year.items.size }} {% if year.items.size == 1 %}entry{% else %}entries{% endif %}
+                </span>
+              </span>
+              <span class="book-pages" aria-hidden="true"></span>
+            </a>
+          {% endfor %}
+        </div>
+        <div class="journal-shelf" aria-hidden="true"></div>
+      </section>
+    {% else %}
+      <p class="journal-empty">The first volume is waiting for its opening page.</p>
+    {% endif %}
   </main>
 
+  <footer class="journal-footer">Root &amp; Brass · A life kept in seasons</footer>
 </body>
 </html>
