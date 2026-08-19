@@ -13,8 +13,14 @@
 body.signs-symbols-page {
   color: #eee5d5;
   background:
-    linear-gradient(rgba(11, 9, 8, 0.77), rgba(11, 9, 8, 0.88)),
-    url("/journal/images/journal-background.png") center top / cover fixed,
+    linear-gradient(
+      180deg,
+      rgba(11, 9, 8, 0.18) 0%,
+      rgba(11, 9, 8, 0.34) 48%,
+      rgba(11, 9, 8, 0.76) 100%
+    ),
+    url("/grimoire/images/signs-symbols-background.png")
+      center top / min(100%, 1280px) auto no-repeat,
     var(--symbols-night);
 }
 
