@@ -489,6 +489,84 @@ content:
         required: false
 
 
+  - name: signs_symbols
+    label: Signs & Symbols
+    type: collection
+    path: grimoire/signs-symbols/entries
+    filename: "{primary}.md"
+    format: yaml-frontmatter
+
+    view:
+      primary: title
+      fields:
+        - title
+        - category
+      sort: title
+      order: asc
+
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          values:
+            - value: numerology
+              label: Numerology
+            - value: repeating-numbers
+              label: Repeating Numbers
+            - value: omens-signs
+              label: Omens & Signs
+            - value: animal-guides
+              label: Animal Guides
+            - value: symbols
+              label: Symbols
+            - value: colors-associations
+              label: Colors & Associations
+            - value: elements-directions
+              label: Elements & Directions
+            - value: plants-nature
+              label: Plants & Nature
+            - value: folklore
+              label: Folklore
+            - value: personal-observations
+              label: Personal Observations
+
+      - name: image
+        label: Image
+        type: image
+        required: false
+
+      - name: meaning
+        label: Meaning
+        type: rich-text
+        required: false
+
+      - name: interpretations
+        label: Common Interpretations
+        type: rich-text
+        required: false
+
+      - name: personal_notes
+        label: Personal Notes
+        type: rich-text
+        required: false
+
+      - name: related_symbols
+        label: Related Symbols
+        type: string
+        required: false
+
+      - name: body
+        label: Additional Notes
+        type: rich-text
+        required: false
+
   - name: plant_journal
     label: Plant Journal
     type: group

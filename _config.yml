@@ -36,6 +36,12 @@ defaults:
       layout: crystal
 
   - scope:
+      path: "grimoire/signs-symbols/entries"
+      type: "pages"
+    values:
+      layout: symbol
+
+  - scope:
       path: "grimoire/apothecary/entries"
       type: "pages"
     values:

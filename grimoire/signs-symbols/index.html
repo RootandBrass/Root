@@ -1,0 +1,142 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="A field guide to numbers, omens, creatures, and the quiet patterns that carry meaning.">
+  <title>Signs &amp; Symbols | Grimoire</title>
+  <link rel="icon" type="image/png" href="/grimoire/images/icon.png">
+  <link rel="stylesheet" href="/grimoire/style.css">
+  <link rel="stylesheet" href="/grimoire/signs-symbols/style.css?v=20260819a">
+</head>
+<body class="signs-symbols-page">
+  <div class="grimoire-shell symbols-shell">
+    <header class="grimoire-header">
+      <a href="/grimoire/" class="grimoire-mark">Grimoire</a>
+      <a href="/" class="return-link">Return Home</a>
+    </header>
+
+    {% assign symbol_entries = site.pages | where_exp: "item", "item.path contains 'grimoire/signs-symbols/entries/'" | sort: "title" %}
+
+    <main class="symbols-library">
+      <header class="symbols-hero">
+        <p class="symbols-kicker">The Grimoire · Reference Library</p>
+        <div class="symbols-hero-mark" aria-hidden="true">✧</div>
+        <h1>Signs <span>&amp;</span> Symbols</h1>
+        <span class="symbols-hero-rule" aria-hidden="true"></span>
+        <p class="symbols-hero-copy">A field guide to numbers, omens, creatures, and the quiet patterns that carry meaning.</p>
+      </header>
+
+      <section class="symbols-catalog" aria-labelledby="symbols-catalog-title">
+        <header class="symbols-catalog-heading">
+          <div>
+            <p class="symbols-paper-kicker">Notes &amp; Correspondences</p>
+            <h2 id="symbols-catalog-title">The Reference Cabinet</h2>
+          </div>
+          <p class="symbols-total">{{ symbol_entries.size }} {% if symbol_entries.size == 1 %}entry{% else %}entries{% endif %}</p>
+        </header>
+
+        <nav class="symbols-filters" aria-label="Filter reference notes">
+          <button type="button" class="symbols-filter is-active" data-category="all" aria-pressed="true">Everything</button>
+          <button type="button" class="symbols-filter" data-category="numerology" aria-pressed="false">Numerology</button>
+          <button type="button" class="symbols-filter" data-category="repeating-numbers" aria-pressed="false">Repeating Numbers</button>
+          <button type="button" class="symbols-filter" data-category="omens-signs" aria-pressed="false">Omens &amp; Signs</button>
+          <button type="button" class="symbols-filter" data-category="animal-guides" aria-pressed="false">Animal Guides</button>
+          <button type="button" class="symbols-filter" data-category="symbols" aria-pressed="false">Symbols</button>
+          <button type="button" class="symbols-filter" data-category="colors-associations" aria-pressed="false">Colors</button>
+          <button type="button" class="symbols-filter" data-category="elements-directions" aria-pressed="false">Elements &amp; Directions</button>
+          <button type="button" class="symbols-filter" data-category="plants-nature" aria-pressed="false">Plants &amp; Nature</button>
+          <button type="button" class="symbols-filter" data-category="folklore" aria-pressed="false">Folklore</button>
+          <button type="button" class="symbols-filter" data-category="personal-observations" aria-pressed="false">Personal Observations</button>
+        </nav>
+
+        <div class="symbols-entry-grid" id="symbols-entry-grid">
+          {% for entry in symbol_entries %}
+            <a class="symbol-card" data-category="{{ entry.category | default: 'personal-observations' }}" href="{{ entry.url | relative_url }}">
+              {% if entry.image %}
+                <div class="symbol-card-image"><img src="{{ entry.image | relative_url }}" alt="{{ entry.title }}"></div>
+              {% else %}
+                <div class="symbol-card-glyph" aria-hidden="true">
+                  {% case entry.category %}
+                    {% when 'numerology' or 'repeating-numbers' %}∞
+                    {% when 'animal-guides' %}☾
+                    {% when 'plants-nature' %}❧
+                    {% when 'elements-directions' %}◇
+                    {% else %}✧
+                  {% endcase %}
+                </div>
+              {% endif %}
+              <div class="symbol-card-content">
+                <p class="symbol-card-category">{{ entry.category | default: 'personal-observations' | replace: '-', ' ' }}</p>
+                <h3>{{ entry.title }}</h3>
+                {% if entry.meaning %}<p class="symbol-card-preview">{{ entry.meaning | markdownify | strip_html | truncate: 125 }}</p>{% endif %}
+                <span class="symbol-card-link">Open field note <span aria-hidden="true">→</span></span>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+
+        <div class="symbols-empty" id="symbols-empty" {% if symbol_entries.size > 0 %}hidden{% endif %}>
+          <span class="symbols-empty-mark" aria-hidden="true">✧</span>
+          <h3>The cabinet is waiting for its first note.</h3>
+          <p>Keep the numbers that follow you, the creatures that find you, and the signs you do not want to forget.</p>
+        </div>
+      </section>
+
+      <nav class="section-nav symbols-section-nav" aria-label="Grimoire sections">
+        <a href="/grimoire/apothecary/">Apothecary</a>
+        <a href="/grimoire/crystals/">Crystals</a>
+        <a href="/grimoire/tarot/">Tarot</a>
+        <a href="/grimoire/spells/">Spells</a>
+        <a href="/grimoire/recipes/">Recipes</a>
+        <a href="/grimoire/moon/">Moon</a>
+        <a href="/grimoire/dreams/">Dreams</a>
+        <a href="/grimoire/signs-symbols/" aria-current="page">Signs &amp; Symbols</a>
+      </nav>
+    </main>
+
+    <footer class="grimoire-footer">Root &amp; Brass</footer>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const filters = Array.from(document.querySelectorAll(".symbols-filter"));
+      const cards = Array.from(document.querySelectorAll(".symbol-card"));
+      const emptyState = document.getElementById("symbols-empty");
+      const emptyHeading = emptyState.querySelector("h3");
+      const emptyCopy = emptyState.querySelector("p");
+
+      filters.forEach(function (filter) {
+        filter.addEventListener("click", function () {
+          const selected = filter.dataset.category;
+          let visibleCount = 0;
+
+          filters.forEach(function (item) {
+            const active = item === filter;
+            item.classList.toggle("is-active", active);
+            item.setAttribute("aria-pressed", active ? "true" : "false");
+          });
+
+          cards.forEach(function (card) {
+            const visible = selected === "all" || card.dataset.category === selected;
+            card.hidden = !visible;
+            if (visible) visibleCount += 1;
+          });
+
+          emptyState.hidden = visibleCount > 0;
+          if (selected === "all") {
+            emptyHeading.textContent = "The cabinet is waiting for its first note.";
+            emptyCopy.textContent = "Keep the numbers that follow you, the creatures that find you, and the signs you do not want to forget.";
+          } else {
+            emptyHeading.textContent = "No notes in this section yet.";
+            emptyCopy.textContent = "Your first " + filter.textContent.trim().toLowerCase() + " entry can be added in Pages CMS.";
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

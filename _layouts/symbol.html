@@ -1,0 +1,62 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>{{ page.title }} | Signs &amp; Symbols | Grimoire</title>
+  <link rel="icon" type="image/png" href="/grimoire/images/icon.png">
+  <link rel="stylesheet" href="/grimoire/style.css">
+  <link rel="stylesheet" href="/grimoire/signs-symbols/style.css?v=20260819a">
+</head>
+<body class="signs-symbols-page symbols-entry-page">
+  <div class="grimoire-shell symbols-shell">
+    <header class="grimoire-header">
+      <a href="/grimoire/" class="grimoire-mark">Grimoire</a>
+      <a href="/grimoire/signs-symbols/" class="return-link">Back to the Cabinet</a>
+    </header>
+
+    <main class="symbols-record-wrap">
+      <article class="symbols-record">
+        <header class="symbols-record-heading">
+          <p class="symbols-paper-kicker">The Reference Cabinet</p>
+          <span class="symbols-record-mark" aria-hidden="true">✧</span>
+          {% if page.category %}<p class="symbols-record-category">{{ page.category | replace: '-', ' ' }}</p>{% endif %}
+          <h1>{{ page.title }}</h1>
+          <span class="symbols-record-rule" aria-hidden="true"></span>
+        </header>
+
+        {% if page.image %}
+          <figure class="symbols-record-image"><img src="{{ page.image | relative_url }}" alt="{{ page.title }}"></figure>
+        {% endif %}
+
+        {% if page.meaning %}
+          <section class="symbols-record-section"><h2>Meaning</h2>{{ page.meaning | markdownify }}</section>
+        {% endif %}
+
+        {% if page.interpretations %}
+          <section class="symbols-record-section"><h2>Common Interpretations</h2>{{ page.interpretations | markdownify }}</section>
+        {% endif %}
+
+        {% if page.personal_notes %}
+          <section class="symbols-record-section symbols-personal-notes"><h2>Personal Notes</h2>{{ page.personal_notes | markdownify }}</section>
+        {% endif %}
+
+        {% if page.related_symbols %}
+          <section class="symbols-record-section"><h2>Related Symbols</h2><p>{{ page.related_symbols }}</p></section>
+        {% endif %}
+
+        {% if content != empty %}
+          <section class="symbols-record-section symbols-additional-notes"><h2>Additional Notes</h2>{{ content }}</section>
+        {% endif %}
+
+        <footer class="symbols-record-footer"><a href="/grimoire/signs-symbols/">← Return to the Reference Cabinet</a></footer>
+      </article>
+    </main>
+
+    <footer class="grimoire-footer">Root &amp; Brass</footer>
+  </div>
+</body>
+</html>
