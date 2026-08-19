@@ -1,11 +1,23 @@
 {
   "routes": [
     {
+      "route": "/crone",
+      "allowedRoles": ["crone"]
+    },
+    {
       "route": "/crone/*",
       "allowedRoles": ["crone"]
     },
     {
+      "route": "/journal",
+      "allowedRoles": ["crone"]
+    },
+    {
       "route": "/journal/*",
+      "allowedRoles": ["crone"]
+    },
+    {
+      "route": "/grimoire",
       "allowedRoles": ["crone"]
     },
     {
