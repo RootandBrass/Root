@@ -2,42 +2,91 @@
 title: Calendula
 common_name: Pot Marigold, Garden Calendula
 scientific_name: Calendula officinalis
+image: /images/uploads/25892167-99e3-48b6-9b45-d90be70a4635.png
 plant_type: annual
+found_date: 2026-08-19
 found_location: Root & Brass garden
-habitat: |-
-  - **Garden setting:** A cool-season annual that performs best in full sun to light afternoon shade.
-  - **Soil:** Prefers well-drained soil with moderate moisture; prolonged sogginess encourages disease.
-  - **Season:** Blooms from late spring until frost and often self-sows when flower heads are left to mature.
-identification: |-
-  - **Flowers:** Bright yellow to orange daisy-like heads, usually 2–3 inches wide, with layered ray florets around a darker center.
-  - **Leaves:** Alternate, oblong to spoon-shaped, slightly hairy or sticky, and mildly aromatic when rubbed.
-  - **Stems:** Soft green, branching, and somewhat resinous.
-  - **Important distinction:** This is *Calendula officinalis*, not a *Tagetes* marigold. Their traditional uses and safety information are not interchangeable.
-benefits: |-
-  - **Best-supported role:** Traditional topical care for minor skin inflammation and as an aid in healing small, superficial wounds.
-  - **Soothing plant compounds:** The flowers contain triterpenes, flavonoids, and carotenoids studied for anti-inflammatory and antioxidant activity.
-  - **Evidence limit:** Regulatory recognition is based largely on longstanding traditional use; calendula does not replace medical care for burns, infection, or slow-healing wounds.
-medicinal_uses: |-
-  Calendula flower preparations are traditionally used externally for minor inflamed skin, mild sunburn, small abrasions, and uncomplicated superficial wounds. A cooled infusion may be used as a wash or compress, and properly prepared dried flowers are commonly infused into oil for balms.
+habitat: >+
+  - **Garden setting:** A cool-season annual that performs best in full sun to
+  light afternoon shade.
 
-  Oral calendula remedies are not included here because evidence and safety are less certain than for limited topical use.
-culinary_uses: |-
-  Unsprayed petals are edible in small food amounts. They can be scattered over salads, rice, soups, or baked goods for color and a mildly peppery taste. Remove the green flower base if its bitterness is unpleasant.
+  - **Soil:** Prefers well-drained soil with moderate moisture; prolonged
+  sogginess encourages disease.
+
+  - **Season:** Blooms from late spring until frost and often self-sows when
+  flower heads are left to mature.
+
+identification: >+
+  - **Flowers:** Bright yellow to orange daisy-like heads, usually 2–3 inches
+  wide, with layered ray florets around a darker center.
+
+  - **Leaves:** Alternate, oblong to spoon-shaped, slightly hairy or sticky, and
+  mildly aromatic when rubbed.
+
+  - **Stems:** Soft green, branching, and somewhat resinous.
+
+  - **Important distinction:** This is *Calendula officinalis*, not a *Tagetes*
+  marigold. Their traditional uses and safety information are not
+  interchangeable.
+
+benefits: >+
+  - **Best-supported role:** Traditional topical care for minor skin
+  inflammation and as an aid in healing small, superficial wounds.
+
+  - **Soothing plant compounds:** The flowers contain triterpenes, flavonoids,
+  and carotenoids studied for anti-inflammatory and antioxidant activity.
+
+  - **Evidence limit:** Regulatory recognition is based largely on longstanding
+  traditional use; calendula does not replace medical care for burns, infection,
+  or slow-healing wounds.
+
+medicinal_uses: >-
+  Calendula flower preparations are traditionally used externally for minor
+  inflamed skin, mild sunburn, small abrasions, and uncomplicated superficial
+  wounds. A cooled infusion may be used as a wash or compress, and properly
+  prepared dried flowers are commonly infused into oil for balms.
+
+
+  Oral calendula remedies are not included here because evidence and safety are
+  less certain than for limited topical use.
+culinary_uses: Unsprayed petals are edible in small food amounts. They can be
+  scattered over salads, rice, soups, or baked goods for color and a mildly
+  peppery taste. Remove the green flower base if its bitterness is unpleasant.
 parts_used: Fully opened flower heads or petals
-harvest: |-
+harvest: >+
   - Pick dry, fully opened flowers after morning dew has evaporated.
-  - Harvest from plants that have not been treated with systemic pesticides, herbicides, or ornamental-only chemicals.
+
+  - Harvest from plants that have not been treated with systemic pesticides,
+  herbicides, or ornamental-only chemicals.
+
   - Deadheading encourages repeat bloom; leave a few healthy heads to set seed.
-preparation: |-
-  - **Drying:** Spread flower heads or petals in one layer out of direct sun with good airflow. Store only when completely crisp.
-  - **Topical infusion:** Steep dried flowers in hot water, cool completely, strain carefully, and use promptly as a wash or compress on minor intact or superficially abraded skin.
-  - **Infused oil:** Use thoroughly dried plant material only. Moisture trapped in oil can support spoilage or microbial growth.
-cautions: |-
-  - Avoid calendula if you are allergic to ragweed, chamomile, chrysanthemums, daisies, or other Asteraceae-family plants; contact sensitization is possible.
-  - Do not use homemade calendula preparations on deep, puncture, surgical, heavily contaminated, infected, or seriously burned skin.
-  - Seek care for spreading redness, warmth, pus, fever, severe pain, red streaking, or a wound that is not improving.
-  - Safety of medicinal use during pregnancy and breastfeeding is not well established. Ask a clinician before use beyond ordinary food amounts or small-area topical care.
-sources: |-
+
+preparation: >+
+  - **Drying:** Spread flower heads or petals in one layer out of direct sun
+  with good airflow. Store only when completely crisp.
+
+  - **Topical infusion:** Steep dried flowers in hot water, cool completely,
+  strain carefully, and use promptly as a wash or compress on minor intact or
+  superficially abraded skin.
+
+  - **Infused oil:** Use thoroughly dried plant material only. Moisture trapped
+  in oil can support spoilage or microbial growth.
+
+cautions: >+
+  - Avoid calendula if you are allergic to ragweed, chamomile, chrysanthemums,
+  daisies, or other Asteraceae-family plants; contact sensitization is possible.
+
+  - Do not use homemade calendula preparations on deep, puncture, surgical,
+  heavily contaminated, infected, or seriously burned skin.
+
+  - Seek care for spreading redness, warmth, pus, fever, severe pain, red
+  streaking, or a wound that is not improving.
+
+  - Safety of medicinal use during pregnancy and breastfeeding is not well
+  established. Ask a clinician before use beyond ordinary food amounts or
+  small-area topical care.
+
+sources: |+
   1. [Root & Brass Plant Journal — Calendula](/garden/plants/flowers/calendula.html)
   2. [European Medicines Agency — Calendula flower](https://www.ema.europa.eu/en/medicines/herbal/calendulae-flos)
   3. [EMA public summary — Calendula flower](https://www.ema.europa.eu/en/documents/herbal-summary/calendula-flower-summary-public_en.pdf)
