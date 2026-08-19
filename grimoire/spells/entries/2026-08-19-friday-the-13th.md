@@ -1,7 +1,7 @@
 ---
 title: Friday the 13th
 date: 2026-08-19
-purpose: Friday the 13th
+purpose: Abundance
 ingredients: Copper Penny and an Earth safe material.
 method: |-
   Wrap the penny in an earth safe material.
