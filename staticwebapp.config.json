@@ -31,6 +31,10 @@
     {
       "route": "/login",
       "redirect": "/.auth/login/aad?post_login_redirect_uri=.referrer"
+    },
+    {
+      "route": "/logout",
+      "redirect": "/.auth/logout?post_logout_redirect_uri=https://rootandbrass.com/"
     }
   ],
   "responseOverrides": {
