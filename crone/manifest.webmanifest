@@ -1,0 +1,10 @@
+{
+  "name": "Crone · Root & Brass",
+  "short_name": "Crone",
+  "description": "Private Root & Brass content desk",
+  "start_url": "/crone/",
+  "scope": "/crone/",
+  "display": "standalone",
+  "background_color": "#100b12",
+  "theme_color": "#100b12"
+}
