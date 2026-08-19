@@ -1,4 +1,4 @@
-const CACHE = 'crone-v3';
+const CACHE = 'crone-v4';
 
 self.addEventListener('install', () => self.skipWaiting());
 
@@ -19,8 +19,8 @@ self.addEventListener('fetch', event => {
   }
 
   // Patch the Crone document at the edge of the PWA so mobile image fields
-  // use the normal photo chooser (camera OR existing library) rather than
-  // forcing the rear camera. Also route Sign out through our friendly URL.
+  // use the normal photo chooser (camera OR existing library). Sign out goes
+  // directly to Azure Static Web Apps' real auth endpoint, not a friendly route.
   if (url.origin === self.location.origin && (url.pathname === '/crone/' || url.pathname === '/crone/index.html')) {
     event.respondWith((async () => {
       const response = await fetch(event.request);
@@ -29,7 +29,8 @@ self.addEventListener('fetch', event => {
 
       let html = await response.text();
       html = html
-        .replace("href=\"/.auth/logout?post_logout_redirect_uri=/\"", "href=\"/logout\"")
+        .replace("href=\"/.auth/logout?post_logout_redirect_uri=/\"", "href=\"/.auth/logout?post_logout_redirect_uri=/signed-out.html\"")
+        .replace("href=\"/logout\"", "href=\"/.auth/logout?post_logout_redirect_uri=/signed-out.html\"")
         .replace(";el.setAttribute('capture','environment')", "")
         .replace("h.textContent='Choose a photo or take one with your phone.'", "h.textContent='Choose an existing photo or take a new one.'");
 
