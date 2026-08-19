@@ -1,6 +1,6 @@
 ---
-title: Laborite
-variety: Laborite
+title: Labradorite
+variety: Labradorite
 image: /images/uploads/1fde6f64-89f7-4591-afb8-803290cc7436.png
 color: Blue Rainbow
 element: Water & Air
