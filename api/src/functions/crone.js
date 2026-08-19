@@ -8,7 +8,7 @@ const API_VERSION = '2022-11-28';
 const definitions = {
   journal: { dir: 'journal/entries', dated: true, bodyField: 'body', required: ['date'] },
   moon: { dir: 'grimoire/moon/entries', datedTitle: true, required: ['title', 'date', 'phase'] },
-  kitchen: { dir: 'kitchen/entries', titleOnly: true, required: ['title', 'category'] },
+  kitchen: { dir: 'kitchen/entries', titleOnly: true, bodyField: 'recipe', required: ['title', 'category', 'recipe'] },
   apothecary: { dir: 'grimoire/apothecary/entries', titleOnly: true, required: ['title'] },
   crystals: { dir: 'grimoire/crystals/entries', titleOnly: true, required: ['title'] },
   tarot: { dir: 'grimoire/tarot/entries', datedTitle: true, required: ['title', 'date'] },
