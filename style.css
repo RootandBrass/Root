@@ -255,16 +255,8 @@ footer p {
 
 }
 
-.ruby-image {
-    background-image: url("images/301-ruby.jpg");
-}
-
 .garden-image {
     background-image: url("images/garden.jpg");
-}
-
-.journal-image {
-    background-image: url("images/journal.jpg");
 }
 
 .collections-image {
@@ -781,7 +773,7 @@ footer p {
 /* Plant Profiles */
 
 .plant-profile {
-    max-width: 820px;
+
     margin: 0 auto;
     padding: 65px 25px;
 }
@@ -805,12 +797,12 @@ footer p {
 .plant-details {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
+
     margin-bottom: 55px;
 }
 
 .plant-detail {
-    padding: 20px;
+
     background-color: #ebe7dc;
     border-left: 2px solid #a98545;
 }
@@ -841,7 +833,7 @@ footer p {
 
 .plant-link {
     display: block;
-    padding: 12px 15px;
+
     background-color: #ebe7dc;
     border-left: 2px solid #a98545;
 
@@ -918,7 +910,7 @@ footer p {
     padding: 32px 28px;
 
     background-color: #eee8dd;
-    border-left: 2px solid #a98545;
+
 }
 
 .history-card h2 {
@@ -1538,7 +1530,7 @@ footer p {
 }
 
 .season-block {
-    margin-bottom: 40px;
+
 }
 
 .season-heading {

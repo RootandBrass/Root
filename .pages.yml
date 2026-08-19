@@ -1020,13 +1020,13 @@ content:
             - value: hors-doeuvres
               label: Hors d'Oeuvres
             - value: meals-beef
-              label: Meals Beef
+              label: Meals-Beef
             - value: meals-chicken
               label: Meals-Chicken
             - value: meals-fish
-              label: Meals Fish
+              label: Meals-Fish
             - value: meals-pork
-              label: Meals Pork
+              label: Meals-Pork
             - value: salads
               label: Salads
             - value: seasonings-dressings

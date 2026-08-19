@@ -24,7 +24,6 @@
     <a href="/house.html">301 Ruby</a>
     <a href="/garden.html">The Garden</a>
     <a href="/kitchen/" aria-current="page">The Kitchen</a>
-    <a href="/history.html">History</a>
     <a href="/about.html">About</a>
   </nav>
 
@@ -39,9 +38,6 @@
       <div class="kitchen-header-note">
         <span class="kitchen-header-rule" aria-hidden="true"></span>
         <p>Family recipes, remembered favorites, and the dishes worth making again.</p>
-        <p class="kitchen-collection-count">
-          {{ kitchen_recipes.size }} recipes in the collection
-        </p>
       </div>
     </section>
 
@@ -55,21 +51,21 @@
       </header>
 
       <div class="kitchen-categories">
-        <button data-category="bread"><span class="category-name">Bread</span><span class="category-count"></span></button>
-        <button data-category="breakfast"><span class="category-name">Breakfast</span><span class="category-count"></span></button>
-        <button data-category="canning"><span class="category-name">Canning</span><span class="category-count"></span></button>
-        <button data-category="casseroles"><span class="category-name">Casseroles</span><span class="category-count"></span></button>
-        <button data-category="copycat-recipes"><span class="category-name">Copycat Recipes</span><span class="category-count"></span></button>
-        <button data-category="desserts"><span class="category-name">Desserts</span><span class="category-count"></span></button>
-        <button data-category="drinks"><span class="category-name">Drinks</span><span class="category-count"></span></button>
-        <button data-category="hors-doeuvres"><span class="category-name">Hors d'Oeuvres</span><span class="category-count"></span></button>
-        <button data-category="meals-beef"><span class="category-name">Meals · Beef</span><span class="category-count"></span></button>
-        <button data-category="meals-chicken"><span class="category-name">Meals · Chicken</span><span class="category-count"></span></button>
-        <button data-category="meals-fish"><span class="category-name">Meals · Fish</span><span class="category-count"></span></button>
-        <button data-category="meals-pork"><span class="category-name">Meals · Pork</span><span class="category-count"></span></button>
-        <button data-category="salads"><span class="category-name">Salads</span><span class="category-count"></span></button>
-        <button data-category="seasonings-dressings"><span class="category-name">Seasonings &amp; Dressings</span><span class="category-count"></span></button>
-        <button data-category="soups"><span class="category-name">Soups</span><span class="category-count"></span></button>
+        <button data-category="bread"><span class="category-name">Bread</span></button>
+        <button data-category="breakfast"><span class="category-name">Breakfast</span></button>
+        <button data-category="canning"><span class="category-name">Canning</span></button>
+        <button data-category="casseroles"><span class="category-name">Casseroles</span></button>
+        <button data-category="copycat-recipes"><span class="category-name">Copycat Recipes</span></button>
+        <button data-category="desserts"><span class="category-name">Desserts</span></button>
+        <button data-category="drinks"><span class="category-name">Drinks</span></button>
+        <button data-category="hors-doeuvres"><span class="category-name">Hors d'Oeuvres</span></button>
+        <button data-category="meals-beef"><span class="category-name">Meals-Beef</span></button>
+        <button data-category="meals-chicken"><span class="category-name">Meals-Chicken</span></button>
+        <button data-category="meals-fish"><span class="category-name">Meals-Fish</span></button>
+        <button data-category="meals-pork"><span class="category-name">Meals-Pork</span></button>
+        <button data-category="salads"><span class="category-name">Salads</span></button>
+        <button data-category="seasonings-dressings"><span class="category-name">Seasonings &amp; Dressings</span></button>
+        <button data-category="soups"><span class="category-name">Soups</span></button>
       </div>
     </section>
 
@@ -78,7 +74,6 @@
         <button id="back-to-categories">← Recipe index</button>
         <p class="eyebrow">Recipe section</p>
         <h2 id="category-title"></h2>
-        <p id="category-summary"></p>
       </header>
 
       <div class="kitchen-recipe-grid">
@@ -113,7 +108,6 @@
       const categoryView = document.getElementById("category-view");
       const recipeView = document.getElementById("recipe-view");
       const categoryTitle = document.getElementById("category-title");
-      const categorySummary = document.getElementById("category-summary");
       const backButton = document.getElementById("back-to-categories");
       const recipeCards = Array.from(document.querySelectorAll(".kitchen-card"));
       const categoryButtons = Array.from(document.querySelectorAll(".kitchen-categories button"));
@@ -121,15 +115,6 @@
 
       categoryButtons.forEach(function (button) {
         const category = button.dataset.category.trim().toLowerCase();
-        const count = recipeCards.filter(function (card) {
-          return (card.dataset.category || "").trim().toLowerCase() === category;
-        }).length;
-        const countLabel = button.querySelector(".category-count");
-
-        if (countLabel) {
-          countLabel.textContent = count + (count === 1 ? " recipe" : " recipes");
-        }
-
         button.addEventListener("click", function () {
           const selectedName = button.querySelector(".category-name").textContent.trim();
           let visibleRecipes = 0;
@@ -143,7 +128,6 @@
           categoryView.hidden = true;
           recipeView.hidden = false;
           categoryTitle.textContent = selectedName;
-          categorySummary.textContent = visibleRecipes + (visibleRecipes === 1 ? " recipe" : " recipes");
           noRecipes.hidden = visibleRecipes > 0;
           window.scrollTo({ top: recipeView.offsetTop - 24, behavior: "smooth" });
         });
