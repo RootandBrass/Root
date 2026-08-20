@@ -1,0 +1,142 @@
+name: Wire Garden Records
+
+on:
+  push:
+    paths:
+      - '.github/workflows/wire-garden-records.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  wire-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Add entry-driven sections to garden pages
+        shell: python
+        run: |
+          from pathlib import Path
+
+          def ensure_front_matter(text):
+              return text if text.startswith('---\n') else '---\n---\n\n' + text
+
+          seasons = Path('garden/seasons.html')
+          text = ensure_front_matter(seasons.read_text())
+          marker = '        <!-- SPRING -->'
+          block = '''        {% assign seasonal_entries = site.pages | where_exp: "item", "item.path contains 'garden/seasonal/entries/'" | sort: "date" | reverse %}
+        {% if seasonal_entries.size > 0 %}
+        <section class="season-block seasonal-records">
+            <div class="season-heading">
+                <p class="eyebrow">SEASONAL JOURNAL</p>
+                <h2>Garden Notes Through the Year</h2>
+                <p>New seasonal observations added from Crone or Pages CMS appear here automatically.</p>
+            </div>
+            {% assign season_names = "spring,summer,autumn,winter" | split: "," %}
+            {% for season_name in season_names %}
+                {% assign entries = seasonal_entries | where: "season", season_name %}
+                {% if entries.size > 0 %}
+                <div class="season-heading"><h3>{{ season_name | capitalize }}</h3></div>
+                <div class="season-plant-grid">
+                    {% for entry in entries %}
+                    <article class="season-plant">
+                        <div class="garden-card">
+                            {% if entry.image %}<img src="{{ entry.image }}" alt="" loading="lazy">{% endif %}
+                            <p class="eyebrow">{{ entry.date | date: "%B %-d, %Y" }}</p>
+                            <h3>{{ entry.title }}</h3>
+                            <div>{{ entry.content | markdownify }}</div>
+                            {% if entry.plant_link %}<p><a href="{{ entry.plant_link }}">Related plant →</a></p>{% endif %}
+                        </div>
+                    </article>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            {% endfor %}
+        </section>
+        {% endif %}
+
+'''
+          if 'SEASONAL JOURNAL' not in text:
+              text = text.replace(marker, block + marker)
+          seasons.write_text(text)
+
+          projects = Path('garden/projects.html')
+          text = ensure_front_matter(projects.read_text())
+          marker = '                <!-- Future Year -->'
+          block = '''        {% assign project_entries = site.pages | where_exp: "item", "item.path contains 'garden/projects/entries/'" | sort: "date" | reverse %}
+        {% if project_entries.size > 0 %}
+        <section class="garden-year">
+            <div class="garden-year-heading">
+                <p class="eyebrow">FROM CRONE &amp; CMS</p>
+                <h2>Garden Project Log</h2>
+            </div>
+            {% assign project_years = project_entries | group_by: "year" | sort: "name" | reverse %}
+            {% for year in project_years %}
+            <section class="garden-year">
+                <div class="garden-year-heading"><p class="eyebrow">GARDEN YEAR</p><h2>{{ year.name }}</h2></div>
+                <div class="garden-year-grid">
+                    <section class="garden-project-section">
+                        <h3>Projects &amp; Work</h3>
+                        {% assign work = year.items | where: "category", "project" %}
+                        {% for entry in work %}<article class="garden-journal-entry"><p class="garden-journal-date">{{ entry.date | date: "%B %-d, %Y" }}{% if entry.status %} · {{ entry.status | replace: "-", " " | capitalize }}{% endif %}</p><h4>{{ entry.title }}</h4>{% if entry.image %}<img src="{{ entry.image }}" alt="" loading="lazy">{% endif %}<div>{{ entry.content | markdownify }}</div></article>{% endfor %}
+                    </section>
+                    <section class="garden-project-section">
+                        <h3>Goals</h3>
+                        {% assign goals = year.items | where: "category", "goal" %}
+                        {% for entry in goals %}<article class="garden-journal-entry"><p class="garden-journal-date">{{ entry.date | date: "%B %-d, %Y" }}{% if entry.status %} · {{ entry.status | replace: "-", " " | capitalize }}{% endif %}</p><h4>{{ entry.title }}</h4><div>{{ entry.content | markdownify }}</div></article>{% endfor %}
+                    </section>
+                </div>
+                <section class="garden-year-journal"><h3>Garden Journal</h3>{% assign notes = year.items | where: "category", "journal" %}{% for entry in notes %}<article class="garden-journal-entry"><p class="garden-journal-date">{{ entry.date | date: "%B %-d, %Y" }}</p><h4>{{ entry.title }}</h4>{% if entry.image %}<img src="{{ entry.image }}" alt="" loading="lazy">{% endif %}<div>{{ entry.content | markdownify }}</div></article>{% endfor %}</section>
+            </section>
+            {% endfor %}
+        </section>
+        {% endif %}
+
+'''
+          if 'FROM CRONE &amp; CMS' not in text:
+              text = text.replace(marker, block + marker)
+          projects.write_text(text)
+
+          harvest = Path('garden/harvest.html')
+          text = ensure_front_matter(harvest.read_text())
+          marker = '        <section class="apothecary-record">'
+          block = '''        {% assign harvest_entries = site.pages | where_exp: "item", "item.path contains 'garden/harvest/entries/'" | sort: "date" | reverse %}
+        {% if harvest_entries.size > 0 %}
+        <section class="apothecary-record">
+            <p class="eyebrow">HARVEST JOURNAL</p>
+            <h2>What I Gathered &amp; Made</h2>
+            <p>Harvest, preservation, and use records added from Crone or Pages CMS.</p>
+            {% for entry in harvest_entries %}
+            <article class="apothecary-entry">
+                <p class="apothecary-date">{{ entry.date | date: "%B %-d, %Y" }} · {{ entry.category | capitalize }}</p>
+                <h3>{{ entry.title }}</h3>
+                {% if entry.image %}<img src="{{ entry.image }}" alt="" loading="lazy">{% endif %}
+                <div class="apothecary-details">
+                    {% if entry.plant %}<p><strong>Plant:</strong> {{ entry.plant }}</p>{% endif %}
+                    {% if entry.method %}<p><strong>Method:</strong> {{ entry.method }}</p>{% endif %}
+                    <div>{{ entry.content | markdownify }}</div>
+                </div>
+            </article>
+            {% endfor %}
+        </section>
+        {% endif %}
+
+'''
+          if 'HARVEST JOURNAL' not in text:
+              text = text.replace(marker, block + marker)
+          harvest.write_text(text)
+
+      - name: Commit wired garden pages
+        run: |
+          if git diff --quiet; then
+            echo "Garden pages already wired."
+            exit 0
+          fi
+          git config user.name "Root & Brass Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add garden/seasons.html garden/projects.html garden/harvest.html
+          git commit -m "Render garden CMS records on public pages"
+          git push
