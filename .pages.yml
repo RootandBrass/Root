@@ -1043,3 +1043,169 @@ content:
         label: Recipe
         type: rich-text
         required: true
+
+  - name: garden_records
+    label: Garden Records
+    type: group
+    items:
+      - name: seasonal_garden
+        label: Seasonal Garden
+        type: collection
+        path: garden/seasonal/entries
+        filename: "{year}-{month}-{day}-{primary}.md"
+        format: yaml-frontmatter
+        view:
+          primary: title
+          fields:
+            - season
+            - date
+          sort: date
+          order: desc
+        fields:
+          - name: title
+            label: Entry Title
+            type: string
+            required: true
+          - name: date
+            label: Date
+            type: date
+            required: true
+          - name: season
+            label: Season
+            type: select
+            required: true
+            options:
+              values:
+                - value: spring
+                  label: Spring
+                - value: summer
+                  label: Summer
+                - value: autumn
+                  label: Autumn
+                - value: winter
+                  label: Winter
+          - name: image
+            label: Photo
+            type: image
+            required: false
+          - name: plant_link
+            label: Related Plant Link
+            type: string
+            required: false
+          - name: body
+            label: Seasonal Notes
+            type: rich-text
+            required: true
+
+      - name: garden_projects
+        label: Garden Projects
+        type: collection
+        path: garden/projects/entries
+        filename: "{year}-{month}-{day}-{primary}.md"
+        format: yaml-frontmatter
+        view:
+          primary: title
+          fields:
+            - year
+            - category
+            - status
+            - date
+          sort: date
+          order: desc
+        fields:
+          - name: title
+            label: Entry Title
+            type: string
+            required: true
+          - name: date
+            label: Date
+            type: date
+            required: true
+          - name: year
+            label: Garden Year
+            type: string
+            required: true
+          - name: category
+            label: Entry Type
+            type: select
+            required: true
+            options:
+              values:
+                - value: project
+                  label: What I Did / Project
+                - value: goal
+                  label: Goal
+                - value: journal
+                  label: Garden Journal
+          - name: status
+            label: Status
+            type: select
+            required: false
+            options:
+              values:
+                - value: planned
+                  label: Planned
+                - value: in-progress
+                  label: In Progress
+                - value: complete
+                  label: Complete
+          - name: image
+            label: Photo
+            type: image
+            required: false
+          - name: body
+            label: Notes
+            type: rich-text
+            required: true
+
+      - name: harvest_use
+        label: Harvest & Use
+        type: collection
+        path: garden/harvest/entries
+        filename: "{year}-{month}-{day}-{primary}.md"
+        format: yaml-frontmatter
+        view:
+          primary: title
+          fields:
+            - category
+            - plant
+            - date
+          sort: date
+          order: desc
+        fields:
+          - name: title
+            label: Entry Title
+            type: string
+            required: true
+          - name: date
+            label: Date
+            type: date
+            required: true
+          - name: category
+            label: Entry Type
+            type: select
+            required: true
+            options:
+              values:
+                - value: harvest
+                  label: Harvest
+                - value: preservation
+                  label: Preservation
+                - value: use
+                  label: Use / Preparation
+          - name: plant
+            label: Plant
+            type: string
+            required: false
+          - name: method
+            label: Method
+            type: string
+            required: false
+          - name: image
+            label: Photo
+            type: image
+            required: false
+          - name: body
+            label: Notes
+            type: rich-text
+            required: true
