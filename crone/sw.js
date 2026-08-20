@@ -1,4 +1,4 @@
-const CACHE = 'crone-v6';
+const CACHE = 'crone-v7';
 
 self.addEventListener('install', () => self.skipWaiting());
 
@@ -15,8 +15,7 @@ self.addEventListener('fetch', event => {
   }
 
   // Crone is private. Never cache protected pages or API responses.
-  // The service worker also loads small progressive enhancements so the
-  // installed/mobile version can gain tools without duplicating the editor.
+  // Progressive enhancement scripts add editing, search, and post-save tools.
   if (url.origin === self.location.origin && (url.pathname === '/crone/' || url.pathname === '/crone/index.html')) {
     event.respondWith((async () => {
       const response = await fetch(event.request);
@@ -28,7 +27,7 @@ self.addEventListener('fetch', event => {
         .replace("href=\"/logout\"", "href=\"/.auth/logout?post_logout_redirect_uri=/signed-out.html\"")
         .replace(";el.setAttribute('capture','environment')", "")
         .replace("h.textContent='Choose a photo or take one with your phone.'", "h.textContent='Choose an existing photo or take a new one.'")
-        .replace('</body>', '<script src="/crone/edit.js?v=1"></script></body>');
+        .replace('</body>', '<script src="/crone/edit.js?v=2"></script><script src="/crone/features.js?v=1"></script></body>');
       const headers = new Headers(response.headers);
       headers.delete('content-length');
       return new Response(html, { status: response.status, statusText: response.statusText, headers });
