@@ -1,0 +1,72 @@
+name: One-time Crone Cleanup
+
+on:
+  push:
+    paths:
+      - '.github/workflows/crone-cleanup.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Clean Crone source
+        shell: python
+        run: |
+          from pathlib import Path
+
+          index = Path('crone/index.html')
+          text = index.read_text()
+
+          text = text.replace(".top{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-bottom:42px}", ".top{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-bottom:22px}")
+          text = text.replace(".intro{max-width:700px}", "")
+          text = text.replace(".intro h2{font-size:clamp(42px,8vw,72px);line-height:1;margin:10px 0 16px;font-weight:normal}", "")
+          text = text.replace(".intro p:last-child{color:#c7bbc8;max-width:620px}", "")
+          text = text.replace(".rule{height:1px;background:linear-gradient(90deg,var(--brass),var(--line) 45%,transparent);margin:30px 0}", "")
+
+          intro = '  <section class="intro"><span class="eyebrow">Root & Brass · private desk</span><h2>Crone</h2><p>Your phone-sized doorway into the garden, kitchen, journal and grimoire. Add an entry, attach a photo, save it, and Crone writes it into the same repository structure the site already uses.</p></section>\n  <div class="rule"></div>\n'
+          text = text.replace(intro, '')
+
+          scripts = '  <script src="/crone/garden.js?v=2"></script>\n  <script src="/crone/edit.js?v=3"></script>\n  <script src="/crone/features.js?v=2"></script>\n'
+          if '/crone/garden.js' not in text:
+              text = text.replace('</body>', scripts + '</body>')
+
+          index.write_text(text)
+
+          sw = Path('crone/sw.js')
+          sw.write_text("""const CACHE = 'crone-v10';
+
+self.addEventListener('install', () => self.skipWaiting());
+
+self.addEventListener('activate', event => {
+  event.waitUntil(caches.keys().then(keys => Promise.all(keys.map(key => caches.delete(key)))));
+  self.clients.claim();
+});
+
+self.addEventListener('fetch', event => {
+  event.respondWith(fetch(event.request));
+});
+""")
+
+          trim = Path('crone/trim.js')
+          if trim.exists():
+              trim.unlink()
+
+      - name: Commit cleanup
+        run: |
+          if git diff --quiet; then
+            echo "Crone already clean."
+            exit 0
+          fi
+          git config user.name "Root & Brass Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add crone/index.html crone/sw.js
+          git add -u crone/trim.js
+          git commit -m "Clean Crone source and service worker"
+          git push
