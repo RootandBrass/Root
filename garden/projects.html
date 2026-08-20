@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,111 +41,117 @@
     <main class="garden-projects-page">
         
         <section class="garden-projects-intro">
-
             <p class="eyebrow">THE GARDEN</p>
-
             <h1>Garden Projects</h1>
-
             <p class="page-lead">
                 A year-by-year record of the work, plans,
                 experiments, successes, failures, and changes
                 that shape the garden at Root &amp; Brass.
             </p>
-         </section>
-        <section>
-            <div class="garden-projects-footer">
-                <a href="../garden.html">← Back to The Garden</a>
-            </div>
         </section>
 
-                <!-- Future Year -->
+        {% assign project_entries = site.pages | where_exp: "item", "item.path contains 'garden/projects/entries/'" | sort: "date" | reverse %}
+        {% if project_entries.size > 0 %}
+            {% assign project_years = project_entries | group_by: "year" | sort: "name" | reverse %}
+            {% for year in project_years %}
+            <section class="garden-year">
+                <div class="garden-year-heading">
+                    <p class="eyebrow">GARDEN YEAR</p>
+                    <h2>{{ year.name }}</h2>
+                </div>
 
+                <div class="garden-year-grid">
+                    <section class="garden-project-section">
+                        <h3>What I Did</h3>
+                        {% assign work = year.items | where: "category", "project" %}
+                        {% for entry in work %}
+                        <article class="garden-journal-entry">
+                            <p class="garden-journal-date">{{ entry.date | date: "%B %-d, %Y" }}{% if entry.status %} · {{ entry.status | replace: "-", " " | capitalize }}{% endif %}</p>
+                            <h4>{{ entry.title }}</h4>
+                            {% if entry.image %}<img src="{{ entry.image }}" alt="" loading="lazy">{% endif %}
+                            <div>{{ entry.content | markdownify }}</div>
+                        </article>
+                        {% endfor %}
+                    </section>
+
+                    <section class="garden-project-section">
+                        <h3>Goals for the Year</h3>
+                        {% assign goals = year.items | where: "category", "goal" %}
+                        {% for entry in goals %}
+                        <article class="garden-journal-entry">
+                            <p class="garden-journal-date">{{ entry.date | date: "%B %-d, %Y" }}{% if entry.status %} · {{ entry.status | replace: "-", " " | capitalize }}{% endif %}</p>
+                            <h4>{{ entry.title }}</h4>
+                            <div>{{ entry.content | markdownify }}</div>
+                        </article>
+                        {% endfor %}
+                    </section>
+                </div>
+
+                <section class="garden-year-journal">
+                    <h3>Garden Journal</h3>
+                    {% assign notes = year.items | where: "category", "journal" %}
+                    {% for entry in notes %}
+                    <article class="garden-journal-entry">
+                        <p class="garden-journal-date">{{ entry.date | date: "%B %-d, %Y" }}</p>
+                        <h4>{{ entry.title }}</h4>
+                        {% if entry.image %}<img src="{{ entry.image }}" alt="" loading="lazy">{% endif %}
+                        <div>{{ entry.content | markdownify }}</div>
+                    </article>
+                    {% endfor %}
+                </section>
+            </section>
+            {% endfor %}
+        {% endif %}
+
+        <!-- Existing garden history remains below -->
         <section class="garden-year future-year">
-
             <div class="garden-year-heading">
                 <p class="eyebrow">NEXT SEASON</p>
                 <h2>2028</h2>
             </div>
-
             <p class="future-year-note">
                 A new garden year will begin. Plans will be added as the season takes shape.
             </p>
         </section>
-        <!-- 2027 -->
 
         <section class="garden-year">
-
             <div class="garden-year-heading">
                 <p class="eyebrow">GARDEN YEAR</p>
                 <h2>2027</h2>
             </div>
-
-
             <div class="garden-year-grid">
-
                 <section class="garden-project-section">
-
                     <h3>What I Did</h3>
-
                     <p class="empty-record">The year’s completed work will be recorded here.</p>
-
                 </section>
-
-
                 <section class="garden-project-section">
-
                     <h3>Goals for the Year</h3>
-
                     <ul class="garden-goals">
                         <li>Weed and clean out the soil in the snack garden.</li>
                         <li>Dig up and replant the raspberries without grass in their roots.</li>
                         <li>Add appropriate companion flowers in the snack garden.</li>
                         <li>Line the snack garden with a weed barrier.</li>
                     </ul>
-
                 </section>
-
             </div>
-
-
             <section class="garden-year-journal">
-
                 <h3>Garden Journal</h3>
-
                 <article class="garden-journal-entry">
-
                     <p class="garden-journal-date">Planning Notes · 2027</p>
-
                     <h4>The Garden This Month</h4>
-
-                    <p>
-                        Add notes about what is blooming, what changed,
-                        what worked, what did not, and anything worth
-                        remembering from the garden this month.
-                    </p>
-
+                    <p>Add notes about what is blooming, what changed, what worked, what did not, and anything worth remembering from the garden this month.</p>
                 </article>
-
             </section>
-
         </section>
 
-        <!-- 2026 -->
-
         <section class="garden-year">
-
             <div class="garden-year-heading">
                 <p class="eyebrow">GARDEN YEAR</p>
                 <h2>2026</h2>
             </div>
-
-
             <div class="garden-year-grid">
-
                 <section class="garden-project-section">
-
                     <h3>What I Did</h3>
-
                     <ul>
                         <li>Moved and split a lilac bush into three plants early this spring, planted them along Pine Avenue, and mulched the area.</li>
                         <li>Moved several Cheyenne privets to give them more breathing room and create a wider spread.</li>
@@ -152,77 +160,37 @@
                         <li>Planted cornflowers in the southwest garden.</li>
                         <li>Added a Strawberry lilac to the corner of the southwest garden; it should become the largest of the group.</li>
                     </ul>
-
                 </section>
-
-
                 <section class="garden-project-section">
-
                     <h3>Goals for the Year</h3>
-
                     <ul class="garden-goals">
                         <li>Focus on the garden’s overall beauty and health.</li>
                         <li>Remove the pine tree.</li>
                         <li>Protect the trees.</li>
                         <li>Investigate the well.</li>
                     </ul>
-
                 </section>
-
             </div>
-
-
             <section class="garden-year-journal">
-
                 <h3>Garden Journal</h3>
-
                 <article class="garden-journal-entry">
-
                     <p class="garden-journal-date">August 2026</p>
-
                     <h4>The Garden in August</h4>
-
-                    <p>
-                        August is always the hardest. The water cannot keep up; everything is dry and windblown.
-                        At this point, I am watering simply to keep things alive and focusing on the planters and the
-                        plants that need strength going into winter. Two weeks ago, after noticing several weeks of new
-                        growth on the hydrangeas in my tall black planters, I deadheaded the old flowers. The new growth
-                        leapt forward and is beginning to produce another round of blooms. I am excited by the response,
-                        although I do not expect the same result every year.
-                    </p>
-
+                    <p>August is always the hardest. The water cannot keep up; everything is dry and windblown. At this point, I am watering simply to keep things alive and focusing on the planters and the plants that need strength going into winter. Two weeks ago, after noticing several weeks of new growth on the hydrangeas in my tall black planters, I deadheaded the old flowers. The new growth leapt forward and is beginning to produce another round of blooms. I am excited by the response, although I do not expect the same result every year.</p>
                 </article>
                 <article class="garden-journal-entry">
-
                     <p class="garden-journal-date">July 2026</p>
-
                     <h4>What is Growing in July</h4>
-
-                    <p>
-                        What is growing, you ask? Everything! I harvested honeysuckle, my calendula has a bloom,
-                        marigolds grown from seed are beginning to flower, and the Cheyenne privets were full earlier
-                        this month. Surprisingly, almost everything is still doing well and the lawn remains green.
-                        I changed my watering routine this year to a deep watering about once a week. The deer did
-                        browse a few things this month, including a hosta and my middle maple tree. I need to protect
-                        those trees soon.
-                    </p>
-
+                    <p>What is growing, you ask? Everything! I harvested honeysuckle, my calendula has a bloom, marigolds grown from seed are beginning to flower, and the Cheyenne privets were full earlier this month. Surprisingly, almost everything is still doing well and the lawn remains green. I changed my watering routine this year to a deep watering about once a week. The deer did browse a few things this month, including a hosta and my middle maple tree. I need to protect those trees soon.</p>
                 </article>
             </section>
+        </section>
 
-            
         <div class="garden-projects-footer">
             <a href="../garden.html">← Back to The Garden</a>
         </div>
-
-        </section>
-
     </main>
 
-    <footer>
-        <p>&copy; 2026 Root &amp; Brass</p>
-    </footer>
-
+    <footer><p>&copy; 2026 Root &amp; Brass</p></footer>
 </body>
-
 </html>
