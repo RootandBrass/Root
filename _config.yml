@@ -60,6 +60,12 @@ defaults:
       layout: kitchen
 
   - scope:
+      path: "garden/plants"
+      type: "pages"
+    values:
+      layout: plant
+
+  - scope:
       path: "garden/plants/treesandshrubs"
       type: "pages"
     values:
