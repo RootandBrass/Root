@@ -2,7 +2,7 @@
 title: Clam Chowder 2
 category: soups
 ---
-Ingredients US CUSTOMARY METRIC 
+### Ingredients 
 
 - 6 strips thick-cut bacon, can sub salt pork 
 - 2 tablespoons butter 
@@ -19,33 +19,27 @@ Ingredients US CUSTOMARY METRIC
 - 3 (6.5 oz. cans) chopped clams, juice reserved 
 - Fresh parsley & Freshly cracked pepper, for serving
 
-Seasonings 
+### Seasonings 
 
 - 1/2 teaspoon EACH: dried oregano, dried parsley 
 - 1/4 teaspoon EACH: dried thyme, salt 
 - 1/8 teaspoon EACH: smoked paprika, pepper
 
-Prep Work 
+### Prep Work 
 
-1. Cook the bacon in a 4-5-quart soup pot slowly over low heat. (I cut my bacon in half, it's easier to fit it in the pan and have it cook evenly.) While the bacon cooks, measure out remaining ingredients. Once the bacon is cooked, set aside on a paper towel lined plate. Chop once cooled and reserve 2 tablespoons of bacon drippings. 
-
+1. Cook the bacon in a 4-5-quart soup pot slowly over low heat. (I cut my bacon in half, it's easier to fit it in the pan and have it cook evenly.) While the bacon cooks, measure out remaining ingredients. Once the bacon is cooked, set aside on a paper towel lined plate. Chop once cooled and reserve 2 tablespoons of bacon drippings.
 2. Wipe any dark spots from the pot but leave as much bacon remnants as you can, as that will add flavor to the soup.
 
-Make the Soup 
+### Make the Soup 
 
-1. Add reserved bacon drippings and butter to the pot over medium heat and use a silicone spatula to "clean" the bottom and sides of the pot. Add the diced onions and celery. Toss to coat and soften for 5- 6 minutes. Add the garlic, hot sauce, Worcestershire sauce, and seasonings. Cook for 1 minute. 
-
+1. Add reserved bacon drippings and butter to the pot over medium heat and use a silicone spatula to "clean" the bottom and sides of the pot. Add the diced onions and celery. Toss to coat and soften for 5- 6 minutes. Add the garlic, hot sauce, Worcestershire sauce, and seasonings. Cook for 1 minute.
 2. Add the flour and cook for 2 minutes stirring continuously, until the raw flour smell is gone.
-
-3. Add the chicken broth in small splashes, stirring continuously, and wiping the pan "clean" again as you do so. Add the half and half in the same manner. 
-
-4. Stir in the chicken bouillon and add the bay leaf. Add the juice from the canned clams to the soup, but don't add the clams yet. Stir in the additional ( 8 oz.) clam juice. 
-
+3. Add the chicken broth in small splashes, stirring continuously, and wiping the pan "clean" again as you do so. Add the half and half in the same manner.
+4. Stir in the chicken bouillon and add the bay leaf. Add the juice from the canned clams to the soup, but don't add the clams yet. Stir in the additional ( 8 oz.) clam juice.
 5. Bring the soup to a gentle boil, then reduce to a simmer, so that its just gently bubbling. Simmer for 20 minutes, partially covered. Stir occasionally as it cooks.
-
 6. Peel and dice the potatoes and add them to the soup. Bring back to a very gentle bubble and let the potatoes cook through for 20-25 minutes, until fork tender. Reduce heat to low. 7. Stir in the clams and let them heat through, about 5 minutes. Remove bay leaf. 8. Ladle soup into serving bowls and garnish with roughly chopped parsley, freshly cracked pepper, and chopped bacon.
 
-Pro Tips 
+### Pro Tips 
 
 • Clams: I use Bar Harbor Chopped Clams and Clam Juice for this recipe. 
 
