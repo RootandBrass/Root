@@ -1,5 +1,5 @@
 ---
-title: Pineapple Cheesecake
+title: Pineapple Cheesecake No Bake
 category: desserts
 ---
 - 1/2 cup graham cracker crumbs 
