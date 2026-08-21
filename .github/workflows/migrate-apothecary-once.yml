@@ -1,5 +1,6 @@
 name: Migrate Apothecary into Plants
 
+# One-time migration. This follow-up commit intentionally triggers the workflow now that it exists on main.
 on:
   push:
     paths:
@@ -21,6 +22,7 @@ jobs:
           ruby <<'RUBY'
           require 'yaml'
           require 'fileutils'
+          require 'date'
 
           def read_front_matter(path)
             text = File.read(path)
@@ -103,7 +105,6 @@ jobs:
               end
             end
 
-            # Intentionally do not migrate found_date or found_location.
             master.delete('found_date')
             master.delete('found_location')
 
