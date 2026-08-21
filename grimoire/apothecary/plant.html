@@ -18,40 +18,66 @@
     </header>
 
     <main class="plant-entry">
-        {% assign plant_entries = site.pages | where_exp: "item", "item.path contains 'garden/plants/' and item.show_apothecary == true" | sort: "title" %}
+        {% assign plant_entries = site.pages | where_exp: "item", "item.path contains 'garden/plants/'" | sort: "title" %}
+        {% assign legacy_entries = site.pages | where_exp: "item", "item.path contains 'grimoire/apothecary/entries/'" %}
         {% for plant in plant_entries %}
-        {% assign plant_slug = plant.path | split: '/' | last | remove: '.html' | remove: '.md' %}
-        <article class="plant-record apothecary-master-record" id="{{ plant_slug }}" data-plant-record hidden>
-            <header class="plant-record-header">
-                <p class="kicker">The Plant Cabinet</p>
-                <div class="plant-entry-mark">❧</div>
-                <h1>{{ plant.title }}</h1>
-                {% if plant.scientific_name %}<p class="plant-entry-latin">{{ plant.scientific_name }}</p>{% endif %}
-                {% if plant.common_name %}<p class="plant-entry-common">Also known as {{ plant.common_name }}</p>{% endif %}
-                <div class="apothecary-divider"><span></span>✦<span></span></div>
-                {% if plant.plant_type or plant.parts_used or plant.found_location %}
-                <div class="plant-properties">
-                    {% if plant.plant_type %}<div><span>Plant Type</span><strong>{{ plant.plant_type | replace: "-", " " }}</strong></div>{% endif %}
-                    {% if plant.parts_used %}<div><span>Parts Used</span><strong>{{ plant.parts_used }}</strong></div>{% endif %}
-                    {% if plant.found_location %}<div><span>Found At</span><strong>{{ plant.found_location }}</strong></div>{% endif %}
-                </div>
-                {% endif %}
-            </header>
+            {% assign legacy_match = legacy_entries | where: "scientific_name", plant.scientific_name | first %}
+            {% assign include_plant = false %}
+            {% if plant.show_apothecary == true %}
+                {% assign include_plant = true %}
+            {% elsif plant.show_apothecary == nil and legacy_match %}
+                {% assign include_plant = true %}
+            {% endif %}
+            {% if include_plant %}
+            {% assign plant_slug = plant.path | split: '/' | last | remove: '.html' | remove: '.md' %}
+            {% assign common_name = plant.common_name | default: legacy_match.common_name %}
+            {% assign parts_used = plant.parts_used | default: legacy_match.parts_used %}
+            {% assign found_location = plant.found_location | default: legacy_match.found_location %}
+            {% assign specimen_photo = plant.photo | default: legacy_match.image %}
+            {% assign identification = plant.identification | default: legacy_match.identification %}
+            {% assign habitat = plant.habitat | default: legacy_match.habitat %}
+            {% assign benefits = plant.benefits | default: legacy_match.benefits %}
+            {% assign medicinal_uses = plant.medicinal_uses | default: legacy_match.medicinal_uses %}
+            {% assign culinary_uses = plant.culinary_uses | default: legacy_match.culinary_uses %}
+            {% assign magical_uses = plant.magical_uses | default: legacy_match.magical_uses %}
+            {% assign harvest = plant.harvest | default: legacy_match.harvest %}
+            {% assign preparation = plant.preparation | default: legacy_match.preparation %}
+            {% assign cautions = plant.cautions | default: legacy_match.cautions %}
+            {% assign personal_notes = plant.personal_notes | default: legacy_match.personal_notes %}
+            {% assign sources = plant.sources | default: legacy_match.sources %}
 
-            {% if plant.photo %}<figure class="plant-specimen-image"><img src="{{ plant.photo }}" alt="{{ plant.title }}"></figure>{% endif %}
-            {% if plant.identification %}<section class="plant-record-section"><h2>Identification</h2>{{ plant.identification | markdownify }}</section>{% endif %}
-            {% if plant.habitat %}<section class="plant-record-section"><h2>Habitat &amp; Growing Conditions</h2>{{ plant.habitat | markdownify }}</section>{% endif %}
-            {% if plant.benefits %}<section class="plant-record-section plant-benefits"><h2>Benefits</h2>{{ plant.benefits | markdownify }}</section>{% endif %}
-            {% if plant.medicinal_uses %}<section class="plant-record-section"><h2>Traditional Medicinal Uses</h2>{{ plant.medicinal_uses | markdownify }}</section>{% endif %}
-            {% if plant.culinary_uses %}<section class="plant-record-section"><h2>Culinary Uses</h2>{{ plant.culinary_uses | markdownify }}</section>{% endif %}
-            {% if plant.magical_uses %}<section class="plant-record-section"><h2>Folklore &amp; Magical Associations</h2>{{ plant.magical_uses | markdownify }}</section>{% endif %}
-            {% if plant.harvest %}<section class="plant-record-section"><h2>Harvesting</h2>{{ plant.harvest | markdownify }}</section>{% endif %}
-            {% if plant.preparation %}<section class="plant-record-section"><h2>Preparation &amp; Preservation</h2>{{ plant.preparation | markdownify }}</section>{% endif %}
-            {% if plant.cautions %}<section class="plant-record-section plant-cautions"><h2>Safety &amp; Cautions</h2>{{ plant.cautions | markdownify }}</section>{% endif %}
-            {% if plant.personal_notes %}<section class="plant-record-section plant-personal"><h2>My Notes</h2>{{ plant.personal_notes | markdownify }}</section>{% endif %}
-            {% if plant.sources %}<section class="plant-record-section plant-sources"><h2>Sources &amp; References</h2>{{ plant.sources | markdownify }}</section>{% endif %}
-            <footer class="plant-record-footer"><span>❧</span><a href="/grimoire/apothecary/">Return to the Plant Cabinet</a><span>❧</span></footer>
-        </article>
+            <article class="plant-record apothecary-master-record" id="{{ plant_slug }}" data-plant-record hidden>
+                <header class="plant-record-header">
+                    <p class="kicker">The Plant Cabinet</p>
+                    <div class="plant-entry-mark">❧</div>
+                    <h1>{{ plant.title }}</h1>
+                    {% if plant.scientific_name %}<p class="plant-entry-latin">{{ plant.scientific_name }}</p>{% endif %}
+                    {% if common_name %}<p class="plant-entry-common">Also known as {{ common_name }}</p>{% endif %}
+                    <div class="apothecary-divider"><span></span>✦<span></span></div>
+                    {% if plant.plant_type or parts_used or found_location %}
+                    <div class="plant-properties">
+                        {% if plant.plant_type %}<div><span>Plant Type</span><strong>{{ plant.plant_type | replace: "-", " " }}</strong></div>{% endif %}
+                        {% if parts_used %}<div><span>Parts Used</span><strong>{{ parts_used }}</strong></div>{% endif %}
+                        {% if found_location %}<div><span>Found At</span><strong>{{ found_location }}</strong></div>{% endif %}
+                    </div>
+                    {% endif %}
+                </header>
+
+                {% if specimen_photo %}<figure class="plant-specimen-image"><img src="{{ specimen_photo }}" alt="{{ plant.title }}"></figure>{% endif %}
+                {% if identification %}<section class="plant-record-section"><h2>Identification</h2>{{ identification | markdownify }}</section>{% endif %}
+                {% if habitat %}<section class="plant-record-section"><h2>Habitat &amp; Growing Conditions</h2>{{ habitat | markdownify }}</section>{% endif %}
+                {% if benefits %}<section class="plant-record-section plant-benefits"><h2>Benefits</h2>{{ benefits | markdownify }}</section>{% endif %}
+                {% if medicinal_uses %}<section class="plant-record-section"><h2>Traditional Medicinal Uses</h2>{{ medicinal_uses | markdownify }}</section>{% endif %}
+                {% if culinary_uses %}<section class="plant-record-section"><h2>Culinary Uses</h2>{{ culinary_uses | markdownify }}</section>{% endif %}
+                {% if magical_uses %}<section class="plant-record-section"><h2>Folklore &amp; Magical Associations</h2>{{ magical_uses | markdownify }}</section>{% endif %}
+                {% if harvest %}<section class="plant-record-section"><h2>Harvesting</h2>{{ harvest | markdownify }}</section>{% endif %}
+                {% if preparation %}<section class="plant-record-section"><h2>Preparation &amp; Preservation</h2>{{ preparation | markdownify }}</section>{% endif %}
+                {% if cautions %}<section class="plant-record-section plant-cautions"><h2>Safety &amp; Cautions</h2>{{ cautions | markdownify }}</section>{% endif %}
+                {% if personal_notes %}<section class="plant-record-section plant-personal"><h2>My Notes</h2>{{ personal_notes | markdownify }}</section>{% endif %}
+                {% if sources %}<section class="plant-record-section plant-sources"><h2>Sources &amp; References</h2>{{ sources | markdownify }}</section>{% endif %}
+                <footer class="plant-record-footer"><span>❧</span><a href="/grimoire/apothecary/">Return to the Plant Cabinet</a><span>❧</span></footer>
+            </article>
+            {% endif %}
         {% endfor %}
 
         <article class="plant-record" id="missing-record" hidden>
