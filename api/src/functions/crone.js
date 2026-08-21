@@ -9,7 +9,6 @@ const definitions = {
   journal: { dir: 'journal/entries', dated: true, bodyField: 'body', required: ['date'] },
   moon: { dir: 'grimoire/moon/entries', datedTitle: true, required: ['title', 'date', 'phase'] },
   kitchen: { dir: 'kitchen/entries', titleOnly: true, bodyField: 'recipe', required: ['title', 'category', 'recipe'] },
-  apothecary: { dir: 'grimoire/apothecary/entries', titleOnly: true, required: ['title'] },
   crystals: { dir: 'grimoire/crystals/entries', titleOnly: true, required: ['title'] },
   tarot: { dir: 'grimoire/tarot/entries', datedTitle: true, required: ['title', 'date'] },
   dreams: { dir: 'grimoire/dreams/entries', datedTitle: true, required: ['title', 'date'], bodyField: 'body' },
@@ -17,12 +16,11 @@ const definitions = {
   grimoireRecipes: { dir: 'grimoire/recipes/entries', datedTitle: true, required: ['title', 'date', 'category'] },
   signs: { dir: 'grimoire/signs-symbols/entries', titleOnly: true, required: ['title', 'category'] },
   seasonal: { dir: 'garden/seasonal/entries', datedTitle: true, required: ['title', 'date', 'season'], bodyField: 'body' },
-  projects: { dir: 'garden/projects/entries', datedTitle: true, required: ['title', 'date', 'year', 'category'], bodyField: 'body' },
-  harvest: { dir: 'garden/harvest/entries', datedTitle: true, required: ['title', 'date', 'category'], bodyField: 'body' }
+  projects: { dir: 'garden/projects/entries', datedTitle: true, required: ['title', 'date', 'year', 'category'], bodyField: 'body' }
 };
 
 const plantDirs = {
-  treesandshrubs: 'garden/plants/treesandshrubs',
+  'trees-shrubs': 'garden/plants/treesandshrubs',
   flowers: 'garden/plants/flowers',
   climbers: 'garden/plants/climbers',
   edibles: 'garden/plants/edibles'
@@ -72,7 +70,7 @@ function makeFilename(def,fields){const date=fields.date||new Date().toISOString
 function typeDirs(type){if(type==='plant')return Object.entries(plantDirs);const def=definitions[type];if(!def)throw new Error('Unknown entry type.');return[[null,def.dir]]}
 function labelFromFile(name){return name.replace(/\.(md|html)$/,'').replace(/^\d{4}-\d{2}-\d{2}-?/,'').replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase())||name}
 function typeForPath(path){for(const[type,def]of Object.entries(definitions))if(path.startsWith(def.dir+'/'))return type;for(const[,dir]of Object.entries(plantDirs))if(path.startsWith(dir+'/'))return'plant';return null}
-function typeLabel(type){return({journal:'Journal',moon:'Moon Journal',kitchen:'Kitchen',apothecary:'Apothecary',crystals:'Crystals',tarot:'Tarot',dreams:'Dreams',spells:'Spells',grimoireRecipes:'Grimoire Recipes',signs:'Signs & Symbols',plant:'Plant Journal',seasonal:'Seasonal Garden',projects:'Garden Projects',harvest:'Harvest & Use'})[type]||type}
+function typeLabel(type){return({journal:'Journal',moon:'Moon Journal',kitchen:'Kitchen',crystals:'Crystals',tarot:'Tarot',dreams:'Dreams',spells:'Spells',grimoireRecipes:'Grimoire Recipes',signs:'Signs & Symbols',plant:'Plants',seasonal:'Seasonal Garden',projects:'Garden Projects'})[type]||type}
 function snippetFor(text,query){const compact=String(text||'').replace(/---[\s\S]*?---/,' ').replace(/\s+/g,' ').trim(),lower=compact.toLowerCase(),q=query.toLowerCase(),i=lower.indexOf(q);if(i<0)return compact.slice(0,130);const start=Math.max(0,i-45),end=Math.min(compact.length,i+q.length+85);return(start?'…':'')+compact.slice(start,end)+(end<compact.length?'…':'')}
 
 app.http('croneEntries',{route:'crone/entries',methods:['GET'],authLevel:'anonymous',handler:async(request)=>{const principal=authorized(request);if(!principal)return{status:403,jsonBody:{ok:false,error:'Crone role required.'}};const token=process.env.CRONE_GITHUB_TOKEN;if(!token)return{status:503,jsonBody:{ok:false,error:'GitHub write key is not connected.'}};try{const type=request.query.get('type'),items=[];for(const[group,dir]of typeDirs(type)){let list=[];try{list=await githubRequest(dir,token,{query:`?ref=${BRANCH}`})}catch(error){if(String(error.message).includes('GitHub 404'))continue;throw error}for(const f of list)if(f.type==='file'&&/\.(md|html)$/i.test(f.name))items.push({path:f.path,name:f.name,label:labelFromFile(f.name),sha:f.sha,plant_group:group})}items.sort((a,b)=>b.name.localeCompare(a.name));return{jsonBody:{ok:true,items}}}catch{return{status:500,jsonBody:{ok:false,error:'Crone could not load existing entries.'}}}}});
