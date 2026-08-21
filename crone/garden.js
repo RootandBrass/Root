@@ -25,8 +25,6 @@
 
     ['show_apothecary','Show in Apothecary','select',false,'false',[['false','No'],['true','Yes']]],
     ['common_name','Common Name','text',false,''],
-    ['found_date','Date Found','date',false,''],
-    ['found_location','Where Found','text',false,''],
     ['habitat','Habitat & Growing Conditions','textarea',false,''],
     ['identification','Identification Notes','textarea',false,''],
     ['benefits','Benefits','textarea',false,''],
