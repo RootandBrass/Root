@@ -11,22 +11,13 @@ content:
     path: journal/entries
     filename: "{year}-{month}-{day}.md"
     format: yaml-frontmatter
-
     view:
       primary: date
       sort: date
       order: desc
-
     fields:
-      - name: date
-        label: Date
-        type: date
-        required: true
-
-      - name: body
-        label: Entry
-        type: rich-text
-        required: true
+      - { name: date, label: Date, type: date, required: true }
+      - { name: body, label: Entry, type: rich-text, required: true }
 
   - name: grimoire
     label: Dreams
@@ -34,32 +25,15 @@ content:
     path: grimoire/dreams/entries
     filename: "{year}-{month}-{day}-{primary}.md"
     format: yaml-frontmatter
-
     view:
       primary: title
       sort: date
       order: desc
-
-    fields:       
-      - name: title
-        label: Title
-        type: string
-        required: true
-
-      - name: date
-        label: Date
-        type: date
-        required: true
-
-      - name: image
-        label: Image
-        type: image
-        required: false
-
-      - name: body
-        label: Entry
-        type: rich-text
-        required: true
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: date, label: Date, type: date, required: true }
+      - { name: image, label: Image, type: image, required: false }
+      - { name: body, label: Entry, type: rich-text, required: true }
 
   - name: spells
     label: Spells
@@ -67,57 +41,20 @@ content:
     path: grimoire/spells/entries
     filename: "{year}-{month}-{day}-{primary}.md"
     format: yaml-frontmatter
-
     view:
       primary: title
       sort: date
       order: desc
-
-    fields:        
-      - name: title
-        label: Title
-        type: string
-        required: true
-
-      - name: date
-        label: Date
-        type: date
-        required: true
-
-      - name: purpose
-        label: Purpose
-        type: string
-        required: false
-
-      - name: ingredients
-        label: Ingredients
-        type: rich-text
-        required: false
-
-      - name: method
-        label: Method
-        type: rich-text
-        required: false
-
-      - name: notes
-        label: Notes
-        type: rich-text
-        required: false
-
-      - name: outcome
-        label: Outcome
-        type: rich-text
-        required: false
-
-      - name: image
-        label: Image
-        type: image
-        required: false
-
-      - name: body
-        label: Entry
-        type: rich-text
-        required: false
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: date, label: Date, type: date, required: true }
+      - { name: purpose, label: Purpose, type: string, required: false }
+      - { name: ingredients, label: Ingredients, type: rich-text, required: false }
+      - { name: method, label: Method, type: rich-text, required: false }
+      - { name: notes, label: Notes, type: rich-text, required: false }
+      - { name: outcome, label: Outcome, type: rich-text, required: false }
+      - { name: image, label: Image, type: image, required: false }
+      - { name: body, label: Entry, type: rich-text, required: false }
 
   - name: recipes
     label: Recipes
@@ -125,89 +62,35 @@ content:
     path: grimoire/recipes/entries
     filename: "{year}-{month}-{day}-{primary}.md"
     format: yaml-frontmatter
-
     view:
       primary: title
-      fields:
-        - category
-        - date
+      fields: [category, date]
       sort: date
       order: desc
-
     fields:
-      - name: title
-        label: Recipe Name
-        type: string
-        required: true
-
-      - name: date
-        label: Date Made
-        type: date
-        required: true
-
+      - { name: title, label: Recipe Name, type: string, required: true }
+      - { name: date, label: Date Made, type: date, required: true }
       - name: category
         label: Category
         type: select
         required: true
         options:
           values:
-            - value: apothecary
-              label: Apothecary
-            - value: tea-herbal
-              label: Tea & Herbal
-            - value: kitchen
-              label: Kitchen
-            - value: ritual
-              label: Ritual
-            - value: home
-              label: Home
-            - value: bath-body
-              label: Bath & Body
-
-      - name: purpose
-        label: Purpose
-        type: string
-        required: false
-
-      - name: ingredients
-        label: Ingredients
-        type: rich-text
-        required: true
-
-      - name: method
-        label: Method
-        type: rich-text
-        required: true
-
-      - name: storage
-        label: Storage
-        type: string
-        required: false
-
-      - name: shelf_life
-        label: Shelf Life
-        type: string
-        required: false
-
-      - name: result
-        label: Result
-        type: rich-text
-        required: false
-
-      - name: changes
-        label: Changes for Next Time
-        type: rich-text
-        required: false
-
-      - name: notes
-        label: Notes
-        type: rich-text
-        required: false
-
-      - name: body
-        label: Additional Entry
-        type: rich-text
-        required: false
+            - { value: apothecary, label: Apothecary }
+            - { value: tea-herbal, label: Tea & Herbal }
+            - { value: kitchen, label: Kitchen }
+            - { value: ritual, label: Ritual }
+            - { value: home, label: Home }
+            - { value: bath-body, label: Bath & Body }
+      - { name: purpose, label: Purpose, type: string, required: false }
+      - { name: ingredients, label: Ingredients, type: rich-text, required: true }
+      - { name: method, label: Method, type: rich-text, required: true }
+      - { name: storage, label: Storage, type: string, required: false }
+      - { name: shelf_life, label: Shelf Life, type: string, required: false }
+      - { name: result, label: Result, type: rich-text, required: false }
+      - { name: changes, label: Changes for Next Time, type: rich-text, required: false }
+      - { name: notes, label: Notes, type: rich-text, required: false }
+      - { name: body, label: Additional Entry, type: rich-text, required: false }
 
   - name: tarot
     label: Tarot
@@ -215,82 +98,31 @@ content:
     path: grimoire/tarot/entries
     filename: "{year}-{month}-{day}-{primary}.md"
     format: yaml-frontmatter
-
     view:
       primary: title
-      fields:
-        - deck
-        - orientation
-        - date
+      fields: [deck, orientation, date]
       sort: date
       order: desc
-
     fields:
-      - name: title
-        label: Card or Reading Title
-        type: string
-        required: true
-
-      - name: date
-        label: Date
-        type: date
-        required: true
-
-      - name: deck
-        label: Deck
-        type: string
-        required: false
-
+      - { name: title, label: Card or Reading Title, type: string, required: true }
+      - { name: date, label: Date, type: date, required: true }
+      - { name: deck, label: Deck, type: string, required: false }
       - name: orientation
         label: Orientation
         type: select
         required: false
         options:
           values:
-            - value: upright
-              label: Upright
-            - value: reversed
-              label: Reversed
-
-      - name: question
-        label: Question or Prompt
-        type: string
-        required: false
-
-      - name: position
-        label: Spread Position
-        type: string
-        required: false
-
-      - name: traditional_meaning
-        label: Traditional Meaning
-        type: rich-text
-        required: false
-
-      - name: interpretation
-        label: My Interpretation
-        type: rich-text
-        required: false
-
-      - name: symbols
-        label: Symbols Noticed
-        type: rich-text
-        required: false
-
-      - name: outcome
-        label: Outcome or Follow-up
-        type: rich-text
-        required: false
-
-      - name: notes
-        label: Notes
-        type: rich-text
-        required: false
-
-      - name: body
-        label: Additional Entry
-        type: rich-text
-        required: false
+            - { value: upright, label: Upright }
+            - { value: reversed, label: Reversed }
+      - { name: question, label: Question or Prompt, type: string, required: false }
+      - { name: position, label: Spread Position, type: string, required: false }
+      - { name: traditional_meaning, label: Traditional Meaning, type: rich-text, required: false }
+      - { name: interpretation, label: My Interpretation, type: rich-text, required: false }
+      - { name: symbols, label: Symbols Noticed, type: rich-text, required: false }
+      - { name: outcome, label: Outcome or Follow-up, type: rich-text, required: false }
+      - { name: notes, label: Notes, type: rich-text, required: false }
+      - { name: body, label: Additional Entry, type: rich-text, required: false }
 
   - name: moon
     label: Moon Journal
@@ -298,104 +130,39 @@ content:
     path: grimoire/moon/entries
     filename: "{year}-{month}-{day}-{primary}.md"
     format: yaml-frontmatter
-
     view:
       primary: title
-      fields:
-        - phase
-        - date
-        - moon_sign
+      fields: [phase, date, moon_sign]
       sort: date
       order: desc
-
     fields:
-      - name: title
-        label: Entry Title
-        type: string
-        required: true
-
-      - name: date
-        label: Date
-        type: date
-        required: true
-
+      - { name: title, label: Entry Title, type: string, required: true }
+      - { name: date, label: Date, type: date, required: true }
       - name: phase
         label: Moon Phase
         type: select
         required: true
         options:
           values:
-            - value: new-moon
-              label: New Moon
-            - value: waxing-crescent
-              label: Waxing Crescent
-            - value: first-quarter
-              label: First Quarter
-            - value: waxing-gibbous
-              label: Waxing Gibbous
-            - value: full-moon
-              label: Full Moon
-            - value: waning-gibbous
-              label: Waning Gibbous
-            - value: last-quarter
-              label: Last Quarter
-            - value: waning-crescent
-              label: Waning Crescent
-
-      - name: moon_sign
-        label: Moon Sign
-        type: string
-        required: false
-
-      - name: moon_name
-        label: Moon Name
-        type: string
-        required: false
-
-      - name: weather
-        label: Weather / Sky
-        type: string
-        required: false
-
-      - name: mood
-        label: Mood / Energy
-        type: rich-text
-        required: false
-
-      - name: intentions
-        label: Intentions
-        type: rich-text
-        required: false
-
-      - name: release
-        label: What I Am Releasing
-        type: rich-text
-        required: false
-
-      - name: ritual
-        label: Ritual / Practice
-        type: rich-text
-        required: false
-
-      - name: tarot
-        label: Tarot Cards Pulled
-        type: rich-text
-        required: false
-
-      - name: dreams
-        label: Dreams
-        type: rich-text
-        required: false
-
-      - name: observations
-        label: Observations
-        type: rich-text
-        required: false
-
-      - name: notes
-        label: Notes
-        type: rich-text
-        required: false
+            - { value: new-moon, label: New Moon }
+            - { value: waxing-crescent, label: Waxing Crescent }
+            - { value: first-quarter, label: First Quarter }
+            - { value: waxing-gibbous, label: Waxing Gibbous }
+            - { value: full-moon, label: Full Moon }
+            - { value: waning-gibbous, label: Waning Gibbous }
+            - { value: last-quarter, label: Last Quarter }
+            - { value: waning-crescent, label: Waning Crescent }
+      - { name: moon_sign, label: Moon Sign, type: string, required: false }
+      - { name: moon_name, label: Moon Name, type: string, required: false }
+      - { name: weather, label: Weather / Sky, type: string, required: false }
+      - { name: mood, label: Mood / Energy, type: rich-text, required: false }
+      - { name: intentions, label: Intentions, type: rich-text, required: false }
+      - { name: release, label: What I Am Releasing, type: rich-text, required: false }
+      - { name: ritual, label: Ritual / Practice, type: rich-text, required: false }
+      - { name: tarot, label: Tarot Cards Pulled, type: rich-text, required: false }
+      - { name: dreams, label: Dreams, type: rich-text, required: false }
+      - { name: observations, label: Observations, type: rich-text, required: false }
+      - { name: notes, label: Notes, type: rich-text, required: false }
 
   - name: crystals
     label: Crystals
@@ -403,91 +170,27 @@ content:
     path: grimoire/crystals/entries
     filename: "{primary}.md"
     format: yaml-frontmatter
-
     view:
       primary: title
-      fields:
-        - variety
-        - element
+      fields: [variety, element]
       sort: title
       order: asc
-
     fields:
-      - name: title
-        label: Crystal Name
-        type: string
-        required: true
-
-      - name: variety
-        label: Variety
-        type: string
-        required: false
-
-      - name: image
-        label: Photo
-        type: image
-        required: false
-
-      - name: color
-        label: Color
-        type: string
-        required: false
-
-      - name: element
-        label: Element
-        type: string
-        required: false
-
-      - name: chakra
-        label: Chakra
-        type: string
-        required: false
-
-      - name: zodiac
-        label: Zodiac
-        type: string
-        required: false
-
-      - name: geology
-        label: Physical / Geological Notes
-        type: rich-text
-        required: false
-
-      - name: associations
-        label: Traditional Associations
-        type: rich-text
-        required: false
-
-      - name: uses
-        label: Uses
-        type: rich-text
-        required: false
-
-      - name: care
-        label: Cleansing & Care
-        type: rich-text
-        required: false
-
-      - name: pairings
-        label: Crystal Pairings
-        type: rich-text
-        required: false
-
-      - name: acquired
-        label: Where / When Acquired
-        type: string
-        required: false
-
-      - name: personal_notes
-        label: My Stone
-        type: rich-text
-        required: false
-
-      - name: notes
-        label: Additional Notes
-        type: rich-text
-        required: false
-
+      - { name: title, label: Crystal Name, type: string, required: true }
+      - { name: variety, label: Variety, type: string, required: false }
+      - { name: image, label: Photo, type: image, required: false }
+      - { name: color, label: Color, type: string, required: false }
+      - { name: element, label: Element, type: string, required: false }
+      - { name: chakra, label: Chakra, type: string, required: false }
+      - { name: zodiac, label: Zodiac, type: string, required: false }
+      - { name: geology, label: Physical / Geological Notes, type: rich-text, required: false }
+      - { name: associations, label: Traditional Associations, type: rich-text, required: false }
+      - { name: uses, label: Uses, type: rich-text, required: false }
+      - { name: care, label: Cleansing & Care, type: rich-text, required: false }
+      - { name: pairings, label: Crystal Pairings, type: rich-text, required: false }
+      - { name: acquired, label: Where / When Acquired, type: string, required: false }
+      - { name: personal_notes, label: My Stone, type: rich-text, required: false }
+      - { name: notes, label: Additional Notes, type: rich-text, required: false }
 
   - name: signs_symbols
     label: Signs & Symbols
@@ -495,485 +198,93 @@ content:
     path: grimoire/signs-symbols/entries
     filename: "{primary}.md"
     format: yaml-frontmatter
-
     view:
       primary: title
-      fields:
-        - title
-        - category
+      fields: [title, category]
       sort: title
       order: asc
-
     fields:
-      - name: title
-        label: Title
-        type: string
-        required: true
-
+      - { name: title, label: Title, type: string, required: true }
       - name: category
         label: Category
         type: select
         required: true
         options:
           values:
-            - value: numerology
-              label: Numerology
-            - value: repeating-numbers
-              label: Repeating Numbers
-            - value: omens-signs
-              label: Omens & Signs
-            - value: animal-guides
-              label: Animal Guides
-            - value: symbols
-              label: Symbols
-            - value: colors-associations
-              label: Colors & Associations
-            - value: elements-directions
-              label: Elements & Directions
-            - value: plants-nature
-              label: Plants & Nature
-            - value: folklore
-              label: Folklore
-            - value: personal-observations
-              label: Personal Observations
+            - { value: numerology, label: Numerology }
+            - { value: repeating-numbers, label: Repeating Numbers }
+            - { value: omens-signs, label: Omens & Signs }
+            - { value: animal-guides, label: Animal Guides }
+            - { value: symbols, label: Symbols }
+            - { value: colors-associations, label: Colors & Associations }
+            - { value: elements-directions, label: Elements & Directions }
+            - { value: plants-nature, label: Plants & Nature }
+            - { value: folklore, label: Folklore }
+            - { value: personal-observations, label: Personal Observations }
+      - { name: image, label: Image, type: image, required: false }
+      - { name: meaning, label: Meaning, type: rich-text, required: false }
+      - { name: interpretations, label: Common Interpretations, type: rich-text, required: false }
+      - { name: personal_notes, label: Personal Notes, type: rich-text, required: false }
+      - { name: related_symbols, label: Related Symbols, type: string, required: false }
+      - { name: body, label: Additional Notes, type: rich-text, required: false }
 
-      - name: image
-        label: Image
-        type: image
-        required: false
-
-      - name: meaning
-        label: Meaning
-        type: rich-text
-        required: false
-
-      - name: interpretations
-        label: Common Interpretations
-        type: rich-text
-        required: false
-
-      - name: personal_notes
-        label: Personal Notes
-        type: rich-text
-        required: false
-
-      - name: related_symbols
-        label: Related Symbols
-        type: string
-        required: false
-
-      - name: body
-        label: Additional Notes
-        type: rich-text
-        required: false
-
-  - name: plant_journal
-    label: Plant Journal
-    type: group
-    items:
-      - name: plant_trees_shrubs
-        label: Trees & Shrubs
-        type: collection
-        path: garden/plants/treesandshrubs
-        filename: "{primary}.html"
-        format: yaml-frontmatter
-        view:
-          primary: title
-          fields:
-            - scientific_name
-            - plant_type
-            - bloom
-          sort: title
-          order: asc
-        fields:
-          - name: title
-            label: Plant Name
-            type: string
-            required: true
-
-          - name: scientific_name
-            label: Scientific Name
-            type: string
-            required: false
-
-          - name: photo
-            label: Photo
-            type: image
-            required: false
-
-          - name: plant_type
-            label: Type
-            type: string
-            required: true
-            description: "Example: Deciduous flowering shrub or Herbaceous perennial"
-
-          - name: bloom
-            label: Bloom
-            type: string
-            required: true
-            description: When it blooms or produces seasonal interest
-
-          - name: light
-            label: Light
-            type: string
-            required: true
-
-          - name: water
-            label: Water
-            type: string
-            required: true
-
-          - name: garden_notes
-            label: Garden Notes
-            type: rich-text
-            required: false
-
-          - name: seasonal_record
-            label: Seasonal Record
-            type: rich-text
-            required: false
-
-          - name: body
-            label: Additional Notes
-            type: rich-text
-            required: false
-
-      - name: plant_flowers
-        label: Perennials & Flowers
-        type: collection
-        path: garden/plants/flowers
-        filename: "{primary}.html"
-        format: yaml-frontmatter
-        view:
-          primary: title
-          fields:
-            - scientific_name
-            - plant_type
-            - bloom
-          sort: title
-          order: asc
-        fields:
-          - name: title
-            label: Plant Name
-            type: string
-            required: true
-
-          - name: scientific_name
-            label: Scientific Name
-            type: string
-            required: false
-
-          - name: photo
-            label: Photo
-            type: image
-            required: false
-
-          - name: plant_type
-            label: Type
-            type: string
-            required: true
-            description: "Example: Deciduous flowering shrub or Herbaceous perennial"
-
-          - name: bloom
-            label: Bloom
-            type: string
-            required: true
-            description: When it blooms or produces seasonal interest
-
-          - name: light
-            label: Light
-            type: string
-            required: true
-
-          - name: water
-            label: Water
-            type: string
-            required: true
-
-          - name: garden_notes
-            label: Garden Notes
-            type: rich-text
-            required: false
-
-          - name: seasonal_record
-            label: Seasonal Record
-            type: rich-text
-            required: false
-
-          - name: body
-            label: Additional Notes
-            type: rich-text
-            required: false
-
-      - name: plant_climbers
-        label: Vines & Climbers
-        type: collection
-        path: garden/plants/climbers
-        filename: "{primary}.html"
-        format: yaml-frontmatter
-        view:
-          primary: title
-          fields:
-            - scientific_name
-            - plant_type
-            - bloom
-          sort: title
-          order: asc
-        fields:
-          - name: title
-            label: Plant Name
-            type: string
-            required: true
-
-          - name: scientific_name
-            label: Scientific Name
-            type: string
-            required: false
-
-          - name: photo
-            label: Photo
-            type: image
-            required: false
-
-          - name: plant_type
-            label: Type
-            type: string
-            required: true
-            description: "Example: Deciduous flowering shrub or Herbaceous perennial"
-
-          - name: bloom
-            label: Bloom
-            type: string
-            required: true
-            description: When it blooms or produces seasonal interest
-
-          - name: light
-            label: Light
-            type: string
-            required: true
-
-          - name: water
-            label: Water
-            type: string
-            required: true
-
-          - name: garden_notes
-            label: Garden Notes
-            type: rich-text
-            required: false
-
-          - name: seasonal_record
-            label: Seasonal Record
-            type: rich-text
-            required: false
-
-          - name: body
-            label: Additional Notes
-            type: rich-text
-            required: false
-
-      - name: plant_edibles
-        label: Fruit & Edibles
-        type: collection
-        path: garden/plants/edibles
-        filename: "{primary}.html"
-        format: yaml-frontmatter
-        view:
-          primary: title
-          fields:
-            - scientific_name
-            - plant_type
-            - bloom
-          sort: title
-          order: asc
-        fields:
-          - name: title
-            label: Plant Name
-            type: string
-            required: true
-
-          - name: scientific_name
-            label: Scientific Name
-            type: string
-            required: false
-
-          - name: photo
-            label: Photo
-            type: image
-            required: false
-
-          - name: plant_type
-            label: Type
-            type: string
-            required: true
-            description: "Example: Deciduous flowering shrub or Herbaceous perennial"
-
-          - name: bloom
-            label: Bloom
-            type: string
-            required: true
-            description: When it blooms or produces seasonal interest
-
-          - name: light
-            label: Light
-            type: string
-            required: true
-
-          - name: water
-            label: Water
-            type: string
-            required: true
-
-          - name: garden_notes
-            label: Garden Notes
-            type: rich-text
-            required: false
-
-          - name: seasonal_record
-            label: Seasonal Record
-            type: rich-text
-            required: false
-
-          - name: body
-            label: Additional Notes
-            type: rich-text
-            required: false
-
-  - name: apothecary
-    label: Apothecary
+  - name: plants
+    label: Plants
     type: collection
-    path: grimoire/apothecary/entries
-    filename: "{primary}.md"
+    path: garden/plants
+    subfolders: true
+    filename: "{primary}.html"
     format: yaml-frontmatter
-
     view:
       primary: title
-      fields:
-        - common_name
-        - plant_type
-        - found_date
+      fields: [plant_group, scientific_name, show_harvest, show_apothecary]
       sort: title
       order: asc
-
     fields:
-      - name: title
-        label: Plant Name
-        type: string
-        required: true
-
-      - name: common_name
-        label: Common Name
-        type: string
-        required: false
-
-      - name: scientific_name
-        label: Scientific Name
-        type: string
-        required: false
-
-      - name: image
-        label: Photo
-        type: image
-        required: false
-
-      - name: plant_type
-        label: Plant Type
+      - { name: title, label: Plant Name, type: string, required: true }
+      - { name: scientific_name, label: Scientific Name, type: string, required: false }
+      - { name: photo, label: Photo, type: image, required: false }
+      - name: plant_group
+        label: Plant Group
         type: select
-        required: false
+        required: true
         options:
           values:
-            - value: tree
-              label: Tree
-            - value: shrub
-              label: Shrub
-            - value: succulent
-              label: Succulent
-            - value: perennial
-              label: Perennial
-            - value: annual
-              label: Annual
-            - value: biennial
-              label: Biennial
-            - value: vine
-              label: Vine
-            - value: grass
-              label: Grass
-            - value: fern
-              label: Fern
-            - value: moss
-              label: Moss
-            - value: fungi
-              label: Fungi
+            - { value: trees-shrubs, label: Trees & Shrubs }
+            - { value: flowers, label: Perennials & Flowers }
+            - { value: climbers, label: Vines & Climbers }
+            - { value: edibles, label: Fruit & Edibles }
+      - { name: plant_type, label: Type, type: string, required: true }
+      - { name: bloom, label: Bloom / Seasonal Interest, type: string, required: true }
+      - { name: light, label: Light, type: string, required: true }
+      - { name: water, label: Water, type: string, required: true }
+      - { name: garden_notes, label: Garden Notes, type: rich-text, required: false }
+      - { name: seasonal_record, label: Seasonal Record, type: rich-text, required: false }
 
-      - name: found_date
-        label: Date Found
-        type: date
-        required: false
+      - { name: show_harvest, label: Show in Harvest & Use, type: boolean, default: false }
+      - { name: harvest_season, label: Harvest Season, type: string, required: false }
+      - { name: parts_used, label: Parts to Gather / Use, type: string, required: false }
+      - { name: harvest, label: Harvesting Notes, type: rich-text, required: false }
+      - { name: harvest_uses, label: Harvest Uses, type: rich-text, required: false }
+      - { name: preserve_dry, label: Drying Notes, type: rich-text, required: false }
+      - { name: preserve_freeze, label: Freezing Notes, type: rich-text, required: false }
+      - { name: preserve_infuse, label: Infusing / Other Use Notes, type: rich-text, required: false }
+      - { name: preparation, label: Preparation & Preservation, type: rich-text, required: false }
 
-      - name: found_location
-        label: Where Found
-        type: string
-        required: false
-
-      - name: habitat
-        label: Habitat & Growing Conditions
-        type: rich-text
-        required: false
-
-      - name: identification
-        label: Identification Notes
-        type: rich-text
-        required: false
-
-      - name: benefits
-        label: Benefits
-        type: rich-text
-        required: false
-
-      - name: medicinal_uses
-        label: Traditional Medicinal Uses
-        type: rich-text
-        required: false
-
-      - name: culinary_uses
-        label: Culinary Uses
-        type: rich-text
-        required: false
-
-      - name: magical_uses
-        label: Folklore & Magical Associations
-        type: rich-text
-        required: false
-
-      - name: parts_used
-        label: Parts Used
-        type: string
-        required: false
-
-      - name: harvest
-        label: Harvesting
-        type: rich-text
-        required: false
-
-      - name: preparation
-        label: Preparation & Preservation
-        type: rich-text
-        required: false
-
-      - name: cautions
-        label: Safety & Cautions
-        type: rich-text
-        required: false
-
-      - name: personal_notes
-        label: My Notes
-        type: rich-text
-        required: false
-
-      - name: sources
-        label: Sources & References
-        type: rich-text
-        required: false
+      - { name: show_apothecary, label: Show in Apothecary, type: boolean, default: false }
+      - { name: common_name, label: Common Name, type: string, required: false }
+      - { name: found_date, label: Date Found, type: date, required: false }
+      - { name: found_location, label: Where Found, type: string, required: false }
+      - { name: habitat, label: Habitat & Growing Conditions, type: rich-text, required: false }
+      - { name: identification, label: Identification Notes, type: rich-text, required: false }
+      - { name: benefits, label: Benefits, type: rich-text, required: false }
+      - { name: medicinal_uses, label: Traditional Medicinal Uses, type: rich-text, required: false }
+      - { name: culinary_uses, label: Culinary Uses, type: rich-text, required: false }
+      - { name: magical_uses, label: Folklore & Magical Associations, type: rich-text, required: false }
+      - { name: cautions, label: Safety & Cautions, type: rich-text, required: false }
+      - { name: personal_notes, label: Apothecary Notes, type: rich-text, required: false }
+      - { name: sources, label: Sources & References, type: rich-text, required: false }
+      - { name: body, label: Additional Notes, type: rich-text, required: false }
 
   - name: kitchen
     label: Kitchen
@@ -981,68 +292,36 @@ content:
     path: kitchen/entries
     filename: "{primary}.md"
     format: yaml-frontmatter
-
     view:
       primary: title
-      fields:
-        - title
-        - category
+      fields: [title, category]
       sort: title
       order: asc
-
     fields:
-      - name: title
-        label: Title
-        type: string
-        required: true
-
+      - { name: title, label: Title, type: string, required: true }
       - name: category
         label: Category
         type: select
         required: true
         options:
           values:
-            
-            - value: bread
-              label: Bread
-            - value: breakfast
-              label: Breakfast
-            - value: canning
-              label: Canning
-            - value: casseroles
-              label: Casseroles
-            - value: copycat-recipes
-              label: Copycat Recipes
-            - value: desserts
-              label: Desserts
-            - value: drinks
-              label: Drinks
-            - value: hors-doeuvres
-              label: Hors d'Oeuvres
-            - value: meals-beef
-              label: Meals-Beef
-            - value: meals-chicken
-              label: Meals-Chicken
-            - value: meals-fish
-              label: Meals-Fish
-            - value: meals-pork
-              label: Meals-Pork
-            - value: salads
-              label: Salads
-            - value: seasonings-dressings
-              label: Seasonings & Dressings
-            - value: soups
-              label: Soups
-
-      - name: photo
-        label: Photo
-        type: image
-        required: false
-
-      - name: body
-        label: Recipe
-        type: rich-text
-        required: true
+            - { value: bread, label: Bread }
+            - { value: breakfast, label: Breakfast }
+            - { value: canning, label: Canning }
+            - { value: casseroles, label: Casseroles }
+            - { value: copycat-recipes, label: Copycat Recipes }
+            - { value: desserts, label: Desserts }
+            - { value: drinks, label: Drinks }
+            - { value: hors-doeuvres, label: Hors d'Oeuvres }
+            - { value: meals-beef, label: Meals-Beef }
+            - { value: meals-chicken, label: Meals-Chicken }
+            - { value: meals-fish, label: Meals-Fish }
+            - { value: meals-pork, label: Meals-Pork }
+            - { value: salads, label: Salads }
+            - { value: seasonings-dressings, label: Seasonings & Dressings }
+            - { value: soups, label: Soups }
+      - { name: photo, label: Photo, type: image, required: false }
+      - { name: body, label: Recipe, type: rich-text, required: true }
 
   - name: garden_records
     label: Garden Records
@@ -1056,46 +335,25 @@ content:
         format: yaml-frontmatter
         view:
           primary: title
-          fields:
-            - season
-            - date
+          fields: [season, date]
           sort: date
           order: desc
         fields:
-          - name: title
-            label: Entry Title
-            type: string
-            required: true
-          - name: date
-            label: Date
-            type: date
-            required: true
+          - { name: title, label: Entry Title, type: string, required: true }
+          - { name: date, label: Date, type: date, required: true }
           - name: season
             label: Season
             type: select
             required: true
             options:
               values:
-                - value: spring
-                  label: Spring
-                - value: summer
-                  label: Summer
-                - value: autumn
-                  label: Autumn
-                - value: winter
-                  label: Winter
-          - name: image
-            label: Photo
-            type: image
-            required: false
-          - name: plant_link
-            label: Related Plant Link
-            type: string
-            required: false
-          - name: body
-            label: Seasonal Notes
-            type: rich-text
-            required: true
+                - { value: spring, label: Spring }
+                - { value: summer, label: Summer }
+                - { value: autumn, label: Autumn }
+                - { value: winter, label: Winter }
+          - { name: image, label: Photo, type: image, required: false }
+          - { name: plant_link, label: Related Plant Link, type: string, required: false }
+          - { name: body, label: Seasonal Notes, type: rich-text, required: true }
 
       - name: garden_projects
         label: Garden Projects
@@ -1105,107 +363,30 @@ content:
         format: yaml-frontmatter
         view:
           primary: title
-          fields:
-            - year
-            - category
-            - status
-            - date
+          fields: [year, category, status, date]
           sort: date
           order: desc
         fields:
-          - name: title
-            label: Entry Title
-            type: string
-            required: true
-          - name: date
-            label: Date
-            type: date
-            required: true
-          - name: year
-            label: Garden Year
-            type: string
-            required: true
+          - { name: title, label: Entry Title, type: string, required: true }
+          - { name: date, label: Date, type: date, required: true }
+          - { name: year, label: Garden Year, type: string, required: true }
           - name: category
             label: Entry Type
             type: select
             required: true
             options:
               values:
-                - value: project
-                  label: What I Did / Project
-                - value: goal
-                  label: Goal
-                - value: journal
-                  label: Garden Journal
+                - { value: project, label: What I Did / Project }
+                - { value: goal, label: Goal }
+                - { value: journal, label: Garden Journal }
           - name: status
             label: Status
             type: select
             required: false
             options:
               values:
-                - value: planned
-                  label: Planned
-                - value: in-progress
-                  label: In Progress
-                - value: complete
-                  label: Complete
-          - name: image
-            label: Photo
-            type: image
-            required: false
-          - name: body
-            label: Notes
-            type: rich-text
-            required: true
-
-      - name: harvest_use
-        label: Harvest & Use
-        type: collection
-        path: garden/harvest/entries
-        filename: "{year}-{month}-{day}-{primary}.md"
-        format: yaml-frontmatter
-        view:
-          primary: title
-          fields:
-            - category
-            - plant
-            - date
-          sort: date
-          order: desc
-        fields:
-          - name: title
-            label: Entry Title
-            type: string
-            required: true
-          - name: date
-            label: Date
-            type: date
-            required: true
-          - name: category
-            label: Entry Type
-            type: select
-            required: true
-            options:
-              values:
-                - value: harvest
-                  label: Harvest
-                - value: preservation
-                  label: Preservation
-                - value: use
-                  label: Use / Preparation
-          - name: plant
-            label: Plant
-            type: string
-            required: false
-          - name: method
-            label: Method
-            type: string
-            required: false
-          - name: image
-            label: Photo
-            type: image
-            required: false
-          - name: body
-            label: Notes
-            type: rich-text
-            required: true
+                - { value: planned, label: Planned }
+                - { value: in-progress, label: In Progress }
+                - { value: complete, label: Complete }
+          - { name: image, label: Photo, type: image, required: false }
+          - { name: body, label: Notes, type: rich-text, required: true }
