@@ -36,7 +36,8 @@
             <p class="page-lead">A living reference for what can be gathered from the garden, when to harvest it, how it can be preserved, and the ways it can be used.</p>
         </section>
 
-        {% assign harvest_plants = site.pages | where_exp: "item", "item.path contains 'garden/plants/' and item.show_harvest == true" | sort: "title" %}
+        {% assign plant_pages = site.pages | where_exp: "item", "item.path contains 'garden/plants/'" %}
+        {% assign harvest_plants = plant_pages | where: "show_harvest", true | sort: "title" %}
 
         <section class="harvest-guide">
             <h2>Harvest Guide</h2>
