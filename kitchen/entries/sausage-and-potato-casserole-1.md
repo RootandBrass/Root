@@ -10,19 +10,14 @@ Ingredients
 - · 1/2 teaspoon salt 
 - · 1/4 teaspoon pepper  
 - . 3 cups thinly sliced peeled potatoes 
-- · 1 cup shredded mild cheddar cheese 
+- · 1 cup shredded mild cheddar cheese
 
 Instructions 
 
-1. In a medium skillet, brown the sausage over medium heat until no longer pink; drain. 
-
-2. In a large bowl, combine the soup, milk, sour cream, onion, salt and pepper. 
-
-3. In a lightly greased 5 qt. slow cooker, layer half the potatoes, soup mixture and sausage; repeat layers. 
-
-4. Cook on low setting for 6-8 hours or until done. 
-
-5. Uncover and sprinkle with cheese. 
-
-6. Cover and cook 5-10 more minutes 
+1. In a medium skillet, brown the sausage over medium heat until no longer pink; drain.
+2. In a large bowl, combine the soup, milk, sour cream, onion, salt and pepper.
+3. In a lightly greased 5 qt. slow cooker, layer half the potatoes, soup mixture and sausage; repeat layers.
+4. Cook on low setting for 6-8 hours or until done.
+5. Uncover and sprinkle with cheese.
+6. Cover and cook 5-10 more minutes
 
