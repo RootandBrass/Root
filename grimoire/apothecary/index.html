@@ -35,13 +35,14 @@
             </header>
 
             <div class="apothecary-grid">
-                {% assign plant_entries = site.pages | where_exp: "item", "item.path contains 'grimoire/apothecary/entries/'" | sort: "title" %}
+                {% assign plant_entries = site.pages | where_exp: "item", "item.path contains 'garden/plants/' and item.show_apothecary == true" | sort: "title" %}
                 {% if plant_entries.size > 0 %}
                     {% for plant in plant_entries %}
+                    {% assign plant_slug = plant.path | split: '/' | last | remove: '.html' | remove: '.md' %}
                     <article class="plant-card">
-                        <a href="{{ plant.url }}">
-                            {% if plant.image %}
-                            <div class="plant-card-image"><img src="{{ plant.image }}" alt="{{ plant.title }}"></div>
+                        <a href="/grimoire/apothecary/plant.html#{{ plant_slug }}">
+                            {% if plant.photo %}
+                            <div class="plant-card-image"><img src="{{ plant.photo }}" alt="{{ plant.title }}"></div>
                             {% else %}
                             <div class="plant-card-symbol">❧</div>
                             {% endif %}
@@ -81,11 +82,7 @@
         </nav>
     </main>
 
-    <footer class="grimoire-footer">
-        Root &amp; Brass
-    </footer>
-
+    <footer class="grimoire-footer">Root &amp; Brass</footer>
 </div>
-
 </body>
 </html>
