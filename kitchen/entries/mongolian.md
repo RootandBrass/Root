@@ -12,10 +12,14 @@ Ingredients
 - 1/2 cup lite soy sauce 1 cup water 
 - 1 tablespoon rice vinegar
 - 1 teaspoon red pepper flakes 
-- Cornstarch Slurry: 
+
+Cornstarch Slurry: 
+
 - 2 tablespoons cornstarch 
 - 1/2 cup water 
-- Garnish: 
+
+Garnish: 
+
 - 1/4 cup green onions (chopped) 
 - 1 teaspoon sesame seeds
 
@@ -30,7 +34,9 @@ Add the rest of the ingredients:
 
 - Add the rest of the ingredients to the pot: minced garlic, minced ginger, lite soy sauce, brown sugar, water, rice vinegar, and red pepper flakes. You can add less sugar, based on your taste and preference.  
 - Stir well until all the ingredients are combined and coated in sauce. 
-- Pressure Cook: 
+
+Pressure Cook: 
+
 - Close lid and pressure cook at High Pressure for 8 minutes + 10 minutes Natural Release. Turn off the heat. Release the remaining pressure manually. Open the lid.
 
 
@@ -40,5 +46,8 @@ Thicken the Sauce:
 - Make the cornstarch slurry, in a small bowl mix cornstarch with water until fully combined. 
 - With the Instant Pot on the Sauté function, add the slurry to the pot, stir to combine, and cook for 2-3 minutes on Sauté, stirring occasionally, until the sauce thickens. 
 - Turn off the Instant Pot and let the Mongolian Beef sit for 8-10 minutes before serving, in this time the sauce will settle and thicken more. 
+
+Serve:
+
 - Serve over rice and garnish with fresh chopped green onions and sesame seeds.
 
