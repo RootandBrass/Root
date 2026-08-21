@@ -1,8 +1,7 @@
 ---
-title: "Creamy White Chicken Chili"
+title: Creamy White Chicken Chili
 category: soups
 ---
-
 TOTAL TIME:
 
 35 MINS
@@ -15,7 +14,25 @@ COOK TIME:
 
 30 MINS
 
-## INGREDIENTS
+## Ingredients Option 1
+
+- 1 pound boneless skinless chicken breasts, 
+- 1 teaspoon salt cut into 1/2-inch cubes 
+- 1 teaspoon ground cumin 
+- 1 medium onion, chopped 1
+-  teaspoon dried oregano 
+- 1-1/2 teaspoons garlic powder 
+- 1/2 teaspoon pepper 
+- 1 tablespoon canola oil 
+- 1/4 teaspoon cayenne pepper 
+- 2 cans (15-1/2 ounces each) great northern 
+- 1 cup sour cream beans, rinsed and drained 
+- 1 can (14-1/2 ounces) chicken broth 
+- 1/2 cup heavy whipping cream 
+- 2 cans (4 ounces each) chopped green 
+- Optional: Tortilla chips, shredded cheddar cheese, sliced seeded jalapeno pepper chiles 
+
+## INGREDIENTS Option 2
 
 - 1 tablespoon olive oil
 - 1 small white onion, diced
@@ -39,3 +56,4 @@ COOK TIME:
 2. Gradually add in the chicken broth, stirring until combined. Then stir in the cooked chicken, green chiles, white beans, corn (if using), and cumin. Continue cooking until the soup reaches a simmer, then reduce heat to medium-low and continue simmering for about 5 minutes. Stir in the warm milk until combined. Then give the soup a taste, and season generously with salt and pepper to taste.
 3. Serve warm in bowls (adding tortilla “bowls” if you’d like), topped with your desired garnishes.
 4. Season to taste; the amount of salt needed will depend on the chicken stock.
+
