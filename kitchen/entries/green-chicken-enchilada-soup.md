@@ -1,0 +1,5 @@
+---
+title: "Green Chicken enchilada soup "
+category: soups
+---
+Crock Pot Green Enchilada Chicken Soup *2.5 lbs of boneless skinless Chicken Breasts or thighs* 28 oz can of Green Enchilada sauce *24oz of Chicken broth* 1 Cup half and half or heavy whipping cream  *2 Cups Monterey jack cheese* 4 oz cream cheese, cubed at room temp *4oz Green Salsa ( salsa verde)* Salt and Pepper to taste 1. In Crock Pot add Chicken breasts or thighs, green enchilada sauce and chicken broth ... cook on low for 6-8 hrs 2. About 30 min before serving Remove Chicken and Shred. the add shredded chicken, Jack Cheese, Cream Cheese, 1/2 and 1/2 and green salsa to crock pot. stir until cheeses are melted. * you can add additional salsa for taste. 3. You can top with sliced avacado, Cilantro, green onion and sour cream and add strips of Crisp tortillas if you like !. Serve and enjoy 
