@@ -1,6 +1,5 @@
 ---
 ---
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,58 +33,48 @@
                 <div class="apothecary-small-divider">❧ &nbsp; ✦ &nbsp; ❧</div>
             </header>
 
+            {% assign plant_entries = site.pages | where_exp: "item", "item.path contains 'garden/plants/'" | sort: "title" %}
+            {% assign legacy_entries = site.pages | where_exp: "item", "item.path contains 'grimoire/apothecary/entries/'" %}
             <div class="apothecary-grid">
-                {% assign plant_entries = site.pages | where_exp: "item", "item.path contains 'grimoire/apothecary/entries/'" | sort: "title" %}
-                {% if plant_entries.size > 0 %}
-                    {% for plant in plant_entries %}
+                {% assign visible_count = 0 %}
+                {% for plant in plant_entries %}
+                    {% assign legacy_match = legacy_entries | where: "scientific_name", plant.scientific_name | first %}
+                    {% assign include_plant = false %}
+                    {% if plant.show_apothecary == true %}
+                        {% assign include_plant = true %}
+                    {% elsif plant.show_apothecary == nil and legacy_match %}
+                        {% assign include_plant = true %}
+                    {% endif %}
+                    {% if include_plant %}
+                    {% assign visible_count = visible_count | plus: 1 %}
+                    {% assign plant_slug = plant.path | split: '/' | last | remove: '.html' | remove: '.md' %}
                     <article class="plant-card">
-                        <a href="{{ plant.url }}">
-                            {% if plant.image %}
-                            <div class="plant-card-image"><img src="{{ plant.image }}" alt="{{ plant.title }}"></div>
-                            {% else %}
-                            <div class="plant-card-symbol">❧</div>
-                            {% endif %}
-                            <p class="plant-card-kicker">{{ plant.plant_type | default: "Plant Record" | replace: "-", " " }}</p>
+                        <a href="/grimoire/apothecary/plant.html#{{ plant_slug }}">
+                            {% assign card_photo = plant.photo | default: legacy_match.image %}
+                            {% if card_photo %}<div class="plant-card-image"><img src="{{ card_photo }}" alt="{{ plant.title }}"></div>{% else %}<div class="plant-card-symbol">❧</div>{% endif %}
+                            <p class="plant-card-kicker">{{ plant.plant_type | default: legacy_match.plant_type | default: "Plant Record" | replace: "-", " " }}</p>
                             <h3>{{ plant.title }}</h3>
                             {% if plant.scientific_name %}<p class="plant-latin">{{ plant.scientific_name }}</p>{% endif %}
-                            {% if plant.found_location %}<p class="plant-found">Found: {{ plant.found_location }}</p>{% endif %}
-                            {% if plant.benefits %}
-                            <div class="plant-preview">{{ plant.benefits | markdownify | strip_html | truncate: 120 }}</div>
-                            {% endif %}
+                            {% assign card_location = plant.found_location | default: legacy_match.found_location %}
+                            {% if card_location %}<p class="plant-found">Found: {{ card_location }}</p>{% endif %}
+                            {% assign card_benefits = plant.benefits | default: legacy_match.benefits %}
+                            {% if card_benefits %}<div class="plant-preview">{{ card_benefits | markdownify | strip_html | truncate: 120 }}</div>{% endif %}
                             <div class="plant-card-footer"><span>Open Plant Record</span><span>❧</span></div>
                         </a>
                     </article>
-                    {% endfor %}
-                {% else %}
-                <div class="empty-apothecary">
-                    <span>❧</span>
-                    <p>The cabinet is waiting for its first plant.</p>
-                </div>
-                {% endif %}
+                    {% endif %}
+                {% endfor %}
+                {% if visible_count == 0 %}<div class="empty-apothecary"><span>❧</span><p>The cabinet is waiting for its first plant.</p></div>{% endif %}
             </div>
         </section>
 
-        <aside class="apothecary-note">
-            <strong>A field-note reminder:</strong> Confirm a plant's identity with reliable sources before eating or using it. Traditional uses are recorded for reference and are not medical advice.
-        </aside>
+        <aside class="apothecary-note"><strong>A field-note reminder:</strong> Confirm a plant's identity with reliable sources before eating or using it. Traditional uses are recorded for reference and are not medical advice.</aside>
 
         <nav class="section-nav" aria-label="Grimoire sections">
-            <a href="/grimoire/apothecary/" aria-current="page">Apothecary</a>
-            <a href="/grimoire/crystals/">Crystals</a>
-            <a href="/grimoire/tarot/">Tarot</a>
-            <a href="/grimoire/signs-symbols/">Signs &amp; Symbols</a>
-            <a href="/grimoire/spells/">Spells</a>
-            <a href="/grimoire/recipes/">Recipes</a>
-            <a href="/grimoire/moon/">Moon</a>
-            <a href="/grimoire/dreams/">Dreams</a>
+            <a href="/grimoire/apothecary/" aria-current="page">Apothecary</a><a href="/grimoire/crystals/">Crystals</a><a href="/grimoire/tarot/">Tarot</a><a href="/grimoire/signs-symbols/">Signs &amp; Symbols</a><a href="/grimoire/spells/">Spells</a><a href="/grimoire/recipes/">Recipes</a><a href="/grimoire/moon/">Moon</a><a href="/grimoire/dreams/">Dreams</a>
         </nav>
     </main>
-
-    <footer class="grimoire-footer">
-        Root &amp; Brass
-    </footer>
-
+    <footer class="grimoire-footer">Root &amp; Brass</footer>
 </div>
-
 </body>
 </html>
