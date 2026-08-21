@@ -273,8 +273,6 @@ content:
 
       - { name: show_apothecary, label: Show in Apothecary, type: boolean, default: false }
       - { name: common_name, label: Common Name, type: string, required: false }
-      - { name: found_date, label: Date Found, type: date, required: false }
-      - { name: found_location, label: Where Found, type: string, required: false }
       - { name: habitat, label: Habitat & Growing Conditions, type: rich-text, required: false }
       - { name: identification, label: Identification Notes, type: rich-text, required: false }
       - { name: benefits, label: Benefits, type: rich-text, required: false }

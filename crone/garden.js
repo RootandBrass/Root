@@ -2,7 +2,7 @@
   if(typeof schemas==='undefined') return;
 
   schemas.plant={label:'Plants',icon:'❦',desc:'Garden, harvest & apothecary in one record',fields:[
-    ['plant_group','Plant Group','select',true,'',[['treesandshrubs','Trees & Shrubs'],['flowers','Perennials & Flowers'],['climbers','Vines & Climbers'],['edibles','Fruit & Edibles']]],
+    ['plant_group','Plant Group','select',true,'',[['trees-shrubs','Trees & Shrubs'],['flowers','Perennials & Flowers'],['climbers','Vines & Climbers'],['edibles','Fruit & Edibles']]],
     ['title','Plant Name','text',true,''],
     ['scientific_name','Scientific Name','text',false,''],
     ['photo','Photo','file',false,''],
