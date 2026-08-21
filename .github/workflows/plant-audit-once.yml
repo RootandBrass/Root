@@ -1,0 +1,101 @@
+name: Plant consistency audit
+
+on:
+  push:
+    branches: [plant-consistency-audit]
+    paths:
+      - '.github/workflows/plant-audit-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: plant-consistency-audit
+          fetch-depth: 0
+
+      - name: Normalize plant records
+        run: |
+          ruby <<'RUBY'
+          require 'yaml'
+
+          def read_page(path)
+            text = File.read(path)
+            m = text.match(/\A---\s*\n(.*?)\n---\s*\n?(.*)\z/m)
+            raise "Missing YAML front matter: #{path}" unless m
+            data = YAML.safe_load(m[1], permitted_classes: [Date, Time], aliases: true) || {}
+            [data, m[2]]
+          end
+
+          def write_page(path, data, body)
+            yaml = data.to_yaml.sub(/\A---\s*\n/, '')
+            File.write(path, "---\n#{yaml}---\n#{body}")
+          end
+
+          group_for = {
+            'treesandshrubs' => 'trees-shrubs',
+            'flowers' => 'flowers',
+            'climbers' => 'climbers',
+            'edibles' => 'edibles'
+          }
+
+          files = Dir['garden/plants/**/*.html'].sort
+          raise "Expected 41 plant records, found #{files.length}" unless files.length == 41
+
+          required = %w[title scientific_name plant_type bloom light water]
+          problems = []
+
+          files.each do |path|
+            data, body = read_page(path)
+            folder = path.split('/')[-2]
+            data['plant_group'] = group_for.fetch(folder)
+
+            # Make the unified toggles explicit so Crone and the public pages agree.
+            data['show_harvest'] = false unless data.key?('show_harvest')
+            data['show_apothecary'] = false unless data.key?('show_apothecary')
+
+            # Conservative botanical normalization: do not claim an exact species
+            # where the journal does not establish one.
+            if File.basename(path) == 'daylily.html' && data['scientific_name'] == 'Hemerocallis fulva'
+              data['scientific_name'] = 'Hemerocallis spp.'
+            end
+
+            # Normalize a few field phrases without changing the user's journal text.
+            data['title'] = 'Black-eyed Susan' if File.basename(path) == 'blackeyedsusan.html'
+            data['plant_type'] = 'Rhizomatous herbaceous perennial' if File.basename(path) == 'lily-of-the-valley.html'
+
+            required.each do |field|
+              problems << "#{path}: missing #{field}" if data[field].nil? || data[field].to_s.strip.empty?
+            end
+
+            write_page(path, data, body)
+          end
+
+          raise "Plant audit failed:\n#{problems.join("\n")}" unless problems.empty?
+
+          # Keep Pages CMS and Crone on the same plant-group vocabulary and remove
+          # the two Apothecary fields the site no longer uses.
+          pages = File.read('.pages.yml')
+          pages = pages.gsub('value: trees-shrubs, label: Trees & Shrubs', 'value: trees-shrubs, label: Trees & Shrubs')
+          pages = pages.lines.reject { |line| line.include?('name: found_date') || line.include?('name: found_location') }.join
+          File.write('.pages.yml', pages)
+
+          garden = File.read('crone/garden.js')
+          garden = garden.gsub("['treesandshrubs','Trees & Shrubs']", "['trees-shrubs','Trees & Shrubs']")
+          File.write('crone/garden.js', garden)
+
+          puts "Audited and normalized #{files.length} plant records."
+          RUBY
+
+      - name: Commit audit changes
+        run: |
+          rm .github/workflows/plant-audit-once.yml
+          git config user.name 'Root & Brass Plant Audit'
+          git config user.email 'actions@users.noreply.github.com'
+          git add -A
+          git commit -m 'Normalize plant records and CMS fields'
+          git push origin plant-consistency-audit
