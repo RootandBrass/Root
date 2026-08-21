@@ -1,3 +1,4 @@
+# one-time audit trigger
 name: Plant consistency audit
 
 on:
@@ -53,18 +54,13 @@ jobs:
             data, body = read_page(path)
             folder = path.split('/')[-2]
             data['plant_group'] = group_for.fetch(folder)
-
-            # Make the unified toggles explicit so Crone and the public pages agree.
             data['show_harvest'] = false unless data.key?('show_harvest')
             data['show_apothecary'] = false unless data.key?('show_apothecary')
 
-            # Conservative botanical normalization: do not claim an exact species
-            # where the journal does not establish one.
             if File.basename(path) == 'daylily.html' && data['scientific_name'] == 'Hemerocallis fulva'
               data['scientific_name'] = 'Hemerocallis spp.'
             end
 
-            # Normalize a few field phrases without changing the user's journal text.
             data['title'] = 'Black-eyed Susan' if File.basename(path) == 'blackeyedsusan.html'
             data['plant_type'] = 'Rhizomatous herbaceous perennial' if File.basename(path) == 'lily-of-the-valley.html'
 
@@ -77,10 +73,7 @@ jobs:
 
           raise "Plant audit failed:\n#{problems.join("\n")}" unless problems.empty?
 
-          # Keep Pages CMS and Crone on the same plant-group vocabulary and remove
-          # the two Apothecary fields the site no longer uses.
           pages = File.read('.pages.yml')
-          pages = pages.gsub('value: trees-shrubs, label: Trees & Shrubs', 'value: trees-shrubs, label: Trees & Shrubs')
           pages = pages.lines.reject { |line| line.include?('name: found_date') || line.include?('name: found_location') }.join
           File.write('.pages.yml', pages)
 
