@@ -42,12 +42,6 @@ defaults:
       layout: symbol
 
   - scope:
-      path: "grimoire/apothecary/entries"
-      type: "pages"
-    values:
-      layout: apothecary
-
-  - scope:
       path: "journal/entries"
       type: "pages"
     values:
@@ -64,6 +58,8 @@ defaults:
       type: "pages"
     values:
       layout: plant
+      show_harvest: false
+      show_apothecary: false
 
   - scope:
       path: "garden/plants/treesandshrubs"
