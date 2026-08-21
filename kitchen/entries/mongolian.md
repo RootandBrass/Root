@@ -7,8 +7,8 @@ Ingredients
 - 1-1.5 pounds flank steak (sliced across the grain) 
 - 1 tablespoon cornstarch 1 tablespoon extra virgin olive oil (or sesame oil) 
 - 1/2 cup brown sugar (or 2/3 cups - I prefer the version with more sugar)
--  8-10 cloves garlic (minced - use less if you prefer it less garlicky)
--  1 tablespoon fresh ginger (minced) 
+- 8-10 cloves garlic (minced - use less if you prefer it less garlicky)
+- 1 tablespoon fresh ginger (minced) 
 - 1/2 cup lite soy sauce 1 cup water 
 - 1 tablespoon rice vinegar
 - 1 teaspoon red pepper flakes 
@@ -19,16 +19,12 @@ Ingredients
 - 1/4 cup green onions (chopped) 
 - 1 teaspoon sesame seeds
 
-
-
-Sear the beef: [
+Sear the beef: 
 
 - Heat up your pressure cooker: press Sauté -> click on the Adjust button -> select More to get the Sauté More function, which means that the food will be sautéed over medium-high heat. Wait for the Instant Pot indicator to read HOT. 
 - Add sliced beef to a large ziplock bag, add 1 tablespoon cornstarch and shake well to coat it evenly. 
 - Add the oil to the hot Instant Pot, once the oil is hot, add the beef and sauté for 2- 3 minutes, stirring a few times. If needed brown the beef in batches, you don't want to add too much as it will start releasing juice and it won't brown well. 
 - Note: You can also skip browning the beef and just add it to the pot! If bits of beef stock to the pot, add 1/2 water and deglaze the pot. Using a wooden spoon scrape the bottom of the pot. You can discard that liquid if wanted.
-
-
 
 Add the rest of the ingredients: 
 
