@@ -58,7 +58,6 @@ defaults:
       type: "pages"
     values:
       layout: plant
-      show_harvest: false
       show_apothecary: false
 
   - scope:
