@@ -1,247 +1,79 @@
 ---
 ---
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-
-    <title>Recipes | Grimoire</title>
-
-    <link rel="icon"
-          type="image/png"
-          href="/grimoire/images/icon.png">
-
-    <link rel="stylesheet"
-          href="/grimoire/style.css">
+    <title>Recipes | Grimoire | Root & Brass</title>
+    <link rel="icon" type="image/png" href="/grimoire/images/icon.png">
+    <link rel="stylesheet" href="/grimoire/style.css">
 </head>
-
-
 <body class="recipes">
-
 <div class="grimoire-shell">
-
     <header class="grimoire-header">
-
-        <a href="/grimoire/"
-           class="grimoire-mark">
-            Grimoire
-        </a>
-
-        <a href="/"
-           class="return-link">
-            Return Home
-        </a>
-
+        <a href="/grimoire/" class="grimoire-mark">Grimoire</a>
+        <a href="/" class="return-link">Return Home</a>
     </header>
 
-
     <main class="recipes-page">
-
         <section class="recipes-hero">
-
             <div class="recipes-hero-content">
-
-                <p class="kicker">
-                    Grimoire
-                </p>
-
+                <p class="kicker">Grimoire</p>
                 <h1>Recipes</h1>
-
-                <div class="recipes-symbol">
-                    ✦
-                </div>
-
-                <p class="recipes-lead">
-                    Preparations, blends and things made by hand.
-                </p>
-
+                <div class="recipes-symbol">✦</div>
+                <p class="recipes-lead">Preparations, blends and things made by hand.</p>
             </div>
-
         </section>
-
 
         <section class="recipes-library">
-
             <header class="recipes-library-heading">
-
-                <p class="kicker">
-                    The Working Kitchen
-                </p>
-
-                <h2>Recipes & Preparations</h2>
-
-                <p>
-                    Made, tested, remembered and changed over time.
-                </p>
-
+                <p class="kicker">The Working Kitchen</p>
+                <h2>Recipes &amp; Preparations</h2>
+                <p>Made, tested, remembered and changed over time.</p>
             </header>
 
-
-            <nav class="recipe-categories">
-
-                <button type="button"
-                        class="recipe-filter active"
-                        data-filter="all">
-                    All
-                </button>
-
-                <button type="button"
-                        class="recipe-filter"
-                        data-filter="apothecary">
-                    Apothecary
-                </button>
-
-                <button type="button"
-                        class="recipe-filter"
-                        data-filter="tea-herbal">
-                    Tea & Herbal
-                </button>
-
-                <button type="button"
-                        class="recipe-filter"
-                        data-filter="kitchen">
-                    Kitchen
-                </button>
-
-                <button type="button"
-                        class="recipe-filter"
-                        data-filter="ritual">
-                    Ritual
-                </button>
-
-                <button type="button"
-                        class="recipe-filter"
-                        data-filter="home">
-                    Home
-                </button>
-
-                <button type="button"
-                        class="recipe-filter"
-                        data-filter="bath-body">
-                    Bath & Body
-                </button>
-
+            <nav class="recipe-categories" aria-label="Recipe categories">
+                <button type="button" class="recipe-filter active" data-filter="all">All</button>
+                <button type="button" class="recipe-filter" data-filter="apothecary">Apothecary</button>
+                <button type="button" class="recipe-filter" data-filter="tea-herbal">Tea &amp; Herbal</button>
+                <button type="button" class="recipe-filter" data-filter="kitchen">Kitchen</button>
+                <button type="button" class="recipe-filter" data-filter="ritual">Ritual</button>
+                <button type="button" class="recipe-filter" data-filter="home">Home</button>
+                <button type="button" class="recipe-filter" data-filter="bath-body">Bath &amp; Body</button>
             </nav>
 
-
             <div class="recipe-list">
-
-                {% assign recipes = site.pages
-                    | where_exp: "item",
-                      "item.path contains 'grimoire/recipes/entries/'"
-                    | sort: "date"
-                    | reverse %}
-
+                {% assign recipes = site.pages | where_exp: "item", "item.path contains 'grimoire/recipes/entries/'" | sort: "date" | reverse %}
                 {% if recipes.size > 0 %}
-
                     {% for recipe in recipes %}
-
-                     <article
-    class="recipe-card"
-    data-category="{{ recipe.category | slugify }}">
-
-    <a href="{{ recipe.url }}">
-
-        <div class="recipe-card-ornament">
-            {% case recipe.category %}
-                {% when "apothecary" %}✣
-                {% when "tea-herbal" %}❧
-                {% when "kitchen" %}♨
-                {% when "ritual" %}☾
-                {% when "home" %}⌂
-                {% when "bath-body" %}♢
-                {% else %}✦
-            {% endcase %}
-        </div>
-
-        <div class="recipe-card-top">
-
-            <span class="recipe-category">
-                {{ recipe.category | replace: "-", " " }}
-            </span>
-
-            {% if recipe.date %}
-                <span class="recipe-date">
-                    {{ recipe.date | date: "%b %-d, %Y" }}
-                </span>
-            {% endif %}
-
-        </div>
-
-        <h3>
-            {{ recipe.title }}
-        </h3>
-
-        {% if recipe.purpose %}
-            <p class="recipe-card-purpose">
-                {{ recipe.purpose }}
-            </p>
-        {% endif %}
-
-
-        <div class="recipe-card-details">
-
-            {% if recipe.storage %}
-                <span>
-                    <small>Storage</small>
-                    {{ recipe.storage }}
-                </span>
-            {% endif %}
-
-            {% if recipe.shelf_life %}
-                <span>
-                    <small>Shelf Life</small>
-                    {{ recipe.shelf_life }}
-                </span>
-            {% endif %}
-
-        </div>
-
-
-        <div class="recipe-card-footer">
-
-            <span class="recipe-open">
-                Open Recipe
-            </span>
-
-            <span class="recipe-arrow">
-                →
-            </span>
-
-        </div>
-
-    </a>
-
-</article>
-
+                    <article class="recipe-card" data-category="{{ recipe.category | slugify }}">
+                        <a href="{{ recipe.url }}">
+                            <div class="recipe-card-ornament">
+                                {% case recipe.category %}{% when "apothecary" %}✣{% when "tea-herbal" %}❧{% when "kitchen" %}♨{% when "ritual" %}☾{% when "home" %}⌂{% when "bath-body" %}♢{% else %}✦{% endcase %}
+                            </div>
+                            <div class="recipe-card-top">
+                                <span class="recipe-category">{{ recipe.category | replace: "-", " " }}</span>
+                                {% if recipe.date %}<span class="recipe-date">{{ recipe.date | date: "%b %-d, %Y" }}</span>{% endif %}
+                            </div>
+                            <h3>{{ recipe.title }}</h3>
+                            {% if recipe.purpose %}<p class="recipe-card-purpose">{{ recipe.purpose }}</p>{% endif %}
+                            <div class="recipe-card-details">
+                                {% if recipe.storage %}<span><small>Storage</small>{{ recipe.storage }}</span>{% endif %}
+                                {% if recipe.shelf_life %}<span><small>Shelf Life</small>{{ recipe.shelf_life }}</span>{% endif %}
+                            </div>
+                            <div class="recipe-card-footer"><span class="recipe-open">Open Recipe</span><span class="recipe-arrow">→</span></div>
+                        </a>
+                    </article>
                     {% endfor %}
-
                 {% else %}
-
-                    <div class="empty-recipes">
-
-                        <span>♨</span>
-
-                        <p>
-                            Nothing has been brewed, blended
-                            or recorded here yet.
-                        </p>
-
-                    </div>
-
+                    <div class="empty-recipes"><span>♨</span><p>Nothing has been brewed, blended or recorded here yet.</p></div>
                 {% endif %}
-
             </div>
-
         </section>
 
-
         <nav class="section-nav" aria-label="Grimoire sections">
-            <a href="/grimoire/apothecary/">Apothecary</a>
             <a href="/grimoire/crystals/">Crystals</a>
             <a href="/grimoire/tarot/">Tarot</a>
             <a href="/grimoire/signs-symbols/">Signs &amp; Symbols</a>
@@ -250,51 +82,24 @@
             <a href="/grimoire/moon/">Moon</a>
             <a href="/grimoire/dreams/">Dreams</a>
         </nav>
-
-        <footer class="grimoire-footer">
-            Root &amp; Brass
-        </footer>
-
     </main>
 
+    <footer class="grimoire-footer">Root &amp; Brass</footer>
 </div>
 
-
 <script>
-
-const filters = document.querySelectorAll(".recipe-filter");
-const cards = document.querySelectorAll(".recipe-card");
-
+const filters = document.querySelectorAll('.recipe-filter');
+const cards = document.querySelectorAll('.recipe-card');
 filters.forEach(filter => {
-
-    filter.addEventListener("click", () => {
-
+    filter.addEventListener('click', () => {
         const selected = filter.dataset.filter;
-
-        filters.forEach(button =>
-            button.classList.remove("active")
-        );
-
-        filter.classList.add("active");
-
+        filters.forEach(button => button.classList.remove('active'));
+        filter.classList.add('active');
         cards.forEach(card => {
-
-            if (
-                selected === "all" ||
-                card.dataset.category === selected
-            ) {
-                card.style.display = "";
-            } else {
-                card.style.display = "none";
-            }
-
+            card.style.display = selected === 'all' || card.dataset.category === selected ? '' : 'none';
         });
-
     });
-
 });
-
 </script>
-
 </body>
 </html>
