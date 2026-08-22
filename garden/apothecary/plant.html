@@ -8,14 +8,30 @@
     <meta name="robots" content="noindex, nofollow">
     <title>Plant Record | Apothecary | Root & Brass</title>
     <link rel="icon" type="image/png" href="/images/logo.png">
-    <link rel="stylesheet" href="/grimoire/style.css?v=20260822-1">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/garden/apothecary/apothecary.css?v=20260822-1">
 </head>
-<body class="apothecary-page plant-entry-page">
-<div class="grimoire-shell">
-    <header class="grimoire-header">
-        <a href="/garden.html" class="grimoire-mark">Root &amp; Brass · The Garden</a>
-        <a href="/garden/apothecary/" class="return-link">Back to Apothecary</a>
+<body class="secondary-page garden-site apothecary-page plant-entry-page">
+    <header class="site-header">
+        <a href="/" aria-label="Root &amp; Brass home">
+            <img src="/images/logo.png" alt="Root &amp; Brass" class="site-logo">
+        </a>
     </header>
+
+    <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/house.html">301 Ruby</a>
+        <a href="/garden.html" aria-current="page">The Garden</a>
+        <a href="/kitchen/">The Kitchen</a>
+        <a href="/about.html">About</a>
+    </nav>
+
+    <nav class="garden-subnav" aria-label="Garden navigation">
+        <a href="/garden/plants.html">Plant Journal</a>
+        <a href="/garden/seasons.html">Seasonal Garden</a>
+        <a href="/garden/apothecary/" aria-current="page">Apothecary</a>
+        <a href="/garden/projects.html">Garden Projects</a>
+    </nav>
 
     <main class="plant-entry">
         {% assign plant_entries = site.pages | where_exp: "item", "item.path contains 'garden/plants/'" | sort: "title" %}
@@ -61,8 +77,9 @@
             <footer class="plant-record-footer"><span>❧</span><a href="/garden/apothecary/">Return to the Plant Cabinet</a><span>❧</span></footer>
         </article>
     </main>
-    <footer class="grimoire-footer">Root &amp; Brass</footer>
-</div>
+
+    <footer><p>&copy; 2026 Root &amp; Brass</p></footer>
+
 <script>
 (function () {
     var records = document.querySelectorAll('[data-plant-record]');
