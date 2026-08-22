@@ -23,7 +23,8 @@ const plantDirs = {
   'trees-shrubs': 'garden/plants/treesandshrubs',
   flowers: 'garden/plants/flowers',
   climbers: 'garden/plants/climbers',
-  edibles: 'garden/plants/edibles'
+  edibles: 'garden/plants/edibles',
+  weeds: 'garden/plants/weeds'
 };
 
 function slugify(value='') {
