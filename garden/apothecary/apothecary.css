@@ -1,0 +1,366 @@
+/* Root & Brass Garden Apothecary */
+
+body.apothecary-page {
+    background: #f4f0e8;
+    color: #2f2a24;
+}
+
+.apothecary-page .site-header {
+    margin: 0;
+}
+
+.apothecary-page .garden-subnav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    padding: 13px 18px;
+    background: #e8e0d2;
+    border-bottom: 1px solid #c3a56a;
+}
+
+.apothecary-page .garden-subnav a {
+    color: #66583f;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    font-size: 12px;
+}
+
+.apothecary-page .garden-subnav a:hover,
+.apothecary-page .garden-subnav a[aria-current="page"] {
+    color: #8a713f;
+    text-decoration: underline;
+}
+
+.apothecary-library,
+.plant-entry {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 65px 25px 80px;
+}
+
+.apothecary-hero,
+.plant-record-header {
+    max-width: 760px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.apothecary-mark,
+.plant-entry-mark {
+    color: #8a713f;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.apothecary-page .kicker {
+    margin: 0 0 10px;
+    color: #a98545;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.apothecary-hero h1,
+.plant-record-header h1 {
+    margin: 0 0 18px;
+    font-size: clamp(38px, 7vw, 58px);
+    font-weight: normal;
+    letter-spacing: 2px;
+    line-height: 1.1;
+}
+
+.apothecary-lead {
+    max-width: 680px;
+    margin: 20px auto 0;
+    font-size: 19px;
+    line-height: 1.8;
+    color: #51483d;
+}
+
+.apothecary-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    width: min(360px, 80%);
+    margin: 20px auto;
+    color: #a98545;
+}
+
+.apothecary-divider span {
+    height: 1px;
+    flex: 1;
+    background: #c3a56a;
+}
+
+.plant-cabinet {
+    margin-bottom: 55px;
+}
+
+.plant-cabinet-heading {
+    max-width: 720px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.plant-cabinet-heading h2 {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-size: 31px;
+}
+
+.apothecary-small-divider {
+    margin-top: 13px;
+    color: #a98545;
+    letter-spacing: 4px;
+}
+
+.apothecary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.plant-card {
+    margin: 0;
+    background: #ebe7dc;
+    border: 1px solid #b7a77d;
+    transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+
+.plant-card:hover {
+    transform: translateY(-3px);
+    background: #f2eee5;
+    box-shadow: 0 9px 22px rgba(47,42,36,.08);
+}
+
+.plant-card > a {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    color: #2f2a24;
+    text-decoration: none;
+}
+
+.plant-card-image {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #d8d0c2;
+}
+
+.plant-card-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.plant-card-symbol {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 4 / 3;
+    background: #ded6c7;
+    color: #8a713f;
+    font-size: 38px;
+}
+
+.plant-card-kicker {
+    margin: 22px 24px 4px;
+    color: #8a713f;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.plant-card h3 {
+    margin: 0 24px 4px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.plant-latin {
+    margin: 0 24px 12px;
+    color: #746959;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.plant-preview {
+    margin: 0 24px 20px;
+    color: #51483d;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.plant-card-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: auto;
+    padding: 15px 24px;
+    border-top: 1px solid #c9b992;
+    color: #8a713f;
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.apothecary-note {
+    max-width: 760px;
+    margin: 55px auto 0;
+    padding: 24px 28px;
+    border: 1px solid #c3a56a;
+    background: #eee7dc;
+    color: #51483d;
+    line-height: 1.75;
+}
+
+.empty-apothecary {
+    grid-column: 1 / -1;
+    padding: 50px 20px;
+    text-align: center;
+    border: 1px solid #c3a56a;
+    background: #ebe7dc;
+    color: #746959;
+}
+
+.empty-apothecary span {
+    display: block;
+    color: #a98545;
+    font-size: 28px;
+}
+
+/* Individual plant record */
+
+.plant-entry {
+    max-width: 900px;
+}
+
+.plant-entry-latin {
+    margin: 0;
+    color: #746959;
+    font-size: 17px;
+    font-style: italic;
+}
+
+.plant-entry-common {
+    margin: 8px 0 0;
+    color: #665b4d;
+}
+
+.plant-properties {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 1px;
+    max-width: 620px;
+    margin: 28px auto 0;
+    border: 1px solid #c3a56a;
+    background: #c3a56a;
+}
+
+.plant-properties > div {
+    padding: 17px;
+    background: #eee7dc;
+}
+
+.plant-properties span {
+    display: block;
+    margin-bottom: 4px;
+    color: #8a713f;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.plant-properties strong {
+    font-weight: normal;
+}
+
+.plant-specimen-image {
+    max-width: 720px;
+    margin: 0 auto 55px;
+    padding: 10px;
+    background: #ebe7dc;
+    border: 1px solid #b7a77d;
+}
+
+.plant-specimen-image img {
+    display: block;
+    width: 100%;
+    max-height: 520px;
+    object-fit: cover;
+}
+
+.plant-record-section {
+    max-width: 720px;
+    margin: 0 auto 42px;
+}
+
+.plant-record-section h2 {
+    margin: 0 0 18px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #a98545;
+    font-size: 27px;
+}
+
+.plant-record-section p,
+.plant-record-section li {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.plant-benefits,
+.plant-personal {
+    padding: 26px 28px;
+    background: #eee7dc;
+    border: 1px solid #c9b992;
+}
+
+.plant-cautions {
+    padding: 26px 28px;
+    background: #efe6dc;
+    border-left: 4px solid #a98545;
+}
+
+.plant-sources {
+    color: #665b4d;
+    font-size: 14px;
+}
+
+.plant-record-footer {
+    max-width: 720px;
+    margin: 55px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid #c3a56a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    color: #8a713f;
+}
+
+.plant-record-footer a {
+    color: #8a713f;
+    text-decoration: none;
+}
+
+.plant-record-footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+    .apothecary-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+
+@media (max-width: 600px) {
+    .apothecary-library,
+    .plant-entry { padding: 45px 16px 65px; }
+    .apothecary-grid { grid-template-columns: 1fr; }
+    .plant-properties { grid-template-columns: 1fr; }
+    .apothecary-page .garden-subnav { gap: 10px 16px; }
+    .apothecary-hero h1,
+    .plant-record-header h1 { font-size: 38px; }
+}
