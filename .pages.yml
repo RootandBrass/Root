@@ -254,6 +254,7 @@ content:
             - { value: flowers, label: Perennials & Flowers }
             - { value: climbers, label: Vines & Climbers }
             - { value: edibles, label: Fruit & Edibles }
+            - { value: weeds, label: Weeds }
       - { name: plant_type, label: Type, type: string, required: true }
       - { name: bloom, label: Bloom / Seasonal Interest, type: string, required: true }
       - { name: light, label: Light, type: string, required: true }
