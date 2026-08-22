@@ -1,101 +1,13 @@
----
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harvest & Use | Root & Brass</title>
-    <link rel="icon" type="image/png" href="../images/logo.png">
-    <link rel="stylesheet" href="/style.css?v=20260815-3">
+    <meta http-equiv="refresh" content="0; url=/garden/apothecary/">
+    <title>Apothecary | Root & Brass</title>
+    <link rel="canonical" href="/garden/apothecary/">
 </head>
-<body class="secondary-page garden-site">
-    <header class="site-header">
-        <a href="/" aria-label="Root &amp; Brass home"><img src="/images/logo.png" alt="Root &amp; Brass" class="site-logo"></a>
-    </header>
-
-    <nav class="main-nav" aria-label="Main navigation">
-        <a href="/">Home</a>
-        <a href="/house.html">301 Ruby</a>
-        <a href="/garden.html" aria-current="page">The Garden</a>
-        <a href="/kitchen/">The Kitchen</a>
-        <a href="/about.html">About</a>
-    </nav>
-
-    <nav class="garden-subnav" aria-label="Garden navigation">
-        <a href="/garden/plants.html">Plant Journal</a>
-        <a href="/garden/seasons.html">Seasonal Garden</a>
-        <a href="/garden/harvest.html" aria-current="page">Harvest &amp; Use</a>
-        <a href="/garden/projects.html">Garden Projects</a>
-    </nav>
-
-    <main class="harvest-page">
-        <section class="harvest-intro">
-            <p class="eyebrow">FROM THE GARDEN</p>
-            <h1>Harvest &amp; Use</h1>
-            <p class="page-lead">A living reference for what can be gathered from the garden, when to harvest it, how it can be preserved, and the ways it can be used.</p>
-        </section>
-
-        {% assign plant_pages = site.pages | where_exp: "item", "item.path contains 'garden/plants/'" %}
-        {% assign harvest_plants = plant_pages | where: "show_harvest", true | sort: "title" %}
-
-        <section class="harvest-guide">
-            <h2>Harvest Guide</h2>
-            {% if harvest_plants.size > 0 %}
-            <div class="harvest-grid">
-                {% for plant in harvest_plants %}
-                <article class="harvest-card">
-                    <a href="{{ plant.url }}" class="garden-card">
-                        <h3>{{ plant.title }}</h3>
-                        {% if plant.harvest_season %}<p><strong>Harvest:</strong> {{ plant.harvest_season }}</p>{% endif %}
-                        {% if plant.parts_used %}<p><strong>Gather:</strong> {{ plant.parts_used }}</p>{% endif %}
-                        {% if plant.harvest_uses %}<div><strong>Uses:</strong> {{ plant.harvest_uses | markdownify }}</div>{% endif %}
-                    </a>
-                </article>
-                {% endfor %}
-            </div>
-            {% else %}
-            <p>No plants are marked for Harvest &amp; Use yet.</p>
-            {% endif %}
-        </section>
-
-        <section class="preservation-section" id="preserving">
-            <p class="eyebrow">PRESERVATION WORKBENCH</p>
-            <h2>Preserving the Harvest</h2>
-            <p class="preservation-intro">Choose the method for the plant and the way it will eventually be used. Start with correctly identified, clean, unsprayed material and label every batch before it leaves the worktable.</p>
-            <nav class="preservation-jump" aria-label="Preservation methods"><a href="#drying">Drying</a><a href="#freezing">Freezing</a><a href="#infusing">Infusing</a><a href="#quick-reference">Garden Reference</a></nav>
-
-            <article class="preservation-method" id="drying">
-                <header class="preservation-method-heading"><p class="method-number">01</p><div><p class="eyebrow">LOW MOISTURE · LONGER KEEPING</p><h3>Drying</h3><p>Best for aromatic herbs, sturdy leaves, and flowers that will be used in teas, blends, crafts, or carefully prepared topical products.</p></div></header>
-                <div class="method-grid"><div><h4>Air Dry</h4><ol><li>Harvest after the dew has dried.</li><li>Remove damaged material and surface moisture.</li><li>Tie small bundles or spread flowers in one layer.</li><li>Keep in a dark, dry, well-ventilated place.</li></ol></div><div><h4>Use a Dehydrator</h4><ol><li>Arrange material in one layer.</li><li>Use low herb-friendly temperatures.</li><li>Check frequently rather than relying on one fixed time.</li><li>Cool completely before packing.</li></ol></div></div>
-                <div class="method-facts"><p><strong>Ready when:</strong> Leaves crumble, stems snap, petals feel papery, and no cool or soft center remains.</p><p><strong>Store:</strong> Airtight, labeled, and away from heat, moisture, and light.</p></div>
-            </article>
-
-            <article class="preservation-method" id="freezing">
-                <header class="preservation-method-heading"><p class="method-number">02</p><div><p class="eyebrow">FRESH COLOR · QUICK STORAGE</p><h3>Freezing</h3><p>Useful for ripe fruit and herbs whose flavor matters more than their thawed texture.</p></div></header>
-                <div class="method-grid"><div><h4>Fruit</h4><ol><li>Use sound, ripe fruit.</li><li>Wash gently and dry well.</li><li>Tray-freeze pieces before transferring to freezer containers when loose pieces are useful.</li><li>Label and freeze promptly.</li></ol></div><div><h4>Herbs</h4><ol><li>Clean and dry thoroughly.</li><li>Freeze whole or chopped in practical portions.</li><li>Herbs can also be frozen in water cubes for cooking or drinks.</li><li>Expect thawed herbs to be soft.</li></ol></div></div>
-            </article>
-
-            <article class="preservation-method" id="infusing">
-                <header class="preservation-method-heading"><p class="method-number">03</p><div><p class="eyebrow">FLAVOR · FRAGRANCE · EXTRACTION</p><h3>Infusing</h3><p>An infusion moves a plant's flavor, aroma, color, or soluble compounds into another medium. Storage rules depend on the liquid and intended use.</p></div></header>
-                <div class="infusion-grid"><div><h4>Water &amp; Tea</h4><p>Use positively identified edible plants and refrigerate leftovers promptly.</p></div><div><h4>Vinegar</h4><p>Use commercial vinegar of known acidity and clean plant material; keep untested homemade preparations refrigerated.</p></div><div><h4>Syrup</h4><p>Fresh garden syrups are perishable unless prepared and processed with a tested recipe.</p></div><div><h4>Oil</h4><p>Use thoroughly dried plant material for shelf-life experiments and follow tested food-safety guidance for edible oils.</p></div></div>
-                <aside class="preservation-warning"><strong>Important:</strong> “Infused” does not automatically mean edible, medicinal, or shelf-stable. Keep topical preparations clearly marked for external use.</aside>
-            </article>
-
-            <section class="harvest-reference" id="quick-reference">
-                <p class="eyebrow">FROM THIS GARDEN</p>
-                <h3>Quick Preservation Reference</h3>
-                {% if harvest_plants.size > 0 %}
-                <div class="harvest-table-wrap"><table><thead><tr><th scope="col">Plant</th><th scope="col">Dry</th><th scope="col">Freeze</th><th scope="col">Infuse or Use</th></tr></thead><tbody>
-                    {% for plant in harvest_plants %}
-                    <tr><th scope="row"><a href="{{ plant.url }}">{{ plant.title }}</a></th><td>{{ plant.preserve_dry | default: "—" | markdownify }}</td><td>{{ plant.preserve_freeze | default: "—" | markdownify }}</td><td>{{ plant.preserve_infuse | default: plant.harvest_uses | default: "—" | markdownify }}</td></tr>
-                    {% endfor %}
-                </tbody></table></div>
-                {% endif %}
-            </section>
-        </section>
-    </main>
-
-    <footer class="site-footer"><p>Root &amp; Brass</p></footer>
+<body>
+    <p>Harvest &amp; Use has moved to <a href="/garden/apothecary/">Apothecary</a>.</p>
 </body>
 </html>
