@@ -3,224 +3,64 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <meta name="robots"
-          content="noindex, nofollow">
-
-    <title>Tarot | Grimoire</title>
-
-    <link rel="icon"
-          type="image/png"
-          href="/grimoire/images/icon.png">
-
-    <link rel="stylesheet"
-          href="/grimoire/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Tarot | Grimoire | Root & Brass</title>
+    <link rel="icon" type="image/png" href="/grimoire/images/icon.png">
+    <link rel="stylesheet" href="/grimoire/style.css">
 </head>
-
-
 <body class="tarot">
-
 <div class="grimoire-shell">
-
     <header class="grimoire-header">
-
-        <a href="/grimoire/"
-           class="grimoire-mark">
-            Grimoire
-        </a>
-
-        <a href="/"
-           class="return-link">
-            Return Home
-        </a>
-
+        <a href="/grimoire/" class="grimoire-mark">Grimoire</a>
+        <a href="/" class="return-link">Return Home</a>
     </header>
 
-
     <main class="tarot-page">
-
-        <!-- HERO -->
-
         <section class="tarot-hero">
-
             <div class="tarot-hero-inner">
-
-                <p class="kicker">
-                    The Grimoire
-                </p>
-
+                <p class="kicker">The Grimoire</p>
                 <h1>Tarot</h1>
-
-                <div class="tarot-divider">
-                    <span></span>
-                    ✦
-                    <span></span>
-                </div>
-
-                <p class="tarot-lead">
-                    A living record of readings, insight,
-                    and the symbols that find their way to me.
-                </p>
-
+                <div class="tarot-divider"><span></span>✦<span></span></div>
+                <p class="tarot-lead">A living record of readings, insight, and the symbols that find their way to me.</p>
             </div>
-
         </section>
-
-
-        <!-- READINGS -->
 
         <section class="tarot-library">
-
             <header class="tarot-library-heading">
-
-                <p class="kicker">
-                    The Cards
-                </p>
-
+                <p class="kicker">The Cards</p>
                 <h2>Readings</h2>
-
-                <p>
-                    Drawn, considered and remembered.
-                </p>
-
+                <p>Drawn, considered and remembered.</p>
             </header>
 
-
             <div class="tarot-list">
-
-                {% assign readings = site.pages
-                    | where_exp: "item",
-                      "item.path contains 'grimoire/tarot/entries/'"
-                    | sort: "date"
-                    | reverse %}
-
-
+                {% assign readings = site.pages | where_exp: "item", "item.path contains 'grimoire/tarot/entries/'" | sort: "date" | reverse %}
                 {% if readings.size > 0 %}
-
                     {% for reading in readings %}
-
-                        <article class="tarot-card">
-
-                            <a href="{{ reading.url }}">
-
-                                <div class="tarot-card-mark">
-
-                                    {% if reading.orientation == "reversed" %}
-                                        ☽
-                                    {% else %}
-                                        ✦
-                                    {% endif %}
-
-                                </div>
-
-
-                                <div class="tarot-card-top">
-
-                                    {% if reading.date %}
-
-                                        <span class="tarot-date">
-                                            {{ reading.date | date: "%b %-d, %Y" }}
-                                        </span>
-
-                                    {% endif %}
-
-
-                                    {% if reading.orientation %}
-
-                                        <span class="tarot-orientation">
-                                            {{ reading.orientation }}
-                                        </span>
-
-                                    {% endif %}
-
-                                </div>
-
-
-                                <h3>
-                                    {{ reading.title }}
-                                </h3>
-
-
-                                {% if reading.question %}
-
-                                    <p class="tarot-question">
-                                        {{ reading.question }}
-                                    </p>
-
-                                {% endif %}
-                                
-                                {% if reading.traditional_meaning %}
-
-                                    <div class="tarot-preview">
-                                        {{ reading.traditional_meaning
-                                           | markdownify
-                                           | strip_html
-                                           | truncate: 145 }}
-                                    </div>
-
-                                {% endif %}
-
-
-                                {% if reading.interpretation %}
-
-                                    <div class="tarot-preview">
-                                        {{ reading.interpretation
-                                           | markdownify
-                                           | strip_html
-                                           | truncate: 145 }}
-                                    </div>
-
-                                {% endif %}
-
-
-                                <div class="tarot-card-footer">
-
-                                    <span>
-                                        Open Reading
-                                    </span>
-
-                                    <span>
-                                        →
-                                    </span>
-
-                                </div>
-
-                            </a>
-
-                        </article>
-
+                    <article class="tarot-card">
+                        <a href="{{ reading.url }}">
+                            <div class="tarot-card-mark">{% if reading.orientation == "reversed" %}☽{% else %}✦{% endif %}</div>
+                            <div class="tarot-card-top">
+                                {% if reading.date %}<span class="tarot-date">{{ reading.date | date: "%b %-d, %Y" }}</span>{% endif %}
+                                {% if reading.orientation %}<span class="tarot-orientation">{{ reading.orientation }}</span>{% endif %}
+                            </div>
+                            <h3>{{ reading.title }}</h3>
+                            {% if reading.question %}<p class="tarot-question">{{ reading.question }}</p>{% endif %}
+                            {% if reading.traditional_meaning %}<div class="tarot-preview">{{ reading.traditional_meaning | markdownify | strip_html | truncate: 145 }}</div>{% endif %}
+                            {% if reading.interpretation %}<div class="tarot-preview">{{ reading.interpretation | markdownify | strip_html | truncate: 145 }}</div>{% endif %}
+                            <div class="tarot-card-footer"><span>Open Reading</span><span>→</span></div>
+                        </a>
+                    </article>
                     {% endfor %}
-
-
                 {% else %}
-
-                    <div class="empty-tarot">
-
-                        <span>✦</span>
-
-                        <p>
-                            No cards have been recorded yet.
-                        </p>
-
-                    </div>
-
+                    <div class="empty-tarot"><span>✦</span><p>No cards have been recorded yet.</p></div>
                 {% endif %}
-
             </div>
-
         </section>
 
-
-        <!-- GRIMOIRE NAV -->
-
         <nav class="section-nav" aria-label="Grimoire sections">
-            <a href="/grimoire/apothecary/">Apothecary</a>
             <a href="/grimoire/crystals/">Crystals</a>
             <a href="/grimoire/tarot/" aria-current="page">Tarot</a>
             <a href="/grimoire/signs-symbols/">Signs &amp; Symbols</a>
@@ -229,14 +69,9 @@
             <a href="/grimoire/moon/">Moon</a>
             <a href="/grimoire/dreams/">Dreams</a>
         </nav>
-
     </main>
 
-    <footer class="grimoire-footer">
-        Root &amp; Brass
-    </footer>
-
+    <footer class="grimoire-footer">Root &amp; Brass</footer>
 </div>
-
 </body>
 </html>
