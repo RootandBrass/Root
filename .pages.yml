@@ -5,228 +5,232 @@ media:
   categories: [image]
 
 content:
-  - name: journal
-    label: Journal
-    type: collection
-    path: journal/entries
-    filename: "{year}-{month}-{day}.md"
-    format: yaml-frontmatter
-    view:
-      primary: date
-      sort: date
-      order: desc
-    fields:
-      - { name: date, label: Date, type: date, required: true }
-      - { name: body, label: Entry, type: rich-text, required: true }
+  - name: grimoire_section
+    label: Grimoire
+    type: group
+    items:
+      - name: journal
+        label: Journal
+        type: collection
+        path: journal/entries
+        filename: "{year}-{month}-{day}.md"
+        format: yaml-frontmatter
+        view:
+          primary: date
+          sort: date
+          order: desc
+        fields:
+          - { name: date, label: Date, type: date, required: true }
+          - { name: body, label: Entry, type: rich-text, required: true }
 
-  - name: grimoire
-    label: Dreams
-    type: collection
-    path: grimoire/dreams/entries
-    filename: "{year}-{month}-{day}-{primary}.md"
-    format: yaml-frontmatter
-    view:
-      primary: title
-      sort: date
-      order: desc
-    fields:
-      - { name: title, label: Title, type: string, required: true }
-      - { name: date, label: Date, type: date, required: true }
-      - { name: image, label: Image, type: image, required: false }
-      - { name: body, label: Entry, type: rich-text, required: true }
+      - name: grimoire
+        label: Dreams
+        type: collection
+        path: grimoire/dreams/entries
+        filename: "{year}-{month}-{day}-{primary}.md"
+        format: yaml-frontmatter
+        view:
+          primary: title
+          sort: date
+          order: desc
+        fields:
+          - { name: title, label: Title, type: string, required: true }
+          - { name: date, label: Date, type: date, required: true }
+          - { name: image, label: Image, type: image, required: false }
+          - { name: body, label: Entry, type: rich-text, required: true }
 
-  - name: spells
-    label: Spells
-    type: collection
-    path: grimoire/spells/entries
-    filename: "{year}-{month}-{day}-{primary}.md"
-    format: yaml-frontmatter
-    view:
-      primary: title
-      sort: date
-      order: desc
-    fields:
-      - { name: title, label: Title, type: string, required: true }
-      - { name: date, label: Date, type: date, required: true }
-      - { name: purpose, label: Purpose, type: string, required: false }
-      - { name: ingredients, label: Ingredients, type: rich-text, required: false }
-      - { name: method, label: Method, type: rich-text, required: false }
-      - { name: notes, label: Notes, type: rich-text, required: false }
-      - { name: outcome, label: Outcome, type: rich-text, required: false }
-      - { name: image, label: Image, type: image, required: false }
-      - { name: body, label: Entry, type: rich-text, required: false }
+      - name: spells
+        label: Spells
+        type: collection
+        path: grimoire/spells/entries
+        filename: "{year}-{month}-{day}-{primary}.md"
+        format: yaml-frontmatter
+        view:
+          primary: title
+          sort: date
+          order: desc
+        fields:
+          - { name: title, label: Title, type: string, required: true }
+          - { name: date, label: Date, type: date, required: true }
+          - { name: purpose, label: Purpose, type: string, required: false }
+          - { name: ingredients, label: Ingredients, type: rich-text, required: false }
+          - { name: method, label: Method, type: rich-text, required: false }
+          - { name: notes, label: Notes, type: rich-text, required: false }
+          - { name: outcome, label: Outcome, type: rich-text, required: false }
+          - { name: image, label: Image, type: image, required: false }
+          - { name: body, label: Entry, type: rich-text, required: false }
 
-  - name: recipes
-    label: Recipes
-    type: collection
-    path: grimoire/recipes/entries
-    filename: "{year}-{month}-{day}-{primary}.md"
-    format: yaml-frontmatter
-    view:
-      primary: title
-      fields: [category, date]
-      sort: date
-      order: desc
-    fields:
-      - { name: title, label: Recipe Name, type: string, required: true }
-      - { name: date, label: Date Made, type: date, required: true }
-      - name: category
-        label: Category
-        type: select
-        required: true
-        options:
-          values:
-            - { value: apothecary, label: Apothecary }
-            - { value: tea-herbal, label: Tea & Herbal }
-            - { value: kitchen, label: Kitchen }
-            - { value: ritual, label: Ritual }
-            - { value: home, label: Home }
-            - { value: bath-body, label: Bath & Body }
-      - { name: purpose, label: Purpose, type: string, required: false }
-      - { name: ingredients, label: Ingredients, type: rich-text, required: true }
-      - { name: method, label: Method, type: rich-text, required: true }
-      - { name: storage, label: Storage, type: string, required: false }
-      - { name: shelf_life, label: Shelf Life, type: string, required: false }
-      - { name: result, label: Result, type: rich-text, required: false }
-      - { name: changes, label: Changes for Next Time, type: rich-text, required: false }
-      - { name: notes, label: Notes, type: rich-text, required: false }
-      - { name: body, label: Additional Entry, type: rich-text, required: false }
+      - name: recipes
+        label: Recipes
+        type: collection
+        path: grimoire/recipes/entries
+        filename: "{year}-{month}-{day}-{primary}.md"
+        format: yaml-frontmatter
+        view:
+          primary: title
+          fields: [category, date]
+          sort: date
+          order: desc
+        fields:
+          - { name: title, label: Recipe Name, type: string, required: true }
+          - { name: date, label: Date Made, type: date, required: true }
+          - name: category
+            label: Category
+            type: select
+            required: true
+            options:
+              values:
+                - { value: apothecary, label: Apothecary }
+                - { value: tea-herbal, label: Tea & Herbal }
+                - { value: kitchen, label: Kitchen }
+                - { value: ritual, label: Ritual }
+                - { value: home, label: Home }
+                - { value: bath-body, label: Bath & Body }
+          - { name: purpose, label: Purpose, type: string, required: false }
+          - { name: ingredients, label: Ingredients, type: rich-text, required: true }
+          - { name: method, label: Method, type: rich-text, required: true }
+          - { name: storage, label: Storage, type: string, required: false }
+          - { name: shelf_life, label: Shelf Life, type: string, required: false }
+          - { name: result, label: Result, type: rich-text, required: false }
+          - { name: changes, label: Changes for Next Time, type: rich-text, required: false }
+          - { name: notes, label: Notes, type: rich-text, required: false }
+          - { name: body, label: Additional Entry, type: rich-text, required: false }
 
-  - name: tarot
-    label: Tarot
-    type: collection
-    path: grimoire/tarot/entries
-    filename: "{year}-{month}-{day}-{primary}.md"
-    format: yaml-frontmatter
-    view:
-      primary: title
-      fields: [deck, orientation, date]
-      sort: date
-      order: desc
-    fields:
-      - { name: title, label: Card or Reading Title, type: string, required: true }
-      - { name: date, label: Date, type: date, required: true }
-      - { name: deck, label: Deck, type: string, required: false }
-      - name: orientation
-        label: Orientation
-        type: select
-        required: false
-        options:
-          values:
-            - { value: upright, label: Upright }
-            - { value: reversed, label: Reversed }
-      - { name: question, label: Question or Prompt, type: string, required: false }
-      - { name: position, label: Spread Position, type: string, required: false }
-      - { name: traditional_meaning, label: Traditional Meaning, type: rich-text, required: false }
-      - { name: interpretation, label: My Interpretation, type: rich-text, required: false }
-      - { name: symbols, label: Symbols Noticed, type: rich-text, required: false }
-      - { name: outcome, label: Outcome or Follow-up, type: rich-text, required: false }
-      - { name: notes, label: Notes, type: rich-text, required: false }
-      - { name: body, label: Additional Entry, type: rich-text, required: false }
+      - name: tarot
+        label: Tarot
+        type: collection
+        path: grimoire/tarot/entries
+        filename: "{year}-{month}-{day}-{primary}.md"
+        format: yaml-frontmatter
+        view:
+          primary: title
+          fields: [deck, orientation, date]
+          sort: date
+          order: desc
+        fields:
+          - { name: title, label: Card or Reading Title, type: string, required: true }
+          - { name: date, label: Date, type: date, required: true }
+          - { name: deck, label: Deck, type: string, required: false }
+          - name: orientation
+            label: Orientation
+            type: select
+            required: false
+            options:
+              values:
+                - { value: upright, label: Upright }
+                - { value: reversed, label: Reversed }
+          - { name: question, label: Question or Prompt, type: string, required: false }
+          - { name: position, label: Spread Position, type: string, required: false }
+          - { name: traditional_meaning, label: Traditional Meaning, type: rich-text, required: false }
+          - { name: interpretation, label: My Interpretation, type: rich-text, required: false }
+          - { name: symbols, label: Symbols Noticed, type: rich-text, required: false }
+          - { name: outcome, label: Outcome or Follow-up, type: rich-text, required: false }
+          - { name: notes, label: Notes, type: rich-text, required: false }
+          - { name: body, label: Additional Entry, type: rich-text, required: false }
 
-  - name: moon
-    label: Moon Journal
-    type: collection
-    path: grimoire/moon/entries
-    filename: "{year}-{month}-{day}-{primary}.md"
-    format: yaml-frontmatter
-    view:
-      primary: title
-      fields: [phase, date, moon_sign]
-      sort: date
-      order: desc
-    fields:
-      - { name: title, label: Entry Title, type: string, required: true }
-      - { name: date, label: Date, type: date, required: true }
-      - name: phase
-        label: Moon Phase
-        type: select
-        required: true
-        options:
-          values:
-            - { value: new-moon, label: New Moon }
-            - { value: waxing-crescent, label: Waxing Crescent }
-            - { value: first-quarter, label: First Quarter }
-            - { value: waxing-gibbous, label: Waxing Gibbous }
-            - { value: full-moon, label: Full Moon }
-            - { value: waning-gibbous, label: Waning Gibbous }
-            - { value: last-quarter, label: Last Quarter }
-            - { value: waning-crescent, label: Waning Crescent }
-      - { name: moon_sign, label: Moon Sign, type: string, required: false }
-      - { name: moon_name, label: Moon Name, type: string, required: false }
-      - { name: weather, label: Weather / Sky, type: string, required: false }
-      - { name: mood, label: Mood / Energy, type: rich-text, required: false }
-      - { name: intentions, label: Intentions, type: rich-text, required: false }
-      - { name: release, label: What I Am Releasing, type: rich-text, required: false }
-      - { name: ritual, label: Ritual / Practice, type: rich-text, required: false }
-      - { name: tarot, label: Tarot Cards Pulled, type: rich-text, required: false }
-      - { name: dreams, label: Dreams, type: rich-text, required: false }
-      - { name: observations, label: Observations, type: rich-text, required: false }
-      - { name: notes, label: Notes, type: rich-text, required: false }
+      - name: moon
+        label: Moon Journal
+        type: collection
+        path: grimoire/moon/entries
+        filename: "{year}-{month}-{day}-{primary}.md"
+        format: yaml-frontmatter
+        view:
+          primary: title
+          fields: [phase, date, moon_sign]
+          sort: date
+          order: desc
+        fields:
+          - { name: title, label: Entry Title, type: string, required: true }
+          - { name: date, label: Date, type: date, required: true }
+          - name: phase
+            label: Moon Phase
+            type: select
+            required: true
+            options:
+              values:
+                - { value: new-moon, label: New Moon }
+                - { value: waxing-crescent, label: Waxing Crescent }
+                - { value: first-quarter, label: First Quarter }
+                - { value: waxing-gibbous, label: Waxing Gibbous }
+                - { value: full-moon, label: Full Moon }
+                - { value: waning-gibbous, label: Waning Gibbous }
+                - { value: last-quarter, label: Last Quarter }
+                - { value: waning-crescent, label: Waning Crescent }
+          - { name: moon_sign, label: Moon Sign, type: string, required: false }
+          - { name: moon_name, label: Moon Name, type: string, required: false }
+          - { name: weather, label: Weather / Sky, type: string, required: false }
+          - { name: mood, label: Mood / Energy, type: rich-text, required: false }
+          - { name: intentions, label: Intentions, type: rich-text, required: false }
+          - { name: release, label: What I Am Releasing, type: rich-text, required: false }
+          - { name: ritual, label: Ritual / Practice, type: rich-text, required: false }
+          - { name: tarot, label: Tarot Cards Pulled, type: rich-text, required: false }
+          - { name: dreams, label: Dreams, type: rich-text, required: false }
+          - { name: observations, label: Observations, type: rich-text, required: false }
+          - { name: notes, label: Notes, type: rich-text, required: false }
 
-  - name: crystals
-    label: Crystals
-    type: collection
-    path: grimoire/crystals/entries
-    filename: "{primary}.md"
-    format: yaml-frontmatter
-    view:
-      primary: title
-      fields: [variety, element]
-      sort: title
-      order: asc
-    fields:
-      - { name: title, label: Crystal Name, type: string, required: true }
-      - { name: variety, label: Variety, type: string, required: false }
-      - { name: image, label: Photo, type: image, required: false }
-      - { name: color, label: Color, type: string, required: false }
-      - { name: element, label: Element, type: string, required: false }
-      - { name: chakra, label: Chakra, type: string, required: false }
-      - { name: zodiac, label: Zodiac, type: string, required: false }
-      - { name: geology, label: Physical / Geological Notes, type: rich-text, required: false }
-      - { name: associations, label: Traditional Associations, type: rich-text, required: false }
-      - { name: uses, label: Uses, type: rich-text, required: false }
-      - { name: care, label: Cleansing & Care, type: rich-text, required: false }
-      - { name: pairings, label: Crystal Pairings, type: rich-text, required: false }
-      - { name: acquired, label: Where / When Acquired, type: string, required: false }
-      - { name: personal_notes, label: My Stone, type: rich-text, required: false }
-      - { name: notes, label: Additional Notes, type: rich-text, required: false }
+      - name: crystals
+        label: Crystals
+        type: collection
+        path: grimoire/crystals/entries
+        filename: "{primary}.md"
+        format: yaml-frontmatter
+        view:
+          primary: title
+          fields: [variety, element]
+          sort: title
+          order: asc
+        fields:
+          - { name: title, label: Crystal Name, type: string, required: true }
+          - { name: variety, label: Variety, type: string, required: false }
+          - { name: image, label: Photo, type: image, required: false }
+          - { name: color, label: Color, type: string, required: false }
+          - { name: element, label: Element, type: string, required: false }
+          - { name: chakra, label: Chakra, type: string, required: false }
+          - { name: zodiac, label: Zodiac, type: string, required: false }
+          - { name: geology, label: Physical / Geological Notes, type: rich-text, required: false }
+          - { name: associations, label: Traditional Associations, type: rich-text, required: false }
+          - { name: uses, label: Uses, type: rich-text, required: false }
+          - { name: care, label: Cleansing & Care, type: rich-text, required: false }
+          - { name: pairings, label: Crystal Pairings, type: rich-text, required: false }
+          - { name: acquired, label: Where / When Acquired, type: string, required: false }
+          - { name: personal_notes, label: My Stone, type: rich-text, required: false }
+          - { name: notes, label: Additional Notes, type: rich-text, required: false }
 
-  - name: signs_symbols
-    label: Signs & Symbols
-    type: collection
-    path: grimoire/signs-symbols/entries
-    filename: "{primary}.md"
-    format: yaml-frontmatter
-    view:
-      primary: title
-      fields: [title, category]
-      sort: title
-      order: asc
-    fields:
-      - { name: title, label: Title, type: string, required: true }
-      - name: category
-        label: Category
-        type: select
-        required: true
-        options:
-          values:
-            - { value: numerology, label: Numerology }
-            - { value: repeating-numbers, label: Repeating Numbers }
-            - { value: omens-signs, label: Omens & Signs }
-            - { value: animal-guides, label: Animal Guides }
-            - { value: symbols, label: Symbols }
-            - { value: colors-associations, label: Colors & Associations }
-            - { value: elements-directions, label: Elements & Directions }
-            - { value: plants-nature, label: Plants & Nature }
-            - { value: folklore, label: Folklore }
-            - { value: personal-observations, label: Personal Observations }
-      - { name: image, label: Image, type: image, required: false }
-      - { name: meaning, label: Meaning, type: rich-text, required: false }
-      - { name: interpretations, label: Common Interpretations, type: rich-text, required: false }
-      - { name: personal_notes, label: Personal Notes, type: rich-text, required: false }
-      - { name: related_symbols, label: Related Symbols, type: string, required: false }
-      - { name: body, label: Additional Notes, type: rich-text, required: false }
+      - name: signs_symbols
+        label: Signs & Symbols
+        type: collection
+        path: grimoire/signs-symbols/entries
+        filename: "{primary}.md"
+        format: yaml-frontmatter
+        view:
+          primary: title
+          fields: [title, category]
+          sort: title
+          order: asc
+        fields:
+          - { name: title, label: Title, type: string, required: true }
+          - name: category
+            label: Category
+            type: select
+            required: true
+            options:
+              values:
+                - { value: numerology, label: Numerology }
+                - { value: repeating-numbers, label: Repeating Numbers }
+                - { value: omens-signs, label: Omens & Signs }
+                - { value: animal-guides, label: Animal Guides }
+                - { value: symbols, label: Symbols }
+                - { value: colors-associations, label: Colors & Associations }
+                - { value: elements-directions, label: Elements & Directions }
+                - { value: plants-nature, label: Plants & Nature }
+                - { value: folklore, label: Folklore }
+                - { value: personal-observations, label: Personal Observations }
+          - { name: image, label: Image, type: image, required: false }
+          - { name: meaning, label: Meaning, type: rich-text, required: false }
+          - { name: interpretations, label: Common Interpretations, type: rich-text, required: false }
+          - { name: personal_notes, label: Personal Notes, type: rich-text, required: false }
+          - { name: related_symbols, label: Related Symbols, type: string, required: false }
+          - { name: body, label: Additional Notes, type: rich-text, required: false }
 
   - name: plants
     label: Plants
