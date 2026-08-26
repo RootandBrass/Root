@@ -1,5 +1,6 @@
 ---
 title: Angellite
+variety: Angellite
 color: Blue
 element: Air
 chakra: Throat, Third Eye, Crown
