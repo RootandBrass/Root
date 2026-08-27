@@ -66,6 +66,7 @@ form.addEventListener('submit',async e=>{e.preventDefault();if(!activeType)retur
 const scratch=document.getElementById('scratch'),saved=document.getElementById('savedStatus'),key='rootandbrass-crone-scratch';scratch.value=localStorage.getItem(key)||'';let timer;scratch.oninput=()=>{saved.textContent='Saving…';clearTimeout(timer);timer=setTimeout(()=>{localStorage.setItem(key,scratch.value);saved.textContent='Saved on this device.'},250)};document.getElementById('clearNote').onclick=()=>{scratch.value='';localStorage.removeItem(key);saved.textContent='Note cleared.'};if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('/crone/sw.js'));
 </script>
 <script src="/crone/garden.js?v=2"></script>
+<script src="/crone/tarot.js?v=1"></script>
 <script src="/crone/edit.js?v=3"></script>
 <script src="/crone/features.js?v=2"></script>
 <script src="/crone/plants-v2.js?v=1"></script>
