@@ -1,0 +1,313 @@
+# Traditional Rider-Waite-Smith-style tarot meanings used by tarot entries.
+the-fool:
+  name: 'The Fool'
+  upright: 'New beginnings, freedom, spontaneity, innocence, and a leap of faith.'
+  reversed: 'Recklessness, poor judgment, fear of beginning, or holding back from a necessary risk.'
+the-magician:
+  name: 'The Magician'
+  upright: 'Manifestation, focused will, resourcefulness, skill, and turning intention into action.'
+  reversed: 'Manipulation, scattered energy, unused talents, deception, or intentions without action.'
+the-high-priestess:
+  name: 'The High Priestess'
+  upright: 'Intuition, mystery, inner knowing, sacred wisdom, and listening beneath the surface.'
+  reversed: 'Blocked intuition, hidden motives, secrets, confusion, or ignoring your inner voice.'
+the-empress:
+  name: 'The Empress'
+  upright: 'Abundance, creativity, nurture, beauty, fertility, and growth.'
+  reversed: 'Creative blocks, smothering, dependence, neglecting yourself, or stalled growth.'
+the-emperor:
+  name: 'The Emperor'
+  upright: 'Authority, structure, stability, leadership, protection, and firm boundaries.'
+  reversed: 'Rigidity, domination, misuse of power, stubbornness, or lack of discipline.'
+the-hierophant:
+  name: 'The Hierophant'
+  upright: 'Tradition, spiritual teaching, shared beliefs, institutions, and trusted guidance.'
+  reversed: 'Questioning tradition, unconventional beliefs, rebellion, or choosing your own path.'
+the-lovers:
+  name: 'The Lovers'
+  upright: 'Love, harmony, meaningful choice, alignment of values, and wholehearted connection.'
+  reversed: 'Disharmony, imbalance, misaligned values, temptation, or a difficult relationship choice.'
+the-chariot:
+  name: 'The Chariot'
+  upright: 'Determination, disciplined movement, victory, control, and overcoming opposition.'
+  reversed: 'Loss of direction, aggression, obstacles, scattered will, or forcing the outcome.'
+strength:
+  name: 'Strength'
+  upright: 'Courage, patience, compassion, inner power, and gentle self-mastery.'
+  reversed: 'Self-doubt, insecurity, raw emotion, depleted confidence, or misused strength.'
+the-hermit:
+  name: 'The Hermit'
+  upright: 'Solitude, reflection, wisdom, soul-searching, and guidance from within.'
+  reversed: 'Isolation, loneliness, withdrawal, avoidance, or refusing wise counsel.'
+wheel-of-fortune:
+  name: 'Wheel of Fortune'
+  upright: 'Cycles, change, turning points, destiny, opportunity, and movement.'
+  reversed: 'Unwelcome change, resistance, repeated patterns, bad timing, or feeling powerless.'
+justice:
+  name: 'Justice'
+  upright: 'Truth, fairness, accountability, clear decisions, and cause and effect.'
+  reversed: 'Unfairness, dishonesty, avoidance of responsibility, bias, or consequences delayed.'
+the-hanged-man:
+  name: 'The Hanged Man'
+  upright: 'Surrender, pause, new perspective, acceptance, and purposeful waiting.'
+  reversed: 'Stalling, needless sacrifice, resistance, indecision, or clinging to an old viewpoint.'
+death:
+  name: 'Death'
+  upright: 'Endings, transformation, release, transition, and necessary renewal.'
+  reversed: 'Resistance to change, stagnation, fear of endings, or carrying what must be released.'
+temperance:
+  name: 'Temperance'
+  upright: 'Balance, moderation, healing, patience, harmony, and blending opposites.'
+  reversed: 'Excess, imbalance, impatience, conflict, or a need to recalibrate.'
+the-devil:
+  name: 'The Devil'
+  upright: 'Attachment, temptation, shadow work, material bondage, and limiting patterns.'
+  reversed: 'Breaking free, reclaiming power, seeing the trap, detachment, or confronting denial.'
+the-tower:
+  name: 'The Tower'
+  upright: 'Sudden truth, upheaval, revelation, collapse of false structures, and liberation.'
+  reversed: 'Avoiding necessary change, fear of upheaval, a delayed crisis, or quiet inner collapse.'
+the-star:
+  name: 'The Star'
+  upright: 'Hope, healing, renewal, inspiration, serenity, and spiritual trust.'
+  reversed: 'Discouragement, doubt, disconnection, low hope, or difficulty receiving healing.'
+the-moon:
+  name: 'The Moon'
+  upright: 'Intuition, dreams, uncertainty, illusion, subconscious fears, and mystery.'
+  reversed: 'Confusion lifting, secrets revealed, repressed emotion, anxiety, or distrusting intuition.'
+the-sun:
+  name: 'The Sun'
+  upright: 'Joy, clarity, vitality, confidence, warmth, and success.'
+  reversed: 'Temporary sadness, delayed success, unrealistic optimism, or difficulty seeing the good.'
+judgement:
+  name: 'Judgement'
+  upright: 'Awakening, reckoning, forgiveness, renewal, and answering a higher calling.'
+  reversed: 'Self-doubt, harsh self-judgment, refusing the call, or avoiding an important lesson.'
+the-world:
+  name: 'The World'
+  upright: 'Completion, wholeness, achievement, integration, travel, and fulfilled cycles.'
+  reversed: 'Unfinished business, delays, lack of closure, shortcuts, or a lesson not yet integrated.'
+ace-of-wands:
+  name: 'Ace of Wands'
+  upright: 'Inspiration, creative spark, passion, potential, and an exciting beginning.'
+  reversed: 'Delays, low energy, blocked creativity, false starts, or passion without direction.'
+two-of-wands:
+  name: 'Two of Wands'
+  upright: 'Planning, future vision, personal power, and choosing the next horizon.'
+  reversed: 'Fear of the unknown, poor planning, limited options, or reluctance to leave comfort.'
+three-of-wands:
+  name: 'Three of Wands'
+  upright: 'Expansion, foresight, progress, opportunity, and results beginning to arrive.'
+  reversed: 'Delays, obstacles, frustrated plans, limited growth, or playing too small.'
+four-of-wands:
+  name: 'Four of Wands'
+  upright: 'Celebration, homecoming, harmony, community, and a stable milestone.'
+  reversed: 'Tension at home, canceled celebration, instability, or feeling unsupported.'
+five-of-wands:
+  name: 'Five of Wands'
+  upright: 'Competition, conflict, lively challenge, differing opinions, and testing skills.'
+  reversed: 'Conflict avoidance, inner tension, compromise, or a struggle beginning to settle.'
+six-of-wands:
+  name: 'Six of Wands'
+  upright: 'Recognition, victory, confidence, public success, and earned praise.'
+  reversed: 'Ego, private achievement, lack of recognition, self-doubt, or a fall from favor.'
+seven-of-wands:
+  name: 'Seven of Wands'
+  upright: 'Courage, defense, perseverance, boundaries, and standing your ground.'
+  reversed: 'Exhaustion, overwhelm, defensiveness, giving up, or choosing battles poorly.'
+eight-of-wands:
+  name: 'Eight of Wands'
+  upright: 'Speed, momentum, messages, travel, alignment, and rapid progress.'
+  reversed: 'Delays, miscommunication, scattered motion, frustration, or acting too quickly.'
+nine-of-wands:
+  name: 'Nine of Wands'
+  upright: 'Resilience, persistence, caution, boundaries, and one final effort.'
+  reversed: 'Fatigue, paranoia, stubbornness, weak boundaries, or nearing burnout.'
+ten-of-wands:
+  name: 'Ten of Wands'
+  upright: 'Responsibility, burden, hard work, pressure, and carrying too much.'
+  reversed: 'Release, delegation, collapse under pressure, avoidance, or refusing needed help.'
+page-of-wands:
+  name: 'Page of Wands'
+  upright: 'Curiosity, discovery, enthusiasm, a creative message, and bold exploration.'
+  reversed: 'Immaturity, bad news, lack of direction, procrastination, or unreliable enthusiasm.'
+knight-of-wands:
+  name: 'Knight of Wands'
+  upright: 'Adventure, passion, confidence, swift action, and fearless pursuit.'
+  reversed: 'Impulsiveness, anger, restlessness, recklessness, or energy that burns out quickly.'
+queen-of-wands:
+  name: 'Queen of Wands'
+  upright: 'Confidence, warmth, independence, charisma, creativity, and courageous leadership.'
+  reversed: 'Jealousy, insecurity, demanding behavior, burnout, or shrinking from your power.'
+king-of-wands:
+  name: 'King of Wands'
+  upright: 'Vision, leadership, boldness, entrepreneurship, and inspiring action.'
+  reversed: 'Arrogance, impulsive leadership, unrealistic expectations, or controlling behavior.'
+ace-of-cups:
+  name: 'Ace of Cups'
+  upright: 'New love, emotional renewal, compassion, intuition, and an open heart.'
+  reversed: 'Emotional blockage, emptiness, repressed feelings, self-love needed, or a missed connection.'
+two-of-cups:
+  name: 'Two of Cups'
+  upright: 'Mutual attraction, partnership, reconciliation, harmony, and equal exchange.'
+  reversed: 'Imbalance, separation, mistrust, miscommunication, or a strained partnership.'
+three-of-cups:
+  name: 'Three of Cups'
+  upright: 'Friendship, celebration, support, creativity, and joyful community.'
+  reversed: 'Overindulgence, gossip, exclusion, third-party tension, or celebration turned excessive.'
+four-of-cups:
+  name: 'Four of Cups'
+  upright: 'Contemplation, emotional withdrawal, reevaluation, and an overlooked opportunity.'
+  reversed: 'Renewed interest, awareness, choosing again, emerging from withdrawal, or restless boredom.'
+five-of-cups:
+  name: 'Five of Cups'
+  upright: 'Grief, disappointment, regret, and focusing on what has been lost.'
+  reversed: 'Acceptance, forgiveness, recovery, hope returning, or learning to notice what remains.'
+six-of-cups:
+  name: 'Six of Cups'
+  upright: 'Nostalgia, kindness, childhood memories, reunion, and innocent joy.'
+  reversed: 'Living in the past, unrealistic nostalgia, immaturity, or moving beyond old memories.'
+seven-of-cups:
+  name: 'Seven of Cups'
+  upright: 'Choices, imagination, dreams, temptation, and many possibilities.'
+  reversed: 'Clarity, grounded choice, ending confusion, overwhelm, or seeing through illusion.'
+eight-of-cups:
+  name: 'Eight of Cups'
+  upright: 'Walking away, emotional maturity, seeking deeper meaning, and necessary departure.'
+  reversed: 'Fear of leaving, drifting, returning to a situation, avoidance, or settling for less.'
+nine-of-cups:
+  name: 'Nine of Cups'
+  upright: 'Contentment, pleasure, gratitude, wishes fulfilled, and emotional satisfaction.'
+  reversed: 'Dissatisfaction, smugness, excess, shallow pleasure, or a wish that disappoints.'
+ten-of-cups:
+  name: 'Ten of Cups'
+  upright: 'Emotional fulfillment, family harmony, belonging, lasting joy, and shared love.'
+  reversed: 'Family tension, broken expectations, disconnection, disharmony, or appearances masking strain.'
+page-of-cups:
+  name: 'Page of Cups'
+  upright: 'Emotional openness, intuition, creativity, surprise, and a heartfelt message.'
+  reversed: 'Emotional immaturity, insecurity, creative block, escapism, or ignored intuition.'
+knight-of-cups:
+  name: 'Knight of Cups'
+  upright: 'Romance, charm, imagination, idealism, and following the heart.'
+  reversed: 'Moodiness, unrealistic fantasy, jealousy, disappointment, or charming words without substance.'
+queen-of-cups:
+  name: 'Queen of Cups'
+  upright: 'Compassion, emotional wisdom, intuition, calm, and nurturing presence.'
+  reversed: 'Emotional overwhelm, dependence, martyrdom, insecurity, or weak emotional boundaries.'
+king-of-cups:
+  name: 'King of Cups'
+  upright: 'Emotional balance, diplomacy, wisdom, compassion, and steady support.'
+  reversed: 'Emotional manipulation, suppression, moodiness, coldness, or poor emotional control.'
+ace-of-swords:
+  name: 'Ace of Swords'
+  upright: 'Clarity, truth, breakthrough, decisive thought, and a powerful new idea.'
+  reversed: 'Confusion, misinformation, harsh words, mental fog, or an idea not ready to succeed.'
+two-of-swords:
+  name: 'Two of Swords'
+  upright: 'Difficult choice, stalemate, protected emotions, and needing more clarity.'
+  reversed: 'Indecision breaking, information revealed, overwhelm, avoidance, or a forced choice.'
+three-of-swords:
+  name: 'Three of Swords'
+  upright: 'Heartbreak, sorrow, painful truth, separation, and emotional release.'
+  reversed: 'Healing, forgiveness, recovery, lingering pain, or refusing to process grief.'
+four-of-swords:
+  name: 'Four of Swords'
+  upright: 'Rest, recovery, retreat, contemplation, and restoring the mind.'
+  reversed: 'Restlessness, burnout, stagnation, returning too soon, or a forced pause.'
+five-of-swords:
+  name: 'Five of Swords'
+  upright: 'Conflict, hollow victory, tension, betrayal, and winning at a cost.'
+  reversed: 'Reconciliation, remorse, making amends, unresolved resentment, or conflict avoidance.'
+six-of-swords:
+  name: 'Six of Swords'
+  upright: 'Transition, moving on, recovery, travel, and leaving difficulty behind.'
+  reversed: 'Resistance to transition, emotional baggage, delays, or being pulled back into trouble.'
+seven-of-swords:
+  name: 'Seven of Swords'
+  upright: 'Strategy, secrecy, independence, deception, and acting behind the scenes.'
+  reversed: 'Confession, exposure, self-deception, poor strategy, or returning what was taken.'
+eight-of-swords:
+  name: 'Eight of Swords'
+  upright: 'Restriction, trapped thinking, fear, helplessness, and self-imposed limits.'
+  reversed: 'Freedom, new perspective, reclaiming agency, facing fear, or seeing available choices.'
+nine-of-swords:
+  name: 'Nine of Swords'
+  upright: 'Anxiety, sleeplessness, guilt, worry, and thoughts that magnify suffering.'
+  reversed: 'Hope returning, seeking help, releasing worry, shame, or deeply buried anxiety.'
+ten-of-swords:
+  name: 'Ten of Swords'
+  upright: 'Painful ending, betrayal, collapse, rock bottom, and the end of a hard cycle.'
+  reversed: 'Recovery, survival, resisting an ending, lingering wounds, or an unavoidable conclusion delayed.'
+page-of-swords:
+  name: 'Page of Swords'
+  upright: 'Curiosity, alertness, new ideas, truth-seeking, and direct communication.'
+  reversed: 'Gossip, defensiveness, scattered thinking, empty talk, or acting without enough knowledge.'
+knight-of-swords:
+  name: 'Knight of Swords'
+  upright: 'Ambition, speed, direct action, conviction, and charging toward a goal.'
+  reversed: 'Aggression, impatience, recklessness, harsh communication, or acting without a plan.'
+queen-of-swords:
+  name: 'Queen of Swords'
+  upright: 'Honesty, independence, clear boundaries, discernment, and perceptive judgment.'
+  reversed: 'Bitterness, coldness, harsh judgment, isolation, or words used as weapons.'
+king-of-swords:
+  name: 'King of Swords'
+  upright: 'Intellect, truth, authority, ethics, strategy, and impartial judgment.'
+  reversed: 'Manipulation, cruelty, abuse of authority, rigid thinking, or dishonest reasoning.'
+ace-of-pentacles:
+  name: 'Ace of Pentacles'
+  upright: 'A practical beginning, prosperity, opportunity, stability, and a seed worth tending.'
+  reversed: 'Missed opportunity, poor planning, scarcity thinking, instability, or material delay.'
+two-of-pentacles:
+  name: 'Two of Pentacles'
+  upright: 'Balance, adaptability, time management, priorities, and handling change.'
+  reversed: 'Overcommitment, disorganization, imbalance, dropped responsibilities, or financial strain.'
+three-of-pentacles:
+  name: 'Three of Pentacles'
+  upright: 'Teamwork, craftsmanship, learning, collaboration, and recognition of skill.'
+  reversed: 'Poor teamwork, low standards, lack of planning, conflict, or work going unnoticed.'
+four-of-pentacles:
+  name: 'Four of Pentacles'
+  upright: 'Security, conservation, control, boundaries, and protecting resources.'
+  reversed: 'Greed, fear of loss, overspending, possessiveness, or learning to loosen control.'
+five-of-pentacles:
+  name: 'Five of Pentacles'
+  upright: 'Hardship, exclusion, financial worry, illness, and feeling left outside.'
+  reversed: 'Recovery, assistance, improving conditions, renewed faith, or accepting support.'
+six-of-pentacles:
+  name: 'Six of Pentacles'
+  upright: 'Generosity, charity, support, fair exchange, and sharing resources.'
+  reversed: 'Strings attached, debt, inequality, one-sided giving, or misuse of generosity.'
+seven-of-pentacles:
+  name: 'Seven of Pentacles'
+  upright: 'Patience, assessment, long-term effort, investment, and waiting for growth.'
+  reversed: 'Impatience, poor return, wasted effort, lack of follow-through, or changing course.'
+eight-of-pentacles:
+  name: 'Eight of Pentacles'
+  upright: 'Skill-building, diligence, apprenticeship, quality work, and steady improvement.'
+  reversed: 'Perfectionism, boredom, low quality, shortcuts, or work without meaningful growth.'
+nine-of-pentacles:
+  name: 'Nine of Pentacles'
+  upright: 'Independence, comfort, self-sufficiency, refinement, and earned abundance.'
+  reversed: 'Dependence, overwork, living beyond means, isolation, or success without satisfaction.'
+ten-of-pentacles:
+  name: 'Ten of Pentacles'
+  upright: 'Legacy, family wealth, long-term security, tradition, and lasting foundations.'
+  reversed: 'Family disputes, financial loss, unstable foundations, short-term thinking, or legacy burdens.'
+page-of-pentacles:
+  name: 'Page of Pentacles'
+  upright: 'Study, practical opportunity, ambition, a financial message, and grounded beginnings.'
+  reversed: 'Procrastination, lack of progress, missed lessons, impractical plans, or poor follow-through.'
+knight-of-pentacles:
+  name: 'Knight of Pentacles'
+  upright: 'Reliability, patience, routine, hard work, and steady progress.'
+  reversed: 'Stagnation, stubbornness, boredom, laziness, or work becoming joyless and repetitive.'
+queen-of-pentacles:
+  name: 'Queen of Pentacles'
+  upright: 'Practical care, abundance, home, resourcefulness, and grounded nurturing.'
+  reversed: 'Self-neglect, work-home imbalance, insecurity, possessiveness, or material dependence.'
+king-of-pentacles:
+  name: 'King of Pentacles'
+  upright: 'Prosperity, stability, business wisdom, dependable leadership, and material mastery.'
+  reversed: 'Greed, stubbornness, materialism, corruption, or using wealth and status to control.'
