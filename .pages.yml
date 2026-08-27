@@ -111,17 +111,101 @@ content:
           - { name: title, label: Card or Reading Title, type: string, required: true }
           - { name: date, label: Date, type: date, required: true }
           - { name: deck, label: Deck, type: string, required: false }
+          - name: card
+            label: Tarot Card
+            type: select
+            required: true
+            options:
+              values:
+                - { value: the-fool, label: The Fool }
+                - { value: the-magician, label: The Magician }
+                - { value: the-high-priestess, label: The High Priestess }
+                - { value: the-empress, label: The Empress }
+                - { value: the-emperor, label: The Emperor }
+                - { value: the-hierophant, label: The Hierophant }
+                - { value: the-lovers, label: The Lovers }
+                - { value: the-chariot, label: The Chariot }
+                - { value: strength, label: Strength }
+                - { value: the-hermit, label: The Hermit }
+                - { value: wheel-of-fortune, label: Wheel of Fortune }
+                - { value: justice, label: Justice }
+                - { value: the-hanged-man, label: The Hanged Man }
+                - { value: death, label: Death }
+                - { value: temperance, label: Temperance }
+                - { value: the-devil, label: The Devil }
+                - { value: the-tower, label: The Tower }
+                - { value: the-star, label: The Star }
+                - { value: the-moon, label: The Moon }
+                - { value: the-sun, label: The Sun }
+                - { value: judgement, label: Judgement }
+                - { value: the-world, label: The World }
+                - { value: ace-of-wands, label: Ace of Wands }
+                - { value: two-of-wands, label: Two of Wands }
+                - { value: three-of-wands, label: Three of Wands }
+                - { value: four-of-wands, label: Four of Wands }
+                - { value: five-of-wands, label: Five of Wands }
+                - { value: six-of-wands, label: Six of Wands }
+                - { value: seven-of-wands, label: Seven of Wands }
+                - { value: eight-of-wands, label: Eight of Wands }
+                - { value: nine-of-wands, label: Nine of Wands }
+                - { value: ten-of-wands, label: Ten of Wands }
+                - { value: page-of-wands, label: Page of Wands }
+                - { value: knight-of-wands, label: Knight of Wands }
+                - { value: queen-of-wands, label: Queen of Wands }
+                - { value: king-of-wands, label: King of Wands }
+                - { value: ace-of-cups, label: Ace of Cups }
+                - { value: two-of-cups, label: Two of Cups }
+                - { value: three-of-cups, label: Three of Cups }
+                - { value: four-of-cups, label: Four of Cups }
+                - { value: five-of-cups, label: Five of Cups }
+                - { value: six-of-cups, label: Six of Cups }
+                - { value: seven-of-cups, label: Seven of Cups }
+                - { value: eight-of-cups, label: Eight of Cups }
+                - { value: nine-of-cups, label: Nine of Cups }
+                - { value: ten-of-cups, label: Ten of Cups }
+                - { value: page-of-cups, label: Page of Cups }
+                - { value: knight-of-cups, label: Knight of Cups }
+                - { value: queen-of-cups, label: Queen of Cups }
+                - { value: king-of-cups, label: King of Cups }
+                - { value: ace-of-swords, label: Ace of Swords }
+                - { value: two-of-swords, label: Two of Swords }
+                - { value: three-of-swords, label: Three of Swords }
+                - { value: four-of-swords, label: Four of Swords }
+                - { value: five-of-swords, label: Five of Swords }
+                - { value: six-of-swords, label: Six of Swords }
+                - { value: seven-of-swords, label: Seven of Swords }
+                - { value: eight-of-swords, label: Eight of Swords }
+                - { value: nine-of-swords, label: Nine of Swords }
+                - { value: ten-of-swords, label: Ten of Swords }
+                - { value: page-of-swords, label: Page of Swords }
+                - { value: knight-of-swords, label: Knight of Swords }
+                - { value: queen-of-swords, label: Queen of Swords }
+                - { value: king-of-swords, label: King of Swords }
+                - { value: ace-of-pentacles, label: Ace of Pentacles }
+                - { value: two-of-pentacles, label: Two of Pentacles }
+                - { value: three-of-pentacles, label: Three of Pentacles }
+                - { value: four-of-pentacles, label: Four of Pentacles }
+                - { value: five-of-pentacles, label: Five of Pentacles }
+                - { value: six-of-pentacles, label: Six of Pentacles }
+                - { value: seven-of-pentacles, label: Seven of Pentacles }
+                - { value: eight-of-pentacles, label: Eight of Pentacles }
+                - { value: nine-of-pentacles, label: Nine of Pentacles }
+                - { value: ten-of-pentacles, label: Ten of Pentacles }
+                - { value: page-of-pentacles, label: Page of Pentacles }
+                - { value: knight-of-pentacles, label: Knight of Pentacles }
+                - { value: queen-of-pentacles, label: Queen of Pentacles }
+                - { value: king-of-pentacles, label: King of Pentacles }
           - name: orientation
             label: Orientation
             type: select
-            required: false
+            required: true
+            default: upright
             options:
               values:
                 - { value: upright, label: Upright }
                 - { value: reversed, label: Reversed }
           - { name: question, label: Question or Prompt, type: string, required: false }
           - { name: position, label: Spread Position, type: string, required: false }
-          - { name: traditional_meaning, label: Traditional Meaning, type: rich-text, required: false }
           - { name: interpretation, label: My Interpretation, type: rich-text, required: false }
           - { name: symbols, label: Symbols Noticed, type: rich-text, required: false }
           - { name: outcome, label: Outcome or Follow-up, type: rich-text, required: false }
