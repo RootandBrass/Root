@@ -97,19 +97,38 @@
 
             <!-- TRADITIONAL MEANING -->
 
-            {% if page.traditional_meaning %}
+            {% assign tarot_card = site.data.tarot_meanings[page.card] %}
+            {% assign tarot_orientation = page.orientation | default: "upright" %}
 
-             <section class="tarot-reading-section">
+            {% if tarot_card %}
+
+                <section class="tarot-reading-section">
+
+                    <p class="tarot-section-label">
+                        Traditional Meaning · {{ tarot_card.name }} · {{ tarot_orientation | capitalize }}
+                    </p>
+
+                    {% if tarot_orientation == "reversed" %}
+                        {{ tarot_card.reversed | markdownify }}
+                    {% else %}
+                        {{ tarot_card.upright | markdownify }}
+                    {% endif %}
+
+                </section>
+
+            {% elsif page.traditional_meaning %}
+
+                <section class="tarot-reading-section">
 
                     <p class="tarot-section-label">
                         Traditional Meaning
                     </p>
 
-                {{ page.traditional_meaning | markdownify }}
+                    {{ page.traditional_meaning | markdownify }}
 
-             </section>
+                </section>
 
-{% endif %}
+            {% endif %}
 
 
             <!-- INTERPRETATION -->
