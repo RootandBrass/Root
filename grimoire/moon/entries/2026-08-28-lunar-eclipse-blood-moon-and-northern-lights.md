@@ -2,7 +2,7 @@
 title: "Lunar eclipse, blood moon, and northern lights"
 date: "2026-08-28"
 phase: "full-moon"
-moon_name: "Blood moon"
+moon_name: "Sturgeon moon"
 mood: |-
   Anxiety
   This week. Started out feeling weird and moved into heavy. Before crashing and lifting right at the very end. 
