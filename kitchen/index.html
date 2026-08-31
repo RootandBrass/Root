@@ -41,6 +41,19 @@
       </div>
     </section>
 
+    <section class="kitchen-search" aria-labelledby="recipe-search-title">
+      <div class="kitchen-search-copy">
+        <p class="eyebrow">Search the kitchen</p>
+        <h2 id="recipe-search-title">Find a recipe</h2>
+        <p>Search by recipe name, category, ingredient, or anything written in the recipe.</p>
+      </div>
+      <div class="kitchen-search-controls">
+        <label for="recipe-search">Search recipes</label>
+        <input id="recipe-search" type="search" placeholder="Try chicken, lemon, cinnamon…" autocomplete="off">
+        <button id="clear-search" type="button" hidden>Clear search</button>
+      </div>
+    </section>
+
     <section id="category-view" class="kitchen-index" aria-labelledby="recipe-index-title">
       <header class="kitchen-index-heading">
         <div>
@@ -78,7 +91,10 @@
 
       <div class="kitchen-recipe-grid">
         {% for recipe in kitchen_recipes %}
-          <a class="kitchen-card" data-category="{{ recipe.category }}" href="{{ recipe.url | relative_url }}">
+          <a class="kitchen-card"
+             data-category="{{ recipe.category }}"
+             data-search="{{ recipe.title | append: ' ' | append: recipe.category | append: ' ' | append: recipe.content | strip_html | strip_newlines | downcase | escape }}"
+             href="{{ recipe.url | relative_url }}">
             {% if recipe.photo %}
               <div class="kitchen-card-media">
                 <img src="{{ recipe.photo | relative_url }}" alt="{{ recipe.title }}">
@@ -100,6 +116,7 @@
       </div>
 
       <p id="no-recipes" hidden>No recipes have been added to this section yet.</p>
+      <p id="no-search-results" hidden>No recipes match that search.</p>
     </section>
   </main>
 
@@ -112,12 +129,62 @@
       const recipeCards = Array.from(document.querySelectorAll(".kitchen-card"));
       const categoryButtons = Array.from(document.querySelectorAll(".kitchen-categories button"));
       const noRecipes = document.getElementById("no-recipes");
+      const searchInput = document.getElementById("recipe-search");
+      const clearSearchButton = document.getElementById("clear-search");
+      const noSearchResults = document.getElementById("no-search-results");
+
+      function resetRecipeCards() {
+        recipeCards.forEach(function (card) { card.hidden = false; });
+        noRecipes.hidden = true;
+        noSearchResults.hidden = true;
+      }
+
+      function showSearchResults(query) {
+        const normalizedQuery = query.trim().toLowerCase();
+
+        if (!normalizedQuery) {
+          clearSearchButton.hidden = true;
+          recipeView.hidden = true;
+          categoryView.hidden = false;
+          categoryTitle.textContent = "";
+          resetRecipeCards();
+          return;
+        }
+
+        let visibleRecipes = 0;
+        recipeCards.forEach(function (card) {
+          const searchableText = (card.dataset.search || "").toLowerCase();
+          card.hidden = !searchableText.includes(normalizedQuery);
+          if (!card.hidden) visibleRecipes++;
+        });
+
+        clearSearchButton.hidden = false;
+        categoryView.hidden = true;
+        recipeView.hidden = false;
+        categoryTitle.textContent = "Search results";
+        noRecipes.hidden = true;
+        noSearchResults.hidden = visibleRecipes > 0;
+      }
+
+      searchInput.addEventListener("input", function () {
+        showSearchResults(searchInput.value);
+      });
+
+      clearSearchButton.addEventListener("click", function () {
+        searchInput.value = "";
+        showSearchResults("");
+        searchInput.focus();
+      });
 
       categoryButtons.forEach(function (button) {
         const category = button.dataset.category.trim().toLowerCase();
         button.addEventListener("click", function () {
           const selectedName = button.querySelector(".category-name").textContent.trim();
           let visibleRecipes = 0;
+
+          searchInput.value = "";
+          clearSearchButton.hidden = true;
+          noSearchResults.hidden = true;
 
           recipeCards.forEach(function (card) {
             const recipeCategory = (card.dataset.category || "").trim().toLowerCase();
@@ -134,9 +201,11 @@
       });
 
       backButton.addEventListener("click", function () {
+        searchInput.value = "";
+        clearSearchButton.hidden = true;
         recipeView.hidden = true;
         categoryView.hidden = false;
-        recipeCards.forEach(function (card) { card.hidden = false; });
+        resetRecipeCards();
         window.scrollTo({ top: categoryView.offsetTop - 24, behavior: "smooth" });
       });
     });
