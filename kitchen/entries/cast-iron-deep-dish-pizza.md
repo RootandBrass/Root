@@ -1,7 +1,9 @@
 ---
-title: Cast Iron Deep Dish Pizza
-category: pizza
+title: "Cast Iron Deep Dish Pizza"
+category: "pizza"
+body: "Do not preheat the cast iron or precook the dough"
 ---
+
 ## Dough
 
 - 3 ¼ cups (16.25 ounces) all-purpose flour
