@@ -1,8 +1,7 @@
 ---
-title: "Pizza King-Style BBQ Ham Pizza"
-category: copycat-recipes
+title: Pizza King-Style BBQ Ham Pizza
+category: pizza
 ---
-
 Notebook notes: par-bake the crust for 5 minutes so the sauce does not soak in. Use extra sauce and cheese.
 
 ## Ingredients
