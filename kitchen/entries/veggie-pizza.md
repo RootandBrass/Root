@@ -1,8 +1,7 @@
 ---
-title: "Veggie Pizza"
-category: hors-doeuvres
+title: Veggie Pizza
+category: pizza
 ---
-
 ## Ingredients
 
 - 1 can (8 ounces) refrigerated crescent-roll dough
@@ -24,3 +23,4 @@ category: hors-doeuvres
 7. Top with fresh veggies and additional chives if desired.
 8. Use a pizza cutter or large knife to cut down to appetizer size pieces and serve.
 9. Can be refrigerated for up to an hour before serving.
+
