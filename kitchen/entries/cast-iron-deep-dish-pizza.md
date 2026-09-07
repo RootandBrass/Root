@@ -1,8 +1,7 @@
 ---
-title: "Cast Iron Deep Dish Pizza"
-category: meals-pizza
+title: Cast Iron Deep Dish Pizza
+category: pizza
 ---
-
 ## Dough
 
 - 3 ¼ cups (16.25 ounces) all-purpose flour
@@ -62,4 +61,4 @@ Stir all sauce ingredients together in a medium bowl and set aside. Adjust seaso
 7. Bake at 375°F for 55–60 minutes.
 8. Let the pizza rest for 10 minutes before slicing and serving.
 
-_Source: Lodge Cast Iron, Cast Iron Deep Dish Pizza Pan Recipe._
+*Source: Lodge Cast Iron, Cast Iron Deep Dish Pizza Pan Recipe.*
