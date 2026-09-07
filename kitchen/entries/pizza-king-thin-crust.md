@@ -1,6 +1,6 @@
 ---
 title: Pizza King Thin Crust and Pizza
-category: copycat-recipes
+category: pizza
 ---
 A Central Indiana Classic thin crust pizza topped with sausage, pepperoni, and fresh veggies! 
 
