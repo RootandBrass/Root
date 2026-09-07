@@ -1,6 +1,6 @@
 ---
 title: Pizza King Breadsicks
-category: copycat-recipes
+category: pizza
 ---
 1 can refrigerated pizza dough, 
 
