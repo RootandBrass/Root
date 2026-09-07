@@ -1,12 +1,14 @@
 ---
 title: Pizza Dough
-category: bread
+category: pizza
 ---
 - Level: Easy 
 - Yield: 2 (14-inch) pizza crusts 
 - Total: 1 hr 30 min 
 - Prep: 20 min 
-- Inactive: 1 hr 10 m 
+- Inactive: 1 hr 10 m
+
+
 
 **Notes: salt the pan** 
 
@@ -26,8 +28,8 @@ category: bread
 
 **Directions** 
 
-1. Combine the bread flour, sugar, yeast and kosher salt in the bowl of a stand mixer and combine. While the mixer is running, add the water and 2 tablespoons of the oil and beat until the dough forms into a ball. If the dough is sticky, add additional flour, 1 tablespoon at a time, until the dough comes together in a solid ball. If the dough is too dry, add additional water, 1 tablespoon at a time. Scrape the dough onto a lightly floured surface and gently knead into a smooth, firm ball. 
-2. Grease a large bowl with the remaining 2 teaspoons olive oil, add the dough, cover the bowl with plastic wrap and put it in a warm area to let it double in size, about 1 hour. Turn the dough out onto a lightly floured surface and divide it into 2 equal pieces. Cover each with a clean kitchen towel or plastic wrap and let them rest for 10 minutes. 
+1. Combine the bread flour, sugar, yeast and kosher salt in the bowl of a stand mixer and combine. While the mixer is running, add the water and 2 tablespoons of the oil and beat until the dough forms into a ball. If the dough is sticky, add additional flour, 1 tablespoon at a time, until the dough comes together in a solid ball. If the dough is too dry, add additional water, 1 tablespoon at a time. Scrape the dough onto a lightly floured surface and gently knead into a smooth, firm ball.
+2. Grease a large bowl with the remaining 2 teaspoons olive oil, add the dough, cover the bowl with plastic wrap and put it in a warm area to let it double in size, about 1 hour. Turn the dough out onto a lightly floured surface and divide it into 2 equal pieces. Cover each with a clean kitchen towel or plastic wrap and let them rest for 10 minutes.
 
 **Cook’s Note** 
 
