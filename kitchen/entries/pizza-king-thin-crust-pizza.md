@@ -1,8 +1,7 @@
 ---
-title: "Pizza King Thin-Crust Pizza"
-category: copycat-recipes
+title: Pizza King Thin-Crust Pizza
+category: pizza
 ---
-
 Notebook notes: hand-shredded cheese, finely sliced vegetables, cubed pepperoni, slow-cooked sausage, and no salami.
 
 ## Ingredients
