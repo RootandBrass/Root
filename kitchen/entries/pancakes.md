@@ -16,6 +16,5 @@ Ingredients
 
 Directions
 
+Pour the dry ingredients into the mixing bowl. Combine the eggs milk and oil into the dry ingredients until just combined. Pour batter by 1/3 cup full unto a lightly greased hot griddle. Turn when the bubbles form on the top of the pancakes. Cook until the second side is golden brown.
 
-
-&nbsp;
