@@ -12,7 +12,29 @@
     @media(max-width:520px){.crone-search{padding:14px}.crone-search-head{align-items:start;flex-direction:column;gap:2px}.post-save-actions{display:none}.post-save-actions.show{display:grid}.post-save-actions .button{width:100%}}
   `;document.head.appendChild(s)}
 
-  function buildSearch(){if(document.getElementById('croneSearch'))return;const status=document.querySelector('.status');if(!status)return;const wrap=document.createElement('section');wrap.id='croneSearch';wrap.className='crone-search';wrap.innerHTML=`<div class="crone-search-head"><h2>Search Root & Brass</h2><span>Find an entry and open it for editing</span></div><div class="crone-search-box"><input id="croneSearchInput" type="search" autocomplete="off" placeholder="Search plants, recipes, journal, grimoire…" aria-label="Search Root and Brass"><button type="button" class="crone-search-clear" id="croneSearchClear" aria-label="Clear search">×</button></div><div class="crone-search-state" id="croneSearchState">Type at least 2 characters.</div><div class="crone-search-results" id="croneSearchResults"></div>`;status.insertAdjacentElement('afterend',wrap);
+  function installMaintenance(){
+    if(typeof schemas==='undefined')return;
+    if(!schemas.maintenance){schemas.maintenance={label:'House Maintenance',icon:'⌂',desc:'Repairs, upkeep & preservation',fields:[
+      ['title','Work / Record Title','text',true,''],
+      ['date','Date','date',true,today()],
+      ['area','Area','select',true,'',[['whole-house','Whole House'],['exterior','Exterior'],['roof-gutters','Roof & Gutters'],['foundation-masonry','Foundation & Masonry'],['porch','Porch'],['windows-doors','Windows & Doors'],['plumbing','Plumbing'],['electrical','Electrical'],['heating-cooling','Heating & Cooling'],['interior','Interior'],['kitchen','Kitchen'],['bathroom','Bathroom'],['basement-crawlspace','Basement / Crawlspace'],['yard-drainage','Yard & Drainage'],['appliances','Appliances'],['safety','Safety'],['other','Other']]],
+      ['work_type','Type of Work','select',true,'maintenance',[['inspection','Inspection'],['routine-maintenance','Routine Maintenance'],['repair','Repair'],['replacement','Replacement'],['restoration','Restoration / Preservation'],['upgrade','Upgrade'],['emergency','Emergency'],['discovery','Discovery / Documentation']]],
+      ['status','Status','select',false,'complete',[['planned','Planned'],['watch','Watch / Monitor'],['in-progress','In Progress'],['complete','Complete']]],
+      ['summary','Short Summary','textarea',false,''],
+      ['cost','Cost','text',false,''],
+      ['who','Who Did the Work','text',false,''],
+      ['condition','Condition Found','textarea',false,''],
+      ['materials','Materials / Parts','textarea',false,''],
+      ['next_check','Next Check / Follow-up','text',false,''],
+      ['old_house_note','Old-House Note','textarea',false,''],
+      ['photo','Photo','file',false,''],
+      ['body','Full Maintenance Record','textarea',true,'']
+    ]};}
+    const root=document.getElementById('rootCards');if(!root||document.getElementById('maintenanceCroneCard'))return;
+    const b=document.createElement('button');b.type='button';b.className='card';b.id='maintenanceCroneCard';b.innerHTML='<span class="icon">⌂</span><span><strong>House Maintenance</strong><small>Repairs, upkeep & preservation</small></span>';b.onclick=()=>typeof openEditor==='function'&&openEditor('maintenance');root.appendChild(b);
+  }
+
+  function buildSearch(){if(document.getElementById('croneSearch'))return;const status=document.querySelector('.status');if(!status)return;const wrap=document.createElement('section');wrap.id='croneSearch';wrap.className='crone-search';wrap.innerHTML=`<div class="crone-search-head"><h2>Search Root & Brass</h2><span>Find an entry and open it for editing</span></div><div class="crone-search-box"><input id="croneSearchInput" type="search" autocomplete="off" placeholder="Search plants, recipes, maintenance, journal, grimoire…" aria-label="Search Root and Brass"><button type="button" class="crone-search-clear" id="croneSearchClear" aria-label="Clear search">×</button></div><div class="crone-search-state" id="croneSearchState">Type at least 2 characters.</div><div class="crone-search-results" id="croneSearchResults"></div>`;status.insertAdjacentElement('afterend',wrap);
     const input=document.getElementById('croneSearchInput'),clear=document.getElementById('croneSearchClear');let timer=0,seq=0;
     input.addEventListener('input',()=>{clearTimeout(timer);const q=input.value.trim();seq++;window.__croneSearchSeq=seq;if(q.length<2){render([],q?'Type at least 2 characters.':'');return}const mySeq=seq;timer=setTimeout(()=>runSearch(q,mySeq),350)});
     clear.onclick=()=>{input.value='';seq++;window.__croneSearchSeq=seq;render([],'');input.focus()};
@@ -27,5 +49,5 @@
 
   function startAnother(){const box=document.getElementById('postSaveActions');box?.classList.remove('show');const type=typeof activeType!=='undefined'?activeType:null;if(!type)return;const label=schemas[type]?.label;const card=[...document.querySelectorAll('.card')].find(b=>b.querySelector('strong')?.textContent===label);if(card)card.click();else if(typeof openEditor==='function')openEditor(type);setTimeout(()=>{const form=document.getElementById('entryForm');form?.reset();schemas[type]?.fields?.forEach(f=>{if(f[4]){const el=document.getElementById('f-'+f[0]);if(el)el.value=typeof f[4]==='function'?f[4]():f[4]}});window.CroneEdit?.reset?.();const msg=document.getElementById('formMessage');if(msg){msg.className='form-message';msg.textContent='Nothing is saved until you tap Save.'}document.getElementById('editorTitle').textContent='New '+schemas[type].label;document.getElementById('editorWrap')?.scrollIntoView({behavior:'smooth',block:'start'})},80)}
 
-  addStyles();buildSearch();buildSaveActions();
+  addStyles();installMaintenance();buildSearch();buildSaveActions();
 })();
