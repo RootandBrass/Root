@@ -403,13 +403,84 @@ content:
             - { value: meals-beef, label: Meals-Beef }
             - { value: meals-chicken, label: Meals-Chicken }
             - { value: meals-fish, label: Meals-Fish }
-            - { value: pizza, label: Pizza }
             - { value: meals-pork, label: Meals-Pork }
+            - { value: pizza, label: Pizza }
             - { value: salads, label: Salads }
             - { value: seasonings-dressings, label: Seasonings & Dressings }
             - { value: soups, label: Soups }
       - { name: photo, label: Photo, type: image, required: false }
       - { name: body, label: Recipe, type: rich-text, required: true }
+
+  - name: house_maintenance
+    label: House Maintenance
+    type: collection
+    path: house/maintenance/entries
+    filename: "{year}-{month}-{day}-{primary}.md"
+    format: yaml-frontmatter
+    view:
+      primary: title
+      fields: [date, area, work_type, status]
+      sort: date
+      order: desc
+    fields:
+      - { name: title, label: Work / Record Title, type: string, required: true }
+      - { name: date, label: Date, type: date, required: true }
+      - name: area
+        label: Area
+        type: select
+        required: true
+        options:
+          values:
+            - { value: whole-house, label: Whole House }
+            - { value: exterior, label: Exterior }
+            - { value: roof-gutters, label: Roof & Gutters }
+            - { value: foundation-masonry, label: Foundation & Masonry }
+            - { value: porch, label: Porch }
+            - { value: windows-doors, label: Windows & Doors }
+            - { value: plumbing, label: Plumbing }
+            - { value: electrical, label: Electrical }
+            - { value: heating-cooling, label: Heating & Cooling }
+            - { value: interior, label: Interior }
+            - { value: kitchen, label: Kitchen }
+            - { value: bathroom, label: Bathroom }
+            - { value: basement-crawlspace, label: Basement / Crawlspace }
+            - { value: yard-drainage, label: Yard & Drainage }
+            - { value: appliances, label: Appliances }
+            - { value: safety, label: Safety }
+            - { value: other, label: Other }
+      - name: work_type
+        label: Type of Work
+        type: select
+        required: true
+        options:
+          values:
+            - { value: inspection, label: Inspection }
+            - { value: routine-maintenance, label: Routine Maintenance }
+            - { value: repair, label: Repair }
+            - { value: replacement, label: Replacement }
+            - { value: restoration, label: Restoration / Preservation }
+            - { value: upgrade, label: Upgrade }
+            - { value: emergency, label: Emergency }
+            - { value: discovery, label: Discovery / Documentation }
+      - name: status
+        label: Status
+        type: select
+        required: false
+        options:
+          values:
+            - { value: planned, label: Planned }
+            - { value: watch, label: Watch / Monitor }
+            - { value: in-progress, label: In Progress }
+            - { value: complete, label: Complete }
+      - { name: summary, label: Short Summary, type: rich-text, required: false }
+      - { name: cost, label: Cost, type: string, required: false }
+      - { name: who, label: Who Did the Work, type: string, required: false }
+      - { name: condition, label: Condition Found, type: rich-text, required: false }
+      - { name: materials, label: Materials / Parts, type: rich-text, required: false }
+      - { name: next_check, label: Next Check / Follow-up, type: string, required: false }
+      - { name: old_house_note, label: Old-House Note, type: rich-text, required: false }
+      - { name: photo, label: Photo, type: image, required: false }
+      - { name: body, label: Full Maintenance Record, type: rich-text, required: true }
 
   - name: garden_records
     label: Garden Records
