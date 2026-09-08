@@ -1,0 +1,36 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Maintenance, preservation, and repair records for 301 Ruby, a 1914 home in Kemmerer.">
+  <title>House Maintenance | 301 Ruby | Root &amp; Brass</title>
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .maintenance-page{width:min(980px,calc(100% - 40px));margin:0 auto;padding:54px 0 80px}.maintenance-intro{max-width:720px;margin-bottom:52px}.maintenance-intro h1{margin:.2em 0}.maintenance-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:28px 0 54px}.maintenance-panel{border:1px solid #cdb88e;padding:28px;min-height:190px}.maintenance-panel h2{margin:0 0 12px;font-size:1.35rem}.maintenance-panel p{margin:0;line-height:1.7}.log-section{border-top:1px solid #c39a55;padding-top:32px}.log-entry{display:grid;grid-template-columns:130px 1fr;gap:24px;padding:25px 0;border-bottom:1px solid #d8c8aa}.log-date{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#a36d24}.log-entry h3{margin:0 0 7px}.log-meta{font-size:.85rem;margin:0 0 8px;opacity:.72}.empty-log{padding:28px 0;font-style:italic;opacity:.7}@media(max-width:680px){.maintenance-grid{grid-template-columns:1fr}.log-entry{grid-template-columns:1fr;gap:7px}}
+  </style>
+</head>
+<body class="secondary-page house-site">
+<header class="site-header"><a href="/" aria-label="Root &amp; Brass home"><img src="/images/logo.png" alt="Root &amp; Brass" class="site-logo"></a></header>
+<nav class="main-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/house.html" aria-current="page">301 Ruby</a><a href="/garden.html">The Garden</a><a href="/kitchen/">The Kitchen</a><a href="/about.html">About</a></nav>
+{% assign maintenance_entries = site.pages | where_exp: "item", "item.path contains 'house/maintenance/entries/'" | sort: "date" | reverse %}
+<main class="maintenance-page">
+  <section class="maintenance-intro"><p class="eyebrow">Caring for a house built in 1914</p><h1>House Maintenance</h1><p class="page-lead">The ordinary work every house asks for, the extra attention an old house requires, and a running record of what it takes to keep 301 Ruby standing well.</p></section>
+  <section class="maintenance-grid" aria-label="Maintenance guide">
+    <article class="maintenance-panel"><p class="eyebrow">Routine care</p><h2>Every House</h2><p>Seasonal inspections, heating and cooling, plumbing, electrical safety, drainage, roofing, gutters, appliances, caulking, weatherproofing, and the small jobs that prevent expensive ones.</p></article>
+    <article class="maintenance-panel"><p class="eyebrow">Old house care</p><h2>301 Ruby Watch List</h2><p>Foundation and masonry, original woodwork, old windows, plaster, exterior trim, porch components, moisture, settling, historic materials, and aging systems deserve their own record and rhythm.</p></article>
+    <article class="maintenance-panel"><p class="eyebrow">Season by season</p><h2>Seasonal Maintenance</h2><p>Spring recovery, summer exterior work, fall preparation, and winter monitoring will become the recurring checklist for the house.</p></article>
+    <article class="maintenance-panel"><p class="eyebrow">The continuing story</p><h2>Repairs &amp; Preservation</h2><p>Repairs, discoveries, restoration work, costs, materials, photographs, and future follow-up are recorded below so today's maintenance becomes tomorrow's house history.</p></article>
+  </section>
+  <section class="log-section"><p class="eyebrow">Running record</p><h2>Maintenance Log</h2>
+    {% if maintenance_entries.size > 0 %}
+      {% for entry in maintenance_entries %}<article class="log-entry"><div class="log-date">{{ entry.date | date: "%b %d, %Y" }}</div><div><h3>{{ entry.title }}</h3><p class="log-meta">{{ entry.area }}{% if entry.work_type %} · {{ entry.work_type }}{% endif %}{% if entry.cost %} · {{ entry.cost }}{% endif %}</p>{% if entry.summary %}<p>{{ entry.summary }}</p>{% endif %}<a href="{{ entry.url | relative_url }}">View record →</a></div></article>{% endfor %}
+    {% else %}<p class="empty-log">The log begins with the next repair, inspection, or bit of preservation work at 301 Ruby.</p>{% endif %}
+  </section>
+</main>
+<footer><p>&copy; 2026 Root &amp; Brass</p></footer>
+</body>
+</html>
