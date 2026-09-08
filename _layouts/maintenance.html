@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | 301 Ruby | Root &amp; Brass</title>
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .maintenance-record{width:min(820px,calc(100% - 40px));margin:0 auto;padding:54px 0 80px}.record-back{display:inline-block;margin-bottom:34px}.record-head{padding-bottom:28px;border-bottom:1px solid #c39a55}.record-head h1{margin:.25em 0}.record-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:18px;font-size:.88rem;opacity:.76}.record-photo{margin:30px 0}.record-photo img{width:100%;max-height:560px;object-fit:cover}.record-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:30px 0}.record-box{border:1px solid #d4c19e;padding:20px}.record-box h2{font-size:1rem;margin:0 0 8px}.record-body{line-height:1.75}.record-body h2,.record-body h3{margin-top:1.8em}@media(max-width:650px){.record-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body class="secondary-page house-site">
+<header class="site-header"><a href="/" aria-label="Root &amp; Brass home"><img src="/images/logo.png" alt="Root &amp; Brass" class="site-logo"></a></header>
+<nav class="main-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/house.html" aria-current="page">301 Ruby</a><a href="/garden.html">The Garden</a><a href="/kitchen/">The Kitchen</a><a href="/about.html">About</a></nav>
+<main class="maintenance-record">
+  <a class="record-back" href="/house/maintenance/">← House Maintenance</a>
+  <header class="record-head"><p class="eyebrow">301 Ruby maintenance record</p><h1>{{ page.title }}</h1>{% if page.summary %}<p class="page-lead">{{ page.summary }}</p>{% endif %}<div class="record-meta"><span>{{ page.date | date: "%B %d, %Y" }}</span>{% if page.area %}<span>{{ page.area }}</span>{% endif %}{% if page.work_type %}<span>{{ page.work_type }}</span>{% endif %}{% if page.status %}<span>{{ page.status }}</span>{% endif %}</div></header>
+  {% if page.photo %}<figure class="record-photo"><img src="{{ page.photo | relative_url }}" alt="{{ page.title }}"></figure>{% endif %}
+  <section class="record-grid">
+    {% if page.cost %}<div class="record-box"><h2>Cost</h2><p>{{ page.cost }}</p></div>{% endif %}
+    {% if page.who %}<div class="record-box"><h2>Who did the work</h2><p>{{ page.who }}</p></div>{% endif %}
+    {% if page.condition %}<div class="record-box"><h2>Condition found</h2><p>{{ page.condition }}</p></div>{% endif %}
+    {% if page.materials %}<div class="record-box"><h2>Materials / parts</h2><p>{{ page.materials }}</p></div>{% endif %}
+    {% if page.next_check %}<div class="record-box"><h2>Next check</h2><p>{{ page.next_check }}</p></div>{% endif %}
+    {% if page.old_house_note %}<div class="record-box"><h2>Old-house note</h2><p>{{ page.old_house_note }}</p></div>{% endif %}
+  </section>
+  <article class="record-body">{{ content }}</article>
+</main>
+<footer><p>&copy; 2026 Root &amp; Brass</p></footer>
+</body>
+</html>
