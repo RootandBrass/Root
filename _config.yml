@@ -54,6 +54,12 @@ defaults:
       layout: kitchen
 
   - scope:
+      path: "house/maintenance/entries"
+      type: "pages"
+    values:
+      layout: maintenance
+
+  - scope:
       path: "garden/plants"
       type: "pages"
     values:
