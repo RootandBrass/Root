@@ -9,7 +9,7 @@
     .crone-search-result:hover,.crone-search-result:focus-visible{border-color:var(--brass);outline:none}.crone-search-result strong{display:block;font-weight:normal;font-size:14px}.crone-search-meta{display:block;color:var(--brass2);font-size:9px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:2px}.crone-search-snippet{display:block;color:var(--muted);font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
     .crone-search-state{color:var(--muted);font-size:11px;margin-top:9px}.crone-search-state.error{color:var(--danger)}
     .post-save-actions{display:none;gap:8px;flex-wrap:wrap;margin-top:12px}.post-save-actions.show{display:flex}.post-save-actions .button{min-width:120px}
-    @media(max-width:520px){.crone-search{padding:14px}.crone-search-head{align-items:start;flex-direction:column;gap:2px}.post-save-actions{display:none}.post-save-actions.show{display:grid}.post-save-actions .button{width:100%}}
+    @media(max-width:820px){.private-shelves{margin-bottom:30px}}@media(max-width:520px){.crone-search{padding:14px}.crone-search-head{align-items:start;flex-direction:column;gap:2px}.post-save-actions{display:none}.post-save-actions.show{display:grid}.post-save-actions .button{width:100%}}
   `;document.head.appendChild(s)}
 
   function installMaintenance(){
@@ -49,5 +49,17 @@
 
   function startAnother(){const box=document.getElementById('postSaveActions');box?.classList.remove('show');const type=typeof activeType!=='undefined'?activeType:null;if(!type)return;const label=schemas[type]?.label;const card=[...document.querySelectorAll('.card')].find(b=>b.querySelector('strong')?.textContent===label);if(card)card.click();else if(typeof openEditor==='function')openEditor(type);setTimeout(()=>{const form=document.getElementById('entryForm');form?.reset();schemas[type]?.fields?.forEach(f=>{if(f[4]){const el=document.getElementById('f-'+f[0]);if(el)el.value=typeof f[4]==='function'?f[4]():f[4]}});window.CroneEdit?.reset?.();const msg=document.getElementById('formMessage');if(msg){msg.className='form-message';msg.textContent='Nothing is saved until you tap Save.'}document.getElementById('editorTitle').textContent='New '+schemas[type].label;document.getElementById('editorWrap')?.scrollIntoView({behavior:'smooth',block:'start'})},80)}
 
-  addStyles();installMaintenance();buildSearch();buildSaveActions();
+  function positionPrivateShelves(){
+    const shelves=document.getElementById('privateShelves');
+    const search=document.getElementById('croneSearch');
+    const lower=document.querySelector('.lower');
+    if(!shelves||!search||!lower)return;
+    if(window.matchMedia('(max-width:820px)').matches)search.insertAdjacentElement('afterend',shelves);
+    else lower.appendChild(shelves);
+  }
+
+  addStyles();installMaintenance();buildSearch();positionPrivateShelves();buildSaveActions();
+  const mobileLayout=window.matchMedia('(max-width:820px)');
+  if(mobileLayout.addEventListener)mobileLayout.addEventListener('change',positionPrivateShelves);
+  else mobileLayout.addListener(positionPrivateShelves);
 })();
