@@ -6,5 +6,13 @@
   "scope": "/crone/",
   "display": "standalone",
   "background_color": "#100b12",
-  "theme_color": "#100b12"
+  "theme_color": "#100b12",
+  "icons": [
+    {
+      "src": "/crone/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
 }
