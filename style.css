@@ -138,8 +138,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     display: grid; align-items: center;
     padding: 48px max(28px, calc((100vw - 1180px)/2));
     background:
-        linear-gradient(90deg, rgba(10,9,9,.92) 0%, rgba(10,9,9,.72) 34%, rgba(10,9,9,.1) 68%, rgba(10,9,9,.1)),
-        url("/images/root-brass-house-hero.webp") center / cover no-repeat;
+        linear-gradient(90deg, rgba(10,9,9,.86) 0%, rgba(10,9,9,.64) 38%, rgba(10,9,9,.18) 72%, rgba(10,9,9,.1)),
+        url("/images/root-brass-floral-wallpaper.webp") center / cover no-repeat;
     color: var(--rb-paper);
     border-bottom: 2px solid var(--rb-brass);
 }
