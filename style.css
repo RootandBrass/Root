@@ -139,7 +139,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     padding: 48px max(28px, calc((100vw - 1180px)/2));
     background:
         linear-gradient(90deg, rgba(10,9,9,.86) 0%, rgba(10,9,9,.64) 38%, rgba(10,9,9,.18) 72%, rgba(10,9,9,.1)),
-        url("/images/root-brass-floral-wallpaper.webp") center / cover no-repeat;
+        url("/images/root-brass-floral-wallpaper.webp") center / 660px repeat;
     color: var(--rb-paper);
     border-bottom: 2px solid var(--rb-brass);
 }
