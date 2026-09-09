@@ -14,8 +14,8 @@
     </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Maintenance, preservation, and repair records for 301 Ruby, a 1914 home in Kemmerer.">
-  <title>House Maintenance | 301 Ruby | Root &amp; Brass</title>
+  <meta name="description" content="Maintenance, preservation, and repair records for Old Ruby, a 1914 home in Kemmerer.">
+  <title>House Maintenance | Old Ruby | Root &amp; Brass</title>
   <link rel="icon" type="image/png" href="/images/favicon.png">
   <link rel="stylesheet" href="/style.css?v=20260909">
   <style>
@@ -24,14 +24,14 @@
 </head>
 <body class="secondary-page house-site">
 <header class="site-header"><a href="/" aria-label="Root &amp; Brass home"><img src="/images/logo.png" alt="Root &amp; Brass" class="site-logo"></a></header>
-<nav class="main-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/house.html" aria-current="page">301 Ruby</a><a href="/garden.html">Garden</a><a href="/kitchen/">Kitchen</a><a href="/about.html">About</a></nav>
+<nav class="main-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/house.html" aria-current="page">Old Ruby</a><a href="/garden.html">Garden</a><a href="/kitchen/">Kitchen</a><a href="/about.html">About</a></nav>
 {% assign maintenance_entries = site.pages | where_exp: "item", "item.path contains 'house/maintenance/entries/'" | sort: "date" | reverse %}
 <main class="maintenance-page">
-  <section class="maintenance-intro"><p class="eyebrow">Caring for a house built in 1914</p><h1>House Maintenance</h1><p class="page-lead">The ordinary work every house asks for, the extra attention an old house requires, and a running record of what it takes to keep 301 Ruby standing well.</p></section>
+  <section class="maintenance-intro"><p class="eyebrow">Caring for a house built in 1914</p><h1>House Maintenance</h1><p class="page-lead">The ordinary work every house asks for, the extra attention an old house requires, and a running record of what it takes to keep Old Ruby standing well.</p></section>
 
   <section class="maintenance-grid" aria-label="Maintenance guide">
     <article class="maintenance-panel"><p class="eyebrow">Routine care</p><h2>Every House</h2><p>Seasonal inspections, heating and cooling, plumbing, electrical safety, drainage, roofing, gutters, appliances, caulking, weatherproofing, and the small jobs that prevent expensive ones.</p></article>
-    <article class="maintenance-panel"><p class="eyebrow">Old house care</p><h2>301 Ruby Watch List</h2><p>Foundation and masonry, original woodwork, old windows, plaster, exterior trim, porch components, moisture, settling, historic materials, and aging systems deserve their own record and rhythm.</p></article>
+    <article class="maintenance-panel"><p class="eyebrow">Old house care</p><h2>Old Ruby Watch List</h2><p>Foundation and masonry, original woodwork, old windows, plaster, exterior trim, porch components, moisture, settling, historic materials, and aging systems deserve their own record and rhythm.</p></article>
     <article class="maintenance-panel"><p class="eyebrow">Season by season</p><h2>Annual Rhythm</h2><p>Spring recovery, summer exterior work, fall preparation, and winter monitoring keep routine maintenance from becoming a collection of expensive surprises.</p></article>
     <article class="maintenance-panel"><p class="eyebrow">The continuing story</p><h2>Repairs &amp; Preservation</h2><p>Repairs, discoveries, restoration work, costs, materials, photographs, and future follow-up are recorded below so today's maintenance becomes tomorrow's house history.</p></article>
   </section>
@@ -47,7 +47,7 @@
   </section>
 
   <section class="care-section">
-    <header><p class="eyebrow">The extra century</p><h2>301 Ruby Old-House Watch List</h2><p>Older houses often give warnings before they give failures. The useful habit is learning which changes are normal, which are new, and which deserve attention.</p></header>
+    <header><p class="eyebrow">The extra century</p><h2>Old-House Watch List for Ruby</h2><p>Older houses often give warnings before they give failures. The useful habit is learning which changes are normal, which are new, and which deserve attention.</p></header>
     <div class="watch-grid">
       <article class="care-card"><h3>Foundation &amp; Masonry</h3><ul><li>Photograph and date notable cracks so movement can be compared over time.</li><li>Watch mortar, brick, stone, and concrete for spalling, open joints, or moisture damage.</li><li>Prioritize drainage before cosmetic crack repair.</li></ul></article>
       <article class="care-card"><h3>Wood, Windows &amp; Porch</h3><ul><li>Check sills, trim, porch posts, rails, steps, and other horizontal wood surfaces for softness or trapped water.</li><li>Maintain glazing, paint, putty, weatherstripping, and hardware on older windows before replacement becomes the default answer.</li><li>Document original components before repair or alteration.</li></ul></article>
@@ -61,7 +61,7 @@
   <section class="log-section"><p class="eyebrow">Running record</p><h2>Maintenance Log</h2>
     {% if maintenance_entries.size > 0 %}
       {% for entry in maintenance_entries %}<article class="log-entry"><div class="log-date">{{ entry.date | date: "%b %d, %Y" }}</div><div><h3>{{ entry.title }}</h3><p class="log-meta">{{ entry.area | replace: "-", " " }}{% if entry.work_type %} · {{ entry.work_type | replace: "-", " " }}{% endif %}{% if entry.cost %} · {{ entry.cost }}{% endif %}</p>{% if entry.summary %}<p>{{ entry.summary }}</p>{% endif %}<a href="{{ entry.url | relative_url }}">View record →</a></div></article>{% endfor %}
-    {% else %}<p class="empty-log">The log begins with the next repair, inspection, or bit of preservation work at 301 Ruby.</p>{% endif %}
+    {% else %}<p class="empty-log">The log begins with the next repair, inspection, or bit of preservation work at Old Ruby.</p>{% endif %}
   </section>
 </main>
 <footer><p>&copy; 2026 Root &amp; Brass</p></footer>

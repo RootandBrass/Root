@@ -1,6 +1,6 @@
 # Root & Brass
 
-Root & Brass is a personal Jekyll site for the house at 301 Ruby, the garden, kitchen, journal, and private grimoire.
+Root & Brass is a personal Jekyll site for Old Ruby, the garden, kitchen, journal, and private grimoire.
 
 ## How the site works
 
@@ -12,7 +12,7 @@ Root & Brass is a personal Jekyll site for the house at 301 Ruby, the garden, ki
 
 ## Public areas
 
-The main site, 301 Ruby, Garden, Kitchen, History, and About pages are public.
+The main site, Old Ruby, Garden, Kitchen, History, and About pages are public.
 
 ## Protected areas
 
