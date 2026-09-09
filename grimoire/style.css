@@ -1,22 +1,15 @@
 :root {
-    --black: #090c0d;
-    --charcoal: #111719;
-    --midnight: #14212a;
-    --pine: #14251f;
-    --forest: #223a31;
-    --storm: #526674;
-    --smoke: #9da8a4;
-    --bone: #e2e4df;
-    --line: rgba(226, 228, 223, 0.16);
+    --black: #11100f;
+    --charcoal: #1d1918;
+    --midnight: #2a2424;
+    --pine: #311b18;
+    --forest: #5f211c;
+    --storm: #a53a20;
+    --smoke: #cdbb9d;
+    --bone: #eee5d6;
+    --line: rgba(182, 138, 60, 0.28);
 }
 
-/* Root & Brass 2026 botanical continuity */
-:root{--black:#11100f;--charcoal:#1d1918;--midnight:#2a2424;--pine:#311b18;--forest:#5f211c;--storm:#a53a20;--smoke:#cdbb9d;--bone:#eee5d6;--line:rgba(182,138,60,.28)}
-body{background:linear-gradient(rgba(17,16,15,.9),rgba(17,16,15,.96)),url("/images/root-brass-floral-wallpaper.webp") center/720px fixed;color:var(--bone)}
-.grimoire-header{border-bottom-color:rgba(182,138,60,.55)}
-.grimoire-mark,.return-link,.kicker{color:#d88b26}
-.grimoire-index a,.section-nav,.dream-article article,.spell-article article,.recipe-article article,.tarot-reading,.moon-record,.crystal-record,.plant-record{border-color:rgba(182,138,60,.36)}
-.grimoire-index a:hover,.grimoire-index a:focus-visible{border-color:#d88b26}
 
 * {
     box-sizing: border-box;
@@ -33,23 +26,8 @@ body {
     color: var(--bone);
 
     background:
-        radial-gradient(
-            circle at 85% 15%,
-            rgba(42, 67, 78, 0.22),
-            transparent 35rem
-        ),
-        radial-gradient(
-            circle at 10% 75%,
-            rgba(31, 65, 50, 0.20),
-            transparent 40rem
-        ),
-        linear-gradient(
-            150deg,
-            #090c0d,
-            #0d1214 45%,
-            #101a1c 75%,
-            #090d0e
-        );
+        linear-gradient(rgba(17, 16, 15, 0.9), rgba(17, 16, 15, 0.96)),
+        url("/images/root-brass-floral-wallpaper.webp") center / 720px fixed;
 
     font-family: Georgia, "Times New Roman", serif;
     line-height: 1.6;
@@ -74,7 +52,7 @@ a {
     justify-content: space-between;
     align-items: center;
 
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid rgba(182, 138, 60, 0.55);
 }
 
 .grimoire-mark {
@@ -82,7 +60,7 @@ a {
     text-transform: uppercase;
     letter-spacing: .25em;
 
-    color: var(--smoke);
+    color: #d88b26;
     font-size: .75rem;
 }
 
@@ -93,7 +71,7 @@ a {
     letter-spacing: .14em;
     font-size: .7rem;
 
-    color: #71817b;
+    color: #d88b26;
 }
 
 /* GRIMOIRE LOGO */
@@ -137,7 +115,7 @@ a {
 }
 
 .kicker {
-    color: #71817b;
+    color: #d88b26;
 
     text-transform: uppercase;
     letter-spacing: .35em;
@@ -204,6 +182,7 @@ h1 {
     padding-right: 18px;
 
     background: rgba(255,255,255,.02);
+    border-color: #d88b26;
 }
 
 .grimoire-index .name {
@@ -5374,7 +5353,3 @@ body:not(.grimoire-home) .grimoire-shell {
     }
 }
 
-/* Final cascade guard for the shared Root & Brass palette. */
-body{background:linear-gradient(rgba(17,16,15,.9),rgba(17,16,15,.96)),url("/images/root-brass-floral-wallpaper.webp") center/720px fixed;color:#eee5d6}
-.grimoire-header{border-bottom-color:rgba(182,138,60,.55)}
-.grimoire-mark,.return-link,.kicker{color:#d88b26}
