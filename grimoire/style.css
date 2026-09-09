@@ -10,6 +10,14 @@
     --line: rgba(226, 228, 223, 0.16);
 }
 
+/* Root & Brass 2026 botanical continuity */
+:root{--black:#11100f;--charcoal:#1d1918;--midnight:#2a2424;--pine:#311b18;--forest:#5f211c;--storm:#a53a20;--smoke:#cdbb9d;--bone:#eee5d6;--line:rgba(182,138,60,.28)}
+body{background:linear-gradient(rgba(17,16,15,.9),rgba(17,16,15,.96)),url("/images/root-brass-floral-wallpaper.webp") center/720px fixed;color:var(--bone)}
+.grimoire-header{border-bottom-color:rgba(182,138,60,.55)}
+.grimoire-mark,.return-link,.kicker{color:#d88b26}
+.grimoire-index a,.section-nav,.dream-article article,.spell-article article,.recipe-article article,.tarot-reading,.moon-record,.crystal-record,.plant-record{border-color:rgba(182,138,60,.36)}
+.grimoire-index a:hover,.grimoire-index a:focus-visible{border-color:#d88b26}
+
 * {
     box-sizing: border-box;
 }
@@ -5365,3 +5373,8 @@ body:not(.grimoire-home) .grimoire-shell {
         font-size: 1.25rem;
     }
 }
+
+/* Final cascade guard for the shared Root & Brass palette. */
+body{background:linear-gradient(rgba(17,16,15,.9),rgba(17,16,15,.96)),url("/images/root-brass-floral-wallpaper.webp") center/720px fixed;color:#eee5d6}
+.grimoire-header{border-bottom-color:rgba(182,138,60,.55)}
+.grimoire-mark,.return-link,.kicker{color:#d88b26}

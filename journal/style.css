@@ -515,3 +515,10 @@ a { color: inherit; }
   .journal-volume-row,
   .volume-open span { transition: none; }
 }
+
+/* Root & Brass 2026 botanical continuity */
+:root{--journal-ink:#2a2424;--journal-muted:#766b5f;--journal-paper:#eee5d6;--journal-brass:#b68a3c;--journal-brass-light:#d88b26;--journal-oxblood:#7d211d;--journal-night:#11100f}
+body.journal-site{background:linear-gradient(rgba(17,16,15,.82),rgba(17,16,15,.94)),url("/images/root-brass-floral-wallpaper.webp") center/720px fixed,var(--journal-night)}
+.journal-topbar{border-bottom-color:rgba(182,138,60,.5)}
+.journal-brand,.journal-kicker{color:#d88b26}
+.journal-paper,.journal-volume-cover,.journal-entry-stream{background-color:rgba(238,229,214,.97)}
