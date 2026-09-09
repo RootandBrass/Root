@@ -32,13 +32,6 @@
       </div>
     </section>
     <section class="seasonal-feature" aria-labelledby="season-title"><div class="seasonal-copy"><p class="eyebrow">The current season</p><h2 id="season-title">Seasonal Notes</h2><p>Observations, harvests, and small rituals for the turning of the year.</p><a class="button-link" href="/garden/seasons.html">Read the Seasonal Notes <span aria-hidden="true">→</span></a></div></section>
-    <section class="editorial-section journal-preview" aria-labelledby="journal-title">
-      <header class="section-heading compact"><span aria-hidden="true"></span><div><h2 id="journal-title">Latest from the Journal</h2></div><span aria-hidden="true"></span></header>
-      <div class="journal-preview-grid">
-        {% assign latest_entries = site.pages | where_exp: "item", "item.path contains 'journal/entries/'" | sort: "date" | reverse %}
-        {% for entry in latest_entries limit: 3 %}<a class="journal-preview-card" href="{{ entry.url | relative_url }}"><p class="eyebrow">{{ entry.date | date: "%B %-d, %Y" }}</p><h3>{% if entry.title %}{{ entry.title }}{% else %}Notes from {{ entry.date | date: "%B %-d" }}{% endif %}</h3><span>Read the entry →</span></a>{% endfor %}
-      </div>
-    </section>
   </main>
   <footer class="editorial-footer"><strong>Root &amp; Brass</strong><span>A home, a garden, and the stories rooted between them.</span><small>&copy; 2026 Root &amp; Brass</small></footer>
 </body>
