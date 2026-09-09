@@ -15,7 +15,7 @@
 </head>
 <body class="secondary-page house-site">
 <header class="site-header"><a href="/" aria-label="Root &amp; Brass home"><img src="/images/logo.png" alt="Root &amp; Brass" class="site-logo"></a></header>
-<nav class="main-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/house.html" aria-current="page">301 Ruby</a><a href="/garden.html">Garden</a><a href="/kitchen/">Kitchen</a><a href="/history.html">History</a><a href="/grimoire/">Grimoire</a><a href="/journal/">Journal</a><a href="/about.html">About</a></nav>
+<nav class="main-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/house.html" aria-current="page">301 Ruby</a><a href="/garden.html">Garden</a><a href="/kitchen/">Kitchen</a><a href="/about.html">About</a></nav>
 {% assign maintenance_entries = site.pages | where_exp: "item", "item.path contains 'house/maintenance/entries/'" | sort: "date" | reverse %}
 <main class="maintenance-page">
   <section class="maintenance-intro"><p class="eyebrow">Caring for a house built in 1914</p><h1>House Maintenance</h1><p class="page-lead">The ordinary work every house asks for, the extra attention an old house requires, and a running record of what it takes to keep 301 Ruby standing well.</p></section>
