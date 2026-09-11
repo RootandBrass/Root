@@ -58,7 +58,11 @@ function parseFrontMatter(content, bodyField) {
   for (let i=0;i<fm.length;i++) {
     const m = fm[i].match(/^([A-Za-z0-9_]+):\s*(.*)$/); if (!m) continue;
     const key = m[1], raw = m[2];
-    if (/^[|>][+-]?$/.test(raw)) {\n      const vals=[];\n      while (i+1<fm.length && /^\s+/.test(fm[i+1])) vals.push(fm[++i].replace(/^  /,''));\n      fields[key]=raw.startsWith('>') ? vals.join('\\n').replace(/([^\\n])\\n(?=[^\\n])/g,'$1 ') : vals.join('\\n');\n    }
+    if (/^[|>][+-]?$/.test(raw)) {
+      const vals=[];
+      while (i+1<fm.length && /^\s+/.test(fm[i+1])) vals.push(fm[++i].replace(/^  /,''));
+      fields[key]=raw.startsWith('>') ? vals.join('\n').replace(/([^\n])\n(?=[^\n])/g,'$1 ') : vals.join('\n');
+    }
     else { try { fields[key]=JSON.parse(raw); } catch { fields[key]=raw.replace(/^['"]|['"]$/g,''); } }
   }
   const body=text.slice(end+4).trim(); if(bodyField&&body)fields[bodyField]=body; return fields;
