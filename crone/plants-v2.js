@@ -14,6 +14,13 @@
     ['garden_notes','Garden Notes','textarea',false,''],
     ['seasonal_record','Seasonal Record','textarea',false,''],
 
+    ['show_harvest','Show in Harvest & Use','select',false,'false',[['false','No'],['true','Yes']]],
+    ['harvest_season','Harvest Season','text',false,''],
+    ['harvest_uses','Harvest Uses','textarea',false,''],
+    ['preserve_dry','Drying Notes','textarea',false,''],
+    ['preserve_freeze','Freezing Notes','textarea',false,''],
+    ['preserve_infuse','Infusing / Other Use Notes','textarea',false,''],
+
     ['show_apothecary','Show in Apothecary','select',false,'false',[['false','No'],['true','Yes']]],
     ['habitat','Habitat & Growing Conditions','textarea',false,''],
     ['identification','Identification Notes','textarea',false,''],
@@ -52,14 +59,12 @@
     if(url.includes('/api/crone/entry')&&init&&typeof init.body==='string'){
       try{
         const payload=JSON.parse(init.body);
-        if(payload?.type==='plant'&&payload.fields&&Object.prototype.hasOwnProperty.call(payload.fields,'show_apothecary')){
-          payload.fields.show_apothecary=payload.fields.show_apothecary===true||payload.fields.show_apothecary==='true';
-          delete payload.fields.show_harvest;
-          delete payload.fields.harvest_season;
-          delete payload.fields.harvest_uses;
-          delete payload.fields.preserve_dry;
-          delete payload.fields.preserve_freeze;
-          delete payload.fields.preserve_infuse;
+        if(payload?.type==='plant'&&payload.fields){
+          ['show_harvest','show_apothecary'].forEach(key=>{
+            if(Object.prototype.hasOwnProperty.call(payload.fields,key)){
+              payload.fields[key]=payload.fields[key]===true||payload.fields[key]==='true';
+            }
+          });
           init={...init,body:JSON.stringify(payload)};
         }
       }catch{}
