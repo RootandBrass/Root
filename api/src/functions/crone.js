@@ -63,7 +63,16 @@ function parseFrontMatter(content, bodyField) {
       while (i+1<fm.length && /^\s+/.test(fm[i+1])) vals.push(fm[++i].replace(/^  /,''));
       fields[key]=raw.startsWith('>') ? vals.join('\n').replace(/([^\n])\n(?=[^\n])/g,'$1 ') : vals.join('\n');
     }
-    else { try { fields[key]=JSON.parse(raw); } catch { fields[key]=raw.replace(/^['"]|['"]$/g,''); } }
+    else {
+      let scalar=raw;
+      while (i+1<fm.length && /^\s+\S/.test(fm[i+1])) scalar+=' '+fm[++i].trim();
+      try { fields[key]=JSON.parse(scalar); }
+      catch {
+        fields[key]=scalar.startsWith("'")&&scalar.endsWith("'")
+          ? scalar.slice(1,-1).replace(/''/g,"'")
+          : scalar.replace(/^"|"$/g,'');
+      }
+    }
   }
   const body=text.slice(end+4).trim(); if(bodyField&&body)fields[bodyField]=body; return fields;
 }
