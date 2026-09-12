@@ -1,6 +1,7 @@
 ---
 title: Calcite
 variety: Blue Calcite
+image: /images/uploads/15e15758-aeff-425e-bb14-7c03fb5ffda6.png
 color: blue
 element: Water, Air
 chakra: Throat, Thrid Eye
