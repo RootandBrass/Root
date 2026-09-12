@@ -6,41 +6,36 @@ color: Red & Orange
 element: Fire
 chakra: Sacral, Root
 zodiac: Aries, Leo, Virgo
-uses: >+
-  - Boosts **courage, confidence, and motivation**
+geology: |+
+  - A red, orange, or brownish-red variety of **chalcedony**, the microcrystalline form of quartz
+  - Its warm color comes from iron-oxide inclusions
+  - Has a Mohs hardness of approximately **6.5 to 7**
+  - Much commercial Carnelian is heat-treated to deepen or even its color
+  - Usually translucent to opaque with cloudy bands or variations in saturation
 
-  - Encourages **creativity and passion**
+associations: |+
+  - Traditionally associated with **courage, creativity, vitality, motivation, protection, and passion**
+  - Connected with the **sacral and root chakras**
+  - Often used to overcome hesitation and encourage confident action
+  - Associated with ambition, warmth, and life-force energy
 
-  - Supports **personal power and determination**
+uses: |+
+  - Boosts courage, confidence, and motivation
+  - Encourages creativity, passion, and determination
+  - Helps overcome fear, hesitation, and self-doubt
+  - Traditionally used for vitality and protection
+  - Supports grounded action, success, and ambition
+  - Useful in fire, creativity, and empowerment rituals
+  - Encourages emotional warmth and self-expression
 
-  - Helps overcome **fear, hesitation, and self-doubt**
+care: |+
+  - Clean gently with a **soft, damp cloth**
+  - Briefly rinse with lukewarm water and dry thoroughly
+  - Cleanse energetically with **smoke, sound, moonlight, or selenite**
+  - Avoid prolonged strong sunlight, soaking, and saltwater
+  - Avoid harsh chemicals, bleach, and abrasive cleaners
+  - Protect polished pieces from hard impacts
+  - Store separately from harder stones
 
-  - Traditionally associated with **vitality and life-force energy**
-
-  - Encourages **grounding while taking action**
-
-  - Used for **success, ambition, and manifestation**
-
-  - Associated with **sensuality, desire, and emotional warmth**
-
-  - Useful in magical work involving **fire, courage, creativity, and
-  empowerment**
-
-  - Often carried as a protective stone against **envy and negative intentions**
-
-care: >+
-  - Cleanse with **smoke, sound, moonlight, or selenite**
-
-  - Brief rinsing with **lukewarm water** is generally fine for natural
-  carnelian; dry thoroughly
-
-  - Recharge in **moonlight** or briefly in gentle sunlight
-
-  - Avoid **prolonged direct sunlight**, which may affect color over time
-
-  - Avoid **harsh chemicals, bleach, and abrasive cleaners**
-
-  - Protect polished pieces from **hard impacts and scratches**
-
-  - Store separately or wrapped in a **soft cloth**
+pairings: Red Jasper, Citrine, Fire Agate, Clear Quartz, Black Obsidian
 ---
