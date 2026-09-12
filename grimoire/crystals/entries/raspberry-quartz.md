@@ -17,7 +17,7 @@ associations: |+
   - Connected with the **heart and root chakras**
   - Often used to combine the gentleness of pink stones with more active, motivating energy
   - Associated with confidence in relationships and expressing affection openly
- \n- Sometimes used to encourage joy, enthusiasm, and renewed emotional energy
+  - Sometimes used to encourage joy, enthusiasm, and renewed emotional energy
 
 uses: |+
   - Encourages warmth, affection, and emotional openness
