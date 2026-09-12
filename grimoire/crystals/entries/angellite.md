@@ -1,39 +1,41 @@
 ---
-title: Angellite
-variety: Angellite
-color: Blue
+title: Angelite
+variety: Blue Anhydrite
+color: Pale Blue & White
 element: Air
 chakra: Throat, Third Eye, Crown
 zodiac: Aquarius, Pisces
+geology: |+
+  - A pale blue variety of **anhydrite**, an anhydrous calcium sulfate mineral
+  - Commonly forms when gypsum loses water from its crystal structure
+  - Has a Mohs hardness of approximately **3 to 3.5**
+  - Usually opaque with white markings, inclusions, or small surface pits
+  - Exposure to water can alter the surface and gradually encourage conversion toward gypsum
+
 associations: |+
-  - Encourages peaceful and compassionate communication
-  - Supports intuition and spiritual awareness
-  - Promotes patience, forgiveness, and understanding
-  - Helps soothe fear, stress, and emotional tension
-  - Encourages honesty and gentle self-expression
-  - Supports meditation and inner guidance
-  - Traditionally associated with angels and spirit guides
+  - Traditionally associated with **peace, compassion, gentle communication, intuition, and spiritual comfort**
+  - Connected with the **throat, third-eye, and crown chakras**
+  - Often associated with angels, guides, forgiveness, and understanding
+  - Used symbolically to encourage honesty without harshness
 
 uses: |+
-  - Angel and spirit-guide communication
-  - Peace, comfort, and protection rituals
-  - Meditation and divination
-  - Dreamwork and intuitive development
-  - Communication and truth spells
-  - Emotional-healing practices
-  - Creating a calm, spiritually comforting space
+  - Encourages peaceful and compassionate communication
+  - Supports patience, forgiveness, and understanding
+  - Traditionally used for angel or spirit-guide work
+  - Helps soothe fear, stress, and emotional tension
+  - Supports meditation, divination, and dream work
+  - Useful for truth, peace, and emotional-healing rituals
+  - Creates a calm and spiritually comforting space
 
-care: >+
-  - Cleanse with moonlight, smoke, sound, or selenite
+care: |+
+  - **Do not soak or submerge in water**
+  - Clean only with a **soft, dry cloth or gentle dry brush**
+  - Avoid saltwater, acids, harsh chemicals, and abrasive cleaners
+  - Do not use steam or ultrasonic cleaners
+  - Cleanse energetically with **moonlight, smoke, sound, or selenite**
+  - Limit prolonged strong sunlight
+  - Protect from scratches, pressure, knocks, and falls
+  - Store separately from harder stones in a dry place
 
-  - **Do not soak in water**—Angelite is porous and may be damaged or
-  transformed by moisture
-
-  - Avoid salt, harsh chemicals, and abrasive cleaners
-
-  - Limit prolonged direct sunlight to protect its color
-
-  - Gently wipe with a soft, dry cloth
-
-  - Store separately because it scratches easily
+pairings: Selenite, Celestite, Blue Lace Agate, Howlite, Amethyst
 ---
