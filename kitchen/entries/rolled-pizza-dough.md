@@ -38,7 +38,9 @@ Once the dough has risen, use your hands to gently deflate it and transfer to a 
 Use either your hands or a rolling pin to work the dough into 12" circle.
 Transfer dough to a parchment paper lined pizza pan and either pinch the edges or fold them over to form a crust.
 
-
+Drizzle additional olive oil (about a Tablespoon) over the top of the pizza and use your pastry brush to brush the entire surface of the pizza (including the crust) with olive oil. 
+Use a fork to poke holes all over the center of the pizza to keep the dough from bubbling up in the oven.
+Add desired toppings (see the notes for a link to my favorite, 5-minute pizza sauce recipe!) and bake in a 425F (215C) preheated oven for 13-15 minutes or until toppings are golden brown. Slice and serve.
 
 425 degrees  
 
