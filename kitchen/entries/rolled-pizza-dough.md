@@ -1,7 +1,8 @@
 ---
-title: "Rolled Pizza dough "
-category: pizza
+title: "Rolled Pizza dough"
+category: "pizza"
 ---
+
 [https://sugarspunrun.com/the-best-pizza-dough-recipe/](https://sugarspunrun.com/the-best-pizza-dough-recipe/) 
 
 
@@ -31,6 +32,12 @@ category: pizza
 - Gradually add another 1 cup (125g) of flour. Add any additional flour as needed (I've found that sometimes I need as much as an additional ⅓ cup), stirring until the dough is forming into a cohesive, elastic ball and is beginning to pull away from the sides of the bowl (see video above recipe for visual cue). The dough will still be slightly sticky but still should be manageable with your hands. 
 - Drizzle a separate, large, clean bowl generously with olive oil and use a pastry brush to brush up the sides of the bowl.
 
+Lightly dust your hands with flour and form your pizza dough into a round ball and transfer to your olive oil-brushed bowl. Use your hands to roll the pizza dough along the inside of the bowl until it is coated in olive oil, then cover the bowl tightly with plastic wrap and place it in a warm place.
+Allow dough to rise for 30 minutes or until doubled in size. If you intend to bake this dough into a pizza, I also recommend preheating your oven to 425F (215C) at this point so that it will have reached temperature once your pizza is ready to bake.
+Once the dough has risen, use your hands to gently deflate it and transfer to a lightly floured surface and knead briefly until smooth (about 3-5 times). 
+Use either your hands or a rolling pin to work the dough into 12" circle.
+Transfer dough to a parchment paper lined pizza pan and either pinch the edges or fold them over to form a crust.
+
 
 
 425 degrees  
@@ -55,4 +62,4 @@ Brush with a herbed butter 
 
 Then Bake  
 
-Finish with cheese baked on top 
+Finish with cheese baked on top
