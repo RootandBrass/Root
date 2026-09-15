@@ -4648,16 +4648,61 @@ body.crystals-page {
 
     .crystal-library {
         padding:
-            75px 20px
+            75px 12px
             100px;
     }
 
     .crystal-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 8px;
     }
 
     .crystal-card a {
-        min-height: 360px;
+        min-height: 150px;
+
+        padding: 8px;
+    }
+
+    .crystal-card::before {
+        inset: 4px;
+    }
+
+    .crystal-card-image {
+        margin-bottom: 9px;
+    }
+
+    .crystal-card-image img {
+        height: clamp(72px, 24vw, 96px);
+    }
+
+    .crystal-card-symbol {
+        height: clamp(72px, 24vw, 96px);
+
+        margin-bottom: 9px;
+
+        font-size: 1.8rem;
+    }
+
+    .crystal-card h3 {
+        margin: auto 0;
+
+        font-size: clamp(.72rem, 3.3vw, .92rem);
+
+        line-height: 1.2;
+
+        text-align: center;
+
+        overflow-wrap: anywhere;
+    }
+
+    .crystal-card-kicker,
+    .crystal-variety,
+    .crystal-card-details,
+    .crystal-preview,
+    .crystal-card-footer {
+        display: none;
     }
 
 }
