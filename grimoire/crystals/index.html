@@ -29,6 +29,55 @@
 
     <link rel="stylesheet"
           href="/grimoire/style.css">
+
+    <style>
+        .crystal-search {
+            max-width: 760px;
+            margin: 0 auto 2.5rem;
+            text-align: center;
+        }
+
+        .crystal-search label {
+            display: block;
+            margin-bottom: 0.55rem;
+            font-size: 0.78rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .crystal-search-controls {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .crystal-search input[type="search"] {
+            width: min(100%, 560px);
+            padding: 0.95rem 1.1rem;
+            border: 1px solid rgba(120, 93, 60, 0.38);
+            border-radius: 999px;
+            background: rgba(255,255,255,0.82);
+            color: inherit;
+            font: inherit;
+        }
+
+        .crystal-search button {
+            padding: 0.8rem 1rem;
+            border: 1px solid rgba(120, 93, 60, 0.38);
+            border-radius: 999px;
+            background: transparent;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        .crystal-search-status {
+            margin-top: 1rem;
+            opacity: 0.78;
+            font-size: 0.95rem;
+        }
+    </style>
 </head>
 
 <body class="crystals-page">
@@ -58,6 +107,20 @@
                 <div class="crystal-small-divider">◇ &nbsp; ✦ &nbsp; ◇</div>
             </header>
 
+            <section class="crystal-search" aria-labelledby="crystal-search-title">
+                <p class="kicker">Search the cabinet</p>
+                <h2 id="crystal-search-title">Find a crystal</h2>
+                <p>Search by crystal name, variety, chakra, zodiac, associations, or anything written in the entry.</p>
+                <div class="crystal-search-controls">
+                    <div>
+                        <label for="crystal-search-input">Search crystals</label>
+                        <input id="crystal-search-input" type="search" placeholder="Try moonstone, protection, Libra…" autocomplete="off">
+                    </div>
+                    <button id="clear-crystal-search" type="button" hidden>Clear search</button>
+                </div>
+                <p id="crystal-search-status" class="crystal-search-status" hidden>No crystals match that search.</p>
+            </section>
+
             <div class="crystal-grid">
                 {% assign crystal_entries = site.pages
                     | where_exp: "item", "item.path contains 'grimoire/crystals/entries/'"
@@ -65,7 +128,8 @@
 
                 {% if crystal_entries.size > 0 %}
                     {% for crystal in crystal_entries %}
-                    <article class="crystal-card">
+                    <article class="crystal-card"
+                             data-search="{{ crystal.title | append: ' ' | append: crystal.variety | append: ' ' | append: crystal.chakra | append: ' ' | append: crystal.zodiac | append: ' ' | append: crystal.associations | append: ' ' | append: crystal.content | strip_html | strip_newlines | downcase | escape }}">
                         <a href="{{ crystal.url }}">
                             {% if crystal.image %}
                             <div class="crystal-card-image"><img src="{{ crystal.image }}" alt="{{ crystal.title }}"></div>
@@ -112,6 +176,37 @@
     <footer class="grimoire-footer">Root &amp; Brass</footer>
 
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.getElementById("crystal-search-input");
+        const clearButton = document.getElementById("clear-crystal-search");
+        const cards = Array.from(document.querySelectorAll(".crystal-card"));
+        const status = document.getElementById("crystal-search-status");
+
+        function filterCrystals() {
+            const query = searchInput.value.trim().toLowerCase();
+            let visible = 0;
+
+            cards.forEach(function (card) {
+                const searchableText = (card.dataset.search || "").toLowerCase();
+                card.hidden = query ? !searchableText.includes(query) : false;
+                if (!card.hidden) visible++;
+            });
+
+            clearButton.hidden = !query;
+            status.hidden = !query || visible > 0;
+        }
+
+        searchInput.addEventListener("input", filterCrystals);
+
+        clearButton.addEventListener("click", function () {
+            searchInput.value = "";
+            filterCrystals();
+            searchInput.focus();
+        });
+    });
+</script>
 
 </body>
 </html>
