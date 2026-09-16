@@ -9,6 +9,10 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
@@ -24,6 +28,17 @@ jobs:
         run: |
           python -m pip install --quiet pillow
           python .github/scripts/optimize_images.py
+
+      - name: Persist optimized images
+        if: github.event_name == 'push'
+        run: |
+          if ! git diff --quiet -- images grimoire/images journal/images; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add images grimoire/images journal/images
+            git commit -m "Optimize uploaded photos [skip ci]"
+            git push
+          fi
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
