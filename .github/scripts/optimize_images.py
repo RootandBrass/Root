@@ -1,6 +1,7 @@
 """Keep Root & Brass images reasonably sized without changing their URLs."""
 from pathlib import Path
 from tempfile import NamedTemporaryFile
+import re
 
 from PIL import Image, ImageOps, UnidentifiedImageError
 
@@ -8,8 +9,33 @@ from PIL import Image, ImageOps, UnidentifiedImageError
 MAXIMUM_BYTES = 1_000_000
 UPLOAD_MAXIMUM_BYTES = 350_000
 UPLOAD_MAXIMUM_EDGE = 1200
+PLANT_MAXIMUM_BYTES = 250_000
+PLANT_MAXIMUM_EDGE = 1000
 IMAGE_DIRECTORIES = (Path("images"), Path("grimoire/images"), Path("journal/images"))
 IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png"}
+PLANT_CONTENT_DIRECTORY = Path("garden/plants")
+IMAGE_FIELD = re.compile(r"^image:\s*[\"']?(/images/uploads/[^\"'\s]+)", re.MULTILINE)
+
+
+def collect_plant_photos() -> set[Path]:
+    photos: set[Path] = set()
+    if not PLANT_CONTENT_DIRECTORY.exists():
+        return photos
+
+    for entry in PLANT_CONTENT_DIRECTORY.rglob("*"):
+        if not entry.is_file() or entry.suffix.lower() not in {".html", ".md"}:
+            continue
+        try:
+            text = entry.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            continue
+        match = IMAGE_FIELD.search(text)
+        if match:
+            photos.add(Path(match.group(1).lstrip("/")))
+    return photos
+
+
+PLANT_PHOTOS = collect_plant_photos()
 
 
 def is_upload(path: Path) -> bool:
@@ -20,7 +46,13 @@ def is_upload(path: Path) -> bool:
         return False
 
 
+def is_plant_photo(path: Path) -> bool:
+    return path in PLANT_PHOTOS
+
+
 def limits_for(path: Path) -> tuple[int, int]:
+    if is_plant_photo(path):
+        return PLANT_MAXIMUM_BYTES, PLANT_MAXIMUM_EDGE
     if is_upload(path):
         return UPLOAD_MAXIMUM_BYTES, UPLOAD_MAXIMUM_EDGE
     if path.name == "icon.png":
@@ -51,19 +83,19 @@ def optimize(path: Path) -> None:
                     image.convert("RGB").save(
                         temporary_path,
                         format="JPEG",
-                        quality=78 if is_upload(path) else 82,
+                        quality=76 if is_plant_photo(path) else 78 if is_upload(path) else 82,
                         optimize=True,
                         progressive=True,
                     )
                 else:
                     if image.mode == "RGBA" or "transparency" in image.info:
                         image = image.convert("RGBA").quantize(
-                            colors=192 if is_upload(path) else 256,
+                            colors=160 if is_plant_photo(path) else 192 if is_upload(path) else 256,
                             method=Image.Quantize.FASTOCTREE,
                         )
                     else:
                         image = image.convert("RGB").quantize(
-                            colors=192 if is_upload(path) else 256,
+                            colors=160 if is_plant_photo(path) else 192 if is_upload(path) else 256,
                             method=Image.Quantize.MEDIANCUT,
                         )
                     image.save(temporary_path, format="PNG", optimize=True)
@@ -71,7 +103,8 @@ def optimize(path: Path) -> None:
                 optimized_bytes = temporary_path.stat().st_size
                 if optimized_bytes < original_bytes or max(width, height) > maximum_edge:
                     temporary_path.replace(path)
-                    print(f"{path}: {original_bytes:,} -> {optimized_bytes:,} bytes")
+                    label = "plant photo" if is_plant_photo(path) else "image"
+                    print(f"{label} {path}: {original_bytes:,} -> {optimized_bytes:,} bytes")
                 else:
                     temporary_path.unlink()
             except Exception:
@@ -81,6 +114,7 @@ def optimize(path: Path) -> None:
         print(f"Skipping unreadable image {path}: {exc}")
 
 
+print(f"Plant photos tracked for optimization: {len(PLANT_PHOTOS)}")
 for directory in IMAGE_DIRECTORIES:
     if directory.exists():
         for image_path in sorted(directory.rglob("*")):
