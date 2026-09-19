@@ -1,6 +1,6 @@
 ---
 title: "Jimmy Deans Hot Sausage Seasoning"
-category: "Seasonings"
+category: "seasonings-dressings"
 ---
 
 Sea salt: 1 tsp
