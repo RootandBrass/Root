@@ -1,6 +1,6 @@
 ---
 title: "Pumpkin Spice Seasoning"
-category: "Spices"
+category: "seasonings-dressings"
 ---
 
 INGREDIENTS
