@@ -1,0 +1,6 @@
+---
+title: "Pumpkin Spice Creamer"
+category: "Drinks"
+---
+
+Ingredients1.5 cups half-and-half or whole milk (heavy cream works too for extra richness)¼ cup pure pumpkin puree (make sure it is not sweetened pumpkin pie filling)2 to 4 tablespoons pure maple syrup or brown sugar (adjust to your preferred sweetness)1 to 1.5 teaspoons pumpkin pie spice (or a mix of cinnamon, nutmeg, and cloves)1 teaspoon vanilla extractA small pinch of salt (optional, to balance the sweet and earthy flavors)InstructionsCombine ingredients: Add the half-and-half, pumpkin puree, maple syrup, and spices to a small saucepan.Heat and simmer: Whisk everything together and bring the mixture to a gentle simmer over medium heat. Cook for about 1 to 2 minutes while whisking continuously.Add vanilla: Remove the pan from the heat. Stir in the vanilla extract and pinch of salt.Cool and strain (optional): Let the creamer cool down to room temperature. If you want a perfectly smooth texture without any pumpkin texture or spice grit, strain it through a fine-mesh sieve.Store: Pour the cooled creamer into a clean glass jar or bottle with a tight lid. Keep it in the refrigerator for up to 1 week. Give it a quick shake before pouring into your coffee.
