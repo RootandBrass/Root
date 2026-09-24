@@ -1,6 +1,6 @@
 # Root & Brass
 
-Root & Brass is a personal Jekyll site for Old Ruby, the garden, kitchen, journal, and private grimoire.
+Root & Brass is a personal Jekyll site for Old Ruby, the garden, kitchen, book of shaddows, and private grimoire.
 
 ## How the site works
 
@@ -36,7 +36,7 @@ Authentication and redirects are configured in `staticwebapp.config.json`.
 ### Kitchen
 - Recipes: `kitchen/entries/`
 
-### Journal
+### book of shaddows
 - Entries: `journal/entries/`
 
 ### Grimoire

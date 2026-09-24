@@ -10,7 +10,7 @@ content:
     type: group
     items:
       - name: journal
-        label: Journal
+        label: book of shaddows
         type: collection
         path: journal/entries
         filename: "{year}-{month}-{day}.md"
