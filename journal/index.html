@@ -1,6 +1,6 @@
 ---
 ---
-<!-- Yearly book of shaddows archive -->
+<!-- Yearly Book of Shaddows archive -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +15,8 @@
     </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Root & Brass book of shaddows, arranged into yearly volumes.">
-  <title>book of shaddows | Root &amp; Brass</title>
+  <meta name="description" content="The Root & Brass Book of Shaddows, arranged into yearly volumes.">
+  <title>Book of Shaddows | Root &amp; Brass</title>
   <link rel="icon" type="image/png" href="/images/favicon.png">
   <link rel="stylesheet" href="/journal/style.css?v=20260909">
 </head>
@@ -30,7 +30,7 @@
   <main class="journal-library">
     <section class="journal-library-intro" aria-labelledby="journal-title">
       <p class="journal-kicker">Root &amp; Brass · The collected years</p>
-      <h1 id="journal-title">book of shaddows</h1>
+      <h1 id="journal-title">Book of Shaddows</h1>
       <span class="journal-title-rule" aria-hidden="true"></span>
       <p class="journal-intro-copy">
         Ordinary days, turning points, celebrations, and the moments worth remembering—kept together by year.
@@ -48,13 +48,13 @@
     %}
 
     {% if journal_years.size > 0 %}
-      <section class="journal-archive" aria-label="book of shaddows volumes by year">
+      <section class="journal-archive" aria-label="Book of Shaddows volumes by year">
         <div class="journal-volume-list">
           {% for year in journal_years %}
             <a
               class="journal-volume-row"
               href="/journal/year.html?year={{ year.name }}"
-              aria-label="Open the {{ year.name }} book of shaddows, {{ year.items.size }} entries"
+              aria-label="Open the {{ year.name }} Book of Shaddows, {{ year.items.size }} entries"
             >
               <span class="volume-label">Annual volume</span>
               <strong class="volume-year">{{ year.name }}</strong>
