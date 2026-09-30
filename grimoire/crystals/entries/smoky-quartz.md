@@ -38,4 +38,5 @@ care: |-
   - Store separately from softer stones because quartz can scratch them
   - Keep crystal spheres away from direct sunlight where they could concentrate light and create a fire hazard
 pairings: "Black Obsidian, Hematite, Clear Quartz, Amethyst, Fire Quartz"
+image: "/images/uploads/smoky-quartz-1790794377478.png"
 ---
