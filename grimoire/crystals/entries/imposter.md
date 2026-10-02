@@ -40,5 +40,5 @@ care: |-
   - Avoid leaving the sphere in strong direct sunlight, especially near windows, where a polished sphere can concentrate light and create a fire hazard
   - Store on a secure stand because gravity remains stubbornly unimpressed by metaphysical properties
 pairings: "Black Obsidian, Smoky Quartz, Labradorite, Clear Quartz, Red Jasper"
-image: ""
+image: "/images/uploads/imposter-1790969916926.png"
 ---
