@@ -23,21 +23,24 @@ body: |-
 ---
 
 Banana Cake
-▢1/2 cup (1 stick) butter softened
-▢1½ cups granulated sugar
-▢2 large eggs
-▢1 cup sour cream full-fat is best
-▢1 teaspoon vanilla extract
-▢2 cups all-purpose flour
-▢1 teaspoon baking soda
-▢¼ teaspoon salt
-▢1 cup mashed bananas about 3 bananas
+
+* 1/2 cup (1 stick) butter softened
+* 1½ cups granulated sugar
+* 2 large eggs
+* 1 cup sour cream full-fat is best
+* 1 teaspoon vanilla extract
+* 2 cups all-purpose flour
+* 1 teaspoon baking soda
+ * ¼ teaspoon salt
+* 1 cup mashed bananas about 3 bananas
+
 Cream Cheese Frosting
-▢1/2 cup (1 stick) butter softened
-▢1 bar (8 oz) cream cheese full-fat is best
-▢1 teaspoon vanilla extract
-▢3 cups powdered sugar
-▢2 tablespoons heavy whipping cream
+
+* 1/2 cup (1 stick) butter softened
+* 1 bar (8 oz) cream cheese full-fat is best
+* 1 teaspoon vanilla extract
+* 3 cups powdered sugar
+* 2 tablespoons heavy whipping cream
 
 Instructions
 
