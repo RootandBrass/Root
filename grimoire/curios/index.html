@@ -229,24 +229,30 @@
         <p id="curio-search-status" class="curio-search-status" hidden>No curios match that search.</p>
       </section>
 
-      {% assign plant_entries = site.pages | where_exp: "item", "item.path contains 'garden/plants/'" | sort: "title" %}
+      {% assign plant_entries = site.pages | where_exp: "item", "item.path contains 'garden/plants/'" %}
+      {% assign standalone_entries = site.pages | where_exp: "item", "item.path contains 'grimoire/curios/items/'" %}
+      {% assign curio_entries = plant_entries | concat: standalone_entries | sort: "title" %}
       <div class="curio-index">
         {% assign visible_count = 0 %}
-        {% for plant in plant_entries %}
-          {% if plant.show_curios == true %}
+        {% for item in curio_entries %}
+          {% if item.show_curios == true %}
             {% assign visible_count = visible_count | plus: 1 %}
-            {% assign plant_slug = plant.path | split: '/' | last | remove: '.html' | remove: '.md' %}
+            {% assign item_slug = item.path | split: '/' | last | remove: '.html' | remove: '.md' %}
             <article class="curio-item"
-              data-search="{{ plant.title | append: ' ' | append: plant.scientific_name | append: ' ' | append: plant.magical_uses | append: ' ' | append: plant.correspondences | append: ' ' | append: plant.spell_uses | append: ' ' | append: plant.ritual_notes | strip_html | strip_newlines | downcase | escape }}">
-              <a href="/grimoire/curios/plant.html#{{ plant_slug }}">
+              data-search="{{ item.title | append: ' ' | append: item.scientific_name | append: ' ' | append: item.curio_type | append: ' ' | append: item.magical_uses | append: ' ' | append: item.correspondences | append: ' ' | append: item.spell_uses | append: ' ' | append: item.ritual_notes | strip_html | strip_newlines | downcase | escape }}">
+              <a href="/grimoire/curios/plant.html#{{ item_slug }}">
                 <div class="curio-item-top">
                   <div>
-                    <h3>{{ plant.title }}</h3>
-                    {% if plant.scientific_name %}<p class="crystal-variety">{{ plant.scientific_name }}</p>{% endif %}
+                    <h3>{{ item.title }}</h3>
+                    {% if item.scientific_name %}
+                      <p class="crystal-variety">{{ item.scientific_name }}</p>
+                    {% elsif item.curio_type %}
+                      <p class="crystal-variety">{{ item.curio_type }}</p>
+                    {% endif %}
                   </div>
                   <span class="curio-item-mark">❧</span>
                 </div>
-                {% if plant.magical_uses %}<div class="curio-item-preview">{{ plant.magical_uses | markdownify | strip_html | truncate: 92 }}</div>{% endif %}
+                {% if item.magical_uses %}<div class="curio-item-preview">{{ item.magical_uses | markdownify | strip_html | truncate: 92 }}</div>{% endif %}
                 <div class="curio-item-footer"><span>Open</span><span>✦</span></div>
               </a>
             </article>
