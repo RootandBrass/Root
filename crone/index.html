@@ -63,7 +63,7 @@ const schemas={
  grimoireRecipes:{label:'Grimoire Recipes',icon:'♨',desc:'Apothecary, ritual & home recipes',fields:[['title','Recipe Name','text',true,''],['date','Date Made','date',true,today()],['category','Category','select',true,'',[['apothecary','Apothecary'],['tea-herbal','Tea & Herbal'],['kitchen','Kitchen'],['ritual','Ritual'],['home','Home'],['bath-body','Bath & Body']]],['purpose','Purpose','text',false,''],['ingredients','Ingredients','textarea',true,''],['method','Method','textarea',true,''],['storage','Storage','text',false,''],['shelf_life','Shelf Life','text',false,''],['result','Result','textarea',false,''],['changes','Changes for Next Time','textarea',false,''],['notes','Notes','textarea',false,''],['body','Additional Entry','textarea',false,'']]},
  signs:{label:'Signs & Symbols',icon:'⌘',desc:'Meanings, folklore & observations',fields:[['title','Title','text',true,''],['category','Category','select',true,'',[['numerology','Numerology'],['repeating-numbers','Repeating Numbers'],['omens-signs','Omens & Signs'],['animal-guides','Animal Guides'],['symbols','Symbols'],['colors-associations','Colors & Associations'],['elements-directions','Elements & Directions'],['plants-nature','Plants & Nature'],['folklore','Folklore'],['personal-observations','Personal Observations']]],['image','Image','file',false,''],['meaning','Meaning','textarea',false,''],['interpretations','Common Interpretations','textarea',false,''],['personal_notes','Personal Notes','textarea',false,''],['related_symbols','Related Symbols','text',false,''],['body','Additional Notes','textarea',false,'']]}
 };
-const groups={root:['kitchen','plant'],grimoire:['apothecary','crystals','dreams','grimoireRecipes','journal','moon','signs','spells','tarot']};
+const groups={root:['kitchen','plant'],grimoire:['apothecary','crystals','curios','dreams','grimoireRecipes','journal','moon','signs','spells','tarot']};
 const editor=document.getElementById('editorWrap'),fieldsEl=document.getElementById('formFields'),form=document.getElementById('entryForm'),msg=document.getElementById('formMessage'),saveBtn=document.getElementById('saveButton');let activeType=null;
 function cardFor(key){const s=schemas[key];const b=document.createElement('button');b.className='card';b.type='button';b.innerHTML=`<span class="icon">${s.icon}</span><span><strong>${s.label}</strong><small>${s.desc}</small></span>`;b.onclick=()=>openEditor(key);return b}
 groups.root.forEach(k=>document.getElementById('rootCards').appendChild(cardFor(k)));
@@ -78,8 +78,8 @@ const scratch=document.getElementById('scratch'),saved=document.getElementById('
 </script>
 <script src="/crone/garden.js?v=2"></script>
 <script src="/crone/tarot.js?v=1"></script>
-<script src="/crone/edit.js?v=3"></script>
-<script src="/crone/features.js?v=3"></script>
+<script src="/crone/edit.js?v=4"></script>
+<script src="/crone/features.js?v=4"></script>
 <script src="/crone/plants-v2.js?v=1"></script>
 </body>
 </html>
