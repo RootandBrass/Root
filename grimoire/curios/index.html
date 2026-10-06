@@ -25,12 +25,14 @@
     .curio-search-status{margin-top:1rem;opacity:.78;font-size:.95rem}
     .curios-image-hero{
       width:100%;
-      min-height:clamp(360px,66vw,760px);
-      background-image:url('/grimoire/images/curios-background.jpg');
-      background-size:cover;
-      background-position:center;
-      background-repeat:no-repeat;
+      margin-top:35px;
       border-bottom:1px solid rgba(120,93,60,.28);
+      overflow:hidden;
+    }
+    .curios-image-hero img{
+      display:block;
+      width:100%;
+      height:auto;
     }
   </style>
 </head>
@@ -41,7 +43,9 @@
   </header>
 
   <main class="crystal-page">
-    <section class="curios-image-hero" aria-label="Curios cabinet"></section>
+    <section class="curios-image-hero" aria-label="Curios cabinet">
+      <img src="/grimoire/images/curios-background.jpg?v=20261006-3" alt="Curios cabinet">
+    </section>
 
     <section class="crystal-library">
       <header class="crystal-library-heading">
