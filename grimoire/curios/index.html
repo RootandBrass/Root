@@ -23,6 +23,15 @@
     .curio-search input[type="search"]{width:min(100%,560px);padding:.95rem 1.1rem;border:1px solid rgba(120,93,60,.38);border-radius:999px;background:rgba(255,255,255,.82);color:inherit;font:inherit}
     .curio-search button{padding:.8rem 1rem;border:1px solid rgba(120,93,60,.38);border-radius:999px;background:transparent;color:inherit;cursor:pointer}
     .curio-search-status{margin-top:1rem;opacity:.78;font-size:.95rem}
+    .curios-image-hero{
+      width:100%;
+      min-height:clamp(360px,66vw,760px);
+      background-image:url('/grimoire/images/curios-background.jpg');
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+      border-bottom:1px solid rgba(120,93,60,.28);
+    }
   </style>
 </head>
 <body class="crystals-page">
@@ -32,14 +41,7 @@
   </header>
 
   <main class="crystal-page">
-    <section class="crystal-hero">
-      <div class="crystal-hero-content">
-        <p class="kicker">The Grimoire</p>
-        <h1>Curios</h1>
-        <div class="crystal-divider"><span></span>✦<span></span></div>
-        <p class="crystal-lead">Plants, ingredients, and useful little oddities kept for spellwork, ritual, folklore, and practical magic.</p>
-      </div>
-    </section>
+    <section class="curios-image-hero" aria-label="Curios cabinet"></section>
 
     <section class="crystal-library">
       <header class="crystal-library-heading">
