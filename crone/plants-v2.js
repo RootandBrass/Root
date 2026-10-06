@@ -28,6 +28,12 @@
     ['medicinal_uses','Traditional Medicinal Uses','textarea',false,''],
     ['culinary_uses','Culinary Uses','textarea',false,''],
     ['magical_uses','Folklore & Magical Associations','textarea',false,''],
+
+    ['show_curios','Show in Curios','select',false,'false',[['false','No'],['true','Yes']]],
+    ['correspondences','Magical Correspondences','textarea',false,''],
+    ['spell_uses','Spellwork Uses','textarea',false,''],
+    ['ritual_notes','Ritual / Curio Notes','textarea',false,''],
+
     ['parts_used','Parts Used','text',false,''],
     ['harvest','Harvesting','textarea',false,''],
     ['preparation','Preparation & Preservation','textarea',false,''],
@@ -60,7 +66,7 @@
       try{
         const payload=JSON.parse(init.body);
         if(payload?.type==='plant'&&payload.fields){
-          ['show_harvest','show_apothecary'].forEach(key=>{
+          ['show_harvest','show_apothecary','show_curios'].forEach(key=>{
             if(Object.prototype.hasOwnProperty.call(payload.fields,key)){
               payload.fields[key]=payload.fields[key]===true||payload.fields[key]==='true';
             }
