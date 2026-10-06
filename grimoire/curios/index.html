@@ -106,6 +106,81 @@
       line-height:1.8;
       text-shadow:0 2px 16px rgba(0,0,0,.88);
     }
+
+    .curio-index{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:12px;
+      max-width:1100px;
+      margin:0 auto;
+    }
+    .curio-item{
+      border:1px solid rgba(168,136,87,.18);
+      background:rgba(255,255,255,.018);
+      transition:border-color .18s ease, background .18s ease, transform .18s ease;
+    }
+    .curio-item:hover{
+      border-color:rgba(192,149,88,.42);
+      background:rgba(192,149,88,.045);
+      transform:translateY(-1px);
+    }
+    .curio-item a{
+      display:block;
+      padding:16px 18px 14px;
+      color:inherit;
+      text-decoration:none;
+    }
+    .curio-item-top{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:16px;
+    }
+    .curio-item h3{
+      margin:0;
+      color:#e8dfd2;
+      font-size:1.06rem;
+      font-weight:500;
+      letter-spacing:.02em;
+    }
+    .curio-item-mark{
+      color:#a98758;
+      font-size:.9rem;
+      line-height:1.2;
+      flex:0 0 auto;
+    }
+    .curio-item .crystal-variety{
+      margin:.28rem 0 0;
+      font-size:.78rem;
+      opacity:.56;
+      font-style:italic;
+    }
+    .curio-item-preview{
+      margin:.8rem 0 0;
+      color:#aaa095;
+      font-size:.84rem;
+      line-height:1.5;
+    }
+    .curio-item-footer{
+      margin-top:.9rem;
+      padding-top:.72rem;
+      border-top:1px solid rgba(168,136,87,.10);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      color:#9e7e50;
+      font-size:.67rem;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+    @media (max-width:900px){
+      .curio-index{grid-template-columns:repeat(2,minmax(0,1fr));}
+    }
+    @media (max-width:580px){
+      .curio-index{grid-template-columns:1fr;}
+      .curio-item a{padding:14px 15px 12px;}
+    }
+
     @media (max-width:640px){
       .curios-hero{
         min-height:720px;
@@ -155,25 +230,24 @@
       </section>
 
       {% assign plant_entries = site.pages | where_exp: "item", "item.path contains 'garden/plants/'" | sort: "title" %}
-      <div class="crystal-grid">
+      <div class="curio-index">
         {% assign visible_count = 0 %}
         {% for plant in plant_entries %}
           {% if plant.show_curios == true %}
             {% assign visible_count = visible_count | plus: 1 %}
             {% assign plant_slug = plant.path | split: '/' | last | remove: '.html' | remove: '.md' %}
-            <article class="crystal-card"
+            <article class="curio-item"
               data-search="{{ plant.title | append: ' ' | append: plant.scientific_name | append: ' ' | append: plant.magical_uses | append: ' ' | append: plant.correspondences | append: ' ' | append: plant.spell_uses | append: ' ' | append: plant.ritual_notes | strip_html | strip_newlines | downcase | escape }}">
               <a href="/grimoire/curios/plant.html#{{ plant_slug }}">
-                {% if plant.photo %}
-                  <div class="crystal-card-image"><img src="{{ plant.photo }}" alt="{{ plant.title }}"></div>
-                {% else %}
-                  <div class="crystal-card-symbol">❧</div>
-                {% endif %}
-                <p class="crystal-card-kicker">Curio</p>
-                <h3>{{ plant.title }}</h3>
-                {% if plant.scientific_name %}<p class="crystal-variety">{{ plant.scientific_name }}</p>{% endif %}
-                {% if plant.magical_uses %}<div class="crystal-preview">{{ plant.magical_uses | markdownify | strip_html | truncate: 115 }}</div>{% endif %}
-                <div class="crystal-card-footer"><span>Open Curio</span><span>✦</span></div>
+                <div class="curio-item-top">
+                  <div>
+                    <h3>{{ plant.title }}</h3>
+                    {% if plant.scientific_name %}<p class="crystal-variety">{{ plant.scientific_name }}</p>{% endif %}
+                  </div>
+                  <span class="curio-item-mark">❧</span>
+                </div>
+                {% if plant.magical_uses %}<div class="curio-item-preview">{{ plant.magical_uses | markdownify | strip_html | truncate: 92 }}</div>{% endif %}
+                <div class="curio-item-footer"><span>Open</span><span>✦</span></div>
               </a>
             </article>
           {% endif %}
@@ -204,7 +278,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const input = document.getElementById("curio-search-input");
   const clear = document.getElementById("clear-curio-search");
-  const cards = Array.from(document.querySelectorAll(".crystal-card"));
+  const cards = Array.from(document.querySelectorAll(".curio-item"));
   const status = document.getElementById("curio-search-status");
 
   function filterCurios() {
