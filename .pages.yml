@@ -368,6 +368,12 @@ content:
       - { name: medicinal_uses, label: Traditional Medicinal Uses, type: rich-text, required: false }
       - { name: culinary_uses, label: Culinary Uses, type: rich-text, required: false }
       - { name: magical_uses, label: Folklore & Magical Associations, type: rich-text, required: false }
+
+      - { name: show_curios, label: Show in Curios, type: boolean, default: false }
+      - { name: correspondences, label: Magical Correspondences, type: rich-text, required: false }
+      - { name: spell_uses, label: Spellwork Uses, type: rich-text, required: false }
+      - { name: ritual_notes, label: Ritual / Curio Notes, type: rich-text, required: false }
+
       - { name: cautions, label: Safety & Cautions, type: rich-text, required: false }
       - { name: personal_notes, label: Apothecary Notes, type: rich-text, required: false }
       - { name: sources, label: Sources & References, type: rich-text, required: false }
