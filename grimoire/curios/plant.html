@@ -41,34 +41,40 @@
   </header>
 
   <main>
-    {% assign plant_entries = site.pages | where_exp: "item", "item.path contains 'garden/plants/'" | sort: "title" %}
-    {% for plant in plant_entries %}
-      {% if plant.show_curios == true %}
-        {% assign plant_slug = plant.path | split: '/' | last | remove: '.html' | remove: '.md' %}
-        <article class="curio-record" id="{{ plant_slug }}" data-curio-record hidden>
+    {% assign plant_entries = site.pages | where_exp: "item", "item.path contains 'garden/plants/'" %}
+    {% assign standalone_entries = site.pages | where_exp: "item", "item.path contains 'grimoire/curios/items/'" %}
+    {% assign curio_entries = plant_entries | concat: standalone_entries | sort: "title" %}
+    {% for item in curio_entries %}
+      {% if item.show_curios == true %}
+        {% assign item_slug = item.path | split: '/' | last | remove: '.html' | remove: '.md' %}
+        <article class="curio-record" id="{{ item_slug }}" data-curio-record hidden>
           <header class="curio-header">
             <p class="kicker">The Curio Cabinet</p>
             <div class="curio-symbol">❧</div>
-            <h1>{{ plant.title }}</h1>
-            {% if plant.scientific_name %}<p class="curio-latin">{{ plant.scientific_name }}</p>{% endif %}
+            <h1>{{ item.title }}</h1>
+            {% if item.scientific_name %}
+              <p class="curio-latin">{{ item.scientific_name }}</p>
+            {% elsif item.curio_type %}
+              <p class="curio-latin">{{ item.curio_type }}</p>
+            {% endif %}
             <div class="crystal-divider"><span></span>✦<span></span></div>
-            {% if plant.parts_used or plant.common_name %}
+            {% if item.parts_used or item.common_name %}
             <div class="curio-properties">
-              {% if plant.parts_used %}<div><span>Parts Used</span><strong>{{ plant.parts_used }}</strong></div>{% endif %}
-              {% if plant.common_name %}<div><span>Also Known As</span><strong>{{ plant.common_name }}</strong></div>{% endif %}
+              {% if item.parts_used %}<div><span>Parts Used</span><strong>{{ item.parts_used }}</strong></div>{% endif %}
+              {% if item.common_name %}<div><span>Also Known As</span><strong>{{ item.common_name }}</strong></div>{% endif %}
             </div>
             {% endif %}
           </header>
 
-          {% if plant.photo %}<figure class="curio-image"><img src="{{ plant.photo }}" alt="{{ plant.title }}"></figure>{% endif %}
-          {% if plant.magical_uses %}<section class="curio-section"><h2>Folklore &amp; Magical Associations</h2>{{ plant.magical_uses | markdownify }}</section>{% endif %}
-          {% if plant.correspondences %}<section class="curio-section"><h2>Magical Correspondences</h2>{{ plant.correspondences | markdownify }}</section>{% endif %}
-          {% if plant.spell_uses %}<section class="curio-section"><h2>Spellwork Uses</h2>{{ plant.spell_uses | markdownify }}</section>{% endif %}
-          {% if plant.ritual_notes %}<section class="curio-section"><h2>Ritual &amp; Curio Notes</h2>{{ plant.ritual_notes | markdownify }}</section>{% endif %}
-          {% if plant.harvest %}<section class="curio-section"><h2>Gathering</h2>{{ plant.harvest | markdownify }}</section>{% endif %}
-          {% if plant.preparation %}<section class="curio-section"><h2>Preparation &amp; Preservation</h2>{{ plant.preparation | markdownify }}</section>{% endif %}
-          {% if plant.cautions %}<section class="curio-section"><h2>Safety &amp; Cautions</h2>{{ plant.cautions | markdownify }}</section>{% endif %}
-          {% if plant.personal_notes %}<section class="curio-section"><h2>My Notes</h2>{{ plant.personal_notes | markdownify }}</section>{% endif %}
+          {% if item.photo %}<figure class="curio-image"><img src="{{ item.photo }}" alt="{{ item.title }}"></figure>{% endif %}
+          {% if item.magical_uses %}<section class="curio-section"><h2>Folklore &amp; Magical Associations</h2>{{ item.magical_uses | markdownify }}</section>{% endif %}
+          {% if item.correspondences %}<section class="curio-section"><h2>Magical Correspondences</h2>{{ item.correspondences | markdownify }}</section>{% endif %}
+          {% if item.spell_uses %}<section class="curio-section"><h2>Spellwork Uses</h2>{{ item.spell_uses | markdownify }}</section>{% endif %}
+          {% if item.ritual_notes %}<section class="curio-section"><h2>Ritual &amp; Curio Notes</h2>{{ item.ritual_notes | markdownify }}</section>{% endif %}
+          {% if item.harvest %}<section class="curio-section"><h2>Gathering</h2>{{ item.harvest | markdownify }}</section>{% endif %}
+          {% if item.preparation %}<section class="curio-section"><h2>Preparation &amp; Preservation</h2>{{ item.preparation | markdownify }}</section>{% endif %}
+          {% if item.cautions %}<section class="curio-section"><h2>Safety &amp; Cautions</h2>{{ item.cautions | markdownify }}</section>{% endif %}
+          {% if item.personal_notes %}<section class="curio-section"><h2>My Notes</h2>{{ item.personal_notes | markdownify }}</section>{% endif %}
 
           <footer class="curio-footer"><a href="/grimoire/curios/">Return to the Curio Cabinet</a></footer>
         </article>
