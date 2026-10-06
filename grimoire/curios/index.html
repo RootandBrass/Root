@@ -1,0 +1,139 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBQDLBKX78"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VBQDLBKX78');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Curios | Grimoire | Root & Brass</title>
+  <link rel="icon" type="image/png" href="/grimoire/images/icon.png">
+  <link rel="stylesheet" href="/grimoire/style.css">
+  <style>
+    .curio-search{max-width:760px;margin:0 auto 2.5rem;text-align:center}
+    .curio-search label{display:block;margin-bottom:.55rem;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase}
+    .curio-search-controls{display:flex;gap:.75rem;justify-content:center;align-items:center;flex-wrap:wrap}
+    .curio-search input[type="search"]{width:min(100%,560px);padding:.95rem 1.1rem;border:1px solid rgba(120,93,60,.38);border-radius:999px;background:rgba(255,255,255,.82);color:inherit;font:inherit}
+    .curio-search button{padding:.8rem 1rem;border:1px solid rgba(120,93,60,.38);border-radius:999px;background:transparent;color:inherit;cursor:pointer}
+    .curio-search-status{margin-top:1rem;opacity:.78;font-size:.95rem}
+  </style>
+</head>
+<body class="crystals-page">
+<div class="grimoire-shell">
+  <header class="grimoire-header">
+    <a href="/grimoire/" class="grimoire-mark">← Grimoire</a>
+  </header>
+
+  <main class="crystal-page">
+    <section class="crystal-hero">
+      <div class="crystal-hero-content">
+        <p class="kicker">The Grimoire</p>
+        <h1>Curios</h1>
+        <div class="crystal-divider"><span></span>✦<span></span></div>
+        <p class="crystal-lead">Plants, ingredients, and useful little oddities kept for spellwork, ritual, folklore, and practical magic.</p>
+      </div>
+    </section>
+
+    <section class="crystal-library">
+      <header class="crystal-library-heading">
+        <p class="kicker">Working Collection</p>
+        <h2>The Curio Cabinet</h2>
+        <div class="crystal-small-divider">❧ &nbsp; ✦ &nbsp; ❧</div>
+      </header>
+
+      <section class="curio-search" aria-labelledby="curio-search-title">
+        <p class="kicker">Search the cabinet</p>
+        <h2 id="curio-search-title">Find a curio</h2>
+        <p>Search by name, magical association, correspondence, spell use, or anything written in the entry.</p>
+        <div class="curio-search-controls">
+          <div>
+            <label for="curio-search-input">Search curios</label>
+            <input id="curio-search-input" type="search" placeholder="Try protection, rosemary, cleansing…" autocomplete="off">
+          </div>
+          <button id="clear-curio-search" type="button" hidden>Clear search</button>
+        </div>
+        <p id="curio-search-status" class="curio-search-status" hidden>No curios match that search.</p>
+      </section>
+
+      {% assign plant_entries = site.pages | where_exp: "item", "item.path contains 'garden/plants/'" | sort: "title" %}
+      <div class="crystal-grid">
+        {% assign visible_count = 0 %}
+        {% for plant in plant_entries %}
+          {% if plant.show_curios == true %}
+            {% assign visible_count = visible_count | plus: 1 %}
+            {% assign plant_slug = plant.path | split: '/' | last | remove: '.html' | remove: '.md' %}
+            <article class="crystal-card"
+              data-search="{{ plant.title | append: ' ' | append: plant.scientific_name | append: ' ' | append: plant.magical_uses | append: ' ' | append: plant.correspondences | append: ' ' | append: plant.spell_uses | append: ' ' | append: plant.ritual_notes | strip_html | strip_newlines | downcase | escape }}">
+              <a href="/grimoire/curios/plant.html#{{ plant_slug }}">
+                {% if plant.photo %}
+                  <div class="crystal-card-image"><img src="{{ plant.photo }}" alt="{{ plant.title }}"></div>
+                {% else %}
+                  <div class="crystal-card-symbol">❧</div>
+                {% endif %}
+                <p class="crystal-card-kicker">Curio</p>
+                <h3>{{ plant.title }}</h3>
+                {% if plant.scientific_name %}<p class="crystal-variety">{{ plant.scientific_name }}</p>{% endif %}
+                {% if plant.magical_uses %}<div class="crystal-preview">{{ plant.magical_uses | markdownify | strip_html | truncate: 115 }}</div>{% endif %}
+                <div class="crystal-card-footer"><span>Open Curio</span><span>✦</span></div>
+              </a>
+            </article>
+          {% endif %}
+        {% endfor %}
+        {% if visible_count == 0 %}
+          <div class="empty-crystal"><span>❧</span><p>The cabinet is waiting for its first curio.</p></div>
+        {% endif %}
+      </div>
+    </section>
+
+    <nav class="section-nav" aria-label="Grimoire sections">
+      <a href="/journal/">Book of Shaddows</a>
+      <a href="/grimoire/crystals/">Crystals</a>
+      <a href="/grimoire/curios/" aria-current="page">Curios</a>
+      <a href="/grimoire/tarot/">Tarot</a>
+      <a href="/grimoire/signs-symbols/">Signs &amp; Symbols</a>
+      <a href="/grimoire/spells/">Spells</a>
+      <a href="/grimoire/recipes/">Recipes</a>
+      <a href="/grimoire/moon/">Moon</a>
+      <a href="/grimoire/dreams/">Dreams</a>
+    </nav>
+  </main>
+
+  <footer class="grimoire-footer">Root &amp; Brass</footer>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const input = document.getElementById("curio-search-input");
+  const clear = document.getElementById("clear-curio-search");
+  const cards = Array.from(document.querySelectorAll(".crystal-card"));
+  const status = document.getElementById("curio-search-status");
+
+  function filterCurios() {
+    const query = input.value.trim().toLowerCase();
+    let visible = 0;
+    cards.forEach(function (card) {
+      const searchable = (card.dataset.search || "").toLowerCase();
+      card.hidden = query ? !searchable.includes(query) : false;
+      if (!card.hidden) visible++;
+    });
+    clear.hidden = !query;
+    status.hidden = !query || visible > 0;
+  }
+
+  input.addEventListener("input", filterCurios);
+  clear.addEventListener("click", function () {
+    input.value = "";
+    filterCurios();
+    input.focus();
+  });
+});
+</script>
+</body>
+</html>
