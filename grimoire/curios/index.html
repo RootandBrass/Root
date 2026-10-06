@@ -23,16 +23,78 @@
     .curio-search input[type="search"]{width:min(100%,560px);padding:.95rem 1.1rem;border:1px solid rgba(120,93,60,.38);border-radius:999px;background:rgba(255,255,255,.82);color:inherit;font:inherit}
     .curio-search button{padding:.8rem 1rem;border:1px solid rgba(120,93,60,.38);border-radius:999px;background:transparent;color:inherit;cursor:pointer}
     .curio-search-status{margin-top:1rem;opacity:.78;font-size:.95rem}
-    .curios-image-hero{
-      width:100%;
+    .curios-hero{
+      position:relative;
+      min-height:980px;
+      display:flex;
+      align-items:flex-end;
       margin-top:35px;
-      border-bottom:1px solid rgba(120,93,60,.28);
-      overflow:hidden;
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba(5,3,2,.05) 0%,
+          rgba(5,3,2,.10) 52%,
+          rgba(5,3,2,.66) 84%,
+          #050608 100%
+        ),
+        url('/grimoire/images/curios-background-new.jpg?v=20261006-1');
+      background-size:cover;
+      background-position:center top;
+      background-repeat:no-repeat;
+      border-left:1px solid rgba(168,136,87,.14);
+      border-right:1px solid rgba(168,136,87,.14);
     }
-    .curios-image-hero img{
-      display:block;
+    .curios-hero-content{
       width:100%;
-      height:auto;
+      padding:100px 8% 120px;
+      text-align:center;
+      background:linear-gradient(to bottom,transparent,rgba(4,5,7,.55));
+    }
+    .curios-hero .kicker{
+      margin-bottom:15px;
+      color:#aa8a57;
+      text-transform:uppercase;
+      letter-spacing:.35em;
+      font-size:.68rem;
+    }
+    .curios-hero h1{
+      margin:0;
+      color:#eee5d6;
+      font-size:clamp(4rem,10vw,7.4rem);
+      font-weight:normal;
+      letter-spacing:.10em;
+      text-shadow:0 3px 30px rgba(0,0,0,.82),0 0 30px rgba(168,112,55,.12);
+    }
+    .curios-divider{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:15px;
+      margin:28px auto;
+      color:#c09558;
+    }
+    .curios-divider span{
+      width:90px;
+      height:1px;
+      background:linear-gradient(90deg,transparent,rgba(192,149,88,.60),transparent);
+    }
+    .curios-lead{
+      max-width:650px;
+      margin:0 auto;
+      color:#c0b6a8;
+      font-style:italic;
+      font-size:1.05rem;
+      line-height:1.8;
+      text-shadow:0 2px 16px rgba(0,0,0,.88);
+    }
+    @media (max-width:640px){
+      .curios-hero{
+        min-height:760px;
+        background-position:center top;
+      }
+      .curios-hero-content{
+        padding:75px 24px 95px;
+      }
     }
   </style>
 </head>
@@ -43,8 +105,13 @@
   </header>
 
   <main class="crystal-page">
-    <section class="curios-image-hero" aria-label="Curios cabinet">
-      <img src="/grimoire/images/curios-background.jpg?v=20261006-3" alt="Curios cabinet">
+    <section class="curios-hero">
+      <div class="curios-hero-content">
+        <p class="kicker">The Grimoire</p>
+        <h1>Curios</h1>
+        <div class="curios-divider"><span></span>❧<span></span></div>
+        <p class="curios-lead">Plants, ingredients, and useful little oddities kept for spellwork, ritual, folklore, and practical magic.</p>
+      </div>
     </section>
 
     <section class="crystal-library">
