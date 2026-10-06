@@ -5239,6 +5239,44 @@ button {
     font: inherit;
 }
 
+/* Shared Grimoire form controls */
+input[type="search"],
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="number"],
+select,
+textarea {
+    color: var(--bone) !important;
+    background-color: rgba(10, 10, 10, .92) !important;
+    border-color: rgba(216, 139, 38, .42) !important;
+    caret-color: #d88b26;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9f9487 !important;
+    opacity: 1;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    color: var(--bone) !important;
+    background-color: #12100f !important;
+    border-color: #d88b26 !important;
+    outline: 2px solid rgba(216, 139, 38, .28);
+    outline-offset: 2px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--bone) !important;
+    box-shadow: 0 0 0 1000px #12100f inset !important;
+    caret-color: #d88b26;
+}
+
 [hidden] {
     display: none !important;
 }
