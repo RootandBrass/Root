@@ -9,6 +9,26 @@ content:
     label: Grimoire
     type: group
     items:
+      - name: letters
+        label: The Book of Letters
+        type: collection
+        path: grimoire/letters/entries
+        filename: "{year}-{month}-{day}-{primary}.md"
+        format: yaml-frontmatter
+        view:
+          primary: title
+          fields: [date, recipient, status]
+          sort: date
+          order: desc
+        fields:
+          - { name: title, label: Letter Title, type: string, required: true }
+          - { name: date, label: Date Asked, type: date, required: true }
+          - { name: recipient, label: Addressed To, type: string, required: false }
+          - { name: status, label: Status, type: select, required: true, default: open, options: { values: [ { value: open, label: Awaiting Reply }, { value: answered, label: Answered } ] } }
+          - { name: asked, label: My Question, type: rich-text, required: true }
+          - { name: observations, label: Dated Observations and Possible Replies, type: rich-text, required: false }
+          - { name: body, label: Additional Reflections, type: rich-text, required: false }
+
       - name: journal
         label: Book of Shaddows
         type: collection
