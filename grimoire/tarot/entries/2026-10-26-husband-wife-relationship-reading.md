@@ -1,5 +1,5 @@
 ---
-layout: tarot-reading
+layout: tarot
 title: "Husband & Wife — Six-Card Relationship Reading"
 date: "2026-10-26"
 deck: "Tarot (deck not specified)"
