@@ -19,14 +19,23 @@ notes: "The wife drew the cards. Positions were confirmed: wife first, husband s
 ---
 ## Six cards and their positions
 
-| Position | Card | Orientation | Interpretation |
-| --- | --- | --- | --- |
-| 1. Wife | The Magician | Reversed | Feeling powerless, unheard, or exhausted from trying to change the marriage. |
-| 2. Husband | Nine of Swords | Upright | Possible private worry, anxiety, guilt, or distress. This does not establish remorse or his actual thoughts. |
-| 3. The Connection | The Empress | Reversed | Emotional depletion, neglected tenderness, or an imbalance in giving and receiving care. |
-| 4. Strength | The Fool | Upright | Space for a fresh start, a different approach, or renewed openness. |
-| 5. Challenge | Eight of Cups | Upright | Emotional withdrawal or the search for deeper fulfillment; not necessarily a literal departure or divorce. |
-| 6. Direction | The Tower | Reversed | Resisting or delaying necessary change, possibly by avoiding conversations that must happen. |
+### 1. Wife · The Magician · Reversed
+Feeling powerless, unheard, or exhausted from trying to change the marriage.
+
+### 2. Husband · Nine of Swords · Upright
+Possible private worry, anxiety, guilt, or distress. This does not establish remorse or his actual thoughts.
+
+### 3. The Connection · The Empress · Reversed
+Emotional depletion, neglected tenderness, or an imbalance in giving and receiving care.
+
+### 4. Strength · The Fool · Upright
+Space for a fresh start, a different approach, or renewed openness.
+
+### 5. Challenge · Eight of Cups · Upright
+Emotional withdrawal or the search for deeper fulfillment; not necessarily a literal departure or divorce.
+
+### 6. Direction · The Tower · Reversed
+Resisting or delaying necessary change, possibly by avoiding conversations that must happen.
 
 ## Overall reading
 
